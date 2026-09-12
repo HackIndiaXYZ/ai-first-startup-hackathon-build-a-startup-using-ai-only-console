@@ -21,7 +21,10 @@ export default function Modal({
     close = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     const previous = document.activeElement as HTMLElement;
-    close.current?.focus();
+    (
+      ref.current?.querySelector<HTMLElement>("[data-autofocus]") ||
+      close.current
+    )?.focus();
     const old = document.body.style.overflow;
     document.body.style.overflow = "hidden";
     return () => {

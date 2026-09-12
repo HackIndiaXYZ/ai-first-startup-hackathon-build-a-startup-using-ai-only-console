@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import "./workspace-theme.css";
+import { appearanceBootstrap } from "@/lib/preferences";
 
 export const metadata: Metadata = {
-  title: "RecallScope — Evidence-first traceability",
+  title: "RecallScope · Batch traceability",
   description:
     "Trace ingredient lots to customer deliveries, review uncertain links, and run evidence-backed recall drills.",
   other: {
@@ -20,7 +22,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: appearanceBootstrap }} />
+      </head>
       <body className="antialiased">{children}</body>
     </html>
   );

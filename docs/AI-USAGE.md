@@ -36,6 +36,7 @@ The following are concise records of development instructions, not a verbatim du
 5. Preserve exact identifiers, original files, source references, review notes and evidence of field edits.
 6. Test the application through its actual interface and HTTP routes, including session isolation and failed writes.
 7. Prepare a pitch with synthetic results and unvalidated commercial assumptions labelled honestly.
+8. Refine the interface into an operator-focused workspace: night/system appearance, personalization, record search/filtering and report reading. Development slogans were removed from application navigation; source provenance and sample-data disclosures were preserved. No generated imagery was needed for this data workspace.
 
 ## Runtime extraction prompt
 

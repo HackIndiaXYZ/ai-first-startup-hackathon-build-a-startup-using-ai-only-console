@@ -27,6 +27,17 @@ Verified by actual UI interaction:
 
 Dialog focus management, explicit button labels, visible focus styles and reduced-motion support are implemented. No independent accessibility certification is claimed.
 
+## Interface refinement checks
+
+- Light and night appearance verified; the selected theme and compact density survived reload. A workspace-name edit survived reload without changing source data.
+- System appearance followed emulated light and dark device settings. The emulation was cleared after verification.
+- Desktop and 390 CSS-pixel layouts checked. At 390 pixels the page did not overflow horizontally; the trace map remains an intentionally scrollable region. Mobile navigation has text labels.
+- Search found a production batch on another lot and changed both selected lot and inspected batch correctly. Search focuses its input, opens with Ctrl K, and closes with Escape.
+- Combined document search/category filtering produced an explicit empty result; Clear filters restored the full list.
+- Review filtering showed the unmatched-ingredient item. Confirmation remained disabled with a note but no selected lot. Selecting the supported sample lot and confirming changed 720 confirmed / 720 unresolved packs to 1,080 / 360. The original O code stayed visible.
+- Source/document intake and the report reader were checked in the refreshed interface. Provider consent remains visible before extraction. No additional paid AI requests were needed for this UI-only change.
+- All 40 existing domain/provider tests, the type check, production build and HTTP integration suite passed after the interface changes.
+
 ## What still needs real-world evidence
 
 - Broader PDF/image extraction testing against difficult real document layouts, beyond the labelled synthetic fixtures.

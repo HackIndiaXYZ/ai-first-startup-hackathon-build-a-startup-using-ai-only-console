@@ -21,6 +21,14 @@ import {
   TriangleAlert,
   Truck,
   X,
+  Moon,
+  Sun,
+  Settings2,
+  ChevronsUpDown,
+  Clock3,
+  ScanLine,
+  Eye,
+  ListFilter,
 } from "lucide-react";
 import {
   traceLot,
@@ -28,10 +36,13 @@ import {
   type Batch,
   type SourceDocument,
   type Delivery,
+  type DrillReport,
 } from "@/lib/domain";
 import UploadPanel from "./upload-panel";
 import Modal from "./modal";
 import type { PublicAIConfig } from "@/lib/ai-config";
+import PreferencesPanel, { usePreferences } from "./preferences-panel";
+import WorkspaceSearch, { type Destination } from "./workspace-search";
 type View = "trace" | "records" | "review" | "reports";
 const fmt = (n: number) => n.toLocaleString("en-US");
 export function download(name: string, text: string, type = "text/markdown") {
@@ -43,6 +54,13 @@ export function download(name: string, text: string, type = "text/markdown") {
   setTimeout(() => URL.revokeObjectURL(u), 1000);
 }
 export default function Home() {
+  const { preferences, resolvedTheme, updatePreferences, storageAvailable } =
+    usePreferences();
+  const [settings, setSettings] = useState(false),
+    [searchOpen, setSearchOpen] = useState(false);
+  const [documentFilter, setDocumentFilter] = useState("all");
+  const [reviewFilter, setReviewFilter] = useState("all");
+  const [previewReport, setPreviewReport] = useState<DrillReport | null>(null);
   const [w, setW] = useState<Workspace | null>(null),
     [view, setView] = useState<View>("trace"),
     [lotId, setLotId] = useState("lot-a"),
@@ -69,6 +87,35 @@ export default function Home() {
     [query, setQuery] = useState(""),
     [confirm, setConfirm] = useState<"reset" | "clear" | null>(null),
     [help, setHelp] = useState(false);
+  const dialogOpen = !!(
+    settings ||
+    searchOpen ||
+    previewReport ||
+    upload ||
+    source ||
+    review ||
+    deliveryReview ||
+    confirm ||
+    help
+  );
+  useEffect(() => {
+    function shortcuts(event: KeyboardEvent) {
+      const target = event.target as HTMLElement;
+      if (
+        dialogOpen ||
+        busy ||
+        event.isComposing ||
+        target?.closest("input,textarea,select,[contenteditable='true']")
+      )
+        return;
+      if ((event.ctrlKey || event.metaKey) && event.key.toLowerCase() === "k") {
+        event.preventDefault();
+        setSearchOpen(true);
+      }
+    }
+    window.addEventListener("keydown", shortcuts);
+    return () => window.removeEventListener("keydown", shortcuts);
+  }, [dialogOpen, busy]);
   useEffect(() => {
     fetch("/api/workspace")
       .then(async (r) => {
@@ -128,12 +175,12 @@ export default function Home() {
   function beginReview(b: Batch) {
     setReview(b);
     setNote("");
-    setChosenLot(lotId || w?.lots[0]?.id || "");
+    setChosenLot("");
   }
   async function report() {
     if (await mutate({ action: "report", lotId })) {
       setView("reports");
-      setNotice("Report saved as a fixed snapshot of this drill.");
+      setNotice("Report created. This snapshot will stay unchanged.");
     }
   }
   const t = w ? traceLot(w, lotId) : null,
@@ -145,14 +192,67 @@ export default function Home() {
       (d) => !d.batchId || !w.batches.some((b) => b.id === d.batchId),
     ) || [];
   const reviewCount = unresolved.length + orphaned.length;
+  const matchingDocuments =
+    w?.documents.filter((d) => {
+      const kinds =
+        documentFilter === "receipts"
+          ? w.lots
+          : documentFilter === "production"
+            ? w.batches
+            : w.deliveries;
+      return (
+        (documentFilter === "all" ||
+          kinds.some((row) => row.sourceId === d.id)) &&
+        `${d.name} ${d.kind} ${d.text}`
+          .toLowerCase()
+          .includes(query.toLowerCase().trim())
+      );
+    }) || [];
+  const visibleReviews = [...unresolved]
+    .filter(
+      (b) =>
+        reviewFilter === "all" ||
+        (reviewFilter === "missing"
+          ? !b.sourceId
+          : reviewFilter === "lot"
+            ? !!b.sourceId
+            : false),
+    )
+    .sort(
+      (a, b) =>
+        (w?.deliveries
+          .filter((d) => d.batchId === b.id)
+          .reduce((n, d) => n + d.packs, 0) || 0) -
+        (w?.deliveries
+          .filter((d) => d.batchId === a.id)
+          .reduce((n, d) => n + d.packs, 0) || 0),
+    );
+  function navigate(destination: Destination) {
+    setSearchOpen(false);
+    setView(destination.view);
+    if (destination.lotId) setLotId(destination.lotId);
+    if (destination.view === "trace") setSelected(destination.batchId || "");
+    if (destination.sourceId)
+      evidence(destination.sourceId, destination.line || 0);
+  }
+  const initials = preferences.workspaceName.slice(0, 2).toUpperCase();
   const titles = {
-    trace: ["Trace workspace", "Follow the evidence. Know the scope."],
-    records: ["Source records", "Every connection begins with a record."],
-    review: ["Review queue", "Resolve the gaps that change the picture."],
-    reports: ["Drill reports", "A clear record of what you know."],
+    trace: [
+      "Trace lots",
+      "Follow an ingredient lot through production and delivery.",
+    ],
+    records: ["Documents", "Original records, ready when you need them."],
+    review: [
+      "Needs review",
+      "Resolve missing links, starting with the largest recorded exposure.",
+    ],
+    reports: ["Reports", "Your saved scope, sources and decisions."],
   };
   return (
     <div className="app-shell">
+      <a className="skip-link" href="#workspace-main">
+        Skip to workspace
+      </a>
       <aside className="sidebar">
         <a href="/" className="brand" aria-label="RecallScope home">
           <span className="brand-mark">
@@ -162,27 +262,26 @@ export default function Home() {
             Recall<b>Scope</b>
           </span>
         </a>
-        <div className="workspace-label">
-          <span className="avatar">F</span>
+        <button
+          className="workspace-label"
+          onClick={() => setSettings(true)}
+          aria-label="Workspace preferences"
+        >
+          <span className="avatar">{initials}</span>
           <div>
-            <strong>
-              {w?.synthetic ? "Fieldwork Bakery" : "Your workspace"}
-            </strong>
-            <small>
-              {w?.synthetic
-                ? "Demonstration workspace"
-                : "Private browser session"}
-            </small>
+            <strong>{preferences.workspaceName}</strong>
+            <small>Quality & operations</small>
           </div>
-        </div>
+          <ChevronsUpDown size={15} />
+        </button>
         <div className="nav-label">WORKSPACE</div>
         <nav aria-label="Main navigation">
           {(
             [
-              { id: "trace", label: "Trace workspace", icon: GitBranch },
-              { id: "records", label: "Source records", icon: FileText },
-              { id: "review", label: "Review queue", icon: ClipboardCheck },
-              { id: "reports", label: "Drill reports", icon: Layers3 },
+              { id: "trace", label: "Trace lots", icon: GitBranch },
+              { id: "records", label: "Documents", icon: FileText },
+              { id: "review", label: "Needs review", icon: ClipboardCheck },
+              { id: "reports", label: "Reports", icon: Layers3 },
             ] as const
           ).map((i) => (
             <button
@@ -201,58 +300,104 @@ export default function Home() {
           ))}
         </nav>
         <div className="sidebar-bottom">
-          <div className="exercise-note">
-            <FlaskConical size={21} />
-            <strong>Built for the practice run.</strong>
-            <p>
-              Trace the records, review the gaps, and rehearse your response.
-            </p>
-            <button onClick={() => setHelp(true)}>
-              How this drill works <ArrowUpRight size={14} />
-            </button>
+          <div className="workspace-summary">
+            <span>IN THIS WORKSPACE</span>
+            <div>
+              <strong>{w?.documents.length ?? "—"}</strong> documents{" "}
+              <span>·</span> <strong>{w?.lots.length ?? "—"}</strong> lots
+            </div>
           </div>
           <button className="help-button" onClick={() => setHelp(true)}>
-            <CircleHelp size={17} /> About this workspace
+            <CircleHelp size={17} /> Guide & shortcuts
           </button>
-          <div className="profile">
-            <span className="avatar">C</span>
+          <button className="help-button" onClick={() => setSettings(true)}>
+            <Settings2 size={17} /> Preferences
+          </button>
+          <button
+            className="profile"
+            onClick={() => setSettings(true)}
+            aria-label="Personalize workspace"
+          >
+            <span className="avatar personal-avatar">
+              {preferences.displayName.slice(0, 1).toUpperCase()}
+            </span>
             <div>
-              <strong>Console</strong>
-              <small>HackIndia 2026</small>
+              <strong>{preferences.displayName}</strong>
+              <small>Personal workspace</small>
             </div>
-            <ShieldCheck size={18} />
-          </div>
+            <Settings2 size={16} />
+          </button>
         </div>
       </aside>
-      <main className="main-area">
+      <main className="main-area" id="workspace-main" tabIndex={-1}>
         <header className="topbar">
           <div className="breadcrumb">
-            Workspace <ChevronRight size={14} />
+            <span>{preferences.workspaceName}</span> <ChevronRight size={14} />
             <strong>{titles[view][0]}</strong>
           </div>
           <div className="topbar-right">
-            <span className="sample-tag">
-              <FlaskConical size={14} />
-              {w?.synthetic
-                ? w.documents.some((d) => d.mode !== "sample")
-                  ? "Mixed demo + uploads"
-                  : "Synthetic demo"
-                : "Practice workspace"}
-            </span>
+            <button
+              className="quick-search"
+              onClick={() => setSearchOpen(true)}
+              disabled={busy}
+              aria-label="Find in workspace"
+            >
+              <Search size={17} />
+              <span>Find anything…</span>
+              <kbd>Ctrl K</kbd>
+            </button>
             <span className="save-state">
               {busy ? (
                 <LoaderCircle className="spin" size={15} />
               ) : (
                 <CheckCheck size={16} />
               )}{" "}
-              {busy ? "Saving…" : w ? "Saved in workspace" : "Connecting…"}
+              {busy ? "Saving…" : w ? "Saved" : "Connecting…"}
             </span>
+            <button
+              className="icon-button theme-toggle"
+              onClick={() =>
+                updatePreferences({
+                  theme: resolvedTheme === "dark" ? "light" : "dark",
+                })
+              }
+              aria-label={
+                resolvedTheme === "dark"
+                  ? "Switch to light mode"
+                  : "Switch to night mode"
+              }
+              title={resolvedTheme === "dark" ? "Light mode" : "Night mode"}
+            >
+              {resolvedTheme === "dark" ? (
+                <Sun size={19} />
+              ) : (
+                <Moon size={19} />
+              )}
+            </button>
+            <button
+              className="icon-button"
+              onClick={() => setSettings(true)}
+              aria-label="Open preferences"
+              title="Preferences"
+            >
+              <Settings2 size={19} />
+            </button>
           </div>
         </header>
         <div className="page-content">
           <div className="page-heading">
             <div>
-              <div className="eyebrow">EVIDENCE-FIRST TRACEABILITY</div>
+              <div className="page-context">
+                <span>WORKSPACE</span>
+                {w?.synthetic && (
+                  <span className="sample-tag">
+                    <FlaskConical size={13} />
+                    {w.documents.some((d) => d.mode !== "sample")
+                      ? "Sample + uploaded records"
+                      : "Sample records"}
+                  </span>
+                )}
+              </div>
               <h1>{titles[view][0]}</h1>
               <p>{titles[view][1]}</p>
             </div>
@@ -263,7 +408,7 @@ export default function Home() {
                   disabled={!lot || busy}
                   onClick={report}
                 >
-                  <ArrowDownToLine size={17} /> Save drill report
+                  <ClipboardCheck size={17} /> Create report
                 </button>
               )}
               <button
@@ -326,9 +471,7 @@ export default function Home() {
                         <Box size={22} />
                       </span>
                       <div>
-                        <label htmlFor="selected-lot">
-                          Investigating ingredient lot
-                        </label>
+                        <label htmlFor="selected-lot">Ingredient lot</label>
                         <select
                           id="selected-lot"
                           value={lotId}
@@ -352,7 +495,9 @@ export default function Home() {
                       <small>SUPPLIER</small>
                       <strong>{lot?.supplier || "No records yet"}</strong>
                     </div>
-                    <span className="drill-badge">Recall drill active</span>
+                    <span className="drill-badge">
+                      <ScanLine size={15} /> Trace view
+                    </span>
                   </section>
                   <section className="metrics" aria-label="Trace results">
                     <div className="metric">
@@ -388,7 +533,7 @@ export default function Home() {
                     </div>
                     <div className="metric">
                       <span>
-                        Source records <FileText size={16} />
+                        Documents <FileText size={16} />
                       </span>
                       <strong>{w.documents.length}</strong>
                       <p>Original evidence stays inspectable</p>
@@ -714,10 +859,8 @@ export default function Home() {
                       </span>
                       <span>
                         {w.synthetic
-                          ? w.documents.some((d) => d.mode !== "sample")
-                            ? "CONTAINS SYNTHETIC RECORDS"
-                            : "ALL RECORDS ARE SYNTHETIC"
-                          : "PRACTICE EXERCISE"}
+                          ? "Includes fictional sample records"
+                          : "Source-linked trace"}
                       </span>
                     </div>
                   </section>
@@ -791,6 +934,31 @@ export default function Home() {
                       </div>
                     )}
                   </section>
+                  {!!w.audit.length && (
+                    <section className="panel">
+                      <div className="activity-preview">
+                        <div>
+                          <strong>
+                            <Clock3
+                              size={15}
+                              style={{ display: "inline", marginRight: 7 }}
+                            />
+                            Latest decision · {w.audit[0].entity}
+                          </strong>
+                          <small>
+                            {w.audit[0].action} ·{" "}
+                            {new Date(w.audit[0].at).toLocaleString()}
+                          </small>
+                        </div>
+                        <button
+                          className="text-button"
+                          onClick={() => setView("review")}
+                        >
+                          View history <ArrowRight size={15} />
+                        </button>
+                      </div>
+                    </section>
+                  )}
                 </>
               )}
               {view === "records" && (
@@ -812,37 +980,72 @@ export default function Home() {
                       />
                     </label>
                   </div>
-                  {w.documents
-                    .filter((d) =>
-                      (d.name + " " + d.kind)
-                        .toLowerCase()
-                        .includes(query.toLowerCase()),
-                    )
-                    .map((d) => (
+                  <div className="filter-bar">
+                    <div
+                      className="filter-chips"
+                      aria-label="Document categories"
+                    >
+                      {[
+                        ["all", "All documents"],
+                        ["receipts", "Receipts"],
+                        ["production", "Production"],
+                        ["deliveries", "Deliveries"],
+                      ].map(([value, label]) => (
+                        <button
+                          key={value}
+                          aria-pressed={documentFilter === value}
+                          onClick={() => setDocumentFilter(value)}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                    <span>
+                      {matchingDocuments.length} of {w.documents.length}{" "}
+                      documents
+                    </span>
+                  </div>
+                  {matchingDocuments.map((d) => (
+                    <button
+                      className="record-row"
+                      key={d.id}
+                      onClick={() => evidence(d.id, 0)}
+                    >
+                      <span className="file-icon">
+                        <FileText size={22} />
+                      </span>
+                      <div>
+                        <strong>{d.name}</strong>
+                        <small>
+                          {d.kind} ·{" "}
+                          {d.mode === "sample"
+                            ? "Fictional sample"
+                            : d.mode === "ai"
+                              ? "Reviewed extraction"
+                              : "Reviewed import"}
+                        </small>
+                      </div>
+                      <span className="record-label">
+                        View evidence <ArrowUpRight size={15} />
+                      </span>
+                    </button>
+                  ))}
+                  {!!w.documents.length && !matchingDocuments.length && (
+                    <div className="empty-state">
+                      <Search size={28} />
+                      <h3>No documents match</h3>
+                      <p>Try another word or remove the category filter.</p>
                       <button
-                        className="record-row"
-                        key={d.id}
-                        onClick={() => evidence(d.id, 0)}
+                        className="button secondary"
+                        onClick={() => {
+                          setQuery("");
+                          setDocumentFilter("all");
+                        }}
                       >
-                        <span className="file-icon">
-                          <FileText size={22} />
-                        </span>
-                        <div>
-                          <strong>{d.name}</strong>
-                          <small>
-                            {d.kind} ·{" "}
-                            {d.mode === "sample"
-                              ? "Synthetic sample"
-                              : d.mode === "ai"
-                                ? "AI-assisted extraction · reviewed"
-                                : "Operator-reviewed import"}
-                          </small>
-                        </div>
-                        <span className="record-label">
-                          View evidence <ArrowUpRight size={15} />
-                        </span>
+                        Clear filters
                       </button>
-                    ))}
+                    </div>
+                  )}
                   {!w.documents.length && (
                     <div className="empty-inline">
                       Add a supplier invoice, production sheet or delivery
@@ -851,9 +1054,8 @@ export default function Home() {
                   )}
                   <div className="records-bottom">
                     <p>
-                      PDF and image extraction uses AI when connected.
-                      Structured text records can be reviewed and imported
-                      without AI.
+                      Search file names and document text. A document may appear
+                      in more than one category.
                     </p>
                     <button
                       className="text-button"
@@ -886,20 +1088,48 @@ export default function Home() {
                       </p>
                     </div>
                   </div>
+                  <div className="review-filters">
+                    <ListFilter size={18} />
+                    <div
+                      className="filter-chips"
+                      aria-label="Review categories"
+                    >
+                      {[
+                        ["all", `All (${reviewCount})`],
+                        [
+                          "lot",
+                          `Ingredient links (${unresolved.filter((b) => b.sourceId).length})`,
+                        ],
+                        [
+                          "missing",
+                          `Missing records (${unresolved.filter((b) => !b.sourceId).length})`,
+                        ],
+                        ["delivery", `Delivery links (${orphaned.length})`],
+                      ].map(([value, label]) => (
+                        <button
+                          key={value}
+                          aria-pressed={reviewFilter === value}
+                          onClick={() => setReviewFilter(value)}
+                        >
+                          {label}
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                   <div className="review-cards">
-                    {unresolved.map((b) => (
+                    {visibleReviews.map((b) => (
                       <article className="review-card" key={b.id}>
                         <div className="review-card-top">
                           <span className="status-pill warn">
                             {b.sourceId
-                              ? "Ambiguous identifier"
+                              ? "Ingredient link unconfirmed"
                               : "Missing source record"}
                           </span>
                           <span className="mono">{b.code}</span>
                         </div>
                         <h2>
                           {b.sourceId
-                            ? "A letter or a zero?"
+                            ? "Ingredient lot needs review"
                             : "This batch has no consumption sheet."}
                         </h2>
                         <p>
@@ -935,45 +1165,65 @@ export default function Home() {
                       </article>
                     ))}
                   </div>
-                  {orphaned.map((d) => (
-                    <article className="review-card orphan-card" key={d.id}>
-                      <span className="status-pill warn">
-                        Delivery batch unknown
-                      </span>
-                      <h2>
-                        {d.customer} · {fmt(d.packs)} packs
-                      </h2>
-                      <p>
-                        The dispatch has no confirmed production batch. These
-                        packs stay unresolved until the source supports a batch
-                        reference.
-                      </p>
-                      <div className="heading-actions">
+                  {(reviewFilter === "all" || reviewFilter === "delivery") &&
+                    orphaned.map((d) => (
+                      <article className="review-card orphan-card" key={d.id}>
+                        <span className="status-pill warn">
+                          Delivery batch unknown
+                        </span>
+                        <h2>
+                          {d.customer} · {fmt(d.packs)} packs
+                        </h2>
+                        <p>
+                          The dispatch has no confirmed production batch. These
+                          packs stay unresolved until the source supports a
+                          batch reference.
+                        </p>
+                        <div className="heading-actions">
+                          <button
+                            className="button secondary"
+                            onClick={() => evidence(d.sourceId, d.line)}
+                          >
+                            Inspect dispatch
+                          </button>
+                          <button
+                            className="button primary"
+                            disabled={!w.batches.length}
+                            onClick={() => {
+                              setDeliveryReview(d);
+                              setChosenBatch(w.batches[0]?.id || "");
+                              setNote("");
+                            }}
+                          >
+                            Review batch reference
+                          </button>
+                        </div>
+                      </article>
+                    ))}
+                  {!!reviewCount &&
+                    !visibleReviews.length &&
+                    !(
+                      orphaned.length &&
+                      (reviewFilter === "all" || reviewFilter === "delivery")
+                    ) && (
+                      <div className="empty-inline">
+                        No open items in this category.{" "}
                         <button
-                          className="button secondary"
-                          onClick={() => evidence(d.sourceId, d.line)}
+                          className="text-button"
+                          onClick={() => setReviewFilter("all")}
                         >
-                          Inspect dispatch
-                        </button>
-                        <button
-                          className="button primary"
-                          disabled={!w.batches.length}
-                          onClick={() => {
-                            setDeliveryReview(d);
-                            setChosenBatch(w.batches[0]?.id || "");
-                            setNote("");
-                          }}
-                        >
-                          Review batch reference
+                          Show all items
                         </button>
                       </div>
-                    </article>
-                  ))}
+                    )}
                   {!unresolved.length && !orphaned.length && (
                     <div className="empty-state">
                       <CheckCheck size={35} />
-                      <h2>All recorded production links reviewed</h2>
-                      <p>This is not a safety or completeness certification.</p>
+                      <h2>No open links to review</h2>
+                      <p>
+                        All recorded links have a decision. New records may
+                        reveal additional gaps.
+                      </p>
                     </div>
                   )}
                   <section className="panel">
@@ -1009,7 +1259,7 @@ export default function Home() {
                 <section className="panel">
                   <div className="section-bar">
                     <div>
-                      <h2>Saved drill snapshots</h2>
+                      <h2>Saved reports</h2>
                       <small>
                         Later corrections never rewrite a previous report.
                       </small>
@@ -1019,7 +1269,7 @@ export default function Home() {
                       disabled={!lot || busy}
                       onClick={report}
                     >
-                      <Plus size={16} /> Save current drill
+                      <Plus size={16} /> Create report
                     </button>
                   </div>
                   {w.reports.length ? (
@@ -1032,25 +1282,33 @@ export default function Home() {
                           <div className="eyebrow">
                             {r.id} · REVISION {r.revision}
                           </div>
-                          <h3>Recall drill · {r.lotCode}</h3>
+                          <h3>{r.lotCode}</h3>
                           <p>
                             {fmt(r.confirmedPacks)} confirmed packs ·{" "}
                             {fmt(r.unresolvedPacks)} unresolved ·{" "}
                             {new Date(r.at).toLocaleString()}
                           </p>
                         </div>
-                        <button
-                          className="button secondary"
-                          onClick={() => download(r.id + ".md", r.content)}
-                        >
-                          <ArrowDownToLine size={16} /> Download report
-                        </button>
+                        <div className="report-actions">
+                          <button
+                            className="button secondary"
+                            onClick={() => setPreviewReport(r)}
+                          >
+                            <Eye size={16} /> Open report
+                          </button>
+                          <button
+                            className="button secondary"
+                            onClick={() => download(r.id + ".md", r.content)}
+                          >
+                            <ArrowDownToLine size={16} /> Download report
+                          </button>
+                        </div>
                       </article>
                     ))
                   ) : (
                     <div className="empty-state">
                       <ClipboardCheck size={36} />
-                      <h2>Make the drill a record.</h2>
+                      <h2>Keep a record of this trace</h2>
                       <p>
                         Save the current scope, sources, unresolved exposure and
                         decisions in one report.
@@ -1060,13 +1318,13 @@ export default function Home() {
                         disabled={!lot || busy}
                         onClick={report}
                       >
-                        Save your first drill report <ArrowRight size={16} />
+                        Create your first report <ArrowRight size={16} />
                       </button>
                     </div>
                   )}
                   <p className="report-note">
-                    Practice records for operator review. RecallScope does not
-                    send recall notices or certify food safety.
+                    Reports capture the recorded scope and decisions at the time
+                    they were created. No recall notice is sent.
                   </p>
                 </section>
               )}
@@ -1074,19 +1332,107 @@ export default function Home() {
           )}
           <footer className="page-footer">
             <span>
-              RecallScope <span>/</span> Evidence before certainty.
+              RecallScope <span>/</span> Batch traceability
             </span>
             <div>
-              <button disabled={!w} onClick={() => setConfirm("reset")}>
-                Reset sample drill
-              </button>
-              <button disabled={!w} onClick={() => setConfirm("clear")}>
-                Start empty workspace
-              </button>
+              <button onClick={() => setHelp(true)}>Workspace guide</button>
             </div>
           </footer>
         </div>
       </main>
+      {settings && (
+        <PreferencesPanel
+          preferences={preferences}
+          onChange={updatePreferences}
+          onClose={() => setSettings(false)}
+          storageAvailable={storageAvailable}
+          ready={!!w && !busy}
+          onReset={() => {
+            setSettings(false);
+            setConfirm("reset");
+          }}
+          onClear={() => {
+            setSettings(false);
+            setConfirm("clear");
+          }}
+        />
+      )}
+      {searchOpen && (
+        <WorkspaceSearch
+          workspace={w}
+          onClose={() => setSearchOpen(false)}
+          onNavigate={navigate}
+        />
+      )}
+      {previewReport && (
+        <Modal
+          title={"Report · " + previewReport.lotCode}
+          label={previewReport.id}
+          wide
+          onClose={() => setPreviewReport(null)}
+        >
+          <div className="modal-body">
+            <p>
+              Saved {new Date(previewReport.at).toLocaleString()} · revision{" "}
+              {previewReport.revision}. This is a fixed snapshot.
+            </p>
+          </div>
+          <article className="report-preview" aria-label="Saved report content">
+            <div className="report-summary">
+              <div>
+                <strong>{fmt(previewReport.confirmedPacks)}</strong>
+                <span>Confirmed packs</span>
+              </div>
+              <div>
+                <strong>{fmt(previewReport.unresolvedPacks)}</strong>
+                <span>Unresolved packs</span>
+              </div>
+              <div>
+                <strong>{previewReport.customers.length}</strong>
+                <span>Customers</span>
+              </div>
+            </div>
+            {previewReport.content.split(/\n\n+/).map((block, i) => {
+              if (block.startsWith("# "))
+                return <h2 key={i}>{block.slice(2)}</h2>;
+              if (block.startsWith("## ")) {
+                const [heading, ...body] = block.split("\n");
+                return (
+                  <section key={i}>
+                    <h3>{heading.slice(3)}</h3>
+                    {body.length > 0 && <p>{body.join("\n")}</p>}
+                  </section>
+                );
+              }
+              if (block.startsWith("- "))
+                return (
+                  <ul key={i}>
+                    {block.split(/\n(?=- )/).map((line, j) => (
+                      <li key={j}>{line.slice(2)}</li>
+                    ))}
+                  </ul>
+                );
+              return <p key={i}>{block}</p>;
+            })}
+          </article>
+          <div className="modal-footer">
+            <button
+              className="button secondary"
+              onClick={() => setPreviewReport(null)}
+            >
+              Close
+            </button>
+            <button
+              className="button primary"
+              onClick={() =>
+                download(previewReport.id + ".md", previewReport.content)
+              }
+            >
+              <ArrowDownToLine size={16} /> Download report
+            </button>
+          </div>
+        </Modal>
+      )}
       {upload && w && (
         <UploadPanel
           workspace={w}
@@ -1188,7 +1534,7 @@ export default function Home() {
       {review && w && (
         <Modal
           title="Confirm the ingredient link"
-          label="HUMAN REVIEW"
+          label="REVIEW INGREDIENT LINK"
           busy={busy}
           onClose={() => setReview(null)}
         >
@@ -1210,6 +1556,7 @@ export default function Home() {
               value={chosenLot}
               onChange={(e) => setChosenLot(e.target.value)}
             >
+              <option value="">Choose the supported ingredient lot</option>
               {w.lots.map((l) => (
                 <option key={l.id} value={l.id}>
                   {l.code} · {l.supplier}
@@ -1280,7 +1627,7 @@ export default function Home() {
       {deliveryReview && w && (
         <Modal
           title="Identify the delivery batch"
-          label="HUMAN REVIEW"
+          label="REVIEW DELIVERY LINK"
           busy={busy}
           onClose={() => setDeliveryReview(null)}
         >
@@ -1360,8 +1707,8 @@ export default function Home() {
         <Modal
           title={
             confirm === "reset"
-              ? "Reset the sample drill?"
-              : "Start an empty workspace?"
+              ? "Load the sample records?"
+              : "Clear this workspace?"
           }
           busy={busy}
           onClose={() => setConfirm(null)}
@@ -1396,16 +1743,13 @@ export default function Home() {
                 }
               }}
             >
-              {confirm === "reset" ? "Reset sample" : "Start empty"}
+              {confirm === "reset" ? "Load sample records" : "Clear workspace"}
             </button>
           </div>
         </Modal>
       )}
       {help && (
-        <Modal
-          title="An evidence-first recall drill"
-          onClose={() => setHelp(false)}
-        >
+        <Modal title="Working with RecallScope" onClose={() => setHelp(false)}>
           <div className="modal-body help-content">
             <p>
               Follow one ingredient lot through production batches to recorded
@@ -1426,14 +1770,19 @@ export default function Home() {
               </li>
             </ol>
             <p>
-              All sample records are synthetic. Their extraction is
-              pre-authored, not a live AI run. Uploaded documents use live AI
-              only when connected.
+              Sample records are fictional and are labelled throughout the
+              workspace. Document extraction uses the provider named before you
+              upload; you review the result before it is added.
             </p>
             <p>
-              Records are saved server-side for this browser session. This is a
-              single-operator practice tool without team accounts. It does not
-              replace a real recall procedure.
+              Records and reports are saved for this browser session. Keep your
+              own copies of important reports. This workspace does not send
+              recall notices or replace your organisation’s recall procedure.
+            </p>
+            <p>
+              <kbd>Ctrl K</kbd> or <kbd>⌘ K</kbd> opens workspace search. Use{" "}
+              <kbd>Tab</kbd> to move through results and <kbd>Esc</kbd> to close
+              a panel.
             </p>
           </div>
         </Modal>

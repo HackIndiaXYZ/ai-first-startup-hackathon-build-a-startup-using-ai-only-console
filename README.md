@@ -5,7 +5,7 @@ AI-assisted ingredient-to-customer traceability for small food manufacturers, fo
 
 Built for **Team Console · HackIndia AI-First Startup Hackathon · AI in any startup**.
 
-![RecallScope workspace](docs/screenshots/desktop-trace.png)
+The workspace includes light, night and system appearance, device-local personalization, document filters, workspace search and an in-app report reader.
 
 ## What works
 
@@ -18,6 +18,9 @@ Built for **Team Console · HackIndia AI-First Startup Hackathon · AI in any st
 - Fixed report snapshots that include confirmed and unresolved customers, source references and quantity limitations.
 - Server-side persistence, isolated browser sessions, origin checks and revision-based concurrent-write protection.
 - Responsive desktop/mobile UI and keyboard-accessible dialogs.
+- Persistent light/night/system appearance and comfortable/compact density.
+- Editable workspace/display names, quick search with Ctrl/⌘ K, document categories and review filters.
+- In-app report reading and a shortcut to the latest decision history.
 
 This is a local, single-operator hackathon prototype. It is not a live recall system or a compliance certification.
 
@@ -42,19 +45,25 @@ For later runs, only `cd product` and `npm run dev` are needed. Keep the server 
 1. Open the sample workspace and select **FL-260901-A**.
 2. See **720 confirmed packs**, **720 unresolved packs**, and **2 confirmed customers**.
 3. Inspect CK-0903-01 and its original production sheet.
-4. Open **Review queue → Review source & resolve** for CK-0904-01.
+4. Open **Needs review → Review source & resolve** for CK-0904-01.
 5. Compare its recorded **FL-2609O1-A** with the supplier lot **FL-260901-A**. Enter an evidence note and confirm.
 6. Confirm the new result: **1,080 confirmed packs, 360 unresolved, 3 customers**.
 7. CK-0904-02 remains unresolved because its consumption sheet is missing.
-8. Save a drill report. Review history and report snapshots survive a page reload.
+8. Choose **Create report**, then **Open report** to inspect the saved snapshot. Review history and report snapshots survive a page reload.
 
-All demo entities and records are fictional. The seeded records are pre-authored; loading them is **not** represented as live AI extraction. Mixed uploads retain a synthetic-data warning. Use **Start empty workspace** to work without the fictional dataset.
+All demo entities and records are fictional. The seeded records are pre-authored; loading them is **not** represented as live AI extraction. Mixed uploads retain a sample-data label. Use **Preferences → Workspace data → Clear workspace** to work without the fictional dataset; this explicitly confirms replacement of the current records and reports. **Load sample records** is in the same section.
 
 ## Try document import
 
-`sample-records/recallscope-synthetic-import.csv` contains a separate, fictional receipt, batch and delivery. Use **Add records → Structured CSV**. The review shows three records; approval yields **180 delivered packs** for DEMO-FL-01.
+`sample-records/recallscope-synthetic-import.csv` contains a separate, fictional receipt, batch and delivery. Use **Add records → Import CSV**. The review shows three records; approval yields **180 delivered packs** for DEMO-FL-01.
 
 Use the exact CSV headers and explicit units. Unknown receipt/production quantities may remain blank and will remain unknown. A delivery needs a known positive whole pack count to be imported. This version tracks **one ingredient lot per production batch**, not multi-lot recipes or rework.
+
+## Make the workspace yours
+
+Use the moon/sun button for a quick appearance switch, or open **Preferences** for Light, Night or System and layout density. Appearance and display names are stored on this device; names do not identify an authenticated team account or rewrite source records. System appearance follows device changes. The sample-data disclosure stays independent of personalization.
+
+**Find in workspace** (Ctrl/⌘ K) searches lot codes, suppliers, batches, customers and original document text. Document categories derive from the linked receipt/production/delivery records, so one document can appear in several categories. Search and filters do not change trace calculations. **Needs review** supports issue filters and orders ingredient-link items by recorded unresolved packs.
 
 ## Connect live AI
 

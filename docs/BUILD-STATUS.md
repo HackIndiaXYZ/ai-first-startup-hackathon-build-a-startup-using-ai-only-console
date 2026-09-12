@@ -16,6 +16,7 @@ Track: AI in any startup
 - [x] Preserve source values, operator notes, changes and report snapshots.
 - [x] Reject duplicate references, invalid dates, quantity conflicts, cross-session files and stale writes.
 - [x] Check the core workflow in the browser and at desktop/mobile widths.
+- [x] Refine the interface with night mode, device-local personalization/density, quick search, document/review filters and a readable report preview.
 - [x] Prepare source files, sample data, AI usage record, pitch deck and demo script.
 
 ## Remaining before a credible final submission

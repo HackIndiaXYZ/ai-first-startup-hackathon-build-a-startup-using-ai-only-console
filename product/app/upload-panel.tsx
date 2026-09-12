@@ -4,7 +4,7 @@ import {
   Check,
   FileText,
   LoaderCircle,
-  Sparkles,
+  ScanLine,
   Upload,
   ArrowDownToLine,
   TriangleAlert,
@@ -175,7 +175,9 @@ export default function UploadPanel({
   return (
     <Modal
       title={draft ? "Review proposed records" : "Add source records"}
-      label={draft ? "REVIEW BEFORE CONNECTING" : "DOCUMENT INTAKE"}
+      label={
+        draft ? "STEP 2 OF 2 · CHECK RECORDS" : "STEP 1 OF 2 · ADD DOCUMENT"
+      }
       onClose={close}
       busy={busy}
       wide={!!draft}
@@ -191,8 +193,8 @@ export default function UploadPanel({
               <FlaskConical size={18} />
               <p>
                 This workspace contains fictional sample records. New uploads
-                will be mixed with them. Use “Start empty workspace” first to
-                work only with your own records.
+                will be mixed with them. To work only with your own records,
+                clear the workspace in Preferences first.
               </p>
             </div>
           )}
@@ -202,11 +204,11 @@ export default function UploadPanel({
               onClick={() => setMode("ai")}
               disabled={busy}
             >
-              <Sparkles size={20} />
-              <strong>Read with AI</strong>
+              <ScanLine size={20} />
+              <strong>Read a document</strong>
               <small>PDF, image or text</small>
               <span>
-                {aiAvailable ? ai.label + " configured" : "Connection needed"}
+                {aiAvailable ? "Using " + ai.label : "Connection needed"}
               </span>
             </button>
             <button
@@ -215,17 +217,17 @@ export default function UploadPanel({
               disabled={busy}
             >
               <FileText size={20} />
-              <strong>Structured CSV</strong>
+              <strong>Import CSV</strong>
               <small>Review exact record fields</small>
-              <span>Available now</span>
+              <span>From a spreadsheet</span>
             </button>
           </div>
           {mode === "ai" && !aiAvailable && (
             <div className="import-info">
               <TriangleAlert size={18} />
               <p>
-                Live AI extraction is not connected yet. You can explore the
-                sample drill or import records using the CSV template.
+                Document reading is unavailable. You can still import records
+                using the CSV template.
               </p>
             </div>
           )}
@@ -305,8 +307,9 @@ export default function UploadPanel({
             </span>
             <strong>{records.length} proposed records</strong>
             <p>
-              Compare every field with the source. Correct identifiers and
-              quantities below; leave unsupported identifiers blank.
+              Match the printed codes exactly and check quantities against the
+              source. Leave unknown fields blank. Resolve conflicting links
+              after import.
             </p>
             {draft.document.extraction && (
               <p>
@@ -448,8 +451,10 @@ export default function UploadPanel({
               ? "Saving reviewed records…"
               : busyMessage
             : draft
-              ? "Confirm records & connect"
-              : "Prepare for review"}
+              ? "Add reviewed records"
+              : mode === "ai"
+                ? "Read document"
+                : "Review CSV"}
         </button>
       </div>
     </Modal>
