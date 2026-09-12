@@ -41,10 +41,11 @@ cd product
 npm ci
 npm run build
 node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0000_nosy_vulcan.sql
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0001_long_silver_surfer.sql
 npm run dev
 ```
 
-Run the schema command **once for a new local database**, not on every restart. The development server prints its local URL (normally http://127.0.0.1:5173). Local D1/R2 data lives in ignored `product/.wrangler/`.
+Run both schema commands **once for a new local database**, not on every restart. For an existing installation, apply only the new migration. The development server prints its local URL (normally http://127.0.0.1:5173). Local D1/R2 data lives in ignored `product/.wrangler/`.
 
 For later runs, only `cd product` and `npm run dev` are needed. Keep the server running while using the preview. From `product/`, `npm run build` followed by `npm start` opens the built application in a local Worker preview.
 

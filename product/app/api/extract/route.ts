@@ -1,10 +1,11 @@
 import { env } from "cloudflare:workers";
-import { session, json, failure, checkOrigin, AppError } from "@/lib/store";
+import { session, json, failure, checkOrigin, AppError, db } from "@/lib/store";
 import { parseCsv } from "@/lib/import-records";
 import { extractWithAI, extractWithFireworks } from "@/lib/ai-extract";
 import { aiConfig } from "@/lib/ai-config";
 import { fingerprint, validateRenderedPages } from "@/lib/document-input";
 import type { Draft } from "@/lib/draft";
+import { dailyRequestLimit, reserveAIRequest } from "@/lib/request-budget";
 export async function POST(req: Request) {
   try {
     checkOrigin(req);
@@ -22,9 +23,7 @@ export async function POST(req: Request) {
     if (file.size > 5000000)
       throw new AppError("Use a document smaller than 5 MB.", 413);
     if (w.documents.length >= 100)
-      throw new AppError(
-        "This demo workspace supports up to 100 source documents.",
-      );
+      throw new AppError("This workspace supports up to 100 source documents.");
     const allowed = [
       "text/plain",
       "text/csv",
@@ -66,6 +65,17 @@ export async function POST(req: Request) {
     const hash = await fingerprint(bytes);
     if (w.documents.some((d) => d.hash === hash))
       throw new AppError("This document is already in the workspace.", 409);
+    if (
+      mode === "ai" &&
+      !(await reserveAIRequest(
+        db(),
+        dailyRequestLimit(env.AI_DAILY_REQUEST_LIMIT),
+      ))
+    )
+      throw new AppError(
+        "Today's AI reading allowance is used. You can continue tracing or import CSV.",
+        429,
+      );
     let extracted;
     try {
       extracted =

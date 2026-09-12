@@ -13,7 +13,7 @@ Run these from this directory after installing dependencies and applying the ini
 - `npm start` - preview the built Worker locally; this does not deploy it.
 - `npm run test:api` - check the running app's API in isolated sessions.
 
-The AI connection is optional for the sample workflow and reviewed CSV import. See [provider configuration](../README.md#connect-live-ai) for Fireworks and OpenAI. Keep keys in the ignored `.env` file.
+The AI connection is optional for the sample workflow and reviewed CSV import. See [provider configuration](../README.md#connect-ai-extraction) for Fireworks and OpenAI. Keep keys in the ignored `.env` file.
 
 ## Code map
 
@@ -34,6 +34,6 @@ The app retains the Vinext/Cloudflare Worker starter and its supporting componen
 
 A clean checkout defaults to the portable execution profile. Only when working through the Sites plugin should its owner follow that plugin's execution-profile and hosting workflow. No plugin path is required for ordinary local setup or GitHub Actions.
 
-The existing `.openai/hosting.json` declares the logical D1 and R2 bindings. Runtime access controls, hosted resources and provider secrets still need to be configured before a public deployment. The implemented browser session is not a team authentication system.
+The `.openai/hosting.json` identifies the Site and declares the logical D1 and R2 bindings. Hosting manages audience and server-side provider secrets separately. A global daily AI request allowance is enforced atomically in D1 and configured with `AI_DAILY_REQUEST_LIMIT` (default 30; 0 pauses requests). The implemented browser session is not a team authentication system.
 
-See the root [architecture and limits](../README.md#architecture-and-limits) and [validation record](../docs/VALIDATION.md) for the actual supported behavior. Retained starter examples and optional sign-in helpers do not imply that RecallScope uses those features.
+See [how it works](../README.md#how-it-works) and the [validation record](../docs/VALIDATION.md) for the actual supported behavior. Retained starter examples and optional sign-in helpers do not imply that RecallScope uses those features.

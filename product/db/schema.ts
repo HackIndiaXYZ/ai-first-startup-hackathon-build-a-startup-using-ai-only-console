@@ -6,3 +6,8 @@ export const workspaces = sqliteTable("workspaces", {
   data: text("data").notNull(),
   updatedAt: text("updated_at").notNull(),
 });
+
+export const aiRequestUsage = sqliteTable("ai_request_usage", {
+  day: text("day").primaryKey(),
+  requests: integer("requests").notNull().default(0),
+});

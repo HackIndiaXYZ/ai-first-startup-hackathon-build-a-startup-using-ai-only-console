@@ -7,6 +7,56 @@ import { parseCsv, csvTemplate, importRecords } from "../lib/import-records";
 import { sampleWorkspace } from "../lib/sample";
 import { createReport } from "../lib/domain";
 import { PDFDocument } from "pdf-lib";
+import { DatabaseSync } from "node:sqlite";
+import { dailyRequestLimit, reserveAIRequest } from "../lib/request-budget";
+
+test("public AI allowance is atomic and resets by UTC day", async () => {
+  const sql = new DatabaseSync(":memory:");
+  sql.exec(
+    "CREATE TABLE ai_request_usage(day TEXT PRIMARY KEY, requests INTEGER NOT NULL DEFAULT 0)",
+  );
+  const db = {
+    prepare(query: string) {
+      return {
+        bind(...values: (string | number)[]) {
+          return {
+            async first<T>() {
+              return (sql.prepare(query).get(...values) || null) as T | null;
+            },
+          };
+        },
+      };
+    },
+  };
+  try {
+    const today = new Date("2026-09-12T23:59:59Z");
+    const results = await Promise.all(
+      Array.from({ length: 12 }, () => reserveAIRequest(db, 3, today)),
+    );
+    assert.equal(results.filter(Boolean).length, 3);
+    assert.equal(
+      await reserveAIRequest(db, 3, new Date("2026-09-13T00:00:00Z")),
+      true,
+    );
+    assert.equal(await reserveAIRequest(db, 0, today), false);
+    assert.equal(
+      sql
+        .prepare("SELECT requests FROM ai_request_usage WHERE day = ?")
+        .get("2026-09-12")?.requests,
+      3,
+    );
+  } finally {
+    sql.close();
+  }
+});
+
+test("AI allowance configuration defaults safely and supports an explicit pause", () => {
+  assert.equal(dailyRequestLimit(), 30);
+  for (const value of ["bad", "-1", "1.5", "501", "Infinity", " "])
+    assert.equal(dailyRequestLimit(value), 30);
+  assert.equal(dailyRequestLimit("0"), 0);
+  assert.equal(dailyRequestLimit("50"), 50);
+});
 
 test("provider selection retains OpenAI, never falls back from an explicit choice, and hides keys", () => {
   assert.equal(aiConfig({ OPENAI_API_KEY: "test-openai" }).provider, "openai");

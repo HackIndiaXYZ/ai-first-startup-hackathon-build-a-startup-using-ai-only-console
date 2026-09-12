@@ -7,5 +7,6 @@ declare namespace Cloudflare {
     AI_PROVIDER?: string;
     FIREWORKS_API_KEY?: string;
     FIREWORKS_MODEL?: string;
+    AI_DAILY_REQUEST_LIMIT?: string;
   }
 }

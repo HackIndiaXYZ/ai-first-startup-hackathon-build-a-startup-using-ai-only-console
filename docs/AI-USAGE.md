@@ -5,7 +5,7 @@ Prepared for HackIndia's AI-first workflow documentation requirement.
 
 The participant selected RecallScope after AI-assisted project research, then authorised autonomous implementation: “ok, can start now, all you decide for first prize … continuously until before push to github or where you think critical issue to stop”.
 
-The participant supplied the required team repository and GitHub identity. The build remains local, before push.
+The participant supplied the required team repository and GitHub identity, authorized the official GitHub publication, and subsequently requested a public app for judges. Source publication is complete. The demonstration video is intentionally deferred at the participant's request.
 
 ## Tools and roles
 
@@ -13,13 +13,27 @@ The participant supplied the required team repository and GitHub identity. The b
 |---|---|
 | Codex | Product scoping, implementation, synthetic source construction, tests, debugging, visual review, build packaging and documentation |
 | Delegated Codex reviewers | Independent competition-requirement checks and adversarial traceability review |
-| OpenAI Responses API adapter | Implemented runtime extraction from PDF/image/text into a structured review proposal; live credentials and validation pending |
+| OpenAI Responses API adapter | Configurable runtime extraction from PDF/image/text into structured proposals; Fireworks is the selected and live-verified provider |
 | Fireworks / Kimi K2.6 | User-selected development provider; actual synthetic text and PDF extraction tested with explicit review before import |
 | PDF.js and pdf-lib | Existing open-source libraries for browser page rendering and independent server page-count checks; these libraries are not claimed as AI-authored code |
 | Browser tooling | Actual interaction checks: review, recalculation, reload persistence, import approval, reports and responsive layouts |
 | Presentation tooling | Editable pitch deck creation and rendering checks |
 
 Task-specific application code was authored by Codex under participant direction. The project also contains an existing MIT-licensed starter and third-party packages. No audited numerical percentage of the entire dependency tree is claimed. The working history and source identify AI-produced custom work and reused dependencies separately.
+
+## AI-led work across the seven activities
+
+| Activity | Completed work and evidence |
+|---|---|
+| Idea generation | AI-assisted selection and scope of ingredient-to-customer traceability; product decisions recorded below |
+| Market research | Published-source desk research, competitor comparison and buyer/pricing hypotheses in [market research](PILOT-AND-ALTERNATIVES.md) |
+| UI/UX design | Trace map, document library, report reader, personalized appearance and responsive interaction design |
+| Coding | Custom React/TypeScript, server routes, extraction adapters and deterministic traceability rules in the official repository |
+| Testing | Automated domain/provider/SQL checks, browser and API integration, and recorded live Fireworks extraction |
+| Deployment | Sites hosting configuration, database migrations, private server-side Fireworks secret and public request allowance; the verified public URL is recorded in the project overview |
+| Pitch creation | AI-authored, editable [pitch deck](RecallScope-Pitch.pptx) with visual verification |
+
+The fictional bakery records illustrate the product. Market research means documented desk research, and is separate from customer interviews or manufacturer validation. Those are not claimed as completed activities.
 
 ## Evidence for the 80% AI-driven execution requirement
 
