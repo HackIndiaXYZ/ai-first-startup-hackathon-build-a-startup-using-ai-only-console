@@ -248,7 +248,9 @@ export function createReport(
         (a) =>
           a.beforeLotId === lotId ||
           a.afterLotId === lotId ||
-          t.batches.some((b) => b.code === a.entity),
+          t.batches.some((b) => b.code === a.entity) ||
+          t.deliveries.some((d) => d.id === a.entity) ||
+          t.unresolvedDeliveries.some((d) => d.id === a.entity),
       )
       .map(
         (a) =>

@@ -90,6 +90,8 @@ npm run test:api
 
 See [validation results](docs/VALIDATION.md), [AI usage](docs/AI-USAGE.md), [demo script](docs/DEMO-SCRIPT.md), [build status](docs/BUILD-STATUS.md), and the [pitch deck](docs/RecallScope-Pitch.pptx).
 
+See the [76-item readiness checklist](docs/CHAMPIONSHIP-CHECKLIST.md), [printable checklist](docs/CHAMPIONSHIP-CHECKLIST.pdf), and [alternative comparison / pilot plan](docs/PILOT-AND-ALTERNATIVES.md) for the remaining evidence and release work.
+
 ## Delivery status
 
 **No GitHub push or competition submission has been made.** The required upstream is:

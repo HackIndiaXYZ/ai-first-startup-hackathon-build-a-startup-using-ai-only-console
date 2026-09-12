@@ -43,6 +43,7 @@ import Modal from "./modal";
 import type { PublicAIConfig } from "@/lib/ai-config";
 import PreferencesPanel, { usePreferences } from "./preferences-panel";
 import WorkspaceSearch, { type Destination } from "./workspace-search";
+import ReportComparison from "./report-comparison";
 type View = "trace" | "records" | "review" | "reports";
 const fmt = (n: number) => n.toLocaleString("en-US");
 export function download(name: string, text: string, type = "text/markdown") {
@@ -624,10 +625,16 @@ export default function Home() {
                                       key={b.id}
                                       className={
                                         b.lotId === lotId
-                                          ? "edge-confirmed"
-                                          : pending
-                                            ? "edge-pending"
-                                            : "edge-other"
+                                          ? "edge-confirmed" +
+                                            (selected === b.id
+                                              ? " edge-selected"
+                                              : "")
+                                          : (pending
+                                              ? "edge-pending"
+                                              : "edge-other") +
+                                            (selected === b.id
+                                              ? " edge-selected"
+                                              : "")
                                       }
                                     >
                                       {b.lotId === lotId &&
@@ -672,6 +679,7 @@ export default function Home() {
                                   <button
                                     key={b.id}
                                     aria-label={"Inspect batch " + b.code}
+                                    aria-pressed={selected === b.id}
                                     onClick={() => setSelected(b.id)}
                                     className={
                                       "batch-node " +
@@ -715,6 +723,7 @@ export default function Home() {
                                       key={b.id}
                                       className={
                                         "delivery-node " +
+                                        (selected === b.id ? "selected " : "") +
                                         (b.lotId === lotId
                                           ? "linked"
                                           : b.status === "unresolved"
@@ -750,7 +759,7 @@ export default function Home() {
                           )}
                         </div>
                       </div>
-                      <aside className="inspector">
+                      <aside className="inspector" key={selected}>
                         {batch ? (
                           <>
                             <div className="inspector-label">
@@ -1392,6 +1401,11 @@ export default function Home() {
                 <span>Customers</span>
               </div>
             </div>
+            <ReportComparison
+              current={previewReport}
+              reports={w?.reports || []}
+              onOpen={setPreviewReport}
+            />
             {previewReport.content.split(/\n\n+/).map((block, i) => {
               if (block.startsWith("# "))
                 return <h2 key={i}>{block.slice(2)}</h2>;
@@ -1718,6 +1732,11 @@ export default function Home() {
               This replaces the records, decisions and reports in this browser
               session. Download any reports you want to keep first.
             </p>
+            {error && (
+              <p className="inline-error" role="alert">
+                {error}
+              </p>
+            )}
           </div>
           <div className="modal-footer">
             <button

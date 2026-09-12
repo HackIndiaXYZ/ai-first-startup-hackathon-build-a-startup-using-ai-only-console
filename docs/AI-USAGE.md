@@ -69,3 +69,7 @@ OpenAI file input guidance: https://developers.openai.com/api/docs/guides/file-i
 Fireworks vision input guidance: https://docs.fireworks.ai/guides/querying-vision-language-models
 Fireworks structured output guidance: https://docs.fireworks.ai/structured-responses/structured-response-formatting
 Fireworks Chat Completions parameters: https://docs.fireworks.ai/api-reference/post-chatcompletions
+
+## Reference-checklist audit and refinement - 12 September 2026
+
+User instruction: treat an attached championship checklist as optional reference, decide worthwhile improvements and visuals, and provide a fuller post-build checklist. Codex reviewed all four pages, compared official requirements, and used read-only strategic/product reviews. It selected functional path feedback, same-lot report comparison and clearer document-reading status, rather than adding arbitrary charts or luxury imagery. A review found and fixed omitted delivery decisions after later ingredient resolution. Codex implemented and verified the changes, generated a 76-item evidence checklist and prepared a cited alternative comparison, neutral interview plan and unit-economics formulas. No customer interviews, pilot, ROI, paid extraction benchmark, publication or submission was invented or performed in this refinement. Forty-two automated checks pass; remaining gaps are explicitly listed in the readiness packet.

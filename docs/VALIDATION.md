@@ -3,7 +3,7 @@ Date: 12 September 2026
 
 ## Automated checks
 
-- 40 domain, import and provider tests: expected synthetic totals; immutable original sources; missing source protection; unknown quantities; duplicate dispatches; alternate-lot isolation; dangling links; unresolved report recipients; snapshots; reassignment history; quantity conservation; CSV quoting; strict identifiers; evidence quotes; mixed-data disclosure; supplier identity; unknown batch placeholders; reviewed delivery references; provider selection/secret omission; truncated/malformed AI responses; PDF page limits, ordering, original-page-count checks, image budgets and provenance in reports.
+- 42 domain, import and provider tests: saved-report comparison, chained delivery/ingredient decision preservation; expected synthetic totals; immutable original sources; missing source protection; unknown quantities; duplicate dispatches; alternate-lot isolation; dangling links; unresolved report recipients; snapshots; reassignment history; quantity conservation; CSV quoting; strict identifiers; evidence quotes; mixed-data disclosure; supplier identity; unknown batch placeholders; reviewed delivery references; provider selection/secret omission; truncated/malformed AI responses; PDF page limits, ordering, original-page-count checks, image budgets and provenance in reports.
 - TypeScript type check passed.
 - Production Worker/client build passed.
 - HTTP integration flow passed against both the development server on port 5173 and the built production Worker preview on port 8787: separate sessions, required request origin, stale-write rejection, report snapshots, pending extraction, explicit import review, original file recovery, duplicate-source rejection, unsupported files, missing AI configuration, and cross-session draft/file isolation.
@@ -37,6 +37,17 @@ Dialog focus management, explicit button labels, visible focus styles and reduce
 - Review filtering showed the unmatched-ingredient item. Confirmation remained disabled with a note but no selected lot. Selecting the supported sample lot and confirming changed 720 confirmed / 720 unresolved packs to 1,080 / 360. The original O code stayed visible.
 - Source/document intake and the report reader were checked in the refreshed interface. Provider consent remains visible before extraction. No additional paid AI requests were needed for this UI-only change.
 - All 40 existing domain/provider tests, the type check, production build and HTTP integration suite passed after the interface changes.
+
+## Championship-readiness refinement checks
+
+- All 42 domain/provider tests, type checking and the production build passed after the final changes. The HTTP integration suite passed again against the local development server; the earlier production-preview run is recorded above and was not repeated for this refinement.
+- New regression coverage verifies that delivery-review evidence remains in both unresolved and subsequently confirmed reports, preserving raw source codes and unchanged 1,080/360 sample totals.
+- Report comparison checks use the nearest earlier revision of the same exact lot, ignore a different lot, preserve snapshot data, and correctly identify added/removed customers and positive/negative quantity changes.
+- Browser verification created two fixed sample reports, displayed the unchanged 1,080/360 comparison, opened the earlier report and showed the first-snapshot explanation. The 390 CSS-pixel comparison had no page overflow and stacked its two quantities vertically.
+- Selecting CK-0904-01 highlighted that batch, its Harbor Grocer delivery and one corresponding edge group. At 390 CSS pixels the page did not overflow. Emulated reduced motion disabled both edge and inspector animations. Light-mode path contrast was visually reviewed; the workspace was returned to night mode and browser emulation cleared.
+- The document reader now has an elapsed timer, stage message, slow-response guidance and a 110-second browser request deadline. These controls passed type/build review; no additional paid live extraction or full 110-second browser timeout run was performed for this change. The pre-existing real provider timeout and sanitized error evidence remain in LIVE-AI-VALIDATION.md.
+- Reset/clear errors now render inside their confirmation dialog. Existing review dialogs already did so.
+- The 14-page readiness PDF was rendered and visually checked; all 76 checklist identifiers are present. Its status labels deliberately retain incomplete real-world, deployment and accessibility checks.
 
 ## What still needs real-world evidence
 

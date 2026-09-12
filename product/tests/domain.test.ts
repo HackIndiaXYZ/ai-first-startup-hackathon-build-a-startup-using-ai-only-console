@@ -15,6 +15,91 @@ import {
 } from "../lib/import-records";
 import { extractWithAI } from "../lib/ai-extract";
 import { resolveDelivery } from "../lib/resolve-delivery";
+import { comparePreviousReport } from "../lib/report-comparison";
+
+test("delivery decisions survive later ingredient resolution in report evidence", () => {
+  const initial = sampleWorkspace();
+  const delivery = initial.deliveries.find((d) => d.batchId === "batch-03")!;
+  delivery.batchId = null;
+  delivery.rawBatchCode = "UNREADABLE";
+  const linked = resolveDelivery(
+    initial,
+    delivery.id,
+    "batch-03",
+    "Dispatch signature verified against production register.",
+    at,
+    "dispatch-review",
+  );
+  assert.equal(linked.audit[0].afterLotId, null);
+  const unresolvedReport = createReport(linked, "lot-a", at, "unresolved");
+  assert.match(unresolvedReport.content, /Dispatch signature verified/);
+  const resolved = resolveBatch(
+    linked,
+    "batch-03",
+    "lot-a",
+    "Ingredient verified against the synthetic supplier receipt.",
+    at,
+    "ingredient-review",
+  );
+  const report = createReport(resolved, "lot-a", at, "resolved");
+  assert.match(report.content, /Dispatch signature verified/);
+  assert.match(report.content, /Ingredient verified against/);
+  assert.equal(report.confirmedPacks, 1080);
+  assert.equal(report.unresolvedPacks, 360);
+  assert.equal(
+    resolved.deliveries.find((d) => d.id === delivery.id)!.rawBatchCode,
+    "UNREADABLE",
+  );
+});
+
+test("report comparison uses the nearest earlier snapshot of the same lot and preserves sources", () => {
+  const initial = sampleWorkspace();
+  const before = createReport(
+    initial,
+    "lot-a",
+    "2026-09-12T09:00:00Z",
+    "before",
+  );
+  const revised = resolveBatch(
+    initial,
+    "batch-03",
+    "lot-a",
+    "Verified the synthetic invoice and O/0 code.",
+    "2026-09-12T10:00:00Z",
+    "decision",
+  );
+  revised.revision = before.revision + 2;
+  const after = createReport(revised, "lot-a", "2026-09-12T10:00:00Z", "after");
+  const other = {
+    ...before,
+    id: "other",
+    lotCode: "DIFFERENT",
+    revision: after.revision - 1,
+    confirmedPacks: 9999,
+  };
+  const older = {
+    ...before,
+    id: "oldest",
+    revision: before.revision - 1,
+    confirmedPacks: 1,
+  };
+  const snapshots = [other, after, older, before];
+  const unchanged = JSON.stringify(snapshots);
+  const result = comparePreviousReport(after, snapshots)!;
+  assert.equal(result.previous.id, "before");
+  assert.equal(result.confirmedChange, 360);
+  assert.equal(result.unresolvedChange, -360);
+  assert.deepEqual(result.addedCustomers, ["Harbor Grocer"]);
+  assert.deepEqual(result.removedCustomers, []);
+  assert.equal(comparePreviousReport(older, snapshots), null);
+  assert.equal(JSON.stringify(snapshots), unchanged);
+  const reversed = comparePreviousReport(
+    { ...before, revision: after.revision + 1 },
+    snapshots,
+  )!;
+  assert.deepEqual(reversed.removedCustomers, ["Harbor Grocer"]);
+  assert.equal(reversed.confirmedChange, -360);
+});
 test("missing receipt or production quantity remains explicit after import", () => {
   const x = parseCsv(csvTemplate);
   x.records[0].receivedKg = null;

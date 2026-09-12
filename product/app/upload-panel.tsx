@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   Check,
   FileText,
@@ -67,6 +67,19 @@ export default function UploadPanel({
     [busyMessage, setBusyMessage] = useState(""),
     [pagePreviews, setPagePreviews] = useState<string[]>([]),
     [original, setOriginal] = useState("");
+  const [elapsed, setElapsed] = useState(0);
+  useEffect(() => {
+    if (!busy) {
+      setElapsed(0);
+      return;
+    }
+    const start = Date.now();
+    const timer = setInterval(
+      () => setElapsed(Math.floor((Date.now() - start) / 1000)),
+      1000,
+    );
+    return () => clearInterval(timer);
+  }, [busy]);
   function clearPages() {
     pagePreviews.forEach((url) => URL.revokeObjectURL(url));
     setPagePreviews([]);
@@ -105,14 +118,22 @@ export default function UploadPanel({
       setBusyMessage(
         mode === "ai" ? `Reading with ${ai.label}…` : "Preparing records…",
       );
-      const r = await fetch("/api/extract", { method: "POST", body: form });
+      const r = await fetch("/api/extract", {
+        method: "POST",
+        body: form,
+        signal: AbortSignal.timeout(110_000),
+      });
       const d = (await r.json()) as { draft: Draft; error: string };
       if (!r.ok) throw Error(d.error);
       setDraft(d.draft);
       setRecords(d.draft.records);
       setReviewed(false);
     } catch (e) {
-      setError((e as Error).message);
+      setError(
+        (e as Error).name === "TimeoutError"
+          ? "Document reading took too long. No records were added. Retry this document or use the CSV template."
+          : (e as Error).message,
+      );
     } finally {
       setBusy(false);
     }
@@ -290,6 +311,26 @@ export default function UploadPanel({
                 </span>
               </label>
             </>
+          )}
+          {busy && (
+            <div className="reading-progress" role="status" aria-live="polite">
+              <LoaderCircle className="spin" size={20} />
+              <div>
+                <strong>{busyMessage}</strong>
+                <p>
+                  {elapsed >= 30
+                    ? "Still waiting for the document reader. Larger documents can take longer. Your records have not changed."
+                    : "The document will open for your review before any records are added."}
+                </p>
+              </div>
+              <span aria-hidden="true">{elapsed}s</span>
+            </div>
+          )}
+          {error && mode === "ai" && (
+            <p className="input-note">
+              Your records have not changed. You can retry or choose Import CSV
+              above.
+            </p>
           )}
           {error && (
             <div className="inline-error" role="alert">

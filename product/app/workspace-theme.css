@@ -1532,6 +1532,123 @@ td strong {
     padding-bottom: 20px;
   }
 }
+.graph-connections .edge-selected path {
+  stroke-width: 3;
+  animation: trace-selection 420ms ease-out;
+}
+.delivery-node.selected {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+.inspector {
+  animation: inspect-selection 180ms ease-out;
+}
+@keyframes trace-selection {
+  from {
+    stroke-width: 1.5;
+    opacity: 0.45;
+  }
+  to {
+    stroke-width: 3;
+    opacity: 1;
+  }
+}
+@keyframes inspect-selection {
+  from {
+    opacity: 0.7;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.scope-comparison {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px;
+  margin: 24px 0;
+  background: var(--surface-2);
+}
+.comparison-heading,
+.comparison-heading > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.comparison-heading h3 {
+  margin: 0;
+}
+.comparison-heading svg {
+  color: var(--primary);
+}
+.scope-comparison p,
+.comparison-empty {
+  font-size: 14px;
+  line-height: 1.6;
+}
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin: 20px 0;
+}
+.comparison-grid > div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.comparison-grid span,
+.comparison-grid small {
+  font-size: 14px;
+  color: var(--muted-foreground);
+}
+.comparison-grid strong {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-variant-numeric: tabular-nums;
+}
+.scope-comparison .comparison-note {
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+  margin-bottom: 0;
+  color: var(--muted-foreground);
+}
+.reading-progress {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--brand-soft);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  margin-top: 18px;
+}
+.reading-progress > svg {
+  flex: 0 0 auto;
+  color: var(--primary);
+}
+.reading-progress p {
+  font-size: 14px;
+  margin: 6px 0 0;
+}
+.reading-progress > span {
+  margin-left: auto;
+  font-size: 14px;
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 560px) {
+  .comparison-grid {
+    grid-template-columns: 1fr;
+  }
+  .scope-comparison {
+    padding: 16px;
+  }
+}
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

@@ -17,7 +17,9 @@ Track: AI in any startup
 - [x] Reject duplicate references, invalid dates, quantity conflicts, cross-session files and stale writes.
 - [x] Check the core workflow in the browser and at desktop/mobile widths.
 - [x] Refine the interface with night mode, device-local personalization/density, quick search, document/review filters and a readable report preview.
-- [x] Prepare source files, sample data, AI usage record, pitch deck and demo script.
+- [x] Add coordinated trace selection, same-lot saved-report comparison and clearer document-reading status.
+- [x] Preserve chained delivery/ingredient review evidence in reports and verify 42 domain/provider checks.
+- [x] Prepare source files, sample data, AI usage record, pitch deck, demo script and 76-item championship-readiness packet.
 
 ## Remaining before a credible final submission
 
