@@ -5,7 +5,7 @@ Prepared for HackIndia's AI-first workflow documentation requirement.
 
 The participant selected RecallScope after AI-assisted project research, then authorised autonomous implementation: “ok, can start now, all you decide for first prize … continuously until before push to github or where you think critical issue to stop”.
 
-The participant supplied the required team repository and GitHub identity, authorized the official GitHub publication, and subsequently requested a public app for judges. Source publication is complete. The demonstration video is intentionally deferred at the participant's request.
+The participant supplied the required team repository and GitHub identity, authorized the official GitHub publication, and subsequently requested a public app for judges. The participant later authorized the demonstration video and selected Grady as its narration voice. The source, public app and [product demo](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) are published.
 
 ## Tools and roles
 
@@ -18,6 +18,8 @@ The participant supplied the required team repository and GitHub identity, autho
 | PDF.js and pdf-lib | Existing open-source libraries for browser page rendering and independent server page-count checks; these libraries are not claimed as AI-authored code |
 | Browser tooling | Actual interaction checks: review, recalculation, reload persistence, import approval, reports and responsive layouts |
 | Presentation tooling | Editable pitch deck creation and rendering checks |
+| Higgsfield Seed Audio | Nine narration clips using the participant-selected Grady voice at speech rate -5; generation consumed 23.10 credits |
+| Video composition tooling | Chaptered editing, native motion and assembly of actual interface captures with AI narration |
 
 Task-specific application code was authored by Codex under participant direction. The project also contains an existing MIT-licensed starter and third-party packages. No audited numerical percentage of the entire dependency tree is claimed. The working history and source identify AI-produced custom work and reused dependencies separately.
 
@@ -31,7 +33,7 @@ Task-specific application code was authored by Codex under participant direction
 | Coding | Custom React/TypeScript, server routes, extraction adapters and deterministic traceability rules in the official repository |
 | Testing | Automated domain/provider/SQL checks, browser and API integration, and recorded live Fireworks extraction |
 | Deployment | Sites hosting configuration, database migrations, private server-side Fireworks secret and public request allowance; the verified public URL is recorded in the project overview |
-| Pitch creation | AI-authored, editable [pitch deck](RecallScope-Pitch.pptx) with visual verification |
+| Pitch creation | AI-authored, editable [pitch deck](RecallScope-Pitch.pptx) with visual verification, plus a chaptered [product demo](VIDEO.md) with AI narration |
 
 The fictional bakery records illustrate the product. Market research means documented desk research, and is separate from customer interviews or manufacturer validation. Those are not claimed as completed activities.
 
@@ -90,7 +92,7 @@ User instruction: treat an attached championship checklist as optional reference
 
 ## GitHub release preparation - 12 September 2026
 
-After the owner explicitly authorized publication to the official Team Console repository, Codex verified the destination and fast-forward relationship, inspected all reachable Git objects for configured secrets, refined the README/navigation/architecture summary and clarified which submission artifacts remain pending. The original Git history and MIT license are preserved. GitHub Actions runs the project checks from a clean checkout. This authorization covers the source release; it does not claim a public app, final video or completed competition submission.
+After the owner explicitly authorized publication to the official Team Console repository, Codex verified the destination and fast-forward relationship, inspected all reachable Git objects for configured secrets, and refined the README, navigation and architecture summary. The original Git history and MIT license are preserved. GitHub Actions runs the project checks from a clean checkout. The subsequent public app and video releases are documented below.
 
 ## Complete showcase - 12 September 2026
 
@@ -100,4 +102,12 @@ After publication, GitHub's clean installation exposed a versionless optional PD
 
 ## Public deployment - 12 September 2026
 
-Following the participant's request, Codex registered and publicly deployed [RecallScope](https://recallscope.console3096.chatgpt.site) through Sites. The exact application source was pushed to the hosting source repository, and the build archive was checked for required migrations and credential exclusion. Fireworks was configured as a private runtime secret, with OpenAI support retained. An atomic shared request allowance was added before public release, and all 47 automated checks, type checking, the production build and API integration passed. Sites reported deployment success with environment revision 1. The participant's later instruction to defer the video was respected.
+Following the participant's request, Codex registered and publicly deployed [RecallScope](https://recallscope.console3096.chatgpt.site) through Sites. The exact application source was pushed to the hosting source repository, and the build archive was checked for required migrations and credential exclusion. Fireworks was configured as a private runtime secret, with OpenAI support retained. An atomic shared request allowance was added before public release, and all 47 automated checks, type checking, the production build and API integration passed. Sites reported deployment success with environment revision 1. Video production followed under separate authorization.
+
+## Product demo - 13 September 2026
+
+Codex prepared the narration and nine-chapter structure, captured the actual RecallScope interface, and assembled a [4:40 product demo](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) with native motion and AI narration. Its duration is 280.4667 seconds (4:40.47), at 1920 × 1080 and 30 fps. The participant selected Grady (`e2a2d2e6-9ed2-59cd-82af-feaa27f8a678`). Higgsfield Seed Audio generated nine narration clips at speech rate -5, consuming 23.10 credits for those clips. This figure covers the narration generation, separate from development and hosting costs.
+
+Actual UI still captures and authored motion form the visual presentation. No generated footage is used. The chaptered edit presents the ingredient trace, source evidence, report workflow, document intake and AI-led build. It combines selected moments from the workflow rather than representing one continuous application session or a measured task-completion time. The [video materials](VIDEO.md) include separate chapters, production files and 74 optional English caption cues; captions are supplied separately and are not burned into the picture.
+
+The document-intake segment comes from a real Fireworks request that returned three proposals. The operator supplied a source-lot value during review before approving the import. This records both the AI proposal and the operator's contribution. The pre-authored bakery showcase remains separate from that extraction run. Sample transactions illustrate the product; they do not establish customer validation, measured savings or general extraction accuracy.

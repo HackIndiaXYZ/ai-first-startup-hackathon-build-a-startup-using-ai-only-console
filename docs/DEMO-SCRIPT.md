@@ -1,78 +1,43 @@
-# RecallScope showcase script
+# RecallScope video script
 
-A four-minute walkthrough of the complete fictional bakery workspace. These timings guide narration and editing; they are not application performance measurements. This document is the recording script.
+The finished film runs **4:40**, with nine chapters. It combines captures of actual app interactions, native motion graphics and Grady narration. Editing timings are not application performance measurements.
 
-## 0:00–0:25 · One ingredient, a clear delivery scope
+## 0:00 · The decision starts with one lot
 
-Open the supplied workspace with **FL-260901-A** selected.
+A quality lead has an ingredient lot in front of them. The next question is practical: which production batches used it, and where did those products go? RecallScope brings that path into one workspace, with the original records beside every connection. This walkthrough uses the supplied bakery sample records.
 
-“A quality lead starts with one ingredient lot and needs to follow it through production to customer deliveries.
+## 0:27 · A complete delivery scope
 
-This is RecallScope. In our fictional bakery showcase, this lot connects to four production batches and four destinations: 1,440 delivered packs, with source records explaining the route.”
+Here, one flour lot connects to four production batches and four customer destinations, covering fourteen hundred and forty delivered packs. Select a batch, and its route comes into focus. Select a destination to see the matching deliveries. These totals are calculated from the recorded relationships and quantities, giving the operator a consistent starting point for a recall drill.
 
-Keep the sample-data label visible.
+## 0:56 · Evidence behind the connection
 
-## 0:25–1:10 · Follow the trace
+Let’s open the production record behind this batch. The source identifies the flour lot, twenty four kilograms used, and four hundred packs produced. The delivery register connects three hundred and sixty of those packs to Orchard Pantry. The map is useful because each step leads back to readable evidence, keeping the detail close to the decision.
 
-Show the selected lot, four production branches and customer deliveries. Select a batch, then its destination, so the corresponding path and record details are visible.
+## 1:21 · Find the right document
 
-“The map connects the receiving lot, the batches that used it and the deliveries that followed. Selecting a batch brings its part of the trace into focus.
+The document library holds all seven source documents in this workspace: the supplier invoice, production sheets, and delivery register. Search a batch code to reach the relevant record, or narrow the library by category. Workspace search also brings lots, batches, destinations, and document text together, so the operator can move directly from a question to its supporting record.
 
-All deliveries in this supplied scenario have supported ingredient links. The totals come from the recorded quantities and relationships.”
+## 1:51 · Keep the scope as a report
 
-Point to **1,440 packs, four batches and four destinations**. Do not describe these as real manufacturer transactions or results from a new AI request.
+Next, create a report. RecallScope saves the selected lot’s delivery scope as a fixed snapshot, including the batches, destinations, quantities, and source references. Open it in the report reader to see the same fourteen hundred and forty packs. The report remains available after a reload, and reports for the same lot can be compared as the workspace changes.
 
-## 1:10–1:55 · Inspect the documents
+## 2:21 · Designed for the operator
 
-Open the selected batch's source, then **Documents**. Show the receiving, production and dispatch records. The whole workspace contains **seven source documents**. Search one visible batch code and open its result.
+The interface is designed for repeated use. Switch to night mode, choose comfortable or compact spacing, and give the workspace a familiar name. These preferences stay on the device. Clear navigation and coordinated selection keep the trace, documents, and reports within reach, while the underlying records retain their identity.
 
-“The evidence stays close to the trace. I can read the production record, follow its batch code into a dispatch and inspect the receiving record behind the ingredient lot.
+## 2:52 · Where AI helps
 
-The document library keeps the source material together. Search and categories help me reach the record I want without changing any totals.”
+New documents enter through CSV import or AI assisted reading. Fireworks is the configured provider, with OpenAI support also available. AI proposes structured fields from the source. The operator approves those records, and deterministic code calculates the trace. This separation puts AI where it helps with document interpretation, while keeping recorded quantities and relationships inspectable. Original uploaded documents remain accessible alongside the extracted information.
 
-## 1:55–2:40 · Save the scope
+## 3:28 · AI led creation, with evidence
 
-Choose **Create report**, then **Open report**. Show the lot code, pack total, four batches, four destinations and source references. Reload and reopen the saved report if the capture allows.
+The build follows the competition’s AI first approach across all seven activities: idea generation, market research, user experience design, coding, testing, deployment, and pitch creation. The repository documents those contributions, published source research, automated checks, and observed extraction runs. Judges can explore the live application, inspect the implementation, and follow the decisions behind the product.
 
-“I save this scope as a report. It brings together the deliveries, quantities and supporting references in a snapshot I can return to.
+## 4:04 · A focused commercial starting point
 
-Saved reports keep their original scope. The workspace can compare reports for the same lot as records change.”
+The first customer focus is a small food producer whose quality lead manages supplier, production, and dispatch records. The product brings those records into an ingredient to customer workflow, with a proposed subscription model for each site. RecallScope makes that workflow tangible: follow the lot, inspect the evidence, and keep the report.
 
-Use the report ID from the actual recording. Do not imply a changed comparison when both snapshots contain the same data.
+## Production record
 
-## 2:40–3:15 · A workspace for the operator
-
-Show night mode, then open **Preferences** briefly to demonstrate appearance and density. Return to the trace. Use **Find in workspace** to locate a visible record or customer.
-
-“The workspace adapts to the person using it: light, night or system appearance, comfortable or compact spacing, and names that make this workspace familiar.
-
-Search brings lots, batches, customers and document text into reach. These choices change the view; the source records stay intact.”
-
-## 3:15–3:45 · From documents to records
-
-Open **Add records** and show the CSV and AI intake choices. If showing AI, let the selected provider name and consent text remain readable.
-
-“New records can come from CSV or AI-assisted document reading. AI proposes the fields; the operator reviews them against the source before approval. Code then calculates the trace from those recorded relationships.
-
-The original document remains available alongside the extracted information.”
-
-This segment explains the implemented intake flow. The preloaded bakery dataset is authored sample data. Only show a fresh extraction result if an actual request is captured; do not substitute seeded records for that result. The separate [live AI evidence](LIVE-AI-VALIDATION.md) records the observed Fireworks text and PDF checks.
-
-## 3:45–4:00 · Close
-
-Return to the complete lot trace or the saved report.
-
-“One ingredient lot. Four batches. Four destinations. A report with the records behind it.
-
-RecallScope brings a practice recall drill into one workspace—from source documents to an inspectable delivery scope.”
-
-## Capture notes
-
-- Start from the complete supplied bakery dataset and keep its fictional provenance visible. The showcase has 1,440 confirmed packs, four batches, four destinations and zero unresolved deliveries for FL-260901-A; seven documents is the workspace-wide count.
-- Follow the main trace, documents and report workflow. No review-example selection or deliberately incomplete dataset is part of this walkthrough.
-- Capture actual interactions and the report created in that run. Verify displayed figures against the final build before recording.
-- Keep credentials, private configuration and unrelated browser content out of the capture. If provider waiting time is shortened, label the edit.
-- Use the official repository link and only include application/video links that have actually been published. A local preview can be identified as a local preview.
-- Describe a fictional showcase and implemented features. Do not claim manufacturer trials, measured savings, general extraction accuracy or operational recall certification.
-
-The historical O/0 correction fixture remains documented in [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md) as a separate software QA exercise. It is not the default showcase or a required recording branch.
+The supplied bakery case is authored sample data. The filmed Fireworks request returned three proposed records; the operator entered the source lot reference in the production proposal before approval. That imported case traces 180 delivered packs. The earlier bakery case remains at 1,440 packs. See [capture provenance](video-stills/README.md) and the [finished video](VIDEO.md).

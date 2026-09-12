@@ -1,6 +1,6 @@
 # Build record · RecallScope
 
-12 September 2026 · Team Console · AI in any startup
+Updated 13 September 2026 · Team Console · AI in any startup
 
 ## Current deliverable
 
@@ -17,7 +17,7 @@ The supplied workspace contains seven source documents. Ingredient lot **FL-2609
 - Light, night and system appearance; device-local names, density settings, workspace search and responsive layouts.
 - Handling for ambiguous identifiers, unknown references and quantity conflicts when additional records require it.
 - Fireworks text/PDF extraction and a configurable OpenAI adapter.
-- Source code, labelled sample files, an editable pitch, showcase script, AI usage report and verification records.
+- Source code, labelled sample files, an editable pitch, narrated product demo, showcase script, AI usage report and verification records.
 
 ## Verification evidence
 
@@ -31,7 +31,7 @@ The owner authorized publication to the [official Team Console repository](https
 
 **Public app:** [RecallScope](https://recallscope.console3096.chatgpt.site). Sites reported a successful production deployment on 12 September 2026 with public access, database migrations, document storage and the Fireworks secret configured server-side. The deployed app source revision is `407ebed933c0047b2842b1cc5830e4d93019220c`, extracted from the official repository's application directory. Deployment metadata and keys are managed by the hosting service.
 
-The repository also contains the [four-minute recording script](DEMO-SCRIPT.md). The participant explicitly deferred video production; no finished video or organizer submission receipt is claimed. The public app, GitHub repository, pitch and AI usage report are the completed submission materials.
+**Product demo:** [Watch RecallScope · 4:40](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4), released 13 September 2026. The nine-chapter presentation combines actual interface captures, authored motion and Grady AI narration at 1080p and 30 fps. A real Fireworks request returned three record proposals; the operator supplied a source-lot value during review before approving the import. [Separate chapters, optional English captions and production files](VIDEO.md) accompany the [showcase script](DEMO-SCRIPT.md). The public app, GitHub repository, pitch, AI usage report and demo video are the completed submission materials. No organizer submission receipt is claimed.
 
 Earlier checklist documents and PDFs are dated development audits. Their old incomplete sample totals, pilot requests and authorization boundaries do not define the current fictional showcase. The current user request does not require manufacturer outreach or a real-world trial.
 

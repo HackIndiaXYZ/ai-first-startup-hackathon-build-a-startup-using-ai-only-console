@@ -5,7 +5,7 @@
 
 **[Open RecallScope](https://recallscope.console3096.chatgpt.site)** — explore the complete bakery workspace, inspect its source records and save a trace report.
 
-[Quick start](#run-locally) · [Showcase walkthrough](#demo-in-two-minutes) · [AI extraction](#connect-ai-extraction) · [Pitch deck](docs/RecallScope-Pitch.pptx) · [AI build report](docs/AI-USAGE.md)
+[Watch the demo · 4:40](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) · [Quick start](#run-locally) · [Showcase walkthrough](#demo-in-two-minutes) · [AI extraction](#connect-ai-extraction) · [Pitch deck](docs/RecallScope-Pitch.pptx) · [AI build report](docs/AI-USAGE.md)
 
 Follow an ingredient from receiving to production to customer deliveries—with the source records beside the trace.
 
@@ -82,7 +82,8 @@ React and TypeScript run on a Vinext/Cloudflare Worker foundation, with D1 works
 
 ## Project materials
 
-- [Four-minute showcase script](docs/DEMO-SCRIPT.md)
+- [Product demo · 4:40](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) — a narrated walkthrough of the trace workspace, document intake and AI-led build
+- [Video chapters, captions and production files](docs/VIDEO.md) · [Showcase script](docs/DEMO-SCRIPT.md)
 - [Editable pitch deck](docs/RecallScope-Pitch.pptx)
 - [Complete sample report](sample-records/showcase/trace-report.md) and [source records](sample-records/showcase)
 - [AI tools, prompts and development decisions](docs/AI-USAGE.md)

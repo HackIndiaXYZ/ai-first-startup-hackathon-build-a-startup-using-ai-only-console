@@ -9,6 +9,7 @@ RecallScope connects an ingredient lot to production batches and customer delive
 | Material | Link |
 |---|---|
 | Live application | [Open RecallScope](https://recallscope.console3096.chatgpt.site) |
+| Demo video | [Watch RecallScope · 4:40](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) · [Chapters and captions](VIDEO.md) |
 | Source repository | [Official Team Console repository](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console) |
 | Pitch | [Editable pitch deck](RecallScope-Pitch.pptx) |
 | AI usage report | [Tools, prompts and seven AI-led activities](AI-USAGE.md) |
@@ -23,4 +24,4 @@ For document intake, use CSV or the connected Fireworks provider. Proposed recor
 
 ## Submission administration
 
-The [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only) specify a live app, GitHub repository, pitch deck, AI usage report and a **3–5 minute demo video**. Video production is deferred at the participant's request; the [recording script](DEMO-SCRIPT.md) is prepared. Final entry delivery through the organizer's submission process is separate from publishing these materials. No submission receipt is recorded here.
+The materials above provide the live app, GitHub repository, pitch deck, AI usage report and **4-minute 40-second demo video** specified by the [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only). The video combines actual interface captures, authored motion and AI narration to present the sample workspace, a recorded Fireworks intake and the product's AI-led development. Final entry delivery through the organizer's submission process is separate from publishing these materials. No submission receipt is recorded here.
