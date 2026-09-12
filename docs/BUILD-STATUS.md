@@ -10,6 +10,8 @@ Track: AI in any startup
 - [x] Build the trace workspace, record library, review queue and report library.
 - [x] Persist each browser's workspace server-side; preserve original uploaded files.
 - [x] Provide reviewed CSV import and a server-side AI extraction adapter.
+- [x] Connect Fireworks for actual text/PDF extraction while retaining the OpenAI configuration option.
+- [x] Preserve original PDFs, rendered page images, provider/model and source fingerprints after review.
 - [x] Handle missing/ambiguous lot records and unknown delivery batches.
 - [x] Preserve source values, operator notes, changes and report snapshots.
 - [x] Reject duplicate references, invalid dates, quantity conflicts, cross-session files and stale writes.
@@ -18,7 +20,7 @@ Track: AI in any startup
 
 ## Remaining before a credible final submission
 
-1. **Configure the application's API key and test actual PDF/image extraction.** Current AI tests exercise the adapter with controlled responses; no live extraction accuracy is claimed.
+1. Expand real document testing beyond the synthetic Fireworks fixtures and validate any production provider/model before use. OpenAI is optional and remains live-untested.
 2. Confirm the organiser's permitted build window. The public listing is internally inconsistent.
 3. Obtain permissioned manufacturer records and an operator-verified trace map if possible. No customer interviews, pilot results or market validation have been invented.
 4. After the owner's approval, push to the existing HackIndia repository and deploy a judge-accessible app with appropriate access and AI spending limits.

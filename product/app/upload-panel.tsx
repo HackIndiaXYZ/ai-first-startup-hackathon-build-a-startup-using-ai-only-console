@@ -14,6 +14,7 @@ import type { Workspace } from "@/lib/domain";
 import type { Draft } from "@/lib/draft";
 import { csvTemplate, type ExtractedRecord } from "@/lib/import-records";
 import Modal from "./modal";
+import type { PublicAIConfig } from "@/lib/ai-config";
 const labels: Record<string, string> = {
   code: "Reference / code",
   lotCode: "Ingredient lot code",
@@ -31,21 +32,30 @@ const labels: Record<string, string> = {
 };
 const fields: Record<ExtractedRecord["type"], (keyof ExtractedRecord)[]> = {
   lot: ["code", "ingredient", "supplier", "receivedKg"],
-  batch: ["code", "lotCode", "product", "usedKg", "producedPacks"],
+  batch: [
+    "code",
+    "lotCode",
+    "product",
+    "supplier",
+    "ingredient",
+    "usedKg",
+    "producedPacks",
+  ],
   delivery: ["code", "batchCode", "customer", "packs", "date"],
 };
 const numeric = new Set(["receivedKg", "usedKg", "producedPacks", "packs"]);
 export default function UploadPanel({
   workspace,
-  aiAvailable,
+  ai,
   onClose,
   onSaved,
 }: {
   workspace: Workspace;
-  aiAvailable: boolean;
+  ai: PublicAIConfig;
   onClose: () => void;
   onSaved: (w: Workspace) => void;
 }) {
+  const aiAvailable = ai.available;
   const [mode, setMode] = useState<"ai" | "csv">(aiAvailable ? "ai" : "csv"),
     [file, setFile] = useState<File | null>(null),
     [draft, setDraft] = useState<Draft | null>(null),
@@ -54,10 +64,18 @@ export default function UploadPanel({
     [error, setError] = useState(""),
     [consent, setConsent] = useState(false),
     [reviewed, setReviewed] = useState(false),
+    [busyMessage, setBusyMessage] = useState(""),
+    [pagePreviews, setPagePreviews] = useState<string[]>([]),
     [original, setOriginal] = useState("");
+  function clearPages() {
+    pagePreviews.forEach((url) => URL.revokeObjectURL(url));
+    setPagePreviews([]);
+  }
   function choose(f: File | undefined) {
     setFile(f || null);
     setError("");
+    setConsent(false);
+    clearPages();
     if (original) URL.revokeObjectURL(original);
     setOriginal(f ? URL.createObjectURL(f) : "");
   }
@@ -65,11 +83,28 @@ export default function UploadPanel({
     if (!file) return;
     setBusy(true);
     setError("");
+    setBusyMessage("Preparing document…");
     try {
+      if (file.size > 5_000_000)
+        throw Error("Use a document smaller than 5 MB.");
       const form = new FormData();
       form.append("file", file);
       form.append("mode", mode);
       form.append("consent", consent ? "yes" : "no");
+      form.append("provider", ai.provider);
+      if (mode === "ai" && ai.provider === "fireworks") {
+        const { renderDocument } = await import("@/lib/render-document");
+        const pages = await renderDocument(file, setBusyMessage);
+        clearPages();
+        setPagePreviews(pages.map((page) => URL.createObjectURL(page)));
+        if (pages.length) {
+          form.append("pageCount", String(pages.length));
+          pages.forEach((page) => form.append("page", page));
+        }
+      }
+      setBusyMessage(
+        mode === "ai" ? `Reading with ${ai.label}…` : "Preparing records…",
+      );
       const r = await fetch("/api/extract", { method: "POST", body: form });
       const d = (await r.json()) as { draft: Draft; error: string };
       if (!r.ok) throw Error(d.error);
@@ -100,6 +135,7 @@ export default function UploadPanel({
       const d = (await r.json()) as { workspace: Workspace; error: string };
       if (!r.ok) throw Error(d.error);
       if (original) URL.revokeObjectURL(original);
+      clearPages();
       onSaved(d.workspace);
     } catch (e) {
       setError((e as Error).message);
@@ -133,6 +169,7 @@ export default function UploadPanel({
   }
   const close = () => {
     if (original) URL.revokeObjectURL(original);
+    clearPages();
     onClose();
   };
   return (
@@ -168,7 +205,9 @@ export default function UploadPanel({
               <Sparkles size={20} />
               <strong>Read with AI</strong>
               <small>PDF, image or text</small>
-              <span>{aiAvailable ? "Connected" : "Connection needed"}</span>
+              <span>
+                {aiAvailable ? ai.label + " configured" : "Connection needed"}
+              </span>
             </button>
             <button
               className={mode === "csv" ? "selected" : ""}
@@ -230,17 +269,25 @@ export default function UploadPanel({
             />
           </label>
           {mode === "ai" && (
-            <label className="check-label">
-              <input
-                type="checkbox"
-                checked={consent}
-                onChange={(e) => setConsent(e.target.checked)}
-              />{" "}
-              <span>
-                Send this document to OpenAI for extraction. I have permission
-                to use its contents.
-              </span>
-            </label>
+            <>
+              {ai.provider === "fireworks" && (
+                <p className="input-note">
+                  PDFs: up to six pages. Every page is prepared as an image; the
+                  original file stays available for comparison.
+                </p>
+              )}
+              <label className="check-label">
+                <input
+                  type="checkbox"
+                  checked={consent}
+                  onChange={(e) => setConsent(e.target.checked)}
+                />{" "}
+                <span>
+                  Send this document's contents to {ai.label} for extraction. I
+                  have permission to use its contents.
+                </span>
+              </label>
+            </>
           )}
           {error && (
             <div className="inline-error" role="alert">
@@ -261,11 +308,36 @@ export default function UploadPanel({
               Compare every field with the source. Correct identifiers and
               quantities below; leave unsupported identifiers blank.
             </p>
+            {draft.document.extraction && (
+              <p>
+                Extracted by {ai.label}. The transcript below is AI-generated
+                and must be checked against the original.
+              </p>
+            )}
           </div>
           <details className="draft-source" open>
             <summary>Inspect source · {draft.document.name}</summary>
             {file?.type.startsWith("image/") && original && (
               <img src={original} alt="Original uploaded source document" />
+            )}
+            {pagePreviews.length > 0 && (
+              <div className="page-previews">
+                <p>
+                  Images supplied to {ai.label}. Compare all pages with the
+                  original document before approving.
+                </p>
+                {pagePreviews.map((url, i) => (
+                  <figure key={url}>
+                    <figcaption>
+                      Page {i + 1} of {pagePreviews.length}
+                    </figcaption>
+                    <img
+                      src={url}
+                      alt={`Document page ${i + 1} supplied to ${ai.label}`}
+                    />
+                  </figure>
+                ))}
+              </div>
             )}
             {original && (
               <a href={original} download={file?.name} className="text-button">
@@ -374,9 +446,7 @@ export default function UploadPanel({
           {busy
             ? draft
               ? "Saving reviewed records…"
-              : mode === "ai"
-                ? "Reading document…"
-                : "Preparing records…"
+              : busyMessage
             : draft
               ? "Confirm records & connect"
               : "Prepare for review"}

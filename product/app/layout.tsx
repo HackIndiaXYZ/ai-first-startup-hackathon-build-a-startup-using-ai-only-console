@@ -3,7 +3,8 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "RecallScope — Evidence-first traceability",
-  description: "Trace ingredient lots to customer deliveries, review uncertain links, and run evidence-backed recall drills.",
+  description:
+    "Trace ingredient lots to customer deliveries, review uncertain links, and run evidence-backed recall drills.",
   other: {
     "codex-preview": "development",
   },

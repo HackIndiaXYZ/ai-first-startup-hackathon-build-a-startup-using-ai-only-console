@@ -34,6 +34,12 @@ export type SourceDocument = {
   hash?: string;
   fileKey?: string;
   mimeType?: string;
+  extraction?: {
+    provider: "openai" | "fireworks";
+    model: string;
+    inputMode: "original" | "browser-rendered-pages";
+    pages?: { page: number; hash: string; fileKey: string }[];
+  };
 };
 export type AuditEvent = {
   id: string;
@@ -208,7 +214,7 @@ export function createReport(
   const ev = (e: Evidence) => {
     const d = w.documents.find((d) => d.id === e.sourceId);
     return d
-      ? `${d.name}, line ${e.line}${d.hash ? ` (SHA-256 ${d.hash})` : ""}`
+      ? `${d.name}, ${d.mode === "ai" ? "AI transcript " : ""}line ${e.line}${d.hash ? ` (SHA-256 ${d.hash})` : ""}${d.extraction ? `; extracted by ${d.extraction.provider} / ${d.extraction.model}${d.extraction.pages?.length ? "; browser-rendered page SHA-256: " + d.extraction.pages.map((p) => `${p.page}: ${p.hash}`).join(", ") : ""}` : ""}`
       : "Source record missing";
   };
   const content = [

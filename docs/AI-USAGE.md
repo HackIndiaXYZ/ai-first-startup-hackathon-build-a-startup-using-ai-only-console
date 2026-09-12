@@ -14,6 +14,8 @@ The participant supplied the required team repository and GitHub identity. The b
 | Codex | Product scoping, implementation, synthetic source construction, tests, debugging, visual review, build packaging and documentation |
 | Delegated Codex reviewers | Independent competition-requirement checks and adversarial traceability review |
 | OpenAI Responses API adapter | Implemented runtime extraction from PDF/image/text into a structured review proposal; live credentials and validation pending |
+| Fireworks / Kimi K2.6 | User-selected development provider; actual synthetic text and PDF extraction tested with explicit review before import |
+| PDF.js and pdf-lib | Existing open-source libraries for browser page rendering and independent server page-count checks; these libraries are not claimed as AI-authored code |
 | Browser tooling | Actual interaction checks: review, recalculation, reload persistence, import approval, reports and responsive layouts |
 | Presentation tooling | Editable pitch deck creation and rendering checks |
 
@@ -37,9 +39,9 @@ The following are concise records of development instructions, not a verbatim du
 
 ## Runtime extraction prompt
 
-The full executable prompt and JSON schema are versioned in `product/lib/ai-extract.ts`. The prompt treats uploaded documents as untrusted data, preserves O/0 ambiguities, forbids invented records and silent truncation, retains unknown values, requires literal evidence quotes, and requests human-review proposals. The API request uses structured outputs and `store:false`.
+The full executable prompt and JSON schema are versioned in `product/lib/ai-extract.ts`. The prompt treats uploaded documents as untrusted data, preserves O/0 ambiguities, forbids invented records and silent truncation, retains unknown values, requires literal evidence quotes, and requests human-review proposals. Both providers use structured outputs. Only the OpenAI request uses `store:false`.
 
-The model is configurable with `OPENAI_MODEL`; the default is `gpt-5.4-mini`. The adapter is implemented but **has not yet been tested against the live API** in this build. Seeded demo records are pre-authored and are labelled accordingly.
+The participant subsequently requested Fireworks for development while keeping OpenAI support. `AI_PROVIDER` selects the service; `FIREWORKS_MODEL` defaults to `accounts/fireworks/models/kimi-k2p6`, and `OPENAI_MODEL` defaults to `gpt-5.4-mini`. The live Fireworks tests are documented in [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md). The OpenAI adapter has controlled-response tests but no live OpenAI test. Seeded demo records remain pre-authored and labelled. The user-supplied key is kept in ignored local configuration and omitted from all reports and source packages.
 
 ## AI errors found and corrected
 
@@ -51,6 +53,10 @@ The model is configurable with `OPENAI_MODEL`; the default is `gpt-5.4-mini`. Th
 - Explicit supplier/ingredient conflicts and post-save cleanup failure handling were tightened.
 - A named batch without a production sheet now creates a visible unresolved placeholder.
 - Runtime source-size instructions now explicitly forbid silent AI truncation.
+- PDF worker loading initially encountered a development-overlay error; the pinned worker now loads as an unmodified static asset.
+- Fireworks batch fields that could trigger a validation conflict are now editable in the review screen.
+- Server PDF page-count validation now detects a submitted image set that omits an original page.
+- A two-page request reached its timeout without changing saved records; the development request now explicitly disables reasoning for structured extraction, with the retry outcome recorded separately.
 
 ## Evidence and limitations
 
@@ -59,3 +65,6 @@ Domain and adapter tests, route integration checks, UI observations, the pitch d
 Official requirement source: https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only
 OpenAI structured output guidance: https://developers.openai.com/api/docs/guides/structured-outputs
 OpenAI file input guidance: https://developers.openai.com/api/docs/guides/file-inputs
+Fireworks vision input guidance: https://docs.fireworks.ai/guides/querying-vision-language-models
+Fireworks structured output guidance: https://docs.fireworks.ai/structured-responses/structured-response-formatting
+Fireworks Chat Completions parameters: https://docs.fireworks.ai/api-reference/post-chatcompletions

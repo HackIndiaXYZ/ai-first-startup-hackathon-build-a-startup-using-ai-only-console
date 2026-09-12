@@ -151,7 +151,46 @@ if (!data.aiAvailable) {
     body: ai,
   });
   assert.equal(r.status, 503);
+} else {
+  assert.equal("key" in data.ai, false);
+  assert.equal("apiKey" in data.ai, false);
+  ai.set("provider", data.ai.provider === "fireworks" ? "openai" : "fireworks");
+  r = await fetch(base + "/api/extract", {
+    method: "POST",
+    headers: { origin: base, cookie: a.cookie },
+    body: ai,
+  });
+  assert.equal(r.status, 409);
+  assert.match(
+    ((await r.json()) as { error: string }).error,
+    /provider changed/,
+  );
+  ai.set("provider", data.ai.provider);
+  ai.set("consent", "no");
+  r = await fetch(base + "/api/extract", {
+    method: "POST",
+    headers: { origin: base, cookie: a.cookie },
+    body: ai,
+  });
+  assert.equal(r.status, 400);
+  if (data.ai.provider === "fireworks") {
+    ai.set("consent", "yes");
+    ai.set(
+      "file",
+      new File(["%PDF"], "sample.pdf", { type: "application/pdf" }),
+    );
+    r = await fetch(base + "/api/extract", {
+      method: "POST",
+      headers: { origin: base, cookie: a.cookie },
+      body: ai,
+    });
+    assert.equal(r.status, 400);
+    assert.match(
+      ((await r.json()) as { error: string }).error,
+      /every document page/,
+    );
+  }
 }
 console.log(
-  "PASS: session isolation, origin checks, stale writes, report snapshots, pending extraction, reviewed import, original-file retrieval, duplicate rejection, missing AI connection, cross-session draft/file isolation.",
+  "PASS: session isolation, origin checks, stale writes, report snapshots, pending extraction, reviewed import, original-file retrieval, duplicate rejection, provider consent/configuration guards, cross-session draft/file isolation. No live AI requests made by this suite.",
 );

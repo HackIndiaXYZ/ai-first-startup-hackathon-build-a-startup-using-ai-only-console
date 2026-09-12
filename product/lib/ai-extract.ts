@@ -124,3 +124,127 @@ export async function extractWithAI(
     );
   }
 }
+
+export async function extractWithFireworks(
+  file: File,
+  key: string,
+  model: string,
+  pages: File[] = [],
+  send: typeof fetch = fetch,
+): Promise<Extraction> {
+  if (file.type === "application/pdf" && !pages.length)
+    throw Error("Prepare every PDF page as an image before extraction.");
+  const images = pages.length
+    ? pages
+    : file.type.startsWith("image/")
+      ? [file]
+      : [];
+  if (images.some((image) => !["image/png", "image/jpeg"].includes(image.type)))
+    throw Error("Use PNG or JPEG images with Fireworks.");
+  const content: unknown[] = images.length
+    ? [
+        {
+          type: "text",
+          text: `Read all ${images.length} supplied document images in order. Transcribe every page, then extract the records. Return JSON only.`,
+        },
+      ]
+    : [{ type: "text", text: await file.text() }];
+  for (let i = 0; i < images.length; i++) {
+    content.push({
+      type: "text",
+      text: `Document image ${i + 1} of ${images.length}`,
+    });
+    content.push({
+      type: "image_url",
+      image_url: {
+        url: `data:${images[i].type};base64,${Buffer.from(await images[i].arrayBuffer()).toString("base64")}`,
+      },
+    });
+  }
+  let result: Response;
+  try {
+    result = await send(
+      "https://api.fireworks.ai/inference/v1/chat/completions",
+      {
+        method: "POST",
+        signal: AbortSignal.timeout(90000),
+        headers: {
+          Authorization: "Bearer " + key,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model,
+          messages: [
+            {
+              role: "system",
+              content:
+                extractionPrompt +
+                "\nReturn JSON matching this schema: " +
+                JSON.stringify(extractionJsonSchema),
+            },
+            { role: "user", content },
+          ],
+          response_format: {
+            type: "json_schema",
+            json_schema: {
+              name: "traceability_records",
+              schema: extractionJsonSchema,
+            },
+          },
+          max_tokens: 12000,
+          reasoning_effort: "none",
+          temperature: 0,
+          context_length_exceeded_behavior: "error",
+        }),
+      },
+    );
+  } catch {
+    throw Error(
+      "Fireworks did not respond in time. No records were added. Retry or use structured CSV.",
+    );
+  }
+  if (!result.ok) {
+    if (result.status === 401 || result.status === 403)
+      throw Error(
+        "Fireworks could not authenticate this connection. Check its server configuration.",
+      );
+    if (result.status === 402 || result.status === 429)
+      throw Error(
+        "Fireworks reached its credit or usage limit. Retry later or use structured CSV.",
+      );
+    if (result.status === 404)
+      throw Error(
+        "The configured Fireworks model is unavailable. Check its server configuration.",
+      );
+    throw Error(
+      "Fireworks could not read this document. No records were added. Try a smaller or clearer source.",
+    );
+  }
+  let body: {
+    choices?: {
+      finish_reason?: string;
+      message?: { content?: string; refusal?: unknown };
+    }[];
+  };
+  try {
+    body = (await result.json()) as typeof body;
+  } catch {
+    throw Error(
+      "The Fireworks response could not be read. No records were added. Retry with a smaller document.",
+    );
+  }
+  const choice = body.choices?.[0];
+  if (choice?.finish_reason !== "stop")
+    throw Error(
+      "Fireworks extraction did not finish. No records were added. Try a smaller document.",
+    );
+  try {
+    if (choice.message?.refusal || !choice.message?.content)
+      throw Error("No extraction");
+    return extractionSchema.parse(JSON.parse(choice.message.content));
+  } catch {
+    throw Error(
+      "The Fireworks result was incomplete or unsupported. No records were added. Try structured CSV.",
+    );
+  }
+}

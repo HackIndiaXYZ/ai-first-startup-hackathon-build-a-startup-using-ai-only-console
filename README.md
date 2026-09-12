@@ -13,7 +13,7 @@ Built for **Team Console · HackIndia AI-First Startup Hackathon · AI in any st
 - A synthetic bakery scenario: **720 → 1,080 confirmed delivered packs** after review; **720 → 360 unresolved packs**.
 - Original-file storage and SHA-256 fingerprints for uploaded documents.
 - Structured CSV import with editable review proposals and explicit approval before graph changes.
-- Server-side OpenAI Responses API adapter for PDF, image and text extraction. **Live AI validation requires an API key and is still pending.**
+- Live Fireworks extraction for PDF, image and text, with provider-specific consent and reviewed imports. The OpenAI Responses API option remains available.
 - Operator review of ingredient links and unidentified delivery batches, with decision history.
 - Fixed report snapshots that include confirmed and unresolved customers, source references and quantity limitations.
 - Server-side persistence, isolated browser sessions, origin checks and revision-based concurrent-write protection.
@@ -58,13 +58,15 @@ Use the exact CSV headers and explicit units. Unknown receipt/production quantit
 
 ## Connect live AI
 
-Copy `product/.env.example` to `product/.env` and set `OPENAI_API_KEY` server-side. The default configurable model is `gpt-5.4-mini`. Restart the development server after changing configuration. Never put keys in browser code or Git.
+Copy `product/.env.example` to ignored `product/.env`. Set `AI_PROVIDER=fireworks` and `FIREWORKS_API_KEY` for Fireworks; the default model is `accounts/fireworks/models/kimi-k2p6`. To use OpenAI, set `AI_PROVIDER=openai` and `OPENAI_API_KEY`; `OPENAI_MODEL` defaults to `gpt-5.4-mini`. Explicit provider choices never silently fall back to another service. Restart the development server after configuration changes. Never put keys in browser code or Git. The provided local development key is not included in the source package.
 
-The upload screen explicitly asks to send a file to OpenAI. The adapter requests structured output with `store:false`, preserves raw identifier characters, rejects incomplete/unsupported results, and requires review before importing. `store:false` is not a blanket guarantee about all provider retention; review the provider's current data policies before using real documents.
+The upload screen names the selected provider before consent. Both adapters request structured output, preserve raw identifiers, reject incomplete/unsupported results, and require review before importing. OpenAI requests use `store:false`; this option is not sent to Fireworks. Review the chosen provider's current data policies before using real documents.
 
-Before the final competition recording, run and record at least one real API extraction against a labelled fixture and compare every field with ground truth. A ChatGPT subscription does not establish that this application's API connection is configured.
+Fireworks PDFs are rendered in the browser, with a six-page limit and no skipped pages. The server independently checks the original PDF page count against the received JPEG pages. The original PDF and each supplied image are stored with SHA-256 fingerprints; operators must compare the images and transcript against the original. Fingerprints identify stored bytes, not OCR accuracy or proof that a raster faithfully represents its source. WebP is converted to JPEG. OpenAI receives original PDFs/images directly.
 
-Use [the synthetic PDF fixture](sample-records/ai-extraction-fixture.pdf) and its [ground truth](sample-records/expected-ground-truth.md) for this check. In an empty workspace, its three reviewed records should yield 180 confirmed delivered packs and no unresolved deliveries. This fixture has been prepared and inspected; live extraction has not been run.
+The [synthetic PDF fixture](sample-records/ai-extraction-fixture.pdf) was extracted through Fireworks and reviewed in the actual UI: three records, 180 confirmed packs and no unresolved deliveries. See [live AI validation](docs/LIVE-AI-VALIDATION.md) for the evidence and limitations. Live OpenAI extraction remains untested because no OpenAI key is configured.
+
+For a production build preview, run `npm run build` and then `npm start`. The preview reads the private `.env` from the application directory. This starts a local Worker; it does not publish the app.
 
 ## Verification
 

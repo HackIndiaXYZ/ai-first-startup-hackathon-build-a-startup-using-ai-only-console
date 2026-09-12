@@ -31,6 +31,7 @@ import {
 } from "@/lib/domain";
 import UploadPanel from "./upload-panel";
 import Modal from "./modal";
+import type { PublicAIConfig } from "@/lib/ai-config";
 type View = "trace" | "records" | "review" | "reports";
 const fmt = (n: number) => n.toLocaleString("en-US");
 export function download(name: string, text: string, type = "text/markdown") {
@@ -59,7 +60,12 @@ export default function Home() {
     [busy, setBusy] = useState(false),
     [error, setError] = useState(""),
     [notice, setNotice] = useState(""),
-    [ai, setAi] = useState(false),
+    [ai, setAi] = useState<PublicAIConfig>({
+      provider: "openai",
+      label: "OpenAI",
+      model: "",
+      available: false,
+    }),
     [query, setQuery] = useState(""),
     [confirm, setConfirm] = useState<"reset" | "clear" | null>(null),
     [help, setHelp] = useState(false);
@@ -69,11 +75,12 @@ export default function Home() {
         const d = (await r.json()) as {
           workspace: Workspace;
           aiAvailable: boolean;
+          ai: PublicAIConfig;
           error: string;
         };
         if (!r.ok) throw Error(d.error);
         setW(d.workspace);
-        setAi(d.aiAvailable);
+        setAi(d.ai);
       })
       .catch((e) => setError(e.message));
   }, []);
@@ -1083,7 +1090,7 @@ export default function Home() {
       {upload && w && (
         <UploadPanel
           workspace={w}
-          aiAvailable={ai}
+          ai={ai}
           onClose={() => setUpload(false)}
           onSaved={(next) => {
             setW(next);
@@ -1127,6 +1134,28 @@ export default function Home() {
           {source.doc.hash && (
             <div className="source-hash">
               SHA-256 <code>{source.doc.hash}</code>
+            </div>
+          )}
+          {source.doc.extraction && (
+            <div className="import-info source-provenance">
+              <p>
+                Extracted with{" "}
+                {source.doc.extraction.provider === "fireworks"
+                  ? "Fireworks"
+                  : "OpenAI"}{" "}
+                · {source.doc.extraction.model}. Line numbers refer to the AI
+                transcript; check the original source.
+              </p>
+              {source.doc.extraction.pages?.map((page) => (
+                <a
+                  key={page.page}
+                  className="text-button"
+                  href={`/api/document?id=${encodeURIComponent(source.doc.id)}&page=${page.page}`}
+                  download
+                >
+                  Download AI input page {page.page}
+                </a>
+              ))}
             </div>
           )}
           <div className="modal-footer">

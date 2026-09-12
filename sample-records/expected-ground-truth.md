@@ -4,7 +4,7 @@ Fixture: `ai-extraction-fixture.pdf`
 
 Purpose: a supervised first live extraction check for RecallScope.
 
-Status: **Live AI extraction has not been tested.** These values are authored expectations, not measured model results.
+Status: Fireworks / Kimi K2.6 extracted all three records in the live browser test on 12 September 2026. Reviewed import produced the expected 180 confirmed / 0 unresolved result. These ground-truth values were authored before the request; see `../docs/LIVE-AI-VALIDATION.md` for the validation scope. The PDF's original pre-test status wording is preserved as source evidence.
 
 All entities, records and quantities are fictional. The PDF has one page and exactly three factual records. It contains explicit links and units, with no ambiguous identifiers. The product is a synthetic flour packing exercise, not a real recipe or manufacturing instruction.
 

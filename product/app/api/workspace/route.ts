@@ -11,10 +11,12 @@ import {
 import { resolveBatch, createReport } from "@/lib/domain";
 import { sampleWorkspace } from "@/lib/sample";
 import { resolveDelivery } from "@/lib/resolve-delivery";
+import { publicAIConfig } from "@/lib/ai-config";
 export async function GET(req: Request) {
   try {
     const { workspace, cookie } = await session(req, true);
-    return json({ workspace, aiAvailable: !!env.OPENAI_API_KEY }, 200, cookie);
+    const ai = publicAIConfig(env);
+    return json({ workspace, aiAvailable: ai.available, ai }, 200, cookie);
   } catch (e) {
     return failure(e);
   }

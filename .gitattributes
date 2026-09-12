@@ -1,3 +1,4 @@
 *.pdf binary
 *.pptx binary
 *.png binary
+*.worker-*.min.mjs -diff -text

@@ -3,12 +3,12 @@ Date: 12 September 2026
 
 ## Automated checks
 
-- 33 domain, import and AI-adapter tests: expected synthetic totals; immutable original sources; missing source protection; unknown quantities; duplicate dispatches; alternate-lot isolation; dangling links; unresolved report recipients; snapshots; reassignment history; quantity conservation; CSV quoting; strict identifiers; evidence quotes; mixed-data disclosure; supplier identity; unknown batch placeholders; reviewed delivery references; AI response failure handling.
+- 40 domain, import and provider tests: expected synthetic totals; immutable original sources; missing source protection; unknown quantities; duplicate dispatches; alternate-lot isolation; dangling links; unresolved report recipients; snapshots; reassignment history; quantity conservation; CSV quoting; strict identifiers; evidence quotes; mixed-data disclosure; supplier identity; unknown batch placeholders; reviewed delivery references; provider selection/secret omission; truncated/malformed AI responses; PDF page limits, ordering, original-page-count checks, image budgets and provenance in reports.
 - TypeScript type check passed.
 - Production Worker/client build passed.
 - HTTP integration flow passed against both the development server on port 5173 and the built production Worker preview on port 8787: separate sessions, required request origin, stale-write rejection, report snapshots, pending extraction, explicit import review, original file recovery, duplicate-source rejection, unsupported files, missing AI configuration, and cross-session draft/file isolation.
 
-AI adapter tests use controlled responses. **No live OCR/extraction accuracy or latency measurement has been made.**
+Automated adapter tests use controlled responses and make no paid API calls. Separate real Fireworks requests and browser review are documented in [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md). These small synthetic checks do not establish general OCR accuracy or real manufacturer performance. OpenAI remains live-untested.
 
 ## Browser checks
 
@@ -29,7 +29,7 @@ Dialog focus management, explicit button labels, visible focus styles and reduce
 
 ## What still needs real-world evidence
 
-- Live PDF/image extraction against known ground truth and difficult document layouts.
+- Broader PDF/image extraction testing against difficult real document layouts, beyond the labelled synthetic fixtures.
 - At least one permissioned manufacturer's source set and operator review.
 - Extraction completeness, identifier accuracy and review workload measurements.
 - Manual-versus-assisted timing using the same inputs and outcome criteria.
