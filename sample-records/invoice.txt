@@ -1,0 +1,5 @@
+SYNTHETIC SAMPLE — Northfield Milling
+Invoice NF-1042 | 02 September 2026
+Ingredient | Lot | Received
+Wheat flour | FL-260901-A | 120 kg
+Wheat flour | FL-260902-B | 80 kg

@@ -1,0 +1,8 @@
+SYNTHETIC SAMPLE — Fieldwork Bakery
+Date,Customer,Batch,Packs
+2026-09-04,Juniper Café,CK-0903-01,240
+2026-09-04,Grove Market,CK-0903-01,120
+2026-09-04,Grove Market,CK-0903-02,360
+2026-09-05,Harbor Grocer,CK-0904-01,360
+2026-09-05,Orchard Pantry,CK-0904-02,360
+2026-09-06,Juniper Café,CK-0905-01,360
