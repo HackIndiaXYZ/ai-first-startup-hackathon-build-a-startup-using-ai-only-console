@@ -29,7 +29,9 @@ The [live AI record](LIVE-AI-VALIDATION.md) documents actual Fireworks requests 
 
 The owner authorized publication to the [official Team Console repository](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console), with the original Git history and MIT license preserved. The latest showcase changes form the source release described here; the remote commit identifies the published revision.
 
-The repository contains the runnable application and a [four-minute recording script](DEMO-SCRIPT.md). This record does not claim an independently hosted public application, a recorded video or a completed competition submission. Those artifacts should be linked by their actual published URLs when available. Localhost is a local preview.
+**Public app:** [RecallScope](https://recallscope.console3096.chatgpt.site). Sites reported a successful production deployment on 12 September 2026 with public access, database migrations, document storage and the Fireworks secret configured server-side. The deployed app source revision is `407ebed933c0047b2842b1cc5830e4d93019220c`, extracted from the official repository's application directory. Deployment metadata and keys are managed by the hosting service.
+
+The repository also contains the [four-minute recording script](DEMO-SCRIPT.md). The participant explicitly deferred video production; no finished video or organizer submission receipt is claimed. The public app, GitHub repository, pitch and AI usage report are the completed submission materials.
 
 Earlier checklist documents and PDFs are dated development audits. Their old incomplete sample totals, pilot requests and authorization boundaries do not define the current fictional showcase. The current user request does not require manufacturer outreach or a real-world trial.
 
@@ -37,7 +39,7 @@ Earlier checklist documents and PDFs are dated development audits. Their old inc
 
 RecallScope supports practice recall drills in a single-operator workspace and one ingredient lot per production batch. Deterministic code calculates recorded quantities; AI proposes fields for review. Source values remain separate from operator corrections. A sample-data disclosure remains when fictional and custom records are mixed.
 
-The application does not send operational recall notices, certify food safety or establish physical stock. It uses bounded workspace snapshots, with browser-session identity rather than multi-user team accounts. Sessions expire after seven days. Production retention/deletion, shared-user access and service spending controls require their own implementation and verification before handling a real operational deployment.
+The application does not send operational recall notices, certify food safety or establish physical stock. It uses bounded workspace snapshots, with browser-session identity rather than multi-user team accounts. Sessions expire after seven days. The public app allows 30 AI requests per UTC day, enforced atomically across all visitors before sending requests to a provider. Operational retention/deletion and shared-user access are outside this showcase's scope.
 
 ## Optional future research
 
