@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import { csvTemplate } from "../lib/import-records";
+import { traceLot } from "../lib/domain";
 const base = process.env.TEST_BASE_URL || "http://127.0.0.1:5173";
 async function open() {
   const r = await fetch(base + "/api/workspace");
@@ -10,6 +11,9 @@ async function open() {
 }
 const a = await open(),
   b = await open();
+assert.equal(a.workspace.documents.length, 7);
+assert.equal(traceLot(a.workspace, "lot-a").confirmedPacks, 1440);
+assert.equal(traceLot(a.workspace, "lot-a").unresolvedPacks, 0);
 async function post(path: string, body: any, cookie = a.cookie) {
   return fetch(base + path, {
     method: "POST",
@@ -24,15 +28,22 @@ let r = await fetch(base + "/api/workspace", {
 });
 assert.equal(r.status, 403);
 r = await post("/api/workspace", {
-  action: "resolve",
+  action: "reset",
   revision: 0,
+  confirm: "RESET",
+  scenario: "review",
+});
+assert.equal(r.status, 200);
+r = await post("/api/workspace", {
+  action: "resolve",
+  revision: 1,
   batchId: "batch-03",
   lotId: "lot-a",
   note: "Synthetic test: checked O/0 against supplier invoice.",
 });
 assert.equal(r.status, 200);
 let data: any = await r.json();
-assert.equal(data.workspace.revision, 1);
+assert.equal(data.workspace.revision, 2);
 r = await post("/api/workspace", {
   action: "report",
   revision: 0,
@@ -41,20 +52,23 @@ r = await post("/api/workspace", {
 assert.equal(r.status, 409);
 r = await post("/api/workspace", {
   action: "report",
-  revision: 1,
+  revision: 2,
   lotId: "lot-a",
 });
 assert.equal(r.status, 200);
 data = await r.json();
 assert.equal(data.workspace.reports[0].confirmedPacks, 1080);
 assert.equal(data.workspace.reports[0].unresolvedPacks, 360);
+const saved = data.workspace;
+r = await fetch(base + "/api/workspace", { headers: { cookie: a.cookie } });
+assert.deepEqual(((await r.json()) as any).workspace, saved);
 r = await fetch(base + "/api/workspace", { headers: { cookie: b.cookie } });
 data = await r.json();
 assert.equal(data.workspace.revision, 0);
 assert.equal(data.workspace.audit.length, 0);
 r = await post("/api/workspace", {
   action: "clear",
-  revision: 2,
+  revision: 3,
   confirm: "CLEAR",
 });
 assert.equal(r.status, 200);
@@ -82,7 +96,7 @@ assert.equal(
 );
 r = await post("/api/import", {
   draftId: draft.id,
-  revision: 3,
+  revision: 4,
   records: draft.records,
   reviewed: false,
 });
@@ -95,7 +109,7 @@ r = await post(
 assert.equal(r.status, 404);
 r = await post("/api/import", {
   draftId: draft.id,
-  revision: 3,
+  revision: 4,
   records: draft.records,
   reviewed: true,
 });
@@ -103,7 +117,10 @@ data = await r.json();
 assert.equal(r.status, 200, JSON.stringify(data));
 assert.equal(data.workspace.documents.length, 1);
 assert.equal(data.workspace.deliveries[0].packs, 180);
-assert.equal(data.workspace.revision, 4);
+assert.equal(data.workspace.revision, 5);
+const imported = data.workspace;
+r = await fetch(base + "/api/workspace", { headers: { cookie: a.cookie } });
+assert.deepEqual(((await r.json()) as any).workspace, imported);
 r = await fetch(base + "/api/document?id=" + draft.document.id, {
   headers: { cookie: a.cookie },
 });
@@ -191,6 +208,25 @@ if (!data.aiAvailable) {
     );
   }
 }
+r = await post(
+  "/api/workspace",
+  { action: "report", revision: 0, lotId: "lot-a" },
+  b.cookie,
+);
+assert.equal(r.status, 200);
+data = await r.json();
+assert.equal(data.workspace.reports[0].confirmedPacks, 1440);
+assert.doesNotMatch(data.workspace.reports[0].content, /Unresolved exposure/);
+r = await post(
+  "/api/workspace",
+  { action: "reset", revision: 1, confirm: "RESET" },
+  b.cookie,
+);
+assert.equal(r.status, 200);
+data = await r.json();
+assert.equal(data.workspace.revision, 2);
+assert.equal(traceLot(data.workspace, "lot-a").confirmedPacks, 1440);
+assert.equal(data.workspace.documents.length, 7);
 console.log(
   "PASS: session isolation, origin checks, stale writes, report snapshots, pending extraction, reviewed import, original-file retrieval, duplicate rejection, provider consent/configuration guards, cross-session draft/file isolation. No live AI requests made by this suite.",
 );

@@ -191,3 +191,35 @@ export function sampleWorkspace(
     reports: [],
   };
 }
+
+/** Complete fictional example; the original review fixture remains independent. */
+export function completeSampleWorkspace(
+  id = "preview",
+  at = "2026-09-12T07:30:00.000Z",
+): Workspace {
+  const workspace = sampleWorkspace(id, at);
+  for (const suffix of ["03", "04"]) {
+    const batch = workspace.batches.find((b) => b.id === `batch-${suffix}`)!;
+    Object.assign(batch, {
+      producedPacks: 400,
+      usedKg: 24,
+      lotId: "lot-a",
+      rawLotCode: "FL-260901-A",
+      status: "confirmed",
+      sourceId: `production-${suffix}`,
+      line: 4,
+    });
+    const source = {
+      id: batch.sourceId,
+      name: `${batch.code} · Production sheet.txt`,
+      kind: "Production record",
+      text: `SYNTHETIC SAMPLE — Fieldwork Bakery\nProduct: Butter cookies, 200 g\nBatch: ${batch.code}\nIngredient lot: FL-260901-A\nWheat flour used: 24 kg\nProduced: 400 packs`,
+      mode: "sample" as const,
+      uploadedAt: at,
+    };
+    const index = workspace.documents.findIndex((d) => d.id === source.id);
+    if (index >= 0) workspace.documents[index] = source;
+    else workspace.documents.splice(workspace.documents.length - 1, 0, source);
+  }
+  return workspace;
+}

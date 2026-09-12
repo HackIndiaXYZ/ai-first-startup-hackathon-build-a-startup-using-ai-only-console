@@ -1,5 +1,5 @@
 import { env } from "cloudflare:workers";
-import { sampleWorkspace } from "./sample";
+import { completeSampleWorkspace } from "./sample";
 import type { Workspace } from "./domain";
 
 export class AppError extends Error {
@@ -43,7 +43,7 @@ export async function session(
       401,
     );
   const id = crypto.randomUUID();
-  const workspace = sampleWorkspace(id, new Date().toISOString());
+  const workspace = completeSampleWorkspace(id, new Date().toISOString());
   await db()
     .prepare(
       "INSERT INTO workspaces (id,revision,data,updated_at) VALUES (?,0,?,?)",
@@ -59,7 +59,7 @@ export async function save(w: Workspace, previousRevision: number) {
   const data = JSON.stringify(w);
   if (new TextEncoder().encode(data).length > 1500000)
     throw new AppError(
-      "This practice workspace has reached its storage limit. Download reports and start a fresh workspace.",
+      "This workspace has reached its storage limit. Download reports and start a fresh workspace.",
       413,
     );
   const result = await db()

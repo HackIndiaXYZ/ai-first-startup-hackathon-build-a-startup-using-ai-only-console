@@ -77,3 +77,7 @@ User instruction: treat an attached championship checklist as optional reference
 ## GitHub release preparation - 12 September 2026
 
 After the owner explicitly authorized publication to the official Team Console repository, Codex verified the destination and fast-forward relationship, inspected all reachable Git objects for configured secrets, refined the README/navigation/architecture summary and clarified which submission artifacts remain pending. The original Git history and MIT license are preserved. GitHub Actions runs the project checks from a clean checkout. This authorization covers the source release; it does not claim a public app, final video or completed competition submission.
+
+## Complete showcase - 12 September 2026
+
+The owner requested a polished complete fictional scenario without a real manufacturer trial. Codex authored a separate complete dataset with matching production evidence, kept the original ambiguity fixture for regression coverage, and made the complete dataset the default for new sessions and sample resets. Existing sessions remain unchanged. The main experience, reports, README, walkthrough and editable pitch now focus on the complete trace: 1,440 delivered packs across four batches and four destinations. Forty-five automated tests and the application/API checks passed. Codex generated an example report directly from the same domain code. The pre-authored sample is not presented as a new AI extraction or real customer outcome; Fireworks and OpenAI support remain intact.

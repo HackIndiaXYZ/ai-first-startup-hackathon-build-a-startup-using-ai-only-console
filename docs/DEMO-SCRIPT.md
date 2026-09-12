@@ -1,73 +1,78 @@
-# RecallScope demo script
+# RecallScope showcase script
 
-Target recording: approximately 4 minutes. **This script is delivered. The final 3-5-minute video has not been recorded.**
+A four-minute walkthrough of the complete fictional bakery workspace. These timings guide narration and editing; they are not application performance measurements. This document is the recording script.
 
-Use the verified Fireworks workflow and [two-page synthetic fixture](../sample-records/synthetic-two-page-lot-code.pdf). Keep its [ground truth](../sample-records/fireworks-ground-truth.md) available for the review step. The timings below are an editing plan, not measured application performance. If waiting time is shortened in the video, label the cut clearly.
+## 0:00–0:25 · One ingredient, a clear delivery scope
 
-## 0:00-0:25 - The recall-drill question
+Open the supplied workspace with **FL-260901-A** selected.
 
-“A supplier flags an ingredient lot. A food manufacturer's quality lead needs to connect that lot to production batches and customer deliveries, with records that explain every link.
+“A quality lead starts with one ingredient lot and needs to follow it through production to customer deliveries.
 
-We are Console. RecallScope helps small food makers run practice recall drills and see where their evidence is incomplete.”
+This is RecallScope. In our fictional bakery showcase, this lot connects to four production batches and four destinations: 1,440 delivered packs, with source records explaining the route.”
 
-## 0:25-1:10 - Upload the synthetic PDF
+Keep the sample-data label visible.
 
-Start with an empty workspace. Show both pages of `synthetic-two-page-lot-code.pdf`, choose the AI import option, and show Fireworks as the destination before sending.
+## 0:25–1:10 · Follow the trace
 
-“Every business and transaction in this file is fictional. Page one records a flour receipt. Page two records production and a customer dispatch.
+Show the selected lot, four production branches and customer deliveries. Select a batch, then its destination, so the corresponding path and record details are visible.
 
-RecallScope renders every PDF page as an image and sends those images to Fireworks. This run uses Kimi K2.6. The original PDF and the images sent to AI remain available for review.”
+“The map connects the receiving lot, the batches that used it and the deliveries that followed. Selecting a batch brings its part of the trace into focus.
 
-Capture a real request and its result. Do not represent seeded records or a replay as a new live extraction. If the request fails, preserve the failure and show an explicitly labelled successful recorded run or retry.
+All deliveries in this supplied scenario have supported ingredient links. The totals come from the recorded quantities and relationships.”
 
-## 1:10-1:50 - Inspect the proposed records
+Point to **1,440 packs, four batches and four destinations**. Do not describe these as real manufacturer transactions or results from a new AI request.
 
-Show all three returned proposals and their evidence before approving the import. Select `FW-FL-01` after approval.
+## 1:10–1:55 · Inspect the documents
 
-“The model returned a receipt, a production record and a dispatch. Here, the receipt has `FW-FL-01`, with a zero. The production sheet has `FW-FL-O1`, with a letter O. The extraction preserved that difference.
+Open the selected batch's source, then **Documents**. Show the receiving, production and dispatch records. The whole workspace contains **seven source documents**. Search one visible batch code and open its result.
 
-I approve the records as transcribed. The result is zero confirmed delivered packs and 180 unresolved packs. The documents do not yet establish the ingredient connection.”
+“The evidence stays close to the trace. I can read the production record, follow its batch code into a dispatch and inspect the receiving record behind the ingredient lot.
 
-## 1:50-2:40 - Record a supported test correction
+The document library keeps the source material together. Search and categories help me reach the record I want without changing any totals.”
 
-Open the unresolved batch `FW-CK-01`. Show the raw source and fixture ground truth. Assign the reviewed relationship to `FW-FL-01` and enter a note stating the basis.
+## 1:55–2:40 · Save the scope
 
-“The document alone does not prove these are the same lot. This synthetic fixture's ground truth explicitly authorizes the intended relationship, so I can use it to test the correction workflow. A real drill would need supporting operational evidence.
+Choose **Create report**, then **Open report**. Show the lot code, pack total, four batches, four destinations and source references. Reload and reopen the saved report if the capture allows.
 
-I record that basis and confirm the assignment. Now the code calculates 180 confirmed delivered packs, one batch and one customer, with zero unresolved packs. The source still contains the original letter O.”
+“I save this scope as a report. It brings together the deliveries, quantities and supporting references in a snapshot I can return to.
 
-Suggested review note: “Synthetic QA: fixture ground truth authorizes the intended assignment to FW-FL-01. The PDF alone does not prove lot equivalence. Preserve the raw FW-FL-O1 source value.”
+Saved reports keep their original scope. The workspace can compare reports for the same lot as records change.”
 
-## 2:40-3:15 - Save the drill report
+Use the report ID from the actual recording. Do not imply a changed comparison when both snapshots contain the same data.
 
-Save a report and open the decision history and original source.
+## 2:40–3:15 · A workspace for the operator
 
-“This report is a snapshot of the reviewed scope and its supporting records. The decision history records the correction and why I made it. Later edits do not rewrite the saved report.
+Show night mode, then open **Preferences** briefly to demonstrate appearance and density. Return to the trace. Use **Find in workspace** to locate a visible record or customer.
 
-The stored file fingerprints identify the bytes we retained. They do not prove that AI read the document correctly. The operator can inspect the source, page images and transcript.”
+“The workspace adapts to the person using it: light, night or system appearance, comfortable or compact spacing, and names that make this workspace familiar.
 
-Use the report ID produced in the actual recording. The completed validation run saved `RS-ED686CD1`; do not imply a new run must generate the same ID.
+Search brings lots, batches, customers and document text into reach. These choices change the view; the source records stay intact.”
 
-## 3:15-3:45 - Buyer and validation plan
+## 3:15–3:45 · From documents to records
 
-“Our initial buyer is a quality or operations lead at a small packaged-food manufacturer. The proposed subscription is a hypothesis, and we have not validated customer demand or pricing.
+Open **Add records** and show the CSV and AI intake choices. If showing AI, let the selected provider name and consent text remain readable.
 
-We are seeking one permissioned manufacturer pilot. We will compare the same drill manually and with RecallScope, measuring missed links, review effort and completion time.”
+“New records can come from CSV or AI-assisted document reading. AI proposes the fields; the operator reviews them against the source before approval. Code then calculates the trace from those recorded relationships.
 
-## 3:45-4:00 - Close
+The original document remains available alongside the extracted information.”
 
-“These synthetic tests show the workflow working on known examples. They do not establish general extraction accuracy or readiness for a real recall.
+This segment explains the implemented intake flow. The preloaded bakery dataset is authored sample data. Only show a fresh extraction result if an actual request is captured; do not substitute seeded records for that result. The separate [live AI evidence](LIVE-AI-VALIDATION.md) records the observed Fireworks text and PDF checks.
 
-RecallScope gives the team a trace they can inspect and a clear record of what still needs evidence.”
+## 3:45–4:00 · Close
 
-## Recording checklist
+Return to the complete lot trace or the saved report.
 
-- Use an empty workspace and verify the actual three proposals, raw `FW-FL-O1`, and initial 0 confirmed / 180 unresolved result.
-- Keep the synthetic label visible. Show the source of the correction authority instead of guessing from similar codes.
-- Verify the reviewed 180 confirmed / 0 unresolved result and the report created in that run.
-- Keep API keys and local configuration out of all captures.
-- Keep any waiting-time edits visible. Claim no speed improvement, extraction percentage, customer adoption or compliance result.
-- Include public application and GitHub delivery links only after they exist. The official repository is linked from the README. Public deployment and the final video remain pending.
-- The OpenAI option remains configurable, but this verified demonstration uses Fireworks. Live OpenAI extraction is untested.
+“One ingredient lot. Four batches. Four destinations. A report with the records behind it.
 
-See [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md) for the observed results, timeout and limitations.
+RecallScope brings a practice recall drill into one workspace—from source documents to an inspectable delivery scope.”
+
+## Capture notes
+
+- Start from the complete supplied bakery dataset and keep its fictional provenance visible. The showcase has 1,440 confirmed packs, four batches, four destinations and zero unresolved deliveries for FL-260901-A; seven documents is the workspace-wide count.
+- Follow the main trace, documents and report workflow. No review-example selection or deliberately incomplete dataset is part of this walkthrough.
+- Capture actual interactions and the report created in that run. Verify displayed figures against the final build before recording.
+- Keep credentials, private configuration and unrelated browser content out of the capture. If provider waiting time is shortened, label the edit.
+- Use the official repository link and only include application/video links that have actually been published. A local preview can be identified as a local preview.
+- Describe a fictional showcase and implemented features. Do not claim manufacturer trials, measured savings, general extraction accuracy or operational recall certification.
+
+The historical O/0 correction fixture remains documented in [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md) as a separate software QA exercise. It is not the default showcase or a required recording branch.

@@ -1,6 +1,6 @@
 import test from "node:test";
 import assert from "node:assert/strict";
-import { sampleWorkspace } from "../lib/sample";
+import { sampleWorkspace, completeSampleWorkspace } from "../lib/sample";
 import {
   traceLot,
   resolveBatch,
@@ -16,6 +16,78 @@ import {
 import { extractWithAI } from "../lib/ai-extract";
 import { resolveDelivery } from "../lib/resolve-delivery";
 import { comparePreviousReport } from "../lib/report-comparison";
+
+test("complete sample totals are supported by every production source", () => {
+  const w = completeSampleWorkspace();
+  assert.equal(w.documents.length, 7);
+  assert.equal(w.synthetic, true);
+  assert.equal(w.audit.length, 0);
+  for (const [lotId, packs, batches, customers, usedKg, remaining] of [
+    ["lot-a", 1440, 4, 4, 96, 160],
+    ["lot-b", 360, 1, 1, 24, 40],
+  ] as const) {
+    const t = traceLot(w, lotId);
+    assert.equal(t.confirmedPacks, packs);
+    assert.equal(t.batches.length, batches);
+    assert.equal(t.customers.length, customers);
+    assert.equal(t.usedKg, usedKg);
+    assert.equal(t.remainingPacks, remaining);
+    assert.equal(t.unresolvedBatches.length, 0);
+    assert.equal(t.unresolvedDeliveries.length, 0);
+    for (const b of t.batches) {
+      const source = w.documents.find((d) => d.id === b.sourceId)!;
+      assert.equal(source.mode, "sample");
+      assert.equal(
+        source.text.split("\n")[b.line - 1],
+        `Ingredient lot: ${b.rawLotCode}`,
+      );
+    }
+  }
+  w.documents = w.documents.filter((d) => d.id !== "production-04");
+  assert.equal(traceLot(w, "lot-a").confirmedPacks, 1080);
+  assert.equal(traceLot(w, "lot-a").unresolvedPacks, 360);
+});
+
+test("complete sample does not alter the original uncertainty fixture", () => {
+  const before = sampleWorkspace();
+  const complete = completeSampleWorkspace();
+  complete.batches[0].rawLotCode = "CHANGED";
+  complete.documents[0].text = "CHANGED";
+  assert.deepEqual(sampleWorkspace(), before);
+  assert.equal(traceLot(before, "lot-a").confirmedPacks, 720);
+  assert.equal(traceLot(before, "lot-a").unresolvedPacks, 720);
+  assert.equal(before.batches[2].rawLotCode, "FL-2609O1-A");
+  assert.equal(before.batches[3].sourceId, "");
+});
+
+test("complete reports present connected scope and retain actual uncertainty when evidence is removed", () => {
+  const w = completeSampleWorkspace();
+  const report = createReport(
+    w,
+    "lot-a",
+    "2026-09-12T10:00:00Z",
+    "RS-COMPLETE",
+  );
+  assert.equal(report.confirmedPacks, 1440);
+  assert.equal(report.unresolvedPacks, 0);
+  assert.match(report.content, /CONTAINS SYNTHETIC SAMPLE DATA/);
+  assert.match(report.content, /CK-0904-02/);
+  assert.doesNotMatch(
+    report.content,
+    /Unresolved exposure|operator review required|Source record missing/,
+  );
+  w.documents = w.documents.filter((d) => d.id !== "production-04");
+  const incomplete = createReport(
+    w,
+    "lot-a",
+    "2026-09-12T10:01:00Z",
+    "RS-EVIDENCE",
+  );
+  assert.equal(incomplete.unresolvedPacks, 360);
+  assert.match(incomplete.content, /Unresolved exposure/);
+  assert.match(incomplete.content, /No-link does not mean safe/);
+  assert.equal(report.confirmedPacks, 1440);
+});
 
 test("delivery decisions survive later ingredient resolution in report evidence", () => {
   const initial = sampleWorkspace();

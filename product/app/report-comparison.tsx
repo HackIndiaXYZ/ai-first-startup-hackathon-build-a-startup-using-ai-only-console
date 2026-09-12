@@ -18,10 +18,7 @@ export default function ReportComparison({
   const comparison = comparePreviousReport(current, reports);
   if (!comparison)
     return (
-      <p className="comparison-empty">
-        First saved snapshot for this lot. Save another report after reviewing
-        records to compare the scope.
-      </p>
+      <p className="comparison-empty">First saved snapshot for this lot.</p>
     );
   const {
     previous,
@@ -58,15 +55,27 @@ export default function ReportComparison({
           </strong>
           <small>{change(confirmedChange)}</small>
         </div>
-        <div>
-          <span>Unresolved delivered packs</span>
-          <strong>
-            {number(previous.unresolvedPacks)}{" "}
-            <ArrowRight size={16} aria-label="to" />{" "}
-            {number(current.unresolvedPacks)}
-          </strong>
-          <small>{change(unresolvedChange)} · workspace-wide</small>
-        </div>
+        {previous.unresolvedPacks > 0 || current.unresolvedPacks > 0 ? (
+          <div>
+            <span>Unresolved delivered packs</span>
+            <strong>
+              {number(previous.unresolvedPacks)}{" "}
+              <ArrowRight size={16} aria-label="to" />{" "}
+              {number(current.unresolvedPacks)}
+            </strong>
+            <small>{change(unresolvedChange)} · workspace-wide</small>
+          </div>
+        ) : (
+          <div>
+            <span>Customer destinations</span>
+            <strong>
+              {previous.customers.length}{" "}
+              <ArrowRight size={16} aria-label="to" />{" "}
+              {current.customers.length}
+            </strong>
+            <small>Recorded customer reach</small>
+          </div>
+        )}
       </div>
       {addedCustomers.length > 0 || removedCustomers.length > 0 ? (
         <div className="comparison-customers">
@@ -87,8 +96,8 @@ export default function ReportComparison({
         <p>Confirmed customer list unchanged.</p>
       )}
       <p className="comparison-note">
-        Changes describe recorded scope, not a change in safety. Review the
-        saved sources and decisions to understand why.
+        Each comparison follows the sources and decisions preserved in its saved
+        reports.
       </p>
     </section>
   );

@@ -11,6 +11,7 @@ import {
   Layers3,
 } from "lucide-react";
 import type { Workspace } from "@/lib/domain";
+import { traceLot } from "@/lib/domain";
 import Modal from "./modal";
 export type Destination = {
   view: "trace" | "records" | "review" | "reports";
@@ -29,21 +30,31 @@ export default function WorkspaceSearch({
   onNavigate: (d: Destination) => void;
 }) {
   const [query, setQuery] = useState("");
+  const trace = w ? traceLot(w, w.lots[0]?.id || "") : null;
+  const hasReviews = !!(
+    trace?.unresolvedBatches.length || trace?.unresolvedDeliveries.length
+  );
   const entries = [
     ...(
       [
         { title: "Trace lots", view: "trace", icon: GitBranch },
         { title: "Documents", view: "records", icon: FileText },
-        { title: "Needs review", view: "review", icon: ClipboardCheck },
+        {
+          title: hasReviews ? "Needs review" : "Decisions",
+          view: "review",
+          icon: ClipboardCheck,
+        },
         { title: "Reports", view: "reports", icon: Layers3 },
       ] as const
-    ).map((x) => ({
-      title: x.title,
-      detail: "Go to page",
-      search: x.title,
-      icon: x.icon,
-      destination: { view: x.view } as Destination,
-    })),
+    )
+      .filter((x) => x.view !== "review" || hasReviews || !!w?.audit.length)
+      .map((x) => ({
+        title: x.title,
+        detail: "Go to page",
+        search: x.title,
+        icon: x.icon,
+        destination: { view: x.view } as Destination,
+      })),
     ...(w?.lots || []).map((l) => ({
       title: l.code,
       detail: l.ingredient + " · " + l.supplier,

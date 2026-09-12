@@ -9,7 +9,7 @@ import {
   AppError,
 } from "@/lib/store";
 import { resolveBatch, createReport } from "@/lib/domain";
-import { sampleWorkspace } from "@/lib/sample";
+import { completeSampleWorkspace, sampleWorkspace } from "@/lib/sample";
 import { resolveDelivery } from "@/lib/resolve-delivery";
 import { publicAIConfig } from "@/lib/ai-config";
 export async function GET(req: Request) {
@@ -73,9 +73,7 @@ export async function POST(req: Request) {
       if (!w.lots.some((l) => l.id === body.lotId))
         throw new AppError("Choose an ingredient lot.");
       if (w.reports.length >= 50)
-        throw new AppError(
-          "This demo workspace has reached its 50-report limit.",
-        );
+        throw new AppError("This workspace has reached its 50-report limit.");
       const report = createReport(
         w,
         body.lotId,
@@ -89,7 +87,9 @@ export async function POST(req: Request) {
       };
     } else if (body.action === "reset" && body.confirm === "RESET") {
       next = {
-        ...sampleWorkspace(w.id, new Date().toISOString()),
+        ...(body.scenario === "review"
+          ? sampleWorkspace
+          : completeSampleWorkspace)(w.id, new Date().toISOString()),
         revision: w.revision + 1,
       };
     } else if (body.action === "clear" && body.confirm === "CLEAR") {

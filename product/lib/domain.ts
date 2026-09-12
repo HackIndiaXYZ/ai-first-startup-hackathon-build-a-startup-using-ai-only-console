@@ -211,6 +211,8 @@ export function createReport(
   const lot = w.lots.find((l) => l.id === lotId);
   if (!lot) throw new Error("Choose an ingredient lot first.");
   const t = traceLot(w, lotId);
+  const hasUnresolved =
+    t.unresolvedBatches.length > 0 || t.unresolvedDeliveries.length > 0;
   const ev = (e: Evidence) => {
     const d = w.documents.find((d) => d.id === e.sourceId);
     return d
@@ -219,7 +221,7 @@ export function createReport(
   };
   const content = [
     "# RecallScope · Recall drill report",
-    `${w.synthetic ? "CONTAINS SYNTHETIC SAMPLE DATA · " : ""}Practice exercise — operator review required.`,
+    `${w.synthetic ? "CONTAINS SYNTHETIC SAMPLE DATA · " : ""}Recorded ingredient-to-customer trace.`,
     `Report: ${id} | Created: ${at} | Workspace revision: ${w.revision}`,
     `## Selected ingredient lot\n${lot.code} · ${lot.ingredient} · ${lot.supplier}\nEvidence: ${ev(lot)}`,
     `## Recorded scope\n${t.batches.length} confirmed batches · ${t.confirmedPacks} delivered packs · ${t.customers.length} customers\n${t.usedKg === null ? "Ingredient use quantity incomplete" : t.usedKg + " kg ingredient recorded as used"} · ${t.remainingPacks === null ? "Undelivered production quantity unknown" : t.remainingPacks + " produced packs not recorded as delivered (not a verified stock count)"}.`,
@@ -233,7 +235,11 @@ export function createReport(
       (d) =>
         `- ${d.date} · ${d.customer} · ${d.packs} packs · ${w.batches.find((b) => b.id === d.batchId)?.code || d.rawBatchCode}. Source batch code: ${d.rawBatchCode || "not recorded; see operator decision"}. Evidence: ${ev(d)}`,
     ),
-    `## Unresolved exposure\n${t.unresolvedPacks} delivered packs cannot yet be traced reliably. These may overlap the selected lot's exposure and must remain under review.`,
+    ...(hasUnresolved
+      ? [
+          `## Unresolved exposure\n${t.unresolvedPacks} delivered packs cannot yet be traced reliably. These may overlap the selected lot's exposure and must remain under review.`,
+        ]
+      : []),
     ...t.unresolvedBatches.map(
       (b) =>
         `- ${b.code}: ${b.rawLotCode || "Ingredient lot missing"}. ${ev(b)}`,
@@ -242,7 +248,7 @@ export function createReport(
       (d) =>
         `- ${d.customer}: ${d.packs} packs; batch ${d.rawBatchCode || "missing"}; ingredient link or production record unresolved. Evidence: ${ev(d)}`,
     ),
-    "## Evidence and decisions",
+    ...(w.audit.length ? ["## Evidence and decisions"] : []),
     ...w.audit
       .filter(
         (a) =>
@@ -256,7 +262,9 @@ export function createReport(
         (a) =>
           `- ${a.at} · ${a.entity}: ${a.before} → ${a.after}. Operator note: ${a.note}`,
       ),
-    "## Limits\nThis snapshot reflects uploaded records and operator-confirmed links only. No-link does not mean safe. Missing records, unrecorded movements, rework and cross-contact are outside this drill. No recall notice has been sent. No regulatory compliance or real-world accuracy is claimed.",
+    hasUnresolved
+      ? "## Limits\nThis snapshot reflects uploaded records and operator-confirmed links only. No-link does not mean safe. Missing records, unrecorded movements, rework and cross-contact are outside this drill. No recall notice has been sent. No regulatory compliance or real-world accuracy is claimed."
+      : "## Report basis\nThis traceability snapshot records ingredient links and delivery quantities supported by the listed source records. Production balances describe recorded quantities at the time of export.",
   ].join("\n\n");
   return {
     id,

@@ -29,6 +29,7 @@ import {
   ScanLine,
   Eye,
   ListFilter,
+  MapPin,
 } from "lucide-react";
 import {
   traceLot,
@@ -187,7 +188,7 @@ export default function Home() {
   const t = w ? traceLot(w, lotId) : null,
     lot = w?.lots.find((l) => l.id === lotId),
     batch = w?.batches.find((b) => b.id === selected),
-    unresolved = w?.batches.filter((b) => b.status === "unresolved") || [];
+    unresolved = t?.unresolvedBatches || [];
   const orphaned =
     w?.deliveries.filter(
       (d) => !d.batchId || !w.batches.some((b) => b.id === d.batchId),
@@ -244,8 +245,10 @@ export default function Home() {
     ],
     records: ["Documents", "Original records, ready when you need them."],
     review: [
-      "Needs review",
-      "Resolve missing links, starting with the largest recorded exposure.",
+      reviewCount > 0 ? "Needs review" : "Decisions",
+      reviewCount > 0
+        ? "Resolve missing links, starting with the largest recorded exposure."
+        : "Your recorded decisions and supporting evidence.",
     ],
     reports: ["Reports", "Your saved scope, sources and decisions."],
   };
@@ -281,24 +284,33 @@ export default function Home() {
             [
               { id: "trace", label: "Trace lots", icon: GitBranch },
               { id: "records", label: "Documents", icon: FileText },
-              { id: "review", label: "Needs review", icon: ClipboardCheck },
+              {
+                id: "review",
+                label: reviewCount > 0 ? "Needs review" : "Decisions",
+                icon: ClipboardCheck,
+              },
               { id: "reports", label: "Reports", icon: Layers3 },
             ] as const
-          ).map((i) => (
-            <button
-              key={i.id}
-              className={"nav-item " + (view === i.id ? "active" : "")}
-              onClick={() => setView(i.id)}
-              aria-current={view === i.id ? "page" : undefined}
-              aria-label={i.label}
-            >
-              <i.icon size={19} />
-              <span>{i.label}</span>
-              {i.id === "review" && unresolved.length + orphaned.length > 0 && (
-                <em>{unresolved.length + orphaned.length}</em>
-              )}
-            </button>
-          ))}
+          )
+            .filter(
+              (i) => i.id !== "review" || reviewCount > 0 || !!w?.audit.length,
+            )
+            .map((i) => (
+              <button
+                key={i.id}
+                className={"nav-item " + (view === i.id ? "active" : "")}
+                onClick={() => setView(i.id)}
+                aria-current={view === i.id ? "page" : undefined}
+                aria-label={i.label}
+              >
+                <i.icon size={19} />
+                <span>{i.label}</span>
+                {i.id === "review" &&
+                  unresolved.length + orphaned.length > 0 && (
+                    <em>{unresolved.length + orphaned.length}</em>
+                  )}
+              </button>
+            ))}
         </nav>
         <div className="sidebar-bottom">
           <div className="workspace-summary">
@@ -523,15 +535,26 @@ export default function Home() {
                         {t.customers.length === 1 ? "customer" : "customers"}
                       </p>
                     </div>
-                    <div className="metric amber">
-                      <span>
-                        Unresolved delivered packs <TriangleAlert size={16} />
-                      </span>
-                      <strong data-testid="unresolved-packs">
-                        {fmt(t.unresolvedPacks)}
-                      </strong>
-                      <p>Workspace-wide · may be in scope</p>
-                    </div>
+                    {t.unresolvedBatches.length ||
+                    t.unresolvedDeliveries.length ? (
+                      <div className="metric amber">
+                        <span>
+                          Unresolved delivered packs <TriangleAlert size={16} />
+                        </span>
+                        <strong data-testid="unresolved-packs">
+                          {fmt(t.unresolvedPacks)}
+                        </strong>
+                        <p>Workspace-wide · may be in scope</p>
+                      </div>
+                    ) : (
+                      <div className="metric">
+                        <span>
+                          Customer destinations <MapPin size={16} />
+                        </span>
+                        <strong>{t.customers.length}</strong>
+                        <p>Connected through recorded deliveries</p>
+                      </div>
+                    )}
                     <div className="metric">
                       <span>
                         Documents <FileText size={16} />
@@ -570,10 +593,12 @@ export default function Home() {
                           <i />
                           Confirmed
                         </span>
-                        <span>
-                          <i className="dashed" />
-                          Unresolved
-                        </span>
+                        {reviewCount > 0 && (
+                          <span>
+                            <i className="dashed" />
+                            Unresolved
+                          </span>
+                        )}
                       </div>
                     </div>
                     <div className="graph-and-inspector">
@@ -843,7 +868,7 @@ export default function Home() {
                               >
                                 {batch.status === "unresolved"
                                   ? "Review ingredient link"
-                                  : "Review or correct link"}{" "}
+                                  : "Edit lot link"}{" "}
                                 <ArrowRight size={15} />
                               </button>
                             )}
@@ -863,8 +888,8 @@ export default function Home() {
                     </div>
                     <div className="graph-footer">
                       <span>
-                        <ShieldCheck size={15} /> Confirmed links determine
-                        scope. Missing links remain unresolved.
+                        <ShieldCheck size={15} /> Source records support each
+                        confirmed batch-to-customer link.
                       </span>
                       <span>
                         {w.synthetic
@@ -1087,153 +1112,152 @@ export default function Home() {
               )}
               {view === "review" && (
                 <>
-                  <div className="review-intro">
-                    <TriangleAlert size={24} />
-                    <div>
-                      <h2>{reviewCount} unresolved record links</h2>
-                      <p>
-                        Unknown connections stay unresolved until the records
-                        support a decision.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="review-filters">
-                    <ListFilter size={18} />
-                    <div
-                      className="filter-chips"
-                      aria-label="Review categories"
-                    >
-                      {[
-                        ["all", `All (${reviewCount})`],
-                        [
-                          "lot",
-                          `Ingredient links (${unresolved.filter((b) => b.sourceId).length})`,
-                        ],
-                        [
-                          "missing",
-                          `Missing records (${unresolved.filter((b) => !b.sourceId).length})`,
-                        ],
-                        ["delivery", `Delivery links (${orphaned.length})`],
-                      ].map(([value, label]) => (
-                        <button
-                          key={value}
-                          aria-pressed={reviewFilter === value}
-                          onClick={() => setReviewFilter(value)}
-                        >
-                          {label}
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="review-cards">
-                    {visibleReviews.map((b) => (
-                      <article className="review-card" key={b.id}>
-                        <div className="review-card-top">
-                          <span className="status-pill warn">
-                            {b.sourceId
-                              ? "Ingredient link unconfirmed"
-                              : "Missing source record"}
-                          </span>
-                          <span className="mono">{b.code}</span>
+                  {reviewCount > 0 && (
+                    <>
+                      <div className="review-intro">
+                        <TriangleAlert size={24} />
+                        <div>
+                          <h2>{reviewCount} unresolved record links</h2>
+                          <p>
+                            Unknown connections stay unresolved until the
+                            records support a decision.
+                          </p>
                         </div>
-                        <h2>
-                          {b.sourceId
-                            ? "Ingredient lot needs review"
-                            : "This batch has no consumption sheet."}
-                        </h2>
-                        <p>
-                          {b.sourceId
-                            ? "The recorded lot “" +
-                              b.rawLotCode +
-                              "” does not exactly match a supplier lot. Check the source before confirming a link."
-                            : "Deliveries exist, but there is no record of which ingredient lot went into this batch. A date or recipe match cannot establish the connection."}
-                        </p>
-                        <div className="review-impact">
-                          <Truck size={17} />
-                          <strong>
-                            {fmt(
-                              w.deliveries
-                                .filter((d) => d.batchId === b.id)
-                                .reduce((n, d) => n + d.packs, 0),
-                            )}{" "}
-                            delivered packs
-                          </strong>
-                          <span>remain unresolved</span>
-                        </div>
-                        <button
-                          className="button secondary"
-                          onClick={() =>
-                            b.sourceId ? beginReview(b) : setUpload(true)
-                          }
-                        >
-                          {b.sourceId
-                            ? "Review source & resolve"
-                            : "Add missing production record"}{" "}
-                          <ArrowRight size={16} />
-                        </button>
-                      </article>
-                    ))}
-                  </div>
-                  {(reviewFilter === "all" || reviewFilter === "delivery") &&
-                    orphaned.map((d) => (
-                      <article className="review-card orphan-card" key={d.id}>
-                        <span className="status-pill warn">
-                          Delivery batch unknown
-                        </span>
-                        <h2>
-                          {d.customer} · {fmt(d.packs)} packs
-                        </h2>
-                        <p>
-                          The dispatch has no confirmed production batch. These
-                          packs stay unresolved until the source supports a
-                          batch reference.
-                        </p>
-                        <div className="heading-actions">
-                          <button
-                            className="button secondary"
-                            onClick={() => evidence(d.sourceId, d.line)}
-                          >
-                            Inspect dispatch
-                          </button>
-                          <button
-                            className="button primary"
-                            disabled={!w.batches.length}
-                            onClick={() => {
-                              setDeliveryReview(d);
-                              setChosenBatch(w.batches[0]?.id || "");
-                              setNote("");
-                            }}
-                          >
-                            Review batch reference
-                          </button>
-                        </div>
-                      </article>
-                    ))}
-                  {!!reviewCount &&
-                    !visibleReviews.length &&
-                    !(
-                      orphaned.length &&
-                      (reviewFilter === "all" || reviewFilter === "delivery")
-                    ) && (
-                      <div className="empty-inline">
-                        No open items in this category.{" "}
-                        <button
-                          className="text-button"
-                          onClick={() => setReviewFilter("all")}
-                        >
-                          Show all items
-                        </button>
                       </div>
-                    )}
-                  {!unresolved.length && !orphaned.length && (
-                    <div className="empty-state">
-                      <CheckCheck size={35} />
-                      <h2>No open links to review</h2>
-                      <p>
-                        All recorded links have a decision. New records may
-                        reveal additional gaps.
-                      </p>
-                    </div>
+                      <div className="review-filters">
+                        <ListFilter size={18} />
+                        <div
+                          className="filter-chips"
+                          aria-label="Review categories"
+                        >
+                          {[
+                            ["all", `All (${reviewCount})`],
+                            [
+                              "lot",
+                              `Ingredient links (${unresolved.filter((b) => b.sourceId).length})`,
+                            ],
+                            [
+                              "missing",
+                              `Missing records (${unresolved.filter((b) => !b.sourceId).length})`,
+                            ],
+                            ["delivery", `Delivery links (${orphaned.length})`],
+                          ].map(([value, label]) => (
+                            <button
+                              key={value}
+                              aria-pressed={reviewFilter === value}
+                              onClick={() => setReviewFilter(value)}
+                            >
+                              {label}
+                            </button>
+                          ))}
+                        </div>
+                      </div>
+                      <div className="review-cards">
+                        {visibleReviews.map((b) => (
+                          <article className="review-card" key={b.id}>
+                            <div className="review-card-top">
+                              <span className="status-pill warn">
+                                {b.sourceId
+                                  ? "Ingredient link unconfirmed"
+                                  : "Missing source record"}
+                              </span>
+                              <span className="mono">{b.code}</span>
+                            </div>
+                            <h2>
+                              {b.sourceId
+                                ? "Ingredient lot needs review"
+                                : "This batch has no consumption sheet."}
+                            </h2>
+                            <p>
+                              {b.sourceId
+                                ? "The recorded lot “" +
+                                  b.rawLotCode +
+                                  "” does not exactly match a supplier lot. Check the source before confirming a link."
+                                : "Deliveries exist, but there is no record of which ingredient lot went into this batch. A date or recipe match cannot establish the connection."}
+                            </p>
+                            <div className="review-impact">
+                              <Truck size={17} />
+                              <strong>
+                                {fmt(
+                                  w.deliveries
+                                    .filter((d) => d.batchId === b.id)
+                                    .reduce((n, d) => n + d.packs, 0),
+                                )}{" "}
+                                delivered packs
+                              </strong>
+                              <span>remain unresolved</span>
+                            </div>
+                            <button
+                              className="button secondary"
+                              onClick={() =>
+                                b.sourceId ? beginReview(b) : setUpload(true)
+                              }
+                            >
+                              {b.sourceId
+                                ? "Review source & resolve"
+                                : "Add missing production record"}{" "}
+                              <ArrowRight size={16} />
+                            </button>
+                          </article>
+                        ))}
+                      </div>
+                      {(reviewFilter === "all" ||
+                        reviewFilter === "delivery") &&
+                        orphaned.map((d) => (
+                          <article
+                            className="review-card orphan-card"
+                            key={d.id}
+                          >
+                            <span className="status-pill warn">
+                              Delivery batch unknown
+                            </span>
+                            <h2>
+                              {d.customer} · {fmt(d.packs)} packs
+                            </h2>
+                            <p>
+                              The dispatch has no confirmed production batch.
+                              These packs stay unresolved until the source
+                              supports a batch reference.
+                            </p>
+                            <div className="heading-actions">
+                              <button
+                                className="button secondary"
+                                onClick={() => evidence(d.sourceId, d.line)}
+                              >
+                                Inspect dispatch
+                              </button>
+                              <button
+                                className="button primary"
+                                disabled={!w.batches.length}
+                                onClick={() => {
+                                  setDeliveryReview(d);
+                                  setChosenBatch(w.batches[0]?.id || "");
+                                  setNote("");
+                                }}
+                              >
+                                Review batch reference
+                              </button>
+                            </div>
+                          </article>
+                        ))}
+                      {!!reviewCount &&
+                        !visibleReviews.length &&
+                        !(
+                          orphaned.length &&
+                          (reviewFilter === "all" ||
+                            reviewFilter === "delivery")
+                        ) && (
+                          <div className="empty-inline">
+                            No open items in this category.{" "}
+                            <button
+                              className="text-button"
+                              onClick={() => setReviewFilter("all")}
+                            >
+                              Show all items
+                            </button>
+                          </div>
+                        )}
+                    </>
                   )}
                   <section className="panel">
                     <div className="section-bar">
@@ -1294,7 +1318,8 @@ export default function Home() {
                           <h3>{r.lotCode}</h3>
                           <p>
                             {fmt(r.confirmedPacks)} confirmed packs ·{" "}
-                            {fmt(r.unresolvedPacks)} unresolved ·{" "}
+                            {r.unresolvedPacks > 0 &&
+                              `${fmt(r.unresolvedPacks)} unresolved · `}
                             {new Date(r.at).toLocaleString()}
                           </p>
                         </div>
@@ -1319,8 +1344,8 @@ export default function Home() {
                       <ClipboardCheck size={36} />
                       <h2>Keep a record of this trace</h2>
                       <p>
-                        Save the current scope, sources, unresolved exposure and
-                        decisions in one report.
+                        Save the current scope, sources and decisions in one
+                        report.
                       </p>
                       <button
                         className="button primary"
@@ -1392,10 +1417,12 @@ export default function Home() {
                 <strong>{fmt(previewReport.confirmedPacks)}</strong>
                 <span>Confirmed packs</span>
               </div>
-              <div>
-                <strong>{fmt(previewReport.unresolvedPacks)}</strong>
-                <span>Unresolved packs</span>
-              </div>
+              {previewReport.unresolvedPacks > 0 && (
+                <div>
+                  <strong>{fmt(previewReport.unresolvedPacks)}</strong>
+                  <span>Unresolved packs</span>
+                </div>
+              )}
               <div>
                 <strong>{previewReport.customers.length}</strong>
                 <span>Customers</span>
@@ -1780,8 +1807,8 @@ export default function Home() {
                 behind a batch.
               </li>
               <li>
-                <strong>Review.</strong> Resolve the unclear code with a
-                source-supported note. Missing records stay unresolved.
+                <strong>Explore.</strong> Follow each batch to its customer
+                deliveries and open the original dispatch record.
               </li>
               <li>
                 <strong>Record.</strong> Save a report that preserves this

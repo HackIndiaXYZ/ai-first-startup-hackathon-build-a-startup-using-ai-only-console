@@ -1,38 +1,46 @@
-# Build status · RecallScope
-Date: 12 September 2026
-Team: Console
-Track: AI in any startup
+# Build record · RecallScope
 
-## Completed locally
+12 September 2026 · Team Console · AI in any startup
 
-- [x] Clone the required HackIndia team repository while preserving its initial commit and MIT license.
-- [x] Create a complete lot / batch / delivery domain and labelled synthetic sources.
-- [x] Build the trace workspace, record library, review queue and report library.
-- [x] Persist each browser's workspace server-side; preserve original uploaded files.
-- [x] Provide reviewed CSV import and a server-side AI extraction adapter.
-- [x] Connect Fireworks for actual text/PDF extraction while retaining the OpenAI configuration option.
-- [x] Preserve original PDFs, rendered page images, provider/model and source fingerprints after review.
-- [x] Handle missing/ambiguous lot records and unknown delivery batches.
-- [x] Preserve source values, operator notes, changes and report snapshots.
-- [x] Reject duplicate references, invalid dates, quantity conflicts, cross-session files and stale writes.
-- [x] Check the core workflow in the browser and at desktop/mobile widths.
-- [x] Refine the interface with night mode, device-local personalization/density, quick search, document/review filters and a readable report preview.
-- [x] Add coordinated trace selection, same-lot saved-report comparison and clearer document-reading status.
-- [x] Preserve chained delivery/ingredient review evidence in reports and verify 42 domain/provider checks.
-- [x] Prepare source files, sample data, AI usage record, pitch deck, demo script and 76-item championship-readiness packet.
+## Current deliverable
 
-## Remaining before a credible final submission
+The current deliverable is a complete fictional bakery showcase with a working trace workspace, document library, intake review and saved reports. A real manufacturer trial is not required for this showcase release.
 
-1. Expand real document testing beyond the synthetic Fireworks fixtures and validate any production provider/model before use. OpenAI is optional and remains live-untested.
-2. Confirm the organiser's permitted build window. The public listing is internally inconsistent.
-3. Obtain permissioned manufacturer records and an operator-verified trace map if possible. No customer interviews, pilot results or market validation have been invented.
-4. GitHub publication is authorized for the reviewed release. Deploying a judge-accessible app still requires approval and appropriate access and AI spending limits.
-5. Record the final 3–5-minute demo using the verified deployed app and real AI extraction, then finalize submission links.
+The supplied workspace contains seven source documents. Ingredient lot **FL-260901-A** connects to **four production batches, four customer destinations and 1,440 confirmed delivered packs**, with **zero unresolved deliveries**. The records are authored sample data, not actual manufacturer transactions or a live AI extraction result.
 
-The owner authorized GitHub publication on 12 September 2026. See the [current delivery status](../README.md#delivery-status) for source publication and remaining artifacts. Deployment and competition submission are not authorized by that source-publication request.
+## Included capabilities
 
-## Scope decisions
+- Interactive ingredient-to-production-to-delivery tracing with coordinated selection and inspectable source records.
+- A document library with search and category filters; CSV and AI-assisted intake with explicit review before import.
+- Server-side workspace persistence and original-file storage, with source fingerprints and preserved review decisions.
+- Fixed report snapshots, an in-app reader and comparisons between reports for the same lot.
+- Light, night and system appearance; device-local names, density settings, workspace search and responsive layouts.
+- Handling for ambiguous identifiers, unknown references and quantity conflicts when additional records require it.
+- Fireworks text/PDF extraction and a configurable OpenAI adapter.
+- Source code, labelled sample files, an editable pitch, showcase script, AI usage report and verification records.
 
-A focused bakery drill makes each relationship inspectable. One ingredient per production batch is a deliberate initial limit. Quantities are computed with code, not generated prose. Unknowns remain explicit. Source documents are never rewritten by a review decision. A sample-data label remains when real/custom uploads are mixed with fictional records.
+## Verification evidence
 
-The commercial buyer is the quality or operations lead of a small packaged-food manufacturer. The initial outcome to validate is completing an evidence-backed traceability exercise using existing paperwork.
+The [validation record](VALIDATION.md) is the source for automated checks, type checking, production builds, API integration and observed browser behavior. It distinguishes checks on the current showcase from earlier development scenarios; this document does not substitute a new test claim for that record.
+
+The [live AI record](LIVE-AI-VALIDATION.md) documents actual Fireworks requests on separate synthetic fixtures. A single-page PDF produced three proposed records and, after review, 180 confirmed packs with no unresolved deliveries. A separate two-page fixture preserved an O/0 discrepancy and exercised an explicit, evidence-noted correction. Those historical fixture results remain unchanged by the new complete showcase. OpenAI support is implemented and remains live-untested.
+
+## Release record
+
+The owner authorized publication to the [official Team Console repository](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console), with the original Git history and MIT license preserved. The latest showcase changes form the source release described here; the remote commit identifies the published revision.
+
+The repository contains the runnable application and a [four-minute recording script](DEMO-SCRIPT.md). This record does not claim an independently hosted public application, a recorded video or a completed competition submission. Those artifacts should be linked by their actual published URLs when available. Localhost is a local preview.
+
+Earlier checklist documents and PDFs are dated development audits. Their old incomplete sample totals, pilot requests and authorization boundaries do not define the current fictional showcase. The current user request does not require manufacturer outreach or a real-world trial.
+
+## Technical scope
+
+RecallScope supports practice recall drills in a single-operator workspace and one ingredient lot per production batch. Deterministic code calculates recorded quantities; AI proposes fields for review. Source values remain separate from operator corrections. A sample-data disclosure remains when fictional and custom records are mixed.
+
+The application does not send operational recall notices, certify food safety or establish physical stock. It uses bounded workspace snapshots, with browser-session identity rather than multi-user team accounts. Sessions expire after seven days. Production retention/deletion, shared-user access and service spending controls require their own implementation and verification before handling a real operational deployment.
+
+## Optional future research
+
+If the product is taken beyond this fictional showcase, a permissioned operator study could evaluate document variety, extraction completeness, review effort, usability and willingness to pay. The [alternative comparison and pilot protocol](PILOT-AND-ALTERNATIVES.md) is research preparation, not a release requirement or evidence of a completed trial. Pricing and customer benefit remain hypotheses; no customer adoption, savings or general accuracy claims are made.
+
+The [official event page](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only) lists a 48–72-hour format alongside September 2–November 1 event dates. The team's permitted build interval and final submission procedure are organizer matters; this source release does not establish competition eligibility or guarantee an award.
