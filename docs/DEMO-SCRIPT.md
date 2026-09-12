@@ -67,7 +67,7 @@ RecallScope gives the team a trace they can inspect and a clear record of what s
 - Verify the reviewed 180 confirmed / 0 unresolved result and the report created in that run.
 - Keep API keys and local configuration out of all captures.
 - Keep any waiting-time edits visible. Claim no speed improvement, extraction percentage, customer adoption or compliance result.
-- Include public application and GitHub delivery links only after they exist. Public deployment, GitHub push and the final video remain pending.
+- Include public application and GitHub delivery links only after they exist. The official repository is linked from the README. Public deployment and the final video remain pending.
 - The OpenAI option remains configurable, but this verified demonstration uses Fireworks. Live OpenAI extraction is untested.
 
 See [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md) for the observed results, timeout and limitations.

@@ -1,5 +1,7 @@
 # Live AI validation
 
+> Dated evidence snapshot from before the first GitHub publication. See [current delivery status](../README.md#delivery-status) for publication and submission progress.
+
 Date: 12 September 2026
 
 Provider: Fireworks

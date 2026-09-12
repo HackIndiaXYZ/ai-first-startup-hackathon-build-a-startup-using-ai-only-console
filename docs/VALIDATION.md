@@ -58,3 +58,7 @@ Dialog focus management, explicit button labels, visible focus styles and reduce
 - Deployed-app access, retention, cost controls and judge access.
 
 Production operational use is outside this prototype's validated scope.
+
+## GitHub release verification
+
+Before the first source publication on 12 September 2026, all 42 domain/provider checks, type checking, production build and local API integration passed again. The full reachable Git history was scanned for the configured private API keys and recognized private-key/token patterns; none were found. The source package excludes private environment files and local workspace state. GitHub Actions is configured to install, test, build and typecheck from a clean Linux checkout; its live badge is in the README. The pitch deck's pending-publication text was updated, preserving its eight slides and native tables, and the final render was inspected.

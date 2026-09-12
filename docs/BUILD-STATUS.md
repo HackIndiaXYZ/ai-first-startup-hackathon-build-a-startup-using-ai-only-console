@@ -26,10 +26,10 @@ Track: AI in any startup
 1. Expand real document testing beyond the synthetic Fireworks fixtures and validate any production provider/model before use. OpenAI is optional and remains live-untested.
 2. Confirm the organiser's permitted build window. The public listing is internally inconsistent.
 3. Obtain permissioned manufacturer records and an operator-verified trace map if possible. No customer interviews, pilot results or market validation have been invented.
-4. After the owner's approval, push to the existing HackIndia repository and deploy a judge-accessible app with appropriate access and AI spending limits.
+4. GitHub publication is authorized for the reviewed release. Deploying a judge-accessible app still requires approval and appropriate access and AI spending limits.
 5. Record the final 3–5-minute demo using the verified deployed app and real AI extraction, then finalize submission links.
 
-GitHub push and submission remain explicitly outside the completed local work.
+The owner authorized GitHub publication on 12 September 2026. See the [current delivery status](../README.md#delivery-status) for source publication and remaining artifacts. Deployment and competition submission are not authorized by that source-publication request.
 
 ## Scope decisions
 

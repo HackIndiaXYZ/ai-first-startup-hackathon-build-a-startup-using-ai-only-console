@@ -1,11 +1,17 @@
 # RecallScope
 ### Evidence before certainty.
 
+[![RecallScope checks](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console/actions/workflows/ci.yml/badge.svg)](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console/actions/workflows/ci.yml)
+
+[Quick start](#run-locally) · [Demo walkthrough](#demo-in-two-minutes) · [Live AI evidence](docs/LIVE-AI-VALIDATION.md) · [Pitch deck](docs/RecallScope-Pitch.pptx) · [AI build report](docs/AI-USAGE.md)
+
 AI-assisted ingredient-to-customer traceability for small food manufacturers, focused on **practice recall drills**.
 
 Built for **Team Console · HackIndia AI-First Startup Hackathon · AI in any startup**.
 
-The workspace includes light, night and system appearance, device-local personalization, document filters, workspace search and an in-app report reader.
+A quality or operations lead can bring existing supplier receipts, production sheets and dispatch records into one trace, inspect the source behind each link, and preserve the remaining uncertainty in a report.
+
+The workspace includes light, night and system appearance, device-local personalization, search, review filters and comparisons between saved reports.
 
 ## What works
 
@@ -20,9 +26,9 @@ The workspace includes light, night and system appearance, device-local personal
 - Responsive desktop/mobile UI and keyboard-accessible dialogs.
 - Persistent light/night/system appearance and comfortable/compact density.
 - Editable workspace/display names, quick search with Ctrl/⌘ K, document categories and review filters.
-- In-app report reading and a shortcut to the latest decision history.
+- In-app report reading, same-lot snapshot comparisons and a shortcut to the latest decision history.
 
-This is a local, single-operator hackathon prototype. It is not a live recall system or a compliance certification.
+**Current scope:** a single-operator workspace for practice recall drills. It does not send recall notices or certify safety/compliance. Synthetic QA and a permissioned manufacturer pilot are different evidence levels; no real customer validation is claimed.
 
 ## Run locally
 
@@ -46,10 +52,10 @@ For later runs, only `cd product` and `npm run dev` are needed. Keep the server 
 2. See **720 confirmed packs**, **720 unresolved packs**, and **2 confirmed customers**.
 3. Inspect CK-0903-01 and its original production sheet.
 4. Open **Needs review → Review source & resolve** for CK-0904-01.
-5. Compare its recorded **FL-2609O1-A** with the supplier lot **FL-260901-A**. Enter an evidence note and confirm.
+5. Compare its recorded **FL-2609O1-A** with the supplier lot **FL-260901-A** and the [synthetic ground truth](sample-records/expected-ground-truth.md). Explicitly choose **FL-260901-A**, enter the supporting evidence note and confirm. Similar spelling alone is not proof.
 6. Confirm the new result: **1,080 confirmed packs, 360 unresolved, 3 customers**.
 7. CK-0904-02 remains unresolved because its consumption sheet is missing.
-8. Choose **Create report**, then **Open report** to inspect the saved snapshot. Review history and report snapshots survive a page reload.
+8. Choose **Create report**, then **Open report** to inspect the saved snapshot. To see what changed, save one report before step 4 and another after step 6. Review history and report snapshots survive a page reload.
 
 All demo entities and records are fictional. The seeded records are pre-authored; loading them is **not** represented as live AI extraction. Mixed uploads retain a sample-data label. Use **Preferences → Workspace data → Clear workspace** to work without the fictional dataset; this explicitly confirms replacement of the current records and reports. **Load sample records** is in the same section.
 
@@ -94,15 +100,39 @@ See the [76-item readiness checklist](docs/CHAMPIONSHIP-CHECKLIST.md), [printabl
 
 ## Delivery status
 
-**No GitHub push or competition submission has been made.** The required upstream is:
-https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console
+| Deliverable | Status / evidence |
+|---|---|
+| Source code | This official Team Console repository; upstream MIT history preserved |
+| Local verification | 42 domain/provider tests, type checking, production build and API integration passed; [full record](docs/VALIDATION.md) |
+| Live product AI | Fireworks verified on labelled synthetic documents; [observed results and limits](docs/LIVE-AI-VALIDATION.md) |
+| Pitch deck | [Eight-slide deck](docs/RecallScope-Pitch.pptx) |
+| AI usage report | [Tools, prompts, decisions and fixes](docs/AI-USAGE.md) |
+| Public deployed app | Pending; localhost is not a judge-accessible deployment |
+| Final 3-5-minute video | Pending; [recording script](docs/DEMO-SCRIPT.md) is ready |
+| Manufacturer validation | Pending; [permissioned pilot protocol](docs/PILOT-AND-ALTERNATIVES.md) is prepared |
+| Competition submission | Not submitted |
 
-Public deployment and the final 3–5-minute recorded video remain pending. The official listing also has an unresolved build-window inconsistency: a 48–72-hour format versus September 2–November 1 event dates. Confirm the permitted build window with the organiser before submitting.
+The owner authorized this GitHub publication on 12 September 2026. Deployment and competition submission require separate authorization. Earlier audit documents and the checklist PDF describe the pre-publication snapshot; this table is the current delivery status.
+
+The official listing has an unresolved build-window inconsistency: a 48-72-hour format versus September 2-November 1 event dates. Confirm the permitted window and final submission procedure with the organizer before submitting. [Official event](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only)
 
 ## Architecture and limits
 
+```mermaid
+flowchart LR
+  A[Original PDF / image / text / CSV] --> B[Retained source evidence]
+  A --> C[Extraction proposals]
+  C --> D[Schema and record validation]
+  D --> E[Operator review]
+  E --> F[Deterministic lot and delivery trace]
+  B --> E
+  F --> G[Fixed report and decision history]
+```
+
+AI proposes transcription; explicit review and deterministic rules establish the recorded scope. Unknown links stay unresolved until supported by evidence.
+
 React + TypeScript on the Vinext/Cloudflare Worker starter, with D1 for workspace snapshots and R2 for original files. Pure domain functions perform tracing and arithmetic; AI proposes fields, not recall decisions. Session cookies identify separate practice workspaces; they are not multi-user team accounts.
 
-The prototype currently uses a bounded workspace snapshot, not a production inventory database. There are no roles, shared team workspaces, background OCR queues, outbound recall notices, regulatory assertions or verified stock counts. Browser sessions expire after seven days. Uploaded/orphaned storage does not yet have a production retention policy. Use synthetic or properly permissioned test data. Real customer use requires authentication/access, retention/deletion, cost controls and operational validation.
+The current implementation uses a bounded workspace snapshot rather than a production inventory database. There are no roles, shared team workspaces, background OCR queues, outbound recall notices, regulatory assertions or verified stock counts. Browser sessions expire after seven days. Uploaded/orphaned storage does not yet have a production retention policy. Use synthetic or properly permissioned test data. Real customer use requires authentication/access, retention/deletion, cost controls and operational validation.
 
 The root MIT license is preserved from the HackIndia team repository. Framework/component dependencies retain their own licenses.
