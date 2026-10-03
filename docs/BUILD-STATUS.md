@@ -2,13 +2,15 @@
 
 Released 4 October 2026 · Team Console
 
-RecallScope now focuses on pharmaceutical distributors and wholesalers. Its primary workflow follows product batches through receiving, warehouse stock, dispatches, returns, recall reconciliation and fixed evidence reports. The earlier bakery edition remains separately available at `/bakery`.
+RecallScope now focuses on pharmaceutical distributors and wholesalers. Its public workflow follows product batches through receiving, warehouse stock, dispatches, returns, recall reconciliation and fixed evidence reports. The former `/bakery` route redirects to `/`, and Settings no longer offers an earlier-edition switch. Legacy records and their schema remain preserved separately; the earlier interface is retained in Git history.
 
 ## Published application
 
 [Open RecallScope](https://recallscope.console3096.chatgpt.site)
 
-Sites confirmed successful public deployment on **3 October 2026 at 16:36 UTC / 4 October at 00:36 MYT**. Application source revision: `97b74a6055e8b82b21a4613fc2520a88a6d632c6`. Saved version: **2**. Existing public access was preserved.
+Sites confirmed successful public deployment on **3 October 2026 at 17:08 UTC / 4 October at 01:08 MYT**. Application source revision: `9e031f7aea1594d6ca59b8c634a3365d5a89551a`. Saved version: **3**. Existing public access was preserved.
+
+This update keeps the profile inside short desktop viewports, scrolls navigation independently, wraps audit reasons within their column and preserves readable table widths on mobile. The pharmaceutical workspace is now the only public product interface.
 
 ## What works without a provider key
 
@@ -33,7 +35,7 @@ The notice is **“Guided example — pre-filled records; no AI request is made.
 
 **143 unit tests passed**, followed by both API integration suites, TypeScript checking and the production build. The final PDF pagination adjustment passed all six export checks and was included in the successful release build.
 
-Browser verification covered receipt → dispatch/delivery → scoped recall → return → saved report; report comparison; serial/package dossiers; night mode; 390-pixel mobile layout; keyboard focus and the retained bakery page. The two-page exported report retains receipt, dispatch, delivery and return decisions. The browser reported no captured errors or warnings in the pharmaceutical journey.
+Browser verification covered receipt → dispatch/delivery → scoped recall → return → saved report; report comparison; serial/package dossiers; night mode; 390-pixel mobile layout; and keyboard focus. The two-page exported report retains receipt, dispatch, delivery and return decisions. The browser reported no captured errors or warnings in the pharmaceutical journey. The earlier route-render check predates the pharmaceutical-only redirect; legacy API regression checks remain separate from the public interface.
 
 The release scan inspected candidate Git files, Office archive contents and the production browser bundle for token patterns and actual configured local secret values, with **zero findings**. This is a bounded release check, not a claim of exhaustive security certification.
 

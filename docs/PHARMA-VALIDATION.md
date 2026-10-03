@@ -14,6 +14,7 @@ Work dates: **3–4 October 2026**. All pharmaceutical examples are fictional. T
 | Separate browser-created recall | Guided receipt increases PCR-261001 from 400 to 440 boxes; dispatch/delivery of 10 followed by a scoped recall and return of 10 produces a saved report with 10 shipped, 10 returned, 440 in quarantine and zero outstanding |
 | Duplicate printed code | AMX-500-100 / PCR-260901 remains separate from PAR-500-100 / PCR-260901 |
 | Snapshot integrity | The partial recall report remains unchanged when later returns complete the case |
+| Public route policy | The pharmaceutical workspace is the sole public product interface; the former `/bakery` URL redirects to `/` and Settings has no earlier-edition link |
 
 The original 600 dispatched boxes measure historical exposure. They must not be added to the 1,000 on-hand boxes in the completed case.
 
@@ -44,6 +45,8 @@ The domain suite covers quantity conservation, product-specific conversions, hel
 Persistence rejects the reserved `$recordBlob` field anywhere in supplied workspace data, including restored metadata and nested report sources. Stored references must be exact, single-field envelopes containing a UUID JSON key within the same workspace; loaded record identity must match the database row. Regression checks confirm malformed references trigger no object-store read and that failed imports leave saved data unchanged.
 
 The API checks use separate guest sessions and fictitious data, not the user's interactive workspace. The local sign-in shim provides an integration check; production identity is supplied by the hosting authentication system.
+
+The legacy API suite protects preserved historical records; it does not expose a second product interface. The former page implementation remains in Git history. Source inspection of the active pharmaceutical seed and guided templates found no wheat, flour, bakery or other food-production records; catalogue ingredients are medicine active-ingredient metadata.
 
 The persisted document corpus contains ten CSV cases, six PDFs and a corresponding scanned PNG. `product/verification/pharma-evaluation.json` records 187 deterministic field checks across 11 rows, hashes of 17 fixture files, and separate controlled-provider results. Rotated/image-only PDF fixtures have authored expected answers; this does not establish live OCR/model accuracy.
 
@@ -80,6 +83,17 @@ These are observed browser checks, not a claim of exhaustive accessibility confo
 **ERP preparation:** the implemented first phase provides documented CSV fields, explicit column mapping, validated previews and reviewed/idempotent posting, plus the declared EPCIS export/preview profile. Native vendor ERP authentication, synchronization and unattended retries remain a future scoped integration; no connected ERP is claimed.
 
 ## Historical evidence
+
+### 4 October interface follow-up
+
+- All 143 unit tests passed again; TypeScript checking and the production Site build passed.
+- The profile remained fully visible at 1536 × 730, 1280 × 600 and 1280 × 480 CSS-pixel viewports, with approximately 19 pixels of space below it. At the shortest height, navigation scrolled independently and Settings remained reachable.
+- The long recall-closure reason wrapped within the audit Reason column without touching Time or Inspect. Dates and quantities retained their readable formatting.
+- All eight workspace views were checked at 390 × 844 and 1280 × 600. No view introduced page-level horizontal overflow. Mobile tables retained their own horizontal scrolling; minimum column widths kept product names readable.
+- Light and night layouts were inspected. Navigation focus uses an inset outline so its scroll container does not clip the indicator. No browser warnings or errors were captured during this pass.
+- Direct navigation to `/bakery` returned to `/` and displayed the pharmaceutical overview. Settings exposed no earlier-edition link. The active catalogue contained six pharmaceutical products; source inspection found no food-production examples in the active seed or guided templates.
+
+Viewport checks exercise the page layout; they do not automate the Windows taskbar or operating-system display scaling. No industrial trial or video production was performed.
 
 [The September live Fireworks record](LIVE-AI-VALIDATION.md) documents the bakery schema. It is retained as historical evidence and is not counted as a pharmaceutical extraction accuracy result. The older video likewise depicts the bakery edition.
 

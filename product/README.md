@@ -1,6 +1,8 @@
 # RecallScope application
 
-Follow the [project README](../README.md#run-locally) for first-time setup and the source-record walkthrough. A normal clone runs on Windows, macOS or Linux with Node.js 24 LTS (minimum 22.13), without a Codex or Sites plugin.
+Follow the [project README](../README.md#run-locally) for first-time setup and the pharmaceutical source-record walkthrough. A normal clone runs on Windows, macOS or Linux with Node.js 24 LTS (minimum 22.15), without a Codex or Sites plugin.
+
+The public product is pharmaceutical-only. `/` opens the distribution workspace and the former `/bakery` route redirects there. Legacy records and their schema remain preserved separately; the former interface remains in Git history.
 
 ## Commands
 
@@ -13,18 +15,18 @@ Run these from this directory after installing dependencies and applying the ini
 - `npm start` - preview the built Worker locally; this does not deploy it.
 - `npm run test:api` - check the running app's API in isolated sessions.
 
-The AI connection is optional for the sample workflow and reviewed CSV import. See [provider configuration](../README.md#connect-ai-extraction) for Fireworks and OpenAI. Keep keys in the ignored `.env` file.
+The AI connection is optional for guided examples and reviewed CSV import. See [provider configuration](../README.md#optional-live-ai-extraction) for Fireworks and OpenAI. Keep keys in ignored local configuration or private hosting secrets.
 
 ## Code map
 
 | Location | Responsibility |
 |---|---|
-| `app/` | Trace workspace, source review, import and reports |
-| `app/api/` | Session-scoped workspace, extraction, import and source-file routes |
-| `lib/domain.ts` | Trace calculations, reviewed ingredient links and fixed reports |
-| `lib/import-records.ts` | CSV parsing, validation and reviewed record import |
-| `lib/ai-extract.ts` | Fireworks/OpenAI extraction adapters |
-| `lib/store.ts` | D1 snapshots and R2 originals |
+| `app/pharma/` | Pharmaceutical catalogue, stock, trace, intake, recall and report interface |
+| `app/api/pharma/` | Workspace, intake, team access, evidence and exchange routes |
+| `lib/pharma/domain.ts` | Product-specific stock ledger, serial custody, recall accounting and fixed reports |
+| `lib/pharma/intake.ts`, `templates.ts` | Reviewed CSV records and no-key guided examples |
+| `lib/pharma/providers.ts` | Optional Fireworks/OpenAI extraction proposals |
+| `lib/pharma/store.ts` | Versioned D1 records, protected R2 files and hosting-backed access |
 | `db/`, `drizzle/` | Database schema and migration |
 | `tests/` | Domain, provider and API verification |
 
@@ -34,6 +36,6 @@ The app retains the Vinext/Cloudflare Worker starter and its supporting componen
 
 A clean checkout defaults to the portable execution profile. Only when working through the Sites plugin should its owner follow that plugin's execution-profile and hosting workflow. No plugin path is required for ordinary local setup or GitHub Actions.
 
-The `.openai/hosting.json` identifies the Site and declares the logical D1 and R2 bindings. Hosting manages audience and server-side provider secrets separately. A global daily AI request allowance is enforced atomically in D1 and configured with `AI_DAILY_REQUEST_LIMIT` (default 30; 0 pauses requests). The implemented browser session is not a team authentication system.
+The `.openai/hosting.json` identifies the Site and declares the logical D1 and R2 bindings. Hosting manages audience and server-side provider secrets separately. A global daily AI request allowance is enforced atomically in D1 and configured with `AI_DAILY_REQUEST_LIMIT` (default 30; 0 pauses requests). Guest workspaces are isolated; organisation membership and server-enforced roles use the hosting sign-in integration.
 
-See [how it works](../README.md#how-it-works) and the [validation record](../docs/VALIDATION.md) for the actual supported behavior. Retained starter examples and optional sign-in helpers do not imply that RecallScope uses those features.
+See [how it works](../README.md#how-it-works) and the [pharmaceutical verification record](../docs/PHARMA-VALIDATION.md) for supported behavior. Legacy modules and regression checks preserve earlier records without adding another public product interface.

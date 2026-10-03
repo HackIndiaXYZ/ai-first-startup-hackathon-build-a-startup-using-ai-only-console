@@ -23,11 +23,11 @@ The existing local checkout and dependencies survived the earlier attempted clea
 - Repository: `C:/Users/kingy/Documents/Codex/2026-09-12/find-first-prize-hackathon-idea-thread/outputs/recallscope`
 - Application directory: `product/`
 - Restored baseline commit: `0c40f20bdc22f330cc655a7300d358777c12e6b5`
-- Current working product: bakery ingredient-to-batch-to-customer tracing, source documents, reviewed imports, saved reports, search and appearance preferences.
+- Restored baseline product: bakery ingredient-to-batch-to-customer tracing, source documents, reviewed imports, saved reports, search and appearance preferences.
 - Reusable foundations: Fireworks extraction, configurable OpenAI adapter, evidence preservation, explicit review decisions, session isolation, stale-write protection, saved report snapshots, light/night/system themes.
-- Current persistence: bounded workspace JSON in D1, original files in R2, browser-session identity. Product catalogues, stock ledgers and team accounts require new work.
+- Restored baseline persistence: bounded workspace JSON in D1, original files in R2, browser-session identity. Product catalogues, stock ledgers and team accounts were subsequent pharmaceutical work.
 
-This restoration section records the starting baseline. The pharmaceutical schema, movement ledger, recall accounting, template-first intake and evidence exports are now published in version 2. The September video depicts the earlier bakery edition; the pharmaceutical walkthrough video is on hold at the owner's request. See the current [pharmaceutical verification record](PHARMA-VALIDATION.md).
+This restoration section records the starting baseline. The pharmaceutical schema, movement ledger, recall accounting, template-first intake and evidence exports are now published in version 2. The public workspace is pharmaceutical-only: the former `/bakery` route redirects to `/`, and the earlier-edition Settings link has been removed. Legacy records remain preserved separately, with the former interface in Git history. The September video depicts the earlier bakery edition; the pharmaceutical walkthrough video is on hold at the owner's request. See the current [pharmaceutical verification record](PHARMA-VALIDATION.md).
 
 ### Restoration verification
 
@@ -169,7 +169,7 @@ The final integrated unit run passed **143/143** checks. Both retained bakery an
 
 ### 10. Engineering reliability
 
-- [x] **55 · P1 — Versioned pharma schema.** Introduce explicit products, batches, locations, movements, partners, cases and evidence links. Keep existing bakery workspaces readable without silently reinterpreting their data.
+- [x] **55 · P1 — Versioned pharma schema.** Introduce explicit products, batches, locations, movements, partners, cases and evidence links. Preserve legacy stored records and their schema without silently reinterpreting them as pharmaceutical data. The public interface is pharmaceutical-only; the former route redirects to the main workspace.
 - [x] **56 · P1 — Atomic writes.** Post multi-line movements and balance checks in transactions; use idempotency keys and concurrency checks for imports, returns and holds.
 - [x] **57 · P1 — Separation of concerns.** Extract domain calculations and focused UI components from the large workspace page, with schema-validated API boundaries.
 - [x] **58 · P2 — Bounded processing.** Add pagination, indexed queries and bounded document jobs. Keep large binaries out of workspace JSON and stream files where supported.
@@ -246,7 +246,7 @@ Add a second product with the same printed batch code and confirm it remains out
 | Milestone | Deliverable | Acceptance gate |
 | --- | --- | --- |
 | 0 · Restored baseline | Existing app running locally, current source and checks preserved | Completed as recorded above |
-| 1 · Pharma foundation | Versioned products/batches, expiry handling, movement ledger, warehouse and stock tables; first fixture | Receipts, transfers and dispatches balance; duplicate batch codes cannot cross products; existing bakery workspaces remain readable |
+| 1 · Pharma foundation | Versioned products/batches, expiry handling, movement ledger, warehouse and stock tables; first fixture | Receipts, transfers and dispatches balance; duplicate batch codes cannot cross products; legacy stored records remain intact and separate from the pharmaceutical model |
 | 2 · Complete recall workflow | Cases, holds, affected recipients, returns, reconciliation and fixed report | The known-total scenario and partial-return scenario pass in domain, API and browser checks |
 | 3 · Document intelligence | Pharma extraction schema, evidence-linked review, deduplication, provider controls and import recovery | Approved imports produce the expected movements; malformed/ambiguous proposals do not silently change stock |
 | 4 · Product hardening | Team access, exports, audit history, recovery, accessibility and measured scale | Isolation, roles, backup restore and representative browser journeys pass with recorded evidence |

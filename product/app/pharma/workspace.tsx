@@ -2577,6 +2577,7 @@ export default function PharmaWorkspace() {
             {
               key: "reason",
               label: "Reason",
+              className: "ph-audit-reason",
               render: (row) => (
                 <span style={{ display: "block", maxWidth: 370 }}>
                   {row.reason}
@@ -2586,6 +2587,7 @@ export default function PharmaWorkspace() {
             {
               key: "at",
               label: "Time",
+              className: "ph-time-cell",
               render: (row) => (
                 <>
                   <strong>{shortDate(row.at)}</strong>
@@ -3090,14 +3092,6 @@ export default function PharmaWorkspace() {
               Active recall
             </button>
           </div>
-        </SettingRow>
-        <SettingRow
-          title="Original edition"
-          description="The earlier ingredient-tracing workspace remains separate from pharmaceutical records."
-        >
-          <a className="ph-text-button" href="/bakery">
-            Open original edition <ArrowUpRight size={13} />
-          </a>
         </SettingRow>
       </Panel>
     </>

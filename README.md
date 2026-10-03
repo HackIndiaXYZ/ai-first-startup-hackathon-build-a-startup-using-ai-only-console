@@ -10,7 +10,7 @@
 
 [Run locally](#run-locally) · [Three-minute walkthrough](#walkthrough-without-an-api-key) · [Verification](docs/PHARMA-VALIDATION.md) · [AI build record](docs/AI-USAGE.md) · [Product and alternatives](docs/PHARMA-ALTERNATIVES.md) · [Development roadmap](docs/PHARMA-DISTRIBUTION-ROADMAP.md) · [Retention and recovery](docs/DATA-RETENTION.md)
 
-**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The bakery implementation remains separate at `/bakery`, with its original records preserved. The updated walkthrough video is on hold at the owner's request; the [September video](docs/VIDEO.md) depicts the earlier bakery edition.
+**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The public workspace is pharmaceutical-only. The former `/bakery` URL redirects to `/`; legacy records remain preserved separately, and the earlier interface remains in Git history. The updated walkthrough video is on hold at the owner's request; the [September video](docs/VIDEO.md) depicts the earlier bakery edition.
 
 ![RecallScope pharmaceutical distribution workspace](docs/screenshots/pharma/pharma-overview.jpg)
 

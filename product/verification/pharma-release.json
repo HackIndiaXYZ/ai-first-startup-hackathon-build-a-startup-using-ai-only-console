@@ -2,10 +2,10 @@
   "edition": "Pharmaceutical distribution",
   "releaseDateLocal": "2026-10-04",
   "timezone": "Asia/Kuala_Lumpur",
-  "applicationSourceCommit": "97b74a6055e8b82b21a4613fc2520a88a6d632c6",
-  "siteVersion": 2,
+  "applicationSourceCommit": "9e031f7aea1594d6ca59b8c634a3365d5a89551a",
+  "siteVersion": 3,
   "deploymentStatus": "succeeded",
-  "deployedAt": "2026-10-03T16:36:03.332417+00:00",
+  "deployedAt": "2026-10-03T17:08:49.121318+00:00",
   "liveUrl": "https://recallscope.console3096.chatgpt.site",
   "unitTests": {
     "passed": 143,
@@ -18,6 +18,7 @@
   "typecheck": "passed",
   "build": "passed",
   "pdfFinalAdjustment": "six export checks passed; included in successful Site build",
+  "interfaceFollowUp": "short-window profile visibility, audit reason wrapping, mobile column widths, inset navigation focus and pharmaceutical-only routing verified locally; 143 tests, typecheck and production build passed again",
   "video": "on hold at owner request",
   "industrialTrials": "outside requested scope"
 }
