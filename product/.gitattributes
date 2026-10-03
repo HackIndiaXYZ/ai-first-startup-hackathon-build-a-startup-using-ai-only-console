@@ -1,0 +1,2 @@
+# Fixture hashes describe original bytes, including CRLF and quoted newlines.
+fixtures/pharma/*.csv -text

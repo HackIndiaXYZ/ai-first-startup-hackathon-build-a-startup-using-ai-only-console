@@ -1,6 +1,48 @@
 # AI usage report · RecallScope
 Prepared for HackIndia's AI-first workflow documentation requirement.
 
+## Pharmaceutical edition — 3–4 October 2026
+
+The owner selected pharmaceutical distributors and wholesalers, asked for the full improvement roadmap to be implemented without industrial trials, and then requested a template-first experience for judges who do not have an API key. The owner authorised parallel implementation agents.
+
+Codex split implementation between the distribution domain, interface, document intake/interoperability, and the server/release work. The resulting pharmaceutical code is distinct from the earlier manufacturing model: products and their batches, warehouse movements, dispatches, returns, recall cases and source evidence replace ingredient consumption as the primary workflow.
+
+### Three clearly identified intake paths
+
+| Path | What actually happens |
+| --- | --- |
+| Guided example | A selected fictional CSV source becomes pre-filled proposals, with **“Guided example — pre-filled records; no AI request is made.”** The operator reviews and posts through the same ledger rules |
+| Structured CSV | An RFC-style parser reads the supplied fields, supports explicit column mapping and retains original source rows; no model or provider is called |
+| Live AI assistance | The server sends a consented document to its configured Fireworks or OpenAI provider, obtains schema-constrained proposals and applies source/identity validation before review |
+
+Guided records are not described as freshly generated AI results. Deterministic parsing and accounting are not represented as model inference. User API keys remain private server configuration.
+
+### Custom work in this edition
+
+- Product and batch model, month/day expiry precision, explicit packaging conversions, original identifiers and product-specific matching.
+- Movement-led stock, transit confirmation, reservations, held-stock enforcement, delivery/return lifecycles and quantity reconciliation.
+- Recall tasks, acknowledgements, fixed reports, evidence exports and decision records.
+- Template-first intake, pharmaceutical schemas and prompts, explicit corrections, exact quote/page/line evidence, review-before-posting and duplicate protection.
+- D1/R2 persistence, idempotency, revision conflicts, isolated workspaces and roles through the hosting identity integration.
+- Pharmaceutical interface, night mode and operational navigation; bounded GS1/EPCIS/temperature helpers.
+- Synthetic scenario generation, automated tests and official-source alternatives research.
+
+The runtime pharmaceutical prompt and JSON schema are in `product/lib/pharma/providers.ts`; parsing and catalogue matching are in `product/lib/pharma/intake.ts`. Uploaded content is treated as untrusted data. Missing facts remain empty, identifiers are preserved, mixed unsupported records cannot be silently omitted, and model-proposed recall records require an explicit source notice. The AI is not asked to decide medicine safety or invent a recall.
+
+### Verification and development evidence
+
+The final combined unit suite passed **143/143 tests**, followed by both API suites, TypeScript checks and the production build. Provider responses for the new schema were controlled mocks; no paid pharmaceutical extraction was performed. The [pharmaceutical verification record](PHARMA-VALIDATION.md) distinguishes unit, API, standards-profile and browser evidence.
+
+Codex authored an eight-slide pharmaceutical pitch with real interface captures and editable content. Eight Grady narration sections were generated for a revised walkthrough, using **28.4 net credits** for completed narration. The owner then put the walkthrough video on hold. The final balance change was **29.4 credits deducted/reserved**, including one interrupted 1-credit wording-correction request whose outcome is unknown. Existing draft work is preserved; no completed pharmaceutical film is claimed.
+
+Official-source research compares [TraceLink, SAP and Odoo](PHARMA-ALTERNATIVES.md). No customer interview, industrial deployment result, revenue, savings measurement or compliance certification is claimed.
+
+The pharmaceutical application was published as version 2 on 4 October 2026 MYT. The September video remains historical bakery evidence. The current source, pitch and written walkthrough describe the pharmaceutical edition; its video is on hold.
+
+## Historical bakery release record — September 2026
+
+The following sections preserve the earlier release's actual development and publication history. Their sample totals and live extraction observations refer to that bakery implementation.
+
 ## Participant instruction
 
 The participant selected RecallScope after AI-assisted project research, then authorised autonomous implementation: “ok, can start now, all you decide for first prize … continuously until before push to github or where you think critical issue to stop”.

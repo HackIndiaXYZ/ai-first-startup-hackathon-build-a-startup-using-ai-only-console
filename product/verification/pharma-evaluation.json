@@ -1,0 +1,141 @@
+{
+  "format": "recallscope-pharma-evaluation-v1",
+  "measuredAt": "2026-10-03T16:04:52.184Z",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "architecture": "x64"
+  },
+  "corpus": {
+    "csvCases": 10,
+    "pdfCases": 6,
+    "hashChecks": 17
+  },
+  "deterministic": {
+    "casesPassed": 10,
+    "fieldChecks": 187,
+    "records": 11,
+    "cases": [
+      {
+        "id": "clean-receipt",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "month-only-expiry",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "shared-batch-code",
+        "records": 2,
+        "fieldChecks": 34,
+        "outcome": "passed"
+      },
+      {
+        "id": "ambiguous-date",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "ocr-confusable",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "quoted-newline",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "instruction-in-source",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "unsupported-unit",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "customer-return",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      },
+      {
+        "id": "recall-notice",
+        "records": 1,
+        "fieldChecks": 17,
+        "outcome": "passed"
+      }
+    ]
+  },
+  "mockedProviders": {
+    "requests": 8,
+    "successfulFixtures": 7,
+    "unsupportedFieldGuard": "passed",
+    "cases": [
+      {
+        "id": "clean-receipt",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "text",
+        "records": 1,
+        "outcome": "passed"
+      },
+      {
+        "id": "month-only-expiry",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "text",
+        "records": 1,
+        "outcome": "passed"
+      },
+      {
+        "id": "shared-batch-code",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "text",
+        "records": 2,
+        "outcome": "passed"
+      },
+      {
+        "id": "ambiguous-date",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "text",
+        "records": 1,
+        "outcome": "passed"
+      },
+      {
+        "id": "rotated-receipt",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "rotated",
+        "records": 1,
+        "outcome": "passed"
+      },
+      {
+        "id": "scanned-receipt",
+        "provider": "OpenAI adapter / authored mock",
+        "sourceFormat": "image-only",
+        "records": 1,
+        "outcome": "passed"
+      },
+      {
+        "id": "scanned-receipt",
+        "provider": "Fireworks adapter / authored mock",
+        "sourceFormat": "rendered image",
+        "records": 1,
+        "outcome": "passed"
+      }
+    ]
+  },
+  "ledgerUnchanged": true,
+  "liveProviderRequests": 0,
+  "liveOcrAccuracy": "not measured",
+  "scope": "Software parser, identity matching, evidence validation and mocked transport contracts only. Authored provider replies are not measurements of extraction accuracy."
+}

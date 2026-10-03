@@ -1,0 +1,29 @@
+{
+  "transcript": "EVAL-RECALL | 2026-10-03 | AMX-500-100 | Amoxicillin 500 mg | 500 mg | Capsule | Meridian Example Pharma | PCR-260901 | 2027-11 | Fictional supplier notice: hold this specific product and batch for an authored packaging discrepancy",
+  "records": [
+    {
+      "kind": "recall",
+      "fields": {
+        "reference": "EVAL-RECALL",
+        "date": "2026-10-03",
+        "productSku": "AMX-500-100",
+        "productName": "Amoxicillin 500 mg",
+        "strength": "500 mg",
+        "dosageForm": "Capsule",
+        "manufacturer": "Meridian Example Pharma",
+        "batchCode": "PCR-260901",
+        "expiry": "2027-11",
+        "quantity": "",
+        "unit": "",
+        "partnerCode": "",
+        "partnerName": "",
+        "locationCode": "",
+        "toLocationCode": "",
+        "dispatchReference": "",
+        "reason": "Fictional supplier notice: hold this specific product and batch for an authored packaging discrepancy"
+      },
+      "evidence": "EVAL-RECALL | 2026-10-03 | AMX-500-100 | Amoxicillin 500 mg | 500 mg | Capsule | Meridian Example Pharma | PCR-260901 | 2027-11 | Fictional supplier notice: hold this specific product and batch for an authored packaging discrepancy",
+      "page": 1
+    }
+  ]
+}

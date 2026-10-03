@@ -1,43 +1,73 @@
-# RecallScope video script
+# RecallScope pharmaceutical walkthrough
 
-The finished film runs **4:40**, with nine chapters. It combines captures of actual app interactions, native motion graphics and Grady narration. Editing timings are not application performance measurements.
+**Current edition: pharmaceutical distributors and wholesalers.** This is a planned three-minute live walkthrough script, not a claim that a new video has already been produced. The [September film](VIDEO.md) shows the earlier bakery edition.
 
-## 0:00 · The decision starts with one lot
+The presenter uses the labelled fictional Asterbridge Distribution workspace. Start with a fresh **completed** sample scenario so the known quantities below are reproducible. No API key or paid request is required.
 
-A quality lead has an ingredient lot in front of them. The next question is practical: which production batches used it, and where did those products go? RecallScope brings that path into one workspace, with the original records beside every connection. This walkthrough uses the supplied bakery sample records.
+## 0:00–0:25 · One batch, one operational question
 
-## 0:27 · A complete delivery scope
+**Show:** product identity, batch and recall summary.
 
-Here, one flour lot connects to four production batches and four customer destinations, covering fourteen hundred and forty delivered packs. Select a batch, and its route comes into focus. Select a destination to see the matching deliveries. These totals are calculated from the recorded relationships and quantities, giving the operator a consistent starting point for a recall drill.
+**Narration:** “When a distributor receives a recall notice, the first question is where this product batch went. The next is what has come back. RecallScope connects stock, shipments, returns and source records in one workspace for the operations and quality team.”
 
-## 0:56 · Evidence behind the connection
+Briefly identify the records as the supplied fictional scenario.
 
-Let’s open the production record behind this batch. The source identifies the flour lot, twenty four kilograms used, and four hundred packs produced. The delivery register connects three hundred and sixty of those packs to Orchard Pantry. The map is useful because each step leads back to readable evidence, keeping the detail close to the decision.
+## 0:25–0:55 · Explain the accounting
 
-## 1:21 · Find the right document
+**Show:** paracetamol 500 mg, batch PCR-260901; Central/North; the four customer destinations.
 
-The document library holds all seven source documents in this workspace: the supplier invoice, production sheets, and delivery register. Search a batch code to reach the relevant record, or narrow the library by category. Workspace search also brings lots, batches, destinations, and document text together, so the operator can move directly from a question to its supporting record.
+**Narration:** “This batch began with one thousand boxes. Six hundred went to four customer sites. In the completed case, all six hundred were returned and the recorded thousand boxes remain quarantined. Historical deliveries and current stock are different measures, so the app does not add them together.”
 
-## 1:51 · Keep the scope as a report
+Open the amoxicillin product with the same printed batch code. Show that it remains outside the paracetamol case.
 
-Next, create a report. RecallScope saves the selected lot’s delivery scope as a fixed snapshot, including the batches, destinations, quantities, and source references. Open it in the report reader to see the same fourteen hundred and forty packs. The report remains available after a reload, and reports for the same lot can be compared as the workspace changes.
+**Narration:** “A batch code alone is not a product identity. The same printed code on a different medicine stays separate.”
 
-## 2:21 · Designed for the operator
+## 0:55–1:35 · Let the judge use the workflow
 
-The interface is designed for repeated use. Switch to night mode, choose comfortable or compact spacing, and give the workspace a familiar name. These preferences stay on the device. Clear navigation and coordinated selection keep the trace, documents, and reports within reach, while the underlying records retain their identity.
+**Show:** Document intake → Guided examples → Goods received.
 
-## 2:52 · Where AI helps
+Read or leave visible: **“Guided example — pre-filled records; no AI request is made.”**
 
-New documents enter through CSV import or AI assisted reading. Fireworks is the configured provider, with OpenAI support also available. AI proposes structured fields from the source. The operator approves those records, and deterministic code calculates the trace. This separation puts AI where it helps with document interpretation, while keeping recorded quantities and relationships inspectable. Original uploaded documents remain accessible alongside the extracted information.
+**Narration:** “Judges can use the complete document workflow without sharing a key. This guided source is pre-filled. The original CSV stays beside the proposals; product, batch, quantity, unit and warehouse are matched explicitly.”
 
-## 3:28 · AI led creation, with evidence
+Inspect the 40-box receipt for PAR-500-100 / PCR-261001, expiry 2028-01, supplier-northstar, loc-central.
 
-The build follows the competition’s AI first approach across all seven activities: idea generation, market research, user experience design, coding, testing, deployment, and pitch creation. The repository documents those contributions, published source research, automated checks, and observed extraction runs. Judges can explore the live application, inspect the implementation, and follow the decisions behind the product.
+Enter review note: “Compared the source receipt, exact product batch, quantity, unit and receiving location.”
 
-## 4:04 · A focused commercial starting point
+Confirm the review and post. Show the available batch increase from **400 to 440 boxes**. Reload if the available recording time allows.
 
-The first customer focus is a small food producer whose quality lead manages supplier, production, and dispatch records. The product brings those records into an ingredient to customer workflow, with a proposed subscription model for each site. RecallScope makes that workflow tangible: follow the lot, inspect the evidence, and keep the report.
+**Narration:** “The preview does not change stock. A reviewed posting does. Reusing the same document cannot create a second receipt.”
 
-## Production record
+## 1:35–2:10 · Account for a partial return
 
-The supplied bakery case is authored sample data. The filmed Fireworks request returned three proposed records; the operator entered the source lot reference in the production proposal before approval. That imported case traces 180 delivered packs. The earlier bakery case remains at 1,440 packs. See [capture provenance](video-stills/README.md) and the [finished video](VIDEO.md).
+For a live presentation, load the **active recall** sample before this segment. A reset replaces the working sample; export any wanted changes first. In an edited recording, make the scenario switch visible rather than implying continuous state.
+
+**Show:** active case has **100 returned / 500 outstanding**. Open the partial customer-return example. Inspect its link to DSP-001 and approve 20 boxes with a source review note.
+
+**Narration:** “A partial return stays tied to its original dispatch. These twenty boxes change returns to one hundred and twenty and outstanding quantity to four hundred and eighty. Returned stock stays quarantined; the software does not turn an accounting update into a medicine-safety decision.”
+
+## 2:10–2:40 · Take the evidence with you
+
+**Show:** saved report, PDF preview and evidence-package download; original source and decision history.
+
+**Narration:** “A report is a fixed snapshot of the case, its source records and quantities. Later changes do not rewrite the earlier report. The evidence package includes the source files and a content-hash manifest.”
+
+Show light/night appearance and the readable stock/expiry table briefly. Use movement to explain the selected path; do not spend this time on decorative transitions.
+
+## 2:40–3:00 · What AI contributes
+
+**Show:** three intake choices; live AI remains an optional separate mode.
+
+**Narration:** “Fireworks and OpenAI can propose fields from documents when a private server connection is configured. Operators review the evidence; deterministic code controls quantities and posting. The project itself was developed with AI assistance across product design, implementation, research and verification. Its strength is a specific distributor workflow that judges can inspect and use.”
+
+End on: **“Know where every affected batch went. Account for what comes back.”**
+
+## Presenter checks
+
+- Use the correct completed or active scenario for each segment.
+- Keep the sample-data disclosure and template notice visible where relevant.
+- Do not call a template an AI extraction result.
+- Do not claim the previous bakery extraction run measures the pharmaceutical schema.
+- Demonstrate a real posted action, a real report and its source, rather than substituting animated numbers.
+- Keep claims aligned with [software verification](PHARMA-VALIDATION.md) and the [official-source market comparison](PHARMA-ALTERNATIVES.md).
+- Label any future edited footage as selected moments from the workflow; editing length is not a measured task-completion time.

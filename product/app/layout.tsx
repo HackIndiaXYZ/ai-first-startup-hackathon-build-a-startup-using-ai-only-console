@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import "./workspace-theme.css";
+import "./pharma.css";
 import { appearanceBootstrap } from "@/lib/preferences";
 
 export const metadata: Metadata = {
-  title: "RecallScope · Batch traceability",
+  title: "RecallScope · Pharmaceutical distribution",
   description:
-    "Trace ingredient lots to customer deliveries, review uncertain links, and run evidence-backed recall drills.",
+    "Trace pharmaceutical batches from warehouse to customer, reconcile recalls and keep the evidence together.",
   other: {
     "codex-preview": "development",
   },

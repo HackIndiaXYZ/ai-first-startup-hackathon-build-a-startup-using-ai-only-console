@@ -1,0 +1,113 @@
+{
+  "format": "recallscope-pharma-benchmark-v1",
+  "measuredAt": "2026-10-03T16:05:24.999Z",
+  "environment": {
+    "node": "v24.14.0",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpu": "11th Gen Intel(R) Core(TM) i5-11400H @ 2.70GHz",
+    "logicalCpus": 12,
+    "totalMemoryGiB": 15.78
+  },
+  "methodology": "Deterministic synthetic fixtures, one warmup then seven measured in-process runs. Timing excludes DB/network/rendering and fixture construction. No performance acceptance threshold or industrial workload claim.",
+  "results": [
+    {
+      "kind": "receipts",
+      "movements": 1000,
+      "shipments": 0,
+      "serializedWorkspaceBytes": 511985,
+      "validation": {
+        "medianMs": 7.555,
+        "minMs": 5.926,
+        "maxMs": 8.636,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "trace": {
+        "medianMs": 0.561,
+        "minMs": 0.463,
+        "maxMs": 0.708,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "invariants": "passed"
+    },
+    {
+      "kind": "receipts",
+      "movements": 10000,
+      "shipments": 0,
+      "serializedWorkspaceBytes": 5074985,
+      "validation": {
+        "medianMs": 59.869,
+        "minMs": 57.257,
+        "maxMs": 62.782,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "trace": {
+        "medianMs": 4.328,
+        "minMs": 4.018,
+        "maxMs": 4.918,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "invariants": "passed"
+    },
+    {
+      "kind": "distribution",
+      "movements": 1000,
+      "shipments": 250,
+      "serializedWorkspaceBytes": 607523,
+      "validation": {
+        "medianMs": 8.146,
+        "minMs": 7.332,
+        "maxMs": 9.496,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "trace": {
+        "medianMs": 0.672,
+        "minMs": 0.611,
+        "maxMs": 0.984,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "reconciliation": {
+        "medianMs": 0.685,
+        "minMs": 0.668,
+        "maxMs": 0.802,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "invariants": "passed"
+    },
+    {
+      "kind": "distribution",
+      "movements": 10000,
+      "shipments": 2500,
+      "serializedWorkspaceBytes": 6036773,
+      "validation": {
+        "medianMs": 75.955,
+        "minMs": 74.071,
+        "maxMs": 77.806,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "trace": {
+        "medianMs": 5.724,
+        "minMs": 5.39,
+        "maxMs": 6.95,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "reconciliation": {
+        "medianMs": 6.079,
+        "minMs": 5.735,
+        "maxMs": 6.742,
+        "measuredRuns": 7,
+        "warmupRuns": 1
+      },
+      "invariants": "passed"
+    }
+  ]
+}

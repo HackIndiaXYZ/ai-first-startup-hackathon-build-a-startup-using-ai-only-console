@@ -1,0 +1,29 @@
+{
+  "transcript": "EVAL-RETURN | 2026-10-03 | PAR-500-100 | Paracetamol 500 mg | 500 mg | Tablet | Asterbridge Laboratories | PCR-260901 | 2027-09 | 10 | box | customer-a | Aster Pharmacy | loc-central | DSP-001 | Fictional software evaluation record",
+  "records": [
+    {
+      "kind": "return",
+      "fields": {
+        "reference": "EVAL-RETURN",
+        "date": "2026-10-03",
+        "productSku": "PAR-500-100",
+        "productName": "Paracetamol 500 mg",
+        "strength": "500 mg",
+        "dosageForm": "Tablet",
+        "manufacturer": "Asterbridge Laboratories",
+        "batchCode": "PCR-260901",
+        "expiry": "2027-09",
+        "quantity": "10",
+        "unit": "box",
+        "partnerCode": "customer-a",
+        "partnerName": "Aster Pharmacy",
+        "locationCode": "loc-central",
+        "toLocationCode": "",
+        "dispatchReference": "DSP-001",
+        "reason": "Fictional software evaluation record"
+      },
+      "evidence": "EVAL-RETURN | 2026-10-03 | PAR-500-100 | Paracetamol 500 mg | 500 mg | Tablet | Asterbridge Laboratories | PCR-260901 | 2027-09 | 10 | box | customer-a | Aster Pharmacy | loc-central | DSP-001 | Fictional software evaluation record",
+      "page": 1
+    }
+  ]
+}

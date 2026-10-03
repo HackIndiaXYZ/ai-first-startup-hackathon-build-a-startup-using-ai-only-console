@@ -1,0 +1,1 @@
+ALTER TABLE `pharma_records` ADD `position` integer DEFAULT 0 NOT NULL;

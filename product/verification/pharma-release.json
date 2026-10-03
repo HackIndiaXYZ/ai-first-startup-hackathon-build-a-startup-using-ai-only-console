@@ -1,0 +1,23 @@
+{
+  "edition": "Pharmaceutical distribution",
+  "releaseDateLocal": "2026-10-04",
+  "timezone": "Asia/Kuala_Lumpur",
+  "applicationSourceCommit": "97b74a6055e8b82b21a4613fc2520a88a6d632c6",
+  "siteVersion": 2,
+  "deploymentStatus": "succeeded",
+  "deployedAt": "2026-10-03T16:36:03.332417+00:00",
+  "liveUrl": "https://recallscope.console3096.chatgpt.site",
+  "unitTests": {
+    "passed": 143,
+    "failed": 0
+  },
+  "apiSuites": [
+    "retained bakery",
+    "pharmaceutical"
+  ],
+  "typecheck": "passed",
+  "build": "passed",
+  "pdfFinalAdjustment": "six export checks passed; included in successful Site build",
+  "video": "on hold at owner request",
+  "industrialTrials": "outside requested scope"
+}

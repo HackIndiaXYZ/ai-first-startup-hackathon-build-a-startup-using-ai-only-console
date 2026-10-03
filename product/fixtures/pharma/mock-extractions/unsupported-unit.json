@@ -1,0 +1,29 @@
+{
+  "transcript": "EVAL-UNITS | 2026-10-03 | PAR-500-100 | Paracetamol 500 mg | 500 mg | Tablet | Asterbridge Laboratories | PCR-261001 | 2028-01 | 500 | mg | supplier-northstar | Northstar Supply | loc-central | Fictional software evaluation record",
+  "records": [
+    {
+      "kind": "receipt",
+      "fields": {
+        "reference": "EVAL-UNITS",
+        "date": "2026-10-03",
+        "productSku": "PAR-500-100",
+        "productName": "Paracetamol 500 mg",
+        "strength": "500 mg",
+        "dosageForm": "Tablet",
+        "manufacturer": "Asterbridge Laboratories",
+        "batchCode": "PCR-261001",
+        "expiry": "2028-01",
+        "quantity": "500",
+        "unit": "mg",
+        "partnerCode": "supplier-northstar",
+        "partnerName": "Northstar Supply",
+        "locationCode": "loc-central",
+        "toLocationCode": "",
+        "dispatchReference": "",
+        "reason": "Fictional software evaluation record"
+      },
+      "evidence": "EVAL-UNITS | 2026-10-03 | PAR-500-100 | Paracetamol 500 mg | 500 mg | Tablet | Asterbridge Laboratories | PCR-261001 | 2028-01 | 500 | mg | supplier-northstar | Northstar Supply | loc-central | Fictional software evaluation record",
+      "page": 1
+    }
+  ]
+}

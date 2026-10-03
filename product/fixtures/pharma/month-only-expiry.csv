@@ -1,0 +1,2 @@
+reference,date,productSku,productName,strength,dosageForm,manufacturer,batchCode,expiry,quantity,unit,partnerCode,partnerName,locationCode,reason
+EVAL-MONTH,2026-10-03,PAR-500-100,Paracetamol 500 mg,500 mg,Tablet,Asterbridge Laboratories,PCR-261001,2028-01,20,blister,supplier-northstar,Northstar Supply,loc-central,Fictional software evaluation record
