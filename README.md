@@ -6,7 +6,11 @@
 
 **A pharmaceutical distribution workspace for operations and quality teams.** Follow product batches through receiving, warehouses, dispatches and returns; coordinate recall work; export the records behind every quantity.
 
-**Judges need no API key.** Guided document examples and structured CSV imports provide a complete source → review → stock → recall workflow without an AI request. Fireworks and OpenAI remain optional server-side extraction providers.
+**Built with agentic AI, from architecture to evidence exports.** Under the owner's direction, Codex agents designed and implemented the custom interface, backend schemas, stock and recall logic, tests, and project materials. The [AI build record](docs/AI-USAGE.md) documents their work across the seven hackathon activities.
+
+**Live AI extraction is built in.** Fireworks and OpenAI adapters interpret text, images and PDFs into pharmaceutical record proposals, including receipts and dispatches. Source validation, deterministic accounting and operator approval govern what enters the stock ledger: AI interprets documents; reviewed evidence drives inventory changes.
+
+**Judges need no API key.** Guided document examples and structured CSV imports provide a complete source → review → stock → recall workflow. Guided examples use pre-filled proposals without a live model call; optional live extraction uses a privately configured server-side provider.
 
 [Run locally](#run-locally) · [Three-minute walkthrough](#walkthrough-without-an-api-key) · [Verification](docs/PHARMA-VALIDATION.md) · [AI build record](docs/AI-USAGE.md) · [Product and alternatives](docs/PHARMA-ALTERNATIVES.md) · [Development roadmap](docs/PHARMA-DISTRIBUTION-ROADMAP.md) · [Retention and recovery](docs/DATA-RETENTION.md)
 

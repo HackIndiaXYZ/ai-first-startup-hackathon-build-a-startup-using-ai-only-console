@@ -1,6 +1,10 @@
 # AI usage report · RecallScope
 Prepared for HackIndia's AI-first workflow documentation requirement.
 
+**RecallScope was built through agentic AI development.** Codex agents translated the owner's pharmaceutical-distribution brief into architecture, frontend workflows, backend schemas, ledger rules, automated tests and presentation materials. The owner set the direction and authorised key decisions; AI agents carried out the custom implementation and verification work documented below.
+
+AI also powers an optional product capability: multimodal Fireworks/OpenAI document extraction. Its proposals pass through source validation and operator review before deterministic code posts inventory changes. The no-key guided path lets judges explore that review and accounting workflow without spending provider credits.
+
 ## Pharmaceutical edition — 3–4 October 2026
 
 The owner selected pharmaceutical distributors and wholesalers, asked for the full improvement roadmap to be implemented without industrial trials, and then requested a template-first experience for judges who do not have an API key. The owner authorised parallel implementation agents.
@@ -15,7 +19,7 @@ Codex split implementation between the distribution domain, interface, document 
 | Structured CSV | An RFC-style parser reads the supplied fields, supports explicit column mapping and retains original source rows; no model or provider is called |
 | Live AI assistance | The server sends a consented document to its configured Fireworks or OpenAI provider, obtains schema-constrained proposals and applies source/identity validation before review |
 
-Guided records are not described as freshly generated AI results. Deterministic parsing and accounting are not represented as model inference. User API keys remain private server configuration.
+Each path makes its provenance visible. Guided examples provide immediate access to the workflow, CSV offers repeatable structured import, and live AI handles document interpretation. All three share validation and operator review. Provider keys remain private server configuration.
 
 ### Custom work in this edition
 
@@ -53,7 +57,7 @@ The pharmaceutical application was published on 4 October 2026 MYT, with the lay
 
 ## Authorship and reused components
 
-Codex authored the task-specific application implementation, tests, fictional records, documentation and presentation under the owner's direction. The owner selected the project direction, supplied the repository and authorised publication. The project also retains an MIT-licensed starter and third-party packages, including PDF.js and pdf-lib. Those dependencies are not claimed as AI-authored work. No numerical authorship percentage calculated from bundled dependencies or measured development time is asserted.
+Codex authored the task-specific application implementation, tests, fictional records, documentation and presentation under the owner's direction. The owner selected the project direction, supplied the repository and authorised publication. The commit history, executable tests and linked project materials provide concrete evidence of this AI-led work. The application builds on an MIT-licensed starter and credited third-party packages, including PDF.js and pdf-lib.
 
 ## Development decisions
 
