@@ -43,7 +43,11 @@ Detailed evidence: [Pharmaceutical verification](PHARMA-VALIDATION.md), [secret 
 
 ## Presentation and submission materials
 
-Use the [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx), [current demonstration script](DEMO-SCRIPT.md) and [AI usage record](AI-USAGE.md). The pharmaceutical walkthrough video is **on hold at the owner's request**. Existing narration and draft chapters are preserved locally; they are not presented as a completed current film. The current project files include only pharmaceutical presentation materials; superseded assets remain recoverable through Git history.
+The separate deliverables are the [coded pharmaceutical walkthrough](RecallScope-Pharma-Demo.mp4), [editable vector pitch](RecallScope-Pharma-Pitch.pptx) and [pitch PDF](RecallScope-Pharma-Pitch.pdf). The [narration script](DEMO-SCRIPT.md), [pitch source](media-source/pitch/README.md) and [AI usage record](AI-USAGE.md) explain how they were produced.
+
+The eight-slide pitch uses native text, diagrams and three editable tables. All slides passed package/layout checks and were visually inspected in artifact renders and native PowerPoint PDF output. The deck contains no embedded media assets, and the PDF contains no embedded images.
+
+The video uses code-rendered pharmaceutical product visuals and animation, with Higgsfield Grady narration. Its scenario changes and quantities follow the implemented workflow; it is not an actual screen recording, a live pharmaceutical extraction benchmark or a measurement of operator speed. The final 4:11 film passed full decoding of all 15,073 frames. Forty scene samples and sixteen encoded key frames were visually inspected; spoken cues and all 54 caption blocks were checked. Audio is normalized to −16.03 LUFS, with no voice-speed or pitch change. Detailed verification is recorded in the [machine-readable release evidence](../product/verification/pharma-release.json). The application source and deployment remain unchanged by this media update. Superseded assets remain recoverable through Git history.
 
 The [official event page](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only) was checked on 3 October before publication. It listed the code-freeze deadline as **1 November 2026, 08:03 IST** and requested a public repository, live app, 3–5-minute demo, pitch and AI workflow documentation. Publishing assets is distinct from an organizer's entry receipt; no new portal submission is claimed.
 

@@ -37,11 +37,13 @@ The runtime pharmaceutical prompt and JSON schema are in `product/lib/pharma/pro
 
 The final combined unit suite passed **143/143 tests**, followed by both API suites, TypeScript checks and the production build. Provider responses for the new schema were controlled mocks; no paid pharmaceutical extraction was performed. The [pharmaceutical verification record](PHARMA-VALIDATION.md) distinguishes unit, API, standards-profile and browser evidence.
 
-Codex authored an eight-slide pharmaceutical pitch with real interface captures and editable content. Eight Grady narration sections were generated for a revised walkthrough, using **28.4 net credits** for completed narration. The owner then put the walkthrough video on hold. The final balance change was **29.4 credits deducted/reserved**, including one interrupted 1-credit wording-correction request whose outcome is unknown. Existing draft work is preserved; no completed pharmaceutical film is claimed.
+Codex authored the separate eight-slide [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx) in code, using native editable text, diagrams and three tables. The [PDF](RecallScope-Pharma-Pitch.pdf) retains selectable text and vectors. Every slide was inspected in the artifact renderer and in PowerPoint's PDF output. Package checks found no embedded raster images. The [source and dependency instructions](media-source/pitch/README.md) accompany the deliverables.
+
+The owner subsequently requested a [coded animated walkthrough](RecallScope-Pharma-Demo.mp4), replacing the earlier screenshot-based approach. Codex wrote the visuals and eight-section narration around implemented pharmaceutical workflows. Higgsfield's `seed_audio` model generated the **Grady** voice in four paired-section takes, with selected repairs. The editor measured the speech and aligned the visual sections to the selected audio instead of estimating the duration from word count. Product typography remains unchanged, while editorial titles use a restrained separate typeface. Final video verification is recorded in the [release evidence](../product/verification/pharma-release.json).
 
 Official-source research compares [TraceLink, SAP and Odoo](PHARMA-ALTERNATIVES.md). No customer interview, industrial deployment result, revenue, savings measurement or compliance certification is claimed.
 
-The pharmaceutical application was published on 4 October 2026 MYT, with the layout and routing follow-up in version 3. The current source, pitch, screenshots and written walkthrough describe the pharmaceutical edition; its video is on hold. Superseded presentation files were removed from the latest project tree and remain recoverable in Git history.
+The pharmaceutical application was published on 4 October 2026 MYT, with the layout and routing follow-up in version 3. Current source, pitch, narration and product visuals describe the pharmaceutical edition. The coded demonstration illustrates authored scenarios and is not presented as a screen recording or a live extraction benchmark. Superseded presentation files were removed from the latest project tree and remain recoverable in Git history.
 
 ## AI-led work across the seven activities
 
@@ -53,7 +55,7 @@ The pharmaceutical application was published on 4 October 2026 MYT, with the lay
 | Coding | Custom React/TypeScript interface, APIs, reviewed intake, product-scoped ledger and persistence in the official repository |
 | Testing | Domain, provider, export, SQL and API checks plus observed browser journeys in the [verification record](PHARMA-VALIDATION.md) |
 | Deployment | Sites hosting, database migrations, server-side secrets and verified public publication in the [build record](BUILD-STATUS.md) |
-| Pitch creation | AI-authored editable [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx) with application captures; the [written walkthrough](DEMO-SCRIPT.md) is available and video production remains on hold |
+| Pitch creation | Code-authored [native vector pitch](RecallScope-Pharma-Pitch.pptx) and [PDF](RecallScope-Pharma-Pitch.pdf), plus a separate [coded animated walkthrough](RecallScope-Pharma-Demo.mp4) with Higgsfield narration and a [versioned script](DEMO-SCRIPT.md) |
 
 ## Authorship and reused components
 
@@ -67,7 +69,7 @@ Codex authored the task-specific application implementation, tests, fictional re
 4. Make guided examples and CSV useful without a provider key; identify their provenance clearly.
 5. Offer Fireworks and OpenAI as optional server-side providers, with reviewed proposals rather than automatic posting.
 6. Verify duplicate protection, stale-write rejection, workspace isolation, report snapshots and evidence exports.
-7. Use actual pharmaceutical interface captures in the pitch and current project materials.
+7. Build pitch layouts from native text and vectors, and animate coded pharmaceutical product visuals for the separate video. Preserve the product's typography and clearly identify the authored scenarios.
 8. Keep commercial assumptions and controlled verification distinct from industrial validation or measured customer outcomes.
 
 ## Provider and data boundaries

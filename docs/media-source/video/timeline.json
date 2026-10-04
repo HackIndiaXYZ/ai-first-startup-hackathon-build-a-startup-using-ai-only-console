@@ -1,0 +1,7581 @@
+{
+  "schema": 2,
+  "duration": 251.21666666666667,
+  "duration_seconds": 251.21666666666667,
+  "fps": 60,
+  "total_frames": 15073,
+  "audio_file": "narration.wav",
+  "sample_rate": 24000,
+  "channels": 2,
+  "voice": {
+    "name": "Grady",
+    "voice_id": "e2a2d2e6-9ed2-59cd-82af-feaa27f8a678",
+    "voice_type": "preset"
+  },
+  "model": "seed_audio",
+  "leading_hold": 0.8,
+  "trailing_hold": 2.0,
+  "frame_alignment_padding": 0.002125,
+  "timebase": "Edited audio seconds; video section boundaries quantized to 60fps. Word/cue audio times retain sample precision.",
+  "sections": [
+    {
+      "id": "s01",
+      "title": "Every box has a story",
+      "text": "A medicine recall begins with a simple question: where did this batch go? For a distributor, the answer can be scattered across receipts, warehouse records, delivery notes and returned boxes. RecallScope brings that story together, so the team can trace each movement and account for what comes back.",
+      "start": 0,
+      "end": 20.533333333333335,
+      "duration": 20.533333333333335,
+      "audio_file": "narration.wav",
+      "first_word": 0.8,
+      "last_word": 20.161583333333333,
+      "boundary_match_confidence": 1,
+      "words": [
+        {
+          "start": 0.8,
+          "end": 0.98,
+          "word": "A",
+          "original_start": 0.0,
+          "original_end": 0.18
+        },
+        {
+          "start": 0.98,
+          "end": 1.28,
+          "word": "medicine",
+          "original_start": 0.18,
+          "original_end": 0.48
+        },
+        {
+          "start": 1.28,
+          "end": 1.72,
+          "word": "recall",
+          "original_start": 0.48,
+          "original_end": 0.92
+        },
+        {
+          "start": 1.72,
+          "end": 2.28,
+          "word": "begins",
+          "original_start": 0.92,
+          "original_end": 1.48
+        },
+        {
+          "start": 2.28,
+          "end": 2.6,
+          "word": "with",
+          "original_start": 1.48,
+          "original_end": 1.8
+        },
+        {
+          "start": 2.6,
+          "end": 2.74,
+          "word": "a",
+          "original_start": 1.8,
+          "original_end": 1.94
+        },
+        {
+          "start": 2.74,
+          "end": 2.96,
+          "word": "simple",
+          "original_start": 1.94,
+          "original_end": 2.16
+        },
+        {
+          "start": 2.96,
+          "end": 3.44,
+          "word": "question.",
+          "original_start": 2.16,
+          "original_end": 2.64
+        },
+        {
+          "start": 4.3,
+          "end": 4.5,
+          "word": "Where",
+          "original_start": 3.5,
+          "original_end": 3.7
+        },
+        {
+          "start": 4.5,
+          "end": 4.68,
+          "word": "did",
+          "original_start": 3.7,
+          "original_end": 3.88
+        },
+        {
+          "start": 4.68,
+          "end": 4.88,
+          "word": "this",
+          "original_start": 3.88,
+          "original_end": 4.08
+        },
+        {
+          "start": 4.88,
+          "end": 5.1,
+          "word": "batch",
+          "original_start": 4.08,
+          "original_end": 4.3
+        },
+        {
+          "start": 5.1,
+          "end": 5.44,
+          "word": "go?",
+          "original_start": 4.3,
+          "original_end": 4.64
+        },
+        {
+          "start": 6.28,
+          "end": 6.42,
+          "word": "For",
+          "original_start": 5.48,
+          "original_end": 5.62
+        },
+        {
+          "start": 6.42,
+          "end": 6.56,
+          "word": "a",
+          "original_start": 5.62,
+          "original_end": 5.76
+        },
+        {
+          "start": 6.56,
+          "end": 6.98,
+          "word": "distributor,",
+          "original_start": 5.76,
+          "original_end": 6.18
+        },
+        {
+          "start": 7.44,
+          "end": 7.52,
+          "word": "the",
+          "original_start": 6.64,
+          "original_end": 6.72
+        },
+        {
+          "start": 7.52,
+          "end": 7.82,
+          "word": "answer",
+          "original_start": 6.72,
+          "original_end": 7.02
+        },
+        {
+          "start": 7.82,
+          "end": 8.04,
+          "word": "can",
+          "original_start": 7.02,
+          "original_end": 7.24
+        },
+        {
+          "start": 8.04,
+          "end": 8.16,
+          "word": "be",
+          "original_start": 7.24,
+          "original_end": 7.36
+        },
+        {
+          "start": 8.16,
+          "end": 8.52,
+          "word": "scattered",
+          "original_start": 7.36,
+          "original_end": 7.72
+        },
+        {
+          "start": 8.52,
+          "end": 8.82,
+          "word": "across",
+          "original_start": 7.72,
+          "original_end": 8.02
+        },
+        {
+          "start": 8.82,
+          "end": 9.48,
+          "word": "receipts,",
+          "original_start": 8.02,
+          "original_end": 8.68
+        },
+        {
+          "start": 9.9,
+          "end": 10.16,
+          "word": "warehouse",
+          "original_start": 9.1,
+          "original_end": 9.36
+        },
+        {
+          "start": 10.16,
+          "end": 10.74,
+          "word": "records,",
+          "original_start": 9.36,
+          "original_end": 9.94
+        },
+        {
+          "start": 11.14,
+          "end": 11.36,
+          "word": "delivery",
+          "original_start": 10.34,
+          "original_end": 10.56
+        },
+        {
+          "start": 11.36,
+          "end": 11.76,
+          "word": "notes,",
+          "original_start": 10.56,
+          "original_end": 10.96
+        },
+        {
+          "start": 12.18,
+          "end": 12.34,
+          "word": "and",
+          "original_start": 11.38,
+          "original_end": 11.54
+        },
+        {
+          "start": 12.34,
+          "end": 12.72,
+          "word": "returned",
+          "original_start": 11.54,
+          "original_end": 11.92
+        },
+        {
+          "start": 12.72,
+          "end": 13.2,
+          "word": "boxes.",
+          "original_start": 11.92,
+          "original_end": 12.4
+        },
+        {
+          "start": 13.781583333333334,
+          "end": 14.221583333333333,
+          "word": "Recall",
+          "original_start": 13.46,
+          "original_end": 13.9
+        },
+        {
+          "start": 14.221583333333333,
+          "end": 14.521583333333334,
+          "word": "Scope",
+          "original_start": 13.9,
+          "original_end": 14.2
+        },
+        {
+          "start": 14.521583333333334,
+          "end": 14.901583333333333,
+          "word": "brings",
+          "original_start": 14.2,
+          "original_end": 14.58
+        },
+        {
+          "start": 14.901583333333333,
+          "end": 15.161583333333333,
+          "word": "that",
+          "original_start": 14.58,
+          "original_end": 14.84
+        },
+        {
+          "start": 15.161583333333333,
+          "end": 15.541583333333334,
+          "word": "story",
+          "original_start": 14.84,
+          "original_end": 15.22
+        },
+        {
+          "start": 15.541583333333334,
+          "end": 15.941583333333334,
+          "word": "together",
+          "original_start": 15.22,
+          "original_end": 15.62
+        },
+        {
+          "start": 15.941583333333334,
+          "end": 16.701583333333332,
+          "word": "so",
+          "original_start": 15.62,
+          "original_end": 16.38
+        },
+        {
+          "start": 16.701583333333332,
+          "end": 16.841583333333332,
+          "word": "the",
+          "original_start": 16.38,
+          "original_end": 16.52
+        },
+        {
+          "start": 16.841583333333332,
+          "end": 17.101583333333334,
+          "word": "team",
+          "original_start": 16.52,
+          "original_end": 16.78
+        },
+        {
+          "start": 17.101583333333334,
+          "end": 17.321583333333333,
+          "word": "can",
+          "original_start": 16.78,
+          "original_end": 17.0
+        },
+        {
+          "start": 17.321583333333333,
+          "end": 17.661583333333333,
+          "word": "trace",
+          "original_start": 17.0,
+          "original_end": 17.34
+        },
+        {
+          "start": 17.661583333333333,
+          "end": 18.001583333333333,
+          "word": "each",
+          "original_start": 17.34,
+          "original_end": 17.68
+        },
+        {
+          "start": 18.001583333333333,
+          "end": 18.38158333333333,
+          "word": "movement",
+          "original_start": 17.68,
+          "original_end": 18.06
+        },
+        {
+          "start": 18.38158333333333,
+          "end": 18.941583333333334,
+          "word": "and",
+          "original_start": 18.06,
+          "original_end": 18.62
+        },
+        {
+          "start": 18.941583333333334,
+          "end": 19.221583333333335,
+          "word": "account",
+          "original_start": 18.62,
+          "original_end": 18.9
+        },
+        {
+          "start": 19.221583333333335,
+          "end": 19.421583333333334,
+          "word": "for",
+          "original_start": 18.9,
+          "original_end": 19.1
+        },
+        {
+          "start": 19.421583333333334,
+          "end": 19.581583333333334,
+          "word": "what",
+          "original_start": 19.1,
+          "original_end": 19.26
+        },
+        {
+          "start": 19.581583333333334,
+          "end": 19.88158333333333,
+          "word": "comes",
+          "original_start": 19.26,
+          "original_end": 19.56
+        },
+        {
+          "start": 19.88158333333333,
+          "end": 20.161583333333333,
+          "word": "back.",
+          "original_start": 19.56,
+          "original_end": 19.84
+        }
+      ],
+      "original_start": 0.0,
+      "original_end": 20.21,
+      "exact_audio_start": 0.8,
+      "exact_audio_end": 20.531583333333334,
+      "start_frame": 0,
+      "cues": [
+        {
+          "key": "hook",
+          "section": "s01",
+          "phrase": "where did this batch go",
+          "start": 4.3,
+          "end": 5.44,
+          "match_confidence": 1.0,
+          "original_start": 3.5,
+          "original_end": 4.64,
+          "video_frame": 258
+        }
+      ],
+      "end_frame": 1232
+    },
+    {
+      "id": "s02",
+      "title": "One operational workspace",
+      "text": "This is RecallScope for pharmaceutical distributors and wholesalers. We are following Asterbridge Distribution, a fictional workspace with six medicines and nine product-specific batches. The overview connects stock, deliveries, recalls and evidence in one place. Open a product to see its strength, presentation, expiry and recorded quantities, then move directly to the batch, warehouse or recipient behind the number. The familiar workspace stays consistent in light and night mode.",
+      "start": 20.533333333333335,
+      "end": 53.583333333333336,
+      "duration": 33.05,
+      "audio_file": "narration.wav",
+      "first_word": 20.901583333333335,
+      "last_word": 53.24908333333333,
+      "boundary_match_confidence": 1.0,
+      "words": [
+        {
+          "start": 20.901583333333335,
+          "end": 21.241583333333335,
+          "word": "This",
+          "original_start": 20.58,
+          "original_end": 20.92
+        },
+        {
+          "start": 21.241583333333335,
+          "end": 21.501583333333333,
+          "word": "is",
+          "original_start": 20.92,
+          "original_end": 21.18
+        },
+        {
+          "start": 21.501583333333333,
+          "end": 21.941583333333334,
+          "word": "Recall",
+          "original_start": 21.18,
+          "original_end": 21.62
+        },
+        {
+          "start": 21.941583333333334,
+          "end": 22.261583333333334,
+          "word": "Scope",
+          "original_start": 21.62,
+          "original_end": 21.94
+        },
+        {
+          "start": 22.261583333333334,
+          "end": 22.461583333333333,
+          "word": "for",
+          "original_start": 21.94,
+          "original_end": 22.14
+        },
+        {
+          "start": 22.461583333333333,
+          "end": 22.901583333333335,
+          "word": "pharmaceutical",
+          "original_start": 22.14,
+          "original_end": 22.58
+        },
+        {
+          "start": 22.901583333333335,
+          "end": 23.641583333333333,
+          "word": "distributors",
+          "original_start": 22.58,
+          "original_end": 23.32
+        },
+        {
+          "start": 23.641583333333333,
+          "end": 23.821583333333333,
+          "word": "and",
+          "original_start": 23.32,
+          "original_end": 23.5
+        },
+        {
+          "start": 23.821583333333333,
+          "end": 24.361583333333332,
+          "word": "wholesalers.",
+          "original_start": 23.5,
+          "original_end": 24.04
+        },
+        {
+          "start": 25.121583333333334,
+          "end": 25.38158333333333,
+          "word": "We",
+          "original_start": 24.8,
+          "original_end": 25.06
+        },
+        {
+          "start": 25.38158333333333,
+          "end": 25.501583333333333,
+          "word": "are",
+          "original_start": 25.06,
+          "original_end": 25.18
+        },
+        {
+          "start": 25.501583333333333,
+          "end": 25.841583333333332,
+          "word": "following",
+          "original_start": 25.18,
+          "original_end": 25.52
+        },
+        {
+          "start": 25.841583333333332,
+          "end": 26.721583333333335,
+          "word": "Asterbridge",
+          "original_start": 25.52,
+          "original_end": 26.4
+        },
+        {
+          "start": 26.721583333333335,
+          "end": 27.321583333333333,
+          "word": "Distribution,",
+          "original_start": 26.4,
+          "original_end": 27.0
+        },
+        {
+          "start": 27.781583333333334,
+          "end": 27.901583333333335,
+          "word": "a",
+          "original_start": 27.46,
+          "original_end": 27.58
+        },
+        {
+          "start": 27.901583333333335,
+          "end": 28.281583333333334,
+          "word": "fictional",
+          "original_start": 27.58,
+          "original_end": 27.96
+        },
+        {
+          "start": 28.281583333333334,
+          "end": 28.821583333333333,
+          "word": "workspace",
+          "original_start": 27.96,
+          "original_end": 28.5
+        },
+        {
+          "start": 28.821583333333333,
+          "end": 29.501583333333333,
+          "word": "with",
+          "original_start": 28.5,
+          "original_end": 29.18
+        },
+        {
+          "start": 29.501583333333333,
+          "end": 29.841583333333332,
+          "word": "six",
+          "original_start": 29.18,
+          "original_end": 29.52
+        },
+        {
+          "start": 29.841583333333332,
+          "end": 30.261583333333334,
+          "word": "medicines",
+          "original_start": 29.52,
+          "original_end": 29.94
+        },
+        {
+          "start": 30.261583333333334,
+          "end": 30.721583333333335,
+          "word": "and",
+          "original_start": 29.94,
+          "original_end": 30.4
+        },
+        {
+          "start": 30.721583333333335,
+          "end": 31.081583333333334,
+          "word": "nine",
+          "original_start": 30.4,
+          "original_end": 30.76
+        },
+        {
+          "start": 31.081583333333334,
+          "end": 31.601583333333334,
+          "word": "product",
+          "original_start": 30.76,
+          "original_end": 31.28
+        },
+        {
+          "start": 31.601583333333334,
+          "end": 32.041583333333335,
+          "word": "-specific",
+          "original_start": 31.28,
+          "original_end": 31.72
+        },
+        {
+          "start": 32.041583333333335,
+          "end": 32.761583333333334,
+          "word": "batches.",
+          "original_start": 31.72,
+          "original_end": 32.44
+        },
+        {
+          "start": 33.089083333333335,
+          "end": 33.309083333333334,
+          "word": "The",
+          "original_start": 33.2,
+          "original_end": 33.42
+        },
+        {
+          "start": 33.309083333333334,
+          "end": 33.729083333333335,
+          "word": "overview",
+          "original_start": 33.42,
+          "original_end": 33.84
+        },
+        {
+          "start": 33.729083333333335,
+          "end": 34.32908333333334,
+          "word": "connects",
+          "original_start": 33.84,
+          "original_end": 34.44
+        },
+        {
+          "start": 34.32908333333334,
+          "end": 34.84908333333333,
+          "word": "stock,",
+          "original_start": 34.44,
+          "original_end": 34.96
+        },
+        {
+          "start": 35.24908333333333,
+          "end": 35.589083333333335,
+          "word": "deliveries,",
+          "original_start": 35.36,
+          "original_end": 35.7
+        },
+        {
+          "start": 36.14908333333333,
+          "end": 36.88908333333333,
+          "word": "recalls,",
+          "original_start": 36.26,
+          "original_end": 37.0
+        },
+        {
+          "start": 37.06908333333333,
+          "end": 37.14908333333333,
+          "word": "and",
+          "original_start": 37.18,
+          "original_end": 37.26
+        },
+        {
+          "start": 37.14908333333333,
+          "end": 37.549083333333336,
+          "word": "evidence",
+          "original_start": 37.26,
+          "original_end": 37.66
+        },
+        {
+          "start": 37.549083333333336,
+          "end": 37.909083333333335,
+          "word": "in",
+          "original_start": 37.66,
+          "original_end": 38.02
+        },
+        {
+          "start": 37.909083333333335,
+          "end": 38.089083333333335,
+          "word": "one",
+          "original_start": 38.02,
+          "original_end": 38.2
+        },
+        {
+          "start": 38.089083333333335,
+          "end": 38.509083333333336,
+          "word": "place.",
+          "original_start": 38.2,
+          "original_end": 38.62
+        },
+        {
+          "start": 39.189083333333336,
+          "end": 39.46908333333333,
+          "word": "Open",
+          "original_start": 39.3,
+          "original_end": 39.58
+        },
+        {
+          "start": 39.46908333333333,
+          "end": 39.629083333333334,
+          "word": "a",
+          "original_start": 39.58,
+          "original_end": 39.74
+        },
+        {
+          "start": 39.629083333333334,
+          "end": 39.909083333333335,
+          "word": "product",
+          "original_start": 39.74,
+          "original_end": 40.02
+        },
+        {
+          "start": 39.909083333333335,
+          "end": 40.14908333333333,
+          "word": "to",
+          "original_start": 40.02,
+          "original_end": 40.26
+        },
+        {
+          "start": 40.14908333333333,
+          "end": 40.28908333333333,
+          "word": "see",
+          "original_start": 40.26,
+          "original_end": 40.4
+        },
+        {
+          "start": 40.28908333333333,
+          "end": 40.42908333333333,
+          "word": "its",
+          "original_start": 40.4,
+          "original_end": 40.54
+        },
+        {
+          "start": 40.42908333333333,
+          "end": 40.869083333333336,
+          "word": "strength,",
+          "original_start": 40.54,
+          "original_end": 40.98
+        },
+        {
+          "start": 41.269083333333334,
+          "end": 41.70908333333333,
+          "word": "presentation,",
+          "original_start": 41.38,
+          "original_end": 41.82
+        },
+        {
+          "start": 42.38908333333333,
+          "end": 42.96908333333333,
+          "word": "expiry,",
+          "original_start": 42.5,
+          "original_end": 43.08
+        },
+        {
+          "start": 43.20908333333333,
+          "end": 43.32908333333334,
+          "word": "and",
+          "original_start": 43.32,
+          "original_end": 43.44
+        },
+        {
+          "start": 43.32908333333334,
+          "end": 43.78908333333333,
+          "word": "recorded",
+          "original_start": 43.44,
+          "original_end": 43.9
+        },
+        {
+          "start": 43.78908333333333,
+          "end": 44.32908333333334,
+          "word": "quantities,",
+          "original_start": 43.9,
+          "original_end": 44.44
+        },
+        {
+          "start": 44.729083333333335,
+          "end": 44.909083333333335,
+          "word": "then",
+          "original_start": 44.84,
+          "original_end": 45.02
+        },
+        {
+          "start": 44.909083333333335,
+          "end": 45.10908333333333,
+          "word": "move",
+          "original_start": 45.02,
+          "original_end": 45.22
+        },
+        {
+          "start": 45.10908333333333,
+          "end": 45.56908333333333,
+          "word": "directly",
+          "original_start": 45.22,
+          "original_end": 45.68
+        },
+        {
+          "start": 45.56908333333333,
+          "end": 45.78908333333333,
+          "word": "to",
+          "original_start": 45.68,
+          "original_end": 45.9
+        },
+        {
+          "start": 45.78908333333333,
+          "end": 45.869083333333336,
+          "word": "the",
+          "original_start": 45.9,
+          "original_end": 45.98
+        },
+        {
+          "start": 45.869083333333336,
+          "end": 46.129083333333334,
+          "word": "batch,",
+          "original_start": 45.98,
+          "original_end": 46.24
+        },
+        {
+          "start": 46.42908333333333,
+          "end": 46.729083333333335,
+          "word": "warehouse,",
+          "original_start": 46.54,
+          "original_end": 46.84
+        },
+        {
+          "start": 47.14908333333333,
+          "end": 47.28908333333333,
+          "word": "or",
+          "original_start": 47.26,
+          "original_end": 47.4
+        },
+        {
+          "start": 47.28908333333333,
+          "end": 47.689083333333336,
+          "word": "recipient",
+          "original_start": 47.4,
+          "original_end": 47.8
+        },
+        {
+          "start": 47.689083333333336,
+          "end": 48.10908333333333,
+          "word": "behind",
+          "original_start": 47.8,
+          "original_end": 48.22
+        },
+        {
+          "start": 48.10908333333333,
+          "end": 48.32908333333334,
+          "word": "the",
+          "original_start": 48.22,
+          "original_end": 48.44
+        },
+        {
+          "start": 48.32908333333334,
+          "end": 48.549083333333336,
+          "word": "number.",
+          "original_start": 48.44,
+          "original_end": 48.66
+        },
+        {
+          "start": 49.369083333333336,
+          "end": 49.48908333333333,
+          "word": "The",
+          "original_start": 49.48,
+          "original_end": 49.6
+        },
+        {
+          "start": 49.48908333333333,
+          "end": 49.869083333333336,
+          "word": "familiar",
+          "original_start": 49.6,
+          "original_end": 49.98
+        },
+        {
+          "start": 49.869083333333336,
+          "end": 50.42908333333333,
+          "word": "workspace",
+          "original_start": 49.98,
+          "original_end": 50.54
+        },
+        {
+          "start": 50.42908333333333,
+          "end": 51.10908333333333,
+          "word": "stays",
+          "original_start": 50.54,
+          "original_end": 51.22
+        },
+        {
+          "start": 51.10908333333333,
+          "end": 51.769083333333334,
+          "word": "consistent",
+          "original_start": 51.22,
+          "original_end": 51.88
+        },
+        {
+          "start": 51.769083333333334,
+          "end": 52.20908333333333,
+          "word": "in",
+          "original_start": 51.88,
+          "original_end": 52.32
+        },
+        {
+          "start": 52.20908333333333,
+          "end": 52.46908333333333,
+          "word": "light",
+          "original_start": 52.32,
+          "original_end": 52.58
+        },
+        {
+          "start": 52.46908333333333,
+          "end": 52.729083333333335,
+          "word": "and",
+          "original_start": 52.58,
+          "original_end": 52.84
+        },
+        {
+          "start": 52.729083333333335,
+          "end": 52.96908333333333,
+          "word": "night",
+          "original_start": 52.84,
+          "original_end": 53.08
+        },
+        {
+          "start": 52.96908333333333,
+          "end": 53.24908333333333,
+          "word": "mode.",
+          "original_start": 53.08,
+          "original_end": 53.36
+        }
+      ],
+      "original_start": 20.21,
+      "original_end": 53.7,
+      "exact_audio_start": 20.531583333333334,
+      "exact_audio_end": 53.589083333333335,
+      "start_frame": 1232,
+      "cues": [
+        {
+          "key": "workspace_identity",
+          "section": "s02",
+          "phrase": "six medicines and nine product-specific batches",
+          "start": 29.501583333333333,
+          "end": 32.761583333333334,
+          "match_confidence": 1.0,
+          "original_start": 29.18,
+          "original_end": 32.44,
+          "video_frame": 1770
+        }
+      ],
+      "end_frame": 3215
+    },
+    {
+      "id": "s03",
+      "title": "Identity before matching",
+      "text": "Here is the paracetamol batch. One thousand boxes were received, and six hundred were dispatched to four customer sites. The trace connects the supplier, two warehouses and those destinations. Now compare amoxicillin: its printed batch code is identical. RecallScope keeps the two medicines separate because product identity matters as much as the batch label. A matching string alone must never merge stock or expand a recall.",
+      "start": 53.583333333333336,
+      "end": 83.11666666666666,
+      "duration": 29.533333333333324,
+      "audio_file": "narration.wav",
+      "first_word": 53.589083333333335,
+      "last_word": 82.71070833333333,
+      "boundary_match_confidence": 1,
+      "words": [
+        {
+          "start": 53.589083333333335,
+          "end": 54.229083333333335,
+          "word": "Here",
+          "original_start": 53.7,
+          "original_end": 54.34
+        },
+        {
+          "start": 54.229083333333335,
+          "end": 54.729083333333335,
+          "word": "is",
+          "original_start": 54.34,
+          "original_end": 54.84
+        },
+        {
+          "start": 54.729083333333335,
+          "end": 54.869083333333336,
+          "word": "the",
+          "original_start": 54.84,
+          "original_end": 54.98
+        },
+        {
+          "start": 54.869083333333336,
+          "end": 55.52908333333333,
+          "word": "paracetamol",
+          "original_start": 54.98,
+          "original_end": 55.64
+        },
+        {
+          "start": 55.52908333333333,
+          "end": 55.769083333333334,
+          "word": "batch.",
+          "original_start": 55.64,
+          "original_end": 55.88
+        },
+        {
+          "start": 56.689083333333336,
+          "end": 56.96908333333333,
+          "word": "1",
+          "original_start": 56.8,
+          "original_end": 57.08
+        },
+        {
+          "start": 56.96908333333333,
+          "end": 57.42908333333333,
+          "word": ",000",
+          "original_start": 57.08,
+          "original_end": 57.54
+        },
+        {
+          "start": 57.42908333333333,
+          "end": 57.78908333333333,
+          "word": "boxes",
+          "original_start": 57.54,
+          "original_end": 57.9
+        },
+        {
+          "start": 57.78908333333333,
+          "end": 58.089083333333335,
+          "word": "were",
+          "original_start": 57.9,
+          "original_end": 58.2
+        },
+        {
+          "start": 58.089083333333335,
+          "end": 58.509083333333336,
+          "word": "received",
+          "original_start": 58.2,
+          "original_end": 58.62
+        },
+        {
+          "start": 58.509083333333336,
+          "end": 59.16908333333333,
+          "word": "and",
+          "original_start": 58.62,
+          "original_end": 59.28
+        },
+        {
+          "start": 59.16908333333333,
+          "end": 59.52908333333333,
+          "word": "600",
+          "original_start": 59.28,
+          "original_end": 59.64
+        },
+        {
+          "start": 59.52908333333333,
+          "end": 60.009083333333336,
+          "word": "were",
+          "original_start": 59.64,
+          "original_end": 60.12
+        },
+        {
+          "start": 60.009083333333336,
+          "end": 60.46908333333333,
+          "word": "dispatched",
+          "original_start": 60.12,
+          "original_end": 60.58
+        },
+        {
+          "start": 60.46908333333333,
+          "end": 60.64908333333333,
+          "word": "to",
+          "original_start": 60.58,
+          "original_end": 60.76
+        },
+        {
+          "start": 60.64908333333333,
+          "end": 60.909083333333335,
+          "word": "four",
+          "original_start": 60.76,
+          "original_end": 61.02
+        },
+        {
+          "start": 60.909083333333335,
+          "end": 61.28908333333333,
+          "word": "customer",
+          "original_start": 61.02,
+          "original_end": 61.4
+        },
+        {
+          "start": 61.28908333333333,
+          "end": 61.66908333333333,
+          "word": "sites.",
+          "original_start": 61.4,
+          "original_end": 61.78
+        },
+        {
+          "start": 62.267125,
+          "end": 62.387125,
+          "word": "The",
+          "original_start": 62.9,
+          "original_end": 63.02
+        },
+        {
+          "start": 62.387125,
+          "end": 62.667125,
+          "word": "trace",
+          "original_start": 63.02,
+          "original_end": 63.3
+        },
+        {
+          "start": 62.667125,
+          "end": 63.087125,
+          "word": "connects",
+          "original_start": 63.3,
+          "original_end": 63.72
+        },
+        {
+          "start": 63.087125,
+          "end": 63.407125,
+          "word": "the",
+          "original_start": 63.72,
+          "original_end": 64.04
+        },
+        {
+          "start": 63.407125,
+          "end": 63.807125,
+          "word": "supplier,",
+          "original_start": 64.04,
+          "original_end": 64.44
+        },
+        {
+          "start": 64.387125,
+          "end": 64.507125,
+          "word": "two",
+          "original_start": 65.02,
+          "original_end": 65.14
+        },
+        {
+          "start": 64.507125,
+          "end": 65.047125,
+          "word": "warehouses",
+          "original_start": 65.14,
+          "original_end": 65.68
+        },
+        {
+          "start": 65.047125,
+          "end": 65.707125,
+          "word": "and",
+          "original_start": 65.68,
+          "original_end": 66.34
+        },
+        {
+          "start": 65.707125,
+          "end": 65.967125,
+          "word": "those",
+          "original_start": 66.34,
+          "original_end": 66.6
+        },
+        {
+          "start": 65.967125,
+          "end": 66.527125,
+          "word": "destinations.",
+          "original_start": 66.6,
+          "original_end": 67.16
+        },
+        {
+          "start": 67.30470833333334,
+          "end": 67.64470833333333,
+          "word": "Now,",
+          "original_start": 68.42,
+          "original_end": 68.76
+        },
+        {
+          "start": 67.80470833333334,
+          "end": 68.28470833333333,
+          "word": "compare",
+          "original_start": 68.92,
+          "original_end": 69.4
+        },
+        {
+          "start": 68.28470833333333,
+          "end": 68.54470833333333,
+          "word": "a",
+          "original_start": 69.4,
+          "original_end": 69.66
+        },
+        {
+          "start": 68.54470833333333,
+          "end": 69.18470833333333,
+          "word": "moxicillin.",
+          "original_start": 69.66,
+          "original_end": 70.3
+        },
+        {
+          "start": 69.94470833333334,
+          "end": 70.10470833333333,
+          "word": "Its",
+          "original_start": 71.06,
+          "original_end": 71.22
+        },
+        {
+          "start": 70.10470833333333,
+          "end": 70.42470833333333,
+          "word": "printed",
+          "original_start": 71.22,
+          "original_end": 71.54
+        },
+        {
+          "start": 70.42470833333333,
+          "end": 70.76470833333333,
+          "word": "batch",
+          "original_start": 71.54,
+          "original_end": 71.88
+        },
+        {
+          "start": 70.76470833333333,
+          "end": 71.08470833333334,
+          "word": "code",
+          "original_start": 71.88,
+          "original_end": 72.2
+        },
+        {
+          "start": 71.08470833333334,
+          "end": 71.54470833333333,
+          "word": "is",
+          "original_start": 72.2,
+          "original_end": 72.66
+        },
+        {
+          "start": 71.54470833333333,
+          "end": 72.02470833333334,
+          "word": "identical.",
+          "original_start": 72.66,
+          "original_end": 73.14
+        },
+        {
+          "start": 72.5425,
+          "end": 73.2025,
+          "word": "RecallScope",
+          "original_start": 74.0,
+          "original_end": 74.66
+        },
+        {
+          "start": 73.2025,
+          "end": 73.6225,
+          "word": "keeps",
+          "original_start": 74.66,
+          "original_end": 75.08
+        },
+        {
+          "start": 73.6225,
+          "end": 73.8025,
+          "word": "the",
+          "original_start": 75.08,
+          "original_end": 75.26
+        },
+        {
+          "start": 73.8025,
+          "end": 73.9625,
+          "word": "two",
+          "original_start": 75.26,
+          "original_end": 75.42
+        },
+        {
+          "start": 73.9625,
+          "end": 74.2625,
+          "word": "medicines",
+          "original_start": 75.42,
+          "original_end": 75.72
+        },
+        {
+          "start": 74.2625,
+          "end": 74.8025,
+          "word": "separate",
+          "original_start": 75.72,
+          "original_end": 76.26
+        },
+        {
+          "start": 74.8025,
+          "end": 75.2825,
+          "word": "because",
+          "original_start": 76.26,
+          "original_end": 76.74
+        },
+        {
+          "start": 75.2825,
+          "end": 75.6225,
+          "word": "product",
+          "original_start": 76.74,
+          "original_end": 77.08
+        },
+        {
+          "start": 75.6225,
+          "end": 76.2225,
+          "word": "identity",
+          "original_start": 77.08,
+          "original_end": 77.68
+        },
+        {
+          "start": 76.2225,
+          "end": 76.7025,
+          "word": "matters",
+          "original_start": 77.68,
+          "original_end": 78.16
+        },
+        {
+          "start": 76.7025,
+          "end": 77.0625,
+          "word": "as",
+          "original_start": 78.16,
+          "original_end": 78.52
+        },
+        {
+          "start": 77.0625,
+          "end": 77.2625,
+          "word": "much",
+          "original_start": 78.52,
+          "original_end": 78.72
+        },
+        {
+          "start": 77.2625,
+          "end": 77.4225,
+          "word": "as",
+          "original_start": 78.72,
+          "original_end": 78.88
+        },
+        {
+          "start": 77.4225,
+          "end": 77.5225,
+          "word": "the",
+          "original_start": 78.88,
+          "original_end": 78.98
+        },
+        {
+          "start": 77.5225,
+          "end": 77.7825,
+          "word": "batch",
+          "original_start": 78.98,
+          "original_end": 79.24
+        },
+        {
+          "start": 77.7825,
+          "end": 78.1025,
+          "word": "label.",
+          "original_start": 79.24,
+          "original_end": 79.56
+        },
+        {
+          "start": 78.43670833333333,
+          "end": 78.73070833333334,
+          "word": "A",
+          "original_start": 80.48,
+          "original_end": 80.94
+        },
+        {
+          "start": 78.73070833333334,
+          "end": 79.05070833333333,
+          "word": "matching",
+          "original_start": 80.94,
+          "original_end": 81.26
+        },
+        {
+          "start": 79.05070833333333,
+          "end": 79.37070833333334,
+          "word": "string",
+          "original_start": 81.26,
+          "original_end": 81.58
+        },
+        {
+          "start": 79.37070833333334,
+          "end": 79.71070833333333,
+          "word": "alone",
+          "original_start": 81.58,
+          "original_end": 81.92
+        },
+        {
+          "start": 79.71070833333333,
+          "end": 80.27070833333333,
+          "word": "must",
+          "original_start": 81.92,
+          "original_end": 82.48
+        },
+        {
+          "start": 80.27070833333333,
+          "end": 80.55070833333333,
+          "word": "never",
+          "original_start": 82.48,
+          "original_end": 82.76
+        },
+        {
+          "start": 80.55070833333333,
+          "end": 80.97070833333333,
+          "word": "merge",
+          "original_start": 82.76,
+          "original_end": 83.18
+        },
+        {
+          "start": 80.97070833333333,
+          "end": 81.23070833333334,
+          "word": "stock",
+          "original_start": 83.18,
+          "original_end": 83.44
+        },
+        {
+          "start": 81.23070833333334,
+          "end": 81.75070833333334,
+          "word": "or",
+          "original_start": 83.44,
+          "original_end": 83.96
+        },
+        {
+          "start": 81.75070833333334,
+          "end": 82.19070833333333,
+          "word": "expand",
+          "original_start": 83.96,
+          "original_end": 84.4
+        },
+        {
+          "start": 82.19070833333333,
+          "end": 82.39070833333334,
+          "word": "a",
+          "original_start": 84.4,
+          "original_end": 84.6
+        },
+        {
+          "start": 82.39070833333334,
+          "end": 82.71070833333333,
+          "word": "recall.",
+          "original_start": 84.6,
+          "original_end": 84.92
+        }
+      ],
+      "original_start": 53.7,
+      "original_end": 85.32,
+      "exact_audio_start": 53.589083333333335,
+      "exact_audio_end": 83.11070833333333,
+      "start_frame": 3215,
+      "cues": [
+        {
+          "key": "trace_destinations",
+          "section": "s03",
+          "phrase": "six hundred were dispatched",
+          "start": 59.16908333333333,
+          "end": 60.46908333333333,
+          "match_confidence": 1.0,
+          "original_start": 59.28,
+          "original_end": 60.58,
+          "video_frame": 3550
+        },
+        {
+          "key": "same_code",
+          "section": "s03",
+          "phrase": "Now compare amoxicillin",
+          "start": 67.30470833333334,
+          "end": 69.18470833333333,
+          "match_confidence": 1.0,
+          "original_start": 68.42,
+          "original_end": 70.3,
+          "video_frame": 4038
+        }
+      ],
+      "end_frame": 4987
+    },
+    {
+      "id": "s04",
+      "title": "AI interprets. People approve.",
+      "text": "Document intake offers guided examples, structured CSV import and live AI assistance. Fireworks and OpenAI can interpret text, images and PDFs into proposed receipts or dispatches. The original source remains alongside every proposal, and deterministic checks validate identifiers, quantities and units before an operator approves. For this walkthrough, the guided receipt is pre-filled and needs no API key. Review forty boxes of a separate available paracetamol batch, compare the source, and save the decision. Only then does available stock rise from four hundred to four hundred and forty. Repeating that document cannot post the same receipt twice.",
+      "start": 83.11666666666666,
+      "end": 129.43333333333334,
+      "duration": 46.31666666666668,
+      "audio_file": "narration.wav",
+      "first_word": 83.51070833333333,
+      "last_word": 128.97795833333333,
+      "boundary_match_confidence": 1.0,
+      "words": [
+        {
+          "start": 83.51070833333333,
+          "end": 83.83070833333333,
+          "word": "Document",
+          "original_start": 85.72,
+          "original_end": 86.04
+        },
+        {
+          "start": 83.83070833333333,
+          "end": 84.45070833333334,
+          "word": "Intake",
+          "original_start": 86.04,
+          "original_end": 86.66
+        },
+        {
+          "start": 84.45070833333334,
+          "end": 84.75070833333334,
+          "word": "offers",
+          "original_start": 86.66,
+          "original_end": 86.96
+        },
+        {
+          "start": 84.75070833333334,
+          "end": 85.19070833333333,
+          "word": "guided",
+          "original_start": 86.96,
+          "original_end": 87.4
+        },
+        {
+          "start": 85.19070833333333,
+          "end": 85.73070833333334,
+          "word": "examples,",
+          "original_start": 87.4,
+          "original_end": 87.94
+        },
+        {
+          "start": 86.39070833333334,
+          "end": 86.79070833333333,
+          "word": "structured",
+          "original_start": 88.6,
+          "original_end": 89.0
+        },
+        {
+          "start": 86.79070833333333,
+          "end": 87.35070833333333,
+          "word": "CSV",
+          "original_start": 89.0,
+          "original_end": 89.56
+        },
+        {
+          "start": 87.35070833333333,
+          "end": 87.77070833333333,
+          "word": "import",
+          "original_start": 89.56,
+          "original_end": 89.98
+        },
+        {
+          "start": 87.77070833333333,
+          "end": 88.47070833333333,
+          "word": "and",
+          "original_start": 89.98,
+          "original_end": 90.68
+        },
+        {
+          "start": 88.47070833333333,
+          "end": 88.79070833333333,
+          "word": "live",
+          "original_start": 90.68,
+          "original_end": 91.0
+        },
+        {
+          "start": 88.79070833333333,
+          "end": 89.15070833333333,
+          "word": "AI",
+          "original_start": 91.0,
+          "original_end": 91.36
+        },
+        {
+          "start": 89.15070833333333,
+          "end": 89.69070833333333,
+          "word": "assistance.",
+          "original_start": 91.36,
+          "original_end": 91.9
+        },
+        {
+          "start": 90.34841666666667,
+          "end": 91.00841666666666,
+          "word": "Fireworks",
+          "original_start": 93.14,
+          "original_end": 93.8
+        },
+        {
+          "start": 91.00841666666666,
+          "end": 91.22841666666666,
+          "word": "and",
+          "original_start": 93.8,
+          "original_end": 94.02
+        },
+        {
+          "start": 91.22841666666666,
+          "end": 91.76841666666667,
+          "word": "OpenAI",
+          "original_start": 94.02,
+          "original_end": 94.56
+        },
+        {
+          "start": 91.76841666666667,
+          "end": 92.42841666666666,
+          "word": "can",
+          "original_start": 94.56,
+          "original_end": 95.22
+        },
+        {
+          "start": 92.42841666666666,
+          "end": 92.84841666666667,
+          "word": "interpret",
+          "original_start": 95.22,
+          "original_end": 95.64
+        },
+        {
+          "start": 92.84841666666667,
+          "end": 93.30841666666667,
+          "word": "text,",
+          "original_start": 95.64,
+          "original_end": 96.1
+        },
+        {
+          "start": 93.62841666666667,
+          "end": 93.94841666666666,
+          "word": "images",
+          "original_start": 96.42,
+          "original_end": 96.74
+        },
+        {
+          "start": 93.94841666666666,
+          "end": 94.54841666666667,
+          "word": "and",
+          "original_start": 96.74,
+          "original_end": 97.34
+        },
+        {
+          "start": 94.54841666666667,
+          "end": 95.36841666666666,
+          "word": "PDFs",
+          "original_start": 97.34,
+          "original_end": 98.16
+        },
+        {
+          "start": 95.36841666666666,
+          "end": 95.84841666666667,
+          "word": "into",
+          "original_start": 98.16,
+          "original_end": 98.64
+        },
+        {
+          "start": 95.84841666666667,
+          "end": 96.24841666666667,
+          "word": "proposed",
+          "original_start": 98.64,
+          "original_end": 99.04
+        },
+        {
+          "start": 96.24841666666667,
+          "end": 96.94841666666666,
+          "word": "receipts",
+          "original_start": 99.04,
+          "original_end": 99.74
+        },
+        {
+          "start": 96.94841666666666,
+          "end": 97.46841666666667,
+          "word": "or",
+          "original_start": 99.74,
+          "original_end": 100.26
+        },
+        {
+          "start": 97.46841666666667,
+          "end": 98.12841666666667,
+          "word": "dispatches.",
+          "original_start": 100.26,
+          "original_end": 100.92
+        },
+        {
+          "start": 98.3975,
+          "end": 98.70658333333333,
+          "word": "The",
+          "original_start": 101.72,
+          "original_end": 102.1
+        },
+        {
+          "start": 98.70658333333333,
+          "end": 99.00658333333334,
+          "word": "original",
+          "original_start": 102.1,
+          "original_end": 102.4
+        },
+        {
+          "start": 99.00658333333334,
+          "end": 99.38658333333333,
+          "word": "source",
+          "original_start": 102.4,
+          "original_end": 102.78
+        },
+        {
+          "start": 99.38658333333333,
+          "end": 99.70658333333333,
+          "word": "remains",
+          "original_start": 102.78,
+          "original_end": 103.1
+        },
+        {
+          "start": 99.70658333333333,
+          "end": 100.28658333333334,
+          "word": "alongside",
+          "original_start": 103.1,
+          "original_end": 103.68
+        },
+        {
+          "start": 100.28658333333334,
+          "end": 100.70658333333333,
+          "word": "every",
+          "original_start": 103.68,
+          "original_end": 104.1
+        },
+        {
+          "start": 100.70658333333333,
+          "end": 101.22658333333334,
+          "word": "proposal",
+          "original_start": 104.1,
+          "original_end": 104.62
+        },
+        {
+          "start": 101.22658333333334,
+          "end": 101.92658333333334,
+          "word": "and",
+          "original_start": 104.62,
+          "original_end": 105.32
+        },
+        {
+          "start": 101.92658333333334,
+          "end": 102.58658333333334,
+          "word": "deterministic",
+          "original_start": 105.32,
+          "original_end": 105.98
+        },
+        {
+          "start": 102.58658333333334,
+          "end": 102.94658333333334,
+          "word": "checks",
+          "original_start": 105.98,
+          "original_end": 106.34
+        },
+        {
+          "start": 102.94658333333334,
+          "end": 103.46658333333333,
+          "word": "validate",
+          "original_start": 106.34,
+          "original_end": 106.86
+        },
+        {
+          "start": 103.46658333333333,
+          "end": 104.36658333333334,
+          "word": "identifiers,",
+          "original_start": 106.86,
+          "original_end": 107.76
+        },
+        {
+          "start": 104.74658333333333,
+          "end": 105.18658333333333,
+          "word": "quantities",
+          "original_start": 108.14,
+          "original_end": 108.58
+        },
+        {
+          "start": 105.18658333333333,
+          "end": 105.68658333333333,
+          "word": "and",
+          "original_start": 108.58,
+          "original_end": 109.08
+        },
+        {
+          "start": 105.68658333333333,
+          "end": 106.06658333333333,
+          "word": "units",
+          "original_start": 109.08,
+          "original_end": 109.46
+        },
+        {
+          "start": 106.06658333333333,
+          "end": 106.68658333333333,
+          "word": "before",
+          "original_start": 109.46,
+          "original_end": 110.08
+        },
+        {
+          "start": 106.68658333333333,
+          "end": 106.88658333333333,
+          "word": "an",
+          "original_start": 110.08,
+          "original_end": 110.28
+        },
+        {
+          "start": 106.88658333333333,
+          "end": 107.24658333333333,
+          "word": "operator",
+          "original_start": 110.28,
+          "original_end": 110.64
+        },
+        {
+          "start": 107.24658333333333,
+          "end": 107.86658333333334,
+          "word": "approves.",
+          "original_start": 110.64,
+          "original_end": 111.26
+        },
+        {
+          "start": 108.272,
+          "end": 108.532,
+          "word": "For",
+          "original_start": 112.16,
+          "original_end": 112.42
+        },
+        {
+          "start": 108.532,
+          "end": 108.692,
+          "word": "this",
+          "original_start": 112.42,
+          "original_end": 112.58
+        },
+        {
+          "start": 108.692,
+          "end": 109.192,
+          "word": "walkthrough,",
+          "original_start": 112.58,
+          "original_end": 113.08
+        },
+        {
+          "start": 109.672,
+          "end": 109.732,
+          "word": "the",
+          "original_start": 113.56,
+          "original_end": 113.62
+        },
+        {
+          "start": 109.732,
+          "end": 110.032,
+          "word": "guided",
+          "original_start": 113.62,
+          "original_end": 113.92
+        },
+        {
+          "start": 110.032,
+          "end": 110.452,
+          "word": "receipt",
+          "original_start": 113.92,
+          "original_end": 114.34
+        },
+        {
+          "start": 110.452,
+          "end": 110.752,
+          "word": "is",
+          "original_start": 114.34,
+          "original_end": 114.64
+        },
+        {
+          "start": 110.752,
+          "end": 111.012,
+          "word": "pre",
+          "original_start": 114.64,
+          "original_end": 114.9
+        },
+        {
+          "start": 111.012,
+          "end": 111.352,
+          "word": "-filled",
+          "original_start": 114.9,
+          "original_end": 115.24
+        },
+        {
+          "start": 111.352,
+          "end": 111.852,
+          "word": "and",
+          "original_start": 115.24,
+          "original_end": 115.74
+        },
+        {
+          "start": 111.852,
+          "end": 112.112,
+          "word": "needs",
+          "original_start": 115.74,
+          "original_end": 116.0
+        },
+        {
+          "start": 112.112,
+          "end": 112.372,
+          "word": "no",
+          "original_start": 116.0,
+          "original_end": 116.26
+        },
+        {
+          "start": 112.372,
+          "end": 112.812,
+          "word": "API",
+          "original_start": 116.26,
+          "original_end": 116.7
+        },
+        {
+          "start": 112.812,
+          "end": 113.252,
+          "word": "key.",
+          "original_start": 116.7,
+          "original_end": 117.14
+        },
+        {
+          "start": 113.620625,
+          "end": 114.060625,
+          "word": "Review",
+          "original_start": 118.0,
+          "original_end": 118.44
+        },
+        {
+          "start": 114.060625,
+          "end": 114.460625,
+          "word": "40",
+          "original_start": 118.44,
+          "original_end": 118.84
+        },
+        {
+          "start": 114.460625,
+          "end": 114.800625,
+          "word": "boxes",
+          "original_start": 118.84,
+          "original_end": 119.18
+        },
+        {
+          "start": 114.800625,
+          "end": 115.020625,
+          "word": "of",
+          "original_start": 119.18,
+          "original_end": 119.4
+        },
+        {
+          "start": 115.020625,
+          "end": 115.160625,
+          "word": "a",
+          "original_start": 119.4,
+          "original_end": 119.54
+        },
+        {
+          "start": 115.160625,
+          "end": 115.440625,
+          "word": "separate",
+          "original_start": 119.54,
+          "original_end": 119.82
+        },
+        {
+          "start": 115.440625,
+          "end": 115.900625,
+          "word": "available",
+          "original_start": 119.82,
+          "original_end": 120.28
+        },
+        {
+          "start": 115.900625,
+          "end": 116.680625,
+          "word": "paracetamol",
+          "original_start": 120.28,
+          "original_end": 121.06
+        },
+        {
+          "start": 116.680625,
+          "end": 116.960625,
+          "word": "batch.",
+          "original_start": 121.06,
+          "original_end": 121.34
+        },
+        {
+          "start": 117.820625,
+          "end": 118.200625,
+          "word": "Compare",
+          "original_start": 122.2,
+          "original_end": 122.58
+        },
+        {
+          "start": 118.200625,
+          "end": 118.460625,
+          "word": "the",
+          "original_start": 122.58,
+          "original_end": 122.84
+        },
+        {
+          "start": 118.460625,
+          "end": 118.760625,
+          "word": "source",
+          "original_start": 122.84,
+          "original_end": 123.14
+        },
+        {
+          "start": 118.760625,
+          "end": 119.520625,
+          "word": "and",
+          "original_start": 123.14,
+          "original_end": 123.9
+        },
+        {
+          "start": 119.520625,
+          "end": 119.880625,
+          "word": "save",
+          "original_start": 123.9,
+          "original_end": 124.26
+        },
+        {
+          "start": 119.880625,
+          "end": 120.040625,
+          "word": "the",
+          "original_start": 124.26,
+          "original_end": 124.42
+        },
+        {
+          "start": 120.040625,
+          "end": 120.400625,
+          "word": "decision.",
+          "original_start": 124.42,
+          "original_end": 124.78
+        },
+        {
+          "start": 120.400625,
+          "end": 121.20554166666666,
+          "word": "Only",
+          "original_start": 124.78,
+          "original_end": 126.08
+        },
+        {
+          "start": 121.20554166666666,
+          "end": 121.48554166666666,
+          "word": "then",
+          "original_start": 126.08,
+          "original_end": 126.36
+        },
+        {
+          "start": 121.48554166666666,
+          "end": 121.66554166666667,
+          "word": "does",
+          "original_start": 126.36,
+          "original_end": 126.54
+        },
+        {
+          "start": 121.66554166666667,
+          "end": 122.02554166666667,
+          "word": "available",
+          "original_start": 126.54,
+          "original_end": 126.9
+        },
+        {
+          "start": 122.02554166666667,
+          "end": 122.46554166666667,
+          "word": "stock",
+          "original_start": 126.9,
+          "original_end": 127.34
+        },
+        {
+          "start": 122.46554166666667,
+          "end": 122.96554166666667,
+          "word": "rise",
+          "original_start": 127.34,
+          "original_end": 127.84
+        },
+        {
+          "start": 122.96554166666667,
+          "end": 123.22554166666667,
+          "word": "from",
+          "original_start": 127.84,
+          "original_end": 128.1
+        },
+        {
+          "start": 123.22554166666667,
+          "end": 123.82554166666667,
+          "word": "400",
+          "original_start": 128.1,
+          "original_end": 128.7
+        },
+        {
+          "start": 123.82554166666667,
+          "end": 124.26554166666666,
+          "word": "to",
+          "original_start": 128.7,
+          "original_end": 129.14
+        },
+        {
+          "start": 124.26554166666666,
+          "end": 125.34554166666666,
+          "word": "440.",
+          "original_start": 129.14,
+          "original_end": 130.22
+        },
+        {
+          "start": 125.71354166666667,
+          "end": 126.39795833333334,
+          "word": "Repeating",
+          "original_start": 131.04,
+          "original_end": 131.84
+        },
+        {
+          "start": 126.39795833333334,
+          "end": 126.57795833333333,
+          "word": "that",
+          "original_start": 131.84,
+          "original_end": 132.02
+        },
+        {
+          "start": 126.57795833333333,
+          "end": 126.99795833333333,
+          "word": "document",
+          "original_start": 132.02,
+          "original_end": 132.44
+        },
+        {
+          "start": 126.99795833333333,
+          "end": 127.39795833333334,
+          "word": "cannot",
+          "original_start": 132.44,
+          "original_end": 132.84
+        },
+        {
+          "start": 127.39795833333334,
+          "end": 127.81795833333334,
+          "word": "post",
+          "original_start": 132.84,
+          "original_end": 133.26
+        },
+        {
+          "start": 127.81795833333334,
+          "end": 128.03795833333334,
+          "word": "the",
+          "original_start": 133.26,
+          "original_end": 133.48
+        },
+        {
+          "start": 128.03795833333334,
+          "end": 128.31795833333334,
+          "word": "same",
+          "original_start": 133.48,
+          "original_end": 133.76
+        },
+        {
+          "start": 128.31795833333334,
+          "end": 128.65795833333334,
+          "word": "receipt",
+          "original_start": 133.76,
+          "original_end": 134.1
+        },
+        {
+          "start": 128.65795833333334,
+          "end": 128.97795833333333,
+          "word": "twice.",
+          "original_start": 134.1,
+          "original_end": 134.42
+        }
+      ],
+      "original_start": 85.32,
+      "original_end": 134.88,
+      "exact_audio_start": 83.11070833333333,
+      "exact_audio_end": 129.43795833333334,
+      "start_frame": 4987,
+      "cues": [
+        {
+          "key": "provider_options",
+          "section": "s04",
+          "phrase": "Fireworks and OpenAI",
+          "start": 90.34841666666667,
+          "end": 91.76841666666667,
+          "match_confidence": 1.0,
+          "original_start": 93.14,
+          "original_end": 94.56,
+          "video_frame": 5421
+        },
+        {
+          "key": "guided_notice",
+          "section": "s04",
+          "phrase": "guided receipt is pre-filled",
+          "start": 109.732,
+          "end": 111.352,
+          "match_confidence": 1.0,
+          "original_start": 113.62,
+          "original_end": 115.24,
+          "video_frame": 6584
+        },
+        {
+          "key": "receipt_posted",
+          "section": "s04",
+          "phrase": "available stock rise from four hundred to four hundred and forty",
+          "start": 121.66554166666667,
+          "end": 125.34554166666666,
+          "match_confidence": 1.0,
+          "original_start": 126.54,
+          "original_end": 130.22,
+          "video_frame": 7300
+        }
+      ],
+      "end_frame": 7766
+    },
+    {
+      "id": "s05",
+      "title": "Account for every return",
+      "text": "We switch to the active recall scenario, with one hundred boxes returned and five hundred outstanding, then review twenty more returned boxes against their original dispatch. Approval raises returns to one hundred and twenty and reduces outstanding quantity to four hundred and eighty, while the boxes stay quarantined; the completed scenario accounts for all six hundred dispatched boxes returning and all one thousand boxes remaining in quarantine, with historical dispatches kept separate from current stock and no automatic release decision.",
+      "start": 129.43333333333334,
+      "end": 168.81666666666666,
+      "duration": 39.383333333333326,
+      "audio_file": "narration.wav",
+      "first_word": 129.43795833333334,
+      "last_word": 168.46879166666668,
+      "boundary_match_confidence": 1,
+      "words": [
+        {
+          "start": 129.43795833333334,
+          "end": 129.77795833333334,
+          "word": "We",
+          "original_start": 134.88,
+          "original_end": 135.22
+        },
+        {
+          "start": 129.77795833333334,
+          "end": 130.01795833333333,
+          "word": "switch",
+          "original_start": 135.22,
+          "original_end": 135.46
+        },
+        {
+          "start": 130.01795833333333,
+          "end": 130.35795833333333,
+          "word": "to",
+          "original_start": 135.46,
+          "original_end": 135.8
+        },
+        {
+          "start": 130.35795833333333,
+          "end": 130.49795833333334,
+          "word": "the",
+          "original_start": 135.8,
+          "original_end": 135.94
+        },
+        {
+          "start": 130.49795833333334,
+          "end": 130.89795833333332,
+          "word": "active",
+          "original_start": 135.94,
+          "original_end": 136.34
+        },
+        {
+          "start": 130.89795833333332,
+          "end": 131.37795833333334,
+          "word": "recall",
+          "original_start": 136.34,
+          "original_end": 136.82
+        },
+        {
+          "start": 131.37795833333334,
+          "end": 131.77795833333334,
+          "word": "scenario.",
+          "original_start": 136.82,
+          "original_end": 137.22
+        },
+        {
+          "start": 132.61445833333335,
+          "end": 132.79445833333332,
+          "word": "With",
+          "original_start": 138.52,
+          "original_end": 138.7
+        },
+        {
+          "start": 132.79445833333332,
+          "end": 133.29445833333332,
+          "word": "100",
+          "original_start": 138.7,
+          "original_end": 139.2
+        },
+        {
+          "start": 133.29445833333332,
+          "end": 133.69445833333333,
+          "word": "boxes",
+          "original_start": 139.2,
+          "original_end": 139.6
+        },
+        {
+          "start": 133.69445833333333,
+          "end": 134.23445833333332,
+          "word": "returned",
+          "original_start": 139.6,
+          "original_end": 140.14
+        },
+        {
+          "start": 134.23445833333332,
+          "end": 134.91445833333333,
+          "word": "and",
+          "original_start": 140.14,
+          "original_end": 140.82
+        },
+        {
+          "start": 134.91445833333333,
+          "end": 135.45445833333332,
+          "word": "500",
+          "original_start": 140.82,
+          "original_end": 141.36
+        },
+        {
+          "start": 135.45445833333332,
+          "end": 136.27445833333334,
+          "word": "outstanding,",
+          "original_start": 141.36,
+          "original_end": 142.18
+        },
+        {
+          "start": 136.920375,
+          "end": 137.160375,
+          "word": "then",
+          "original_start": 143.18,
+          "original_end": 143.42
+        },
+        {
+          "start": 137.160375,
+          "end": 137.600375,
+          "word": "review",
+          "original_start": 143.42,
+          "original_end": 143.86
+        },
+        {
+          "start": 137.600375,
+          "end": 138.140375,
+          "word": "20",
+          "original_start": 143.86,
+          "original_end": 144.4
+        },
+        {
+          "start": 138.140375,
+          "end": 138.540375,
+          "word": "more",
+          "original_start": 144.4,
+          "original_end": 144.8
+        },
+        {
+          "start": 138.540375,
+          "end": 139.000375,
+          "word": "returned",
+          "original_start": 144.8,
+          "original_end": 145.26
+        },
+        {
+          "start": 139.000375,
+          "end": 139.580375,
+          "word": "boxes",
+          "original_start": 145.26,
+          "original_end": 145.84
+        },
+        {
+          "start": 139.580375,
+          "end": 140.360375,
+          "word": "against",
+          "original_start": 145.84,
+          "original_end": 146.62
+        },
+        {
+          "start": 140.360375,
+          "end": 140.800375,
+          "word": "their",
+          "original_start": 146.62,
+          "original_end": 147.06
+        },
+        {
+          "start": 140.800375,
+          "end": 141.280375,
+          "word": "original",
+          "original_start": 147.06,
+          "original_end": 147.54
+        },
+        {
+          "start": 141.280375,
+          "end": 141.720375,
+          "word": "dispatch.",
+          "original_start": 147.54,
+          "original_end": 147.98
+        },
+        {
+          "start": 142.319875,
+          "end": 143.034375,
+          "word": "Approval",
+          "original_start": 149.18,
+          "original_end": 149.96
+        },
+        {
+          "start": 143.034375,
+          "end": 143.514375,
+          "word": "raises",
+          "original_start": 149.96,
+          "original_end": 150.44
+        },
+        {
+          "start": 143.514375,
+          "end": 144.154375,
+          "word": "returns",
+          "original_start": 150.44,
+          "original_end": 151.08
+        },
+        {
+          "start": 144.154375,
+          "end": 144.514375,
+          "word": "to",
+          "original_start": 151.08,
+          "original_end": 151.44
+        },
+        {
+          "start": 144.514375,
+          "end": 145.414375,
+          "word": "120",
+          "original_start": 151.44,
+          "original_end": 152.34
+        },
+        {
+          "start": 145.414375,
+          "end": 146.414375,
+          "word": "and",
+          "original_start": 152.34,
+          "original_end": 153.34
+        },
+        {
+          "start": 146.414375,
+          "end": 146.914375,
+          "word": "reduces",
+          "original_start": 153.34,
+          "original_end": 153.84
+        },
+        {
+          "start": 146.914375,
+          "end": 147.634375,
+          "word": "outstanding",
+          "original_start": 153.84,
+          "original_end": 154.56
+        },
+        {
+          "start": 147.634375,
+          "end": 148.234375,
+          "word": "quantity",
+          "original_start": 154.56,
+          "original_end": 155.16
+        },
+        {
+          "start": 148.234375,
+          "end": 148.974375,
+          "word": "to",
+          "original_start": 155.16,
+          "original_end": 155.9
+        },
+        {
+          "start": 148.974375,
+          "end": 150.034375,
+          "word": "480",
+          "original_start": 155.9,
+          "original_end": 156.96
+        },
+        {
+          "start": 150.494375,
+          "end": 150.994375,
+          "word": "while",
+          "original_start": 157.42,
+          "original_end": 157.92
+        },
+        {
+          "start": 150.994375,
+          "end": 151.154375,
+          "word": "the",
+          "original_start": 157.92,
+          "original_end": 158.08
+        },
+        {
+          "start": 151.154375,
+          "end": 151.494375,
+          "word": "boxes",
+          "original_start": 158.08,
+          "original_end": 158.42
+        },
+        {
+          "start": 151.494375,
+          "end": 151.954375,
+          "word": "stay",
+          "original_start": 158.42,
+          "original_end": 158.88
+        },
+        {
+          "start": 151.954375,
+          "end": 152.654375,
+          "word": "quarantined.",
+          "original_start": 158.88,
+          "original_end": 159.58
+        },
+        {
+          "start": 153.073375,
+          "end": 153.36879166666668,
+          "word": "The",
+          "original_start": 160.5,
+          "original_end": 160.98
+        },
+        {
+          "start": 153.36879166666668,
+          "end": 153.84879166666667,
+          "word": "completed",
+          "original_start": 160.98,
+          "original_end": 161.46
+        },
+        {
+          "start": 153.84879166666667,
+          "end": 154.44879166666666,
+          "word": "scenario",
+          "original_start": 161.46,
+          "original_end": 162.06
+        },
+        {
+          "start": 154.44879166666666,
+          "end": 155.02879166666668,
+          "word": "accounts",
+          "original_start": 162.06,
+          "original_end": 162.64
+        },
+        {
+          "start": 155.02879166666668,
+          "end": 155.32879166666666,
+          "word": "for",
+          "original_start": 162.64,
+          "original_end": 162.94
+        },
+        {
+          "start": 155.32879166666666,
+          "end": 155.66879166666666,
+          "word": "all",
+          "original_start": 162.94,
+          "original_end": 163.28
+        },
+        {
+          "start": 155.66879166666666,
+          "end": 156.36879166666668,
+          "word": "600",
+          "original_start": 163.28,
+          "original_end": 163.98
+        },
+        {
+          "start": 156.36879166666668,
+          "end": 156.92879166666665,
+          "word": "dispatched",
+          "original_start": 163.98,
+          "original_end": 164.54
+        },
+        {
+          "start": 156.92879166666665,
+          "end": 157.34879166666667,
+          "word": "boxes",
+          "original_start": 164.54,
+          "original_end": 164.96
+        },
+        {
+          "start": 157.34879166666667,
+          "end": 157.82879166666666,
+          "word": "returning",
+          "original_start": 164.96,
+          "original_end": 165.44
+        },
+        {
+          "start": 158.36879166666668,
+          "end": 158.84879166666667,
+          "word": "and",
+          "original_start": 165.98,
+          "original_end": 166.46
+        },
+        {
+          "start": 158.84879166666667,
+          "end": 159.20879166666666,
+          "word": "all",
+          "original_start": 166.46,
+          "original_end": 166.82
+        },
+        {
+          "start": 159.20879166666666,
+          "end": 159.82879166666666,
+          "word": "1000",
+          "original_start": 166.82,
+          "original_end": 167.44
+        },
+        {
+          "start": 159.82879166666666,
+          "end": 160.44879166666666,
+          "word": "boxes",
+          "original_start": 167.44,
+          "original_end": 168.06
+        },
+        {
+          "start": 160.44879166666666,
+          "end": 160.84879166666667,
+          "word": "remaining",
+          "original_start": 168.06,
+          "original_end": 168.46
+        },
+        {
+          "start": 160.84879166666667,
+          "end": 161.14879166666665,
+          "word": "in",
+          "original_start": 168.46,
+          "original_end": 168.76
+        },
+        {
+          "start": 161.14879166666665,
+          "end": 161.62879166666667,
+          "word": "quarantine,",
+          "original_start": 168.76,
+          "original_end": 169.24
+        },
+        {
+          "start": 162.12879166666667,
+          "end": 162.68879166666667,
+          "word": "with",
+          "original_start": 169.74,
+          "original_end": 170.3
+        },
+        {
+          "start": 162.68879166666667,
+          "end": 163.18879166666667,
+          "word": "historical",
+          "original_start": 170.3,
+          "original_end": 170.8
+        },
+        {
+          "start": 163.18879166666667,
+          "end": 163.94879166666666,
+          "word": "dispatches",
+          "original_start": 170.8,
+          "original_end": 171.56
+        },
+        {
+          "start": 163.94879166666666,
+          "end": 164.18879166666667,
+          "word": "kept",
+          "original_start": 171.56,
+          "original_end": 171.8
+        },
+        {
+          "start": 164.18879166666667,
+          "end": 164.72879166666667,
+          "word": "separate",
+          "original_start": 171.8,
+          "original_end": 172.34
+        },
+        {
+          "start": 164.72879166666667,
+          "end": 165.02879166666668,
+          "word": "from",
+          "original_start": 172.34,
+          "original_end": 172.64
+        },
+        {
+          "start": 165.02879166666668,
+          "end": 165.36879166666668,
+          "word": "current",
+          "original_start": 172.64,
+          "original_end": 172.98
+        },
+        {
+          "start": 165.36879166666668,
+          "end": 165.76879166666666,
+          "word": "stock",
+          "original_start": 172.98,
+          "original_end": 173.38
+        },
+        {
+          "start": 165.76879166666666,
+          "end": 166.56879166666667,
+          "word": "and",
+          "original_start": 173.38,
+          "original_end": 174.18
+        },
+        {
+          "start": 166.56879166666667,
+          "end": 166.92879166666665,
+          "word": "no",
+          "original_start": 174.18,
+          "original_end": 174.54
+        },
+        {
+          "start": 166.92879166666665,
+          "end": 167.60879166666666,
+          "word": "automatic",
+          "original_start": 174.54,
+          "original_end": 175.22
+        },
+        {
+          "start": 167.60879166666666,
+          "end": 167.96879166666668,
+          "word": "release",
+          "original_start": 175.22,
+          "original_end": 175.58
+        },
+        {
+          "start": 167.96879166666668,
+          "end": 168.46879166666668,
+          "word": "decision.",
+          "original_start": 175.58,
+          "original_end": 176.08
+        }
+      ],
+      "original_start": 134.88,
+      "original_end": 176.46,
+      "exact_audio_start": 129.43795833333334,
+      "exact_audio_end": 168.824375,
+      "start_frame": 7766,
+      "cues": [
+        {
+          "key": "partial_start",
+          "section": "s05",
+          "phrase": "one hundred boxes returned and five hundred outstanding",
+          "start": 132.79445833333332,
+          "end": 136.27445833333334,
+          "match_confidence": 1.0,
+          "original_start": 138.7,
+          "original_end": 142.18,
+          "video_frame": 7968
+        },
+        {
+          "key": "returned_120",
+          "section": "s05",
+          "phrase": "one hundred and twenty",
+          "start": 144.514375,
+          "end": 145.414375,
+          "match_confidence": 1.0,
+          "original_start": 151.44,
+          "original_end": 152.34,
+          "video_frame": 8671
+        },
+        {
+          "key": "outstanding_480",
+          "section": "s05",
+          "phrase": "four hundred and eighty",
+          "start": 148.974375,
+          "end": 150.034375,
+          "match_confidence": 1.0,
+          "original_start": 155.9,
+          "original_end": 156.96,
+          "video_frame": 8938
+        },
+        {
+          "key": "completed_case",
+          "section": "s05",
+          "phrase": "the completed scenario",
+          "start": 153.073375,
+          "end": 154.44879166666666,
+          "match_confidence": 1.0,
+          "original_start": 160.5,
+          "original_end": 162.06,
+          "video_frame": 9184
+        }
+      ],
+      "end_frame": 10129
+    },
+    {
+      "id": "s06",
+      "title": "Evidence that travels",
+      "text": "Reports preserve the case as a fixed snapshot, so later movements cannot rewrite the earlier record. The original documents, review notes and decision history stay available alongside PDF and ledger exports, with an evidence package and content-hash manifest connecting quantities back to their sources, ready for the operations and quality team to explain and hand over.",
+      "start": 168.81666666666666,
+      "end": 194.2,
+      "duration": 25.383333333333326,
+      "audio_file": "narration.wav",
+      "first_word": 168.824375,
+      "last_word": 193.90070833333334,
+      "boundary_match_confidence": 1.0,
+      "words": [
+        {
+          "start": 168.824375,
+          "end": 169.38058333333333,
+          "word": "Reports",
+          "original_start": 176.84,
+          "original_end": 177.56
+        },
+        {
+          "start": 169.38058333333333,
+          "end": 170.00058333333334,
+          "word": "preserve",
+          "original_start": 177.56,
+          "original_end": 178.18
+        },
+        {
+          "start": 170.00058333333334,
+          "end": 170.22058333333334,
+          "word": "the",
+          "original_start": 178.18,
+          "original_end": 178.4
+        },
+        {
+          "start": 170.22058333333334,
+          "end": 170.48058333333333,
+          "word": "case",
+          "original_start": 178.4,
+          "original_end": 178.66
+        },
+        {
+          "start": 170.48058333333333,
+          "end": 170.80058333333332,
+          "word": "as",
+          "original_start": 178.66,
+          "original_end": 178.98
+        },
+        {
+          "start": 170.80058333333332,
+          "end": 170.94058333333334,
+          "word": "a",
+          "original_start": 178.98,
+          "original_end": 179.12
+        },
+        {
+          "start": 170.94058333333334,
+          "end": 171.30058333333332,
+          "word": "fixed",
+          "original_start": 179.12,
+          "original_end": 179.48
+        },
+        {
+          "start": 171.30058333333332,
+          "end": 171.98058333333333,
+          "word": "snapshot",
+          "original_start": 179.48,
+          "original_end": 180.16
+        },
+        {
+          "start": 172.36058333333332,
+          "end": 172.84058333333334,
+          "word": "so",
+          "original_start": 180.54,
+          "original_end": 181.02
+        },
+        {
+          "start": 172.84058333333334,
+          "end": 173.16058333333334,
+          "word": "later",
+          "original_start": 181.02,
+          "original_end": 181.34
+        },
+        {
+          "start": 173.16058333333334,
+          "end": 173.54058333333333,
+          "word": "movements",
+          "original_start": 181.34,
+          "original_end": 181.72
+        },
+        {
+          "start": 173.54058333333333,
+          "end": 174.04058333333333,
+          "word": "cannot",
+          "original_start": 181.72,
+          "original_end": 182.22
+        },
+        {
+          "start": 174.04058333333333,
+          "end": 174.54058333333333,
+          "word": "rewrite",
+          "original_start": 182.22,
+          "original_end": 182.72
+        },
+        {
+          "start": 174.54058333333333,
+          "end": 174.88058333333333,
+          "word": "the",
+          "original_start": 182.72,
+          "original_end": 183.06
+        },
+        {
+          "start": 174.88058333333333,
+          "end": 175.22058333333334,
+          "word": "earlier",
+          "original_start": 183.06,
+          "original_end": 183.4
+        },
+        {
+          "start": 175.22058333333334,
+          "end": 175.60058333333333,
+          "word": "record.",
+          "original_start": 183.4,
+          "original_end": 183.78
+        },
+        {
+          "start": 175.95379166666666,
+          "end": 176.26070833333333,
+          "word": "The",
+          "original_start": 184.68,
+          "original_end": 185.0
+        },
+        {
+          "start": 176.26070833333333,
+          "end": 176.54070833333333,
+          "word": "original",
+          "original_start": 185.0,
+          "original_end": 185.28
+        },
+        {
+          "start": 176.54070833333333,
+          "end": 177.08070833333332,
+          "word": "documents,",
+          "original_start": 185.28,
+          "original_end": 185.82
+        },
+        {
+          "start": 177.60070833333333,
+          "end": 177.76070833333333,
+          "word": "review",
+          "original_start": 186.34,
+          "original_end": 186.5
+        },
+        {
+          "start": 177.76070833333333,
+          "end": 178.14070833333332,
+          "word": "notes",
+          "original_start": 186.5,
+          "original_end": 186.88
+        },
+        {
+          "start": 178.14070833333332,
+          "end": 178.84070833333334,
+          "word": "and",
+          "original_start": 186.88,
+          "original_end": 187.58
+        },
+        {
+          "start": 178.84070833333334,
+          "end": 179.18070833333334,
+          "word": "decision",
+          "original_start": 187.58,
+          "original_end": 187.92
+        },
+        {
+          "start": 179.18070833333334,
+          "end": 179.64070833333332,
+          "word": "history",
+          "original_start": 187.92,
+          "original_end": 188.38
+        },
+        {
+          "start": 179.64070833333332,
+          "end": 180.12070833333334,
+          "word": "stay",
+          "original_start": 188.38,
+          "original_end": 188.86
+        },
+        {
+          "start": 180.12070833333334,
+          "end": 180.62070833333334,
+          "word": "available",
+          "original_start": 188.86,
+          "original_end": 189.36
+        },
+        {
+          "start": 180.62070833333334,
+          "end": 181.24070833333334,
+          "word": "alongside",
+          "original_start": 189.36,
+          "original_end": 189.98
+        },
+        {
+          "start": 181.24070833333334,
+          "end": 181.76070833333333,
+          "word": "PDF",
+          "original_start": 189.98,
+          "original_end": 190.5
+        },
+        {
+          "start": 181.76070833333333,
+          "end": 182.36070833333332,
+          "word": "and",
+          "original_start": 190.5,
+          "original_end": 191.1
+        },
+        {
+          "start": 182.36070833333332,
+          "end": 182.76070833333333,
+          "word": "ledger",
+          "original_start": 191.1,
+          "original_end": 191.5
+        },
+        {
+          "start": 182.76070833333333,
+          "end": 183.28070833333334,
+          "word": "exports",
+          "original_start": 191.5,
+          "original_end": 192.02
+        },
+        {
+          "start": 183.28070833333334,
+          "end": 184.00070833333334,
+          "word": "with",
+          "original_start": 192.02,
+          "original_end": 192.74
+        },
+        {
+          "start": 184.00070833333334,
+          "end": 184.14070833333332,
+          "word": "an",
+          "original_start": 192.74,
+          "original_end": 192.88
+        },
+        {
+          "start": 184.14070833333332,
+          "end": 184.44070833333333,
+          "word": "evidence",
+          "original_start": 192.88,
+          "original_end": 193.18
+        },
+        {
+          "start": 184.44070833333333,
+          "end": 184.92070833333332,
+          "word": "package",
+          "original_start": 193.18,
+          "original_end": 193.66
+        },
+        {
+          "start": 184.92070833333332,
+          "end": 185.28070833333334,
+          "word": "and",
+          "original_start": 193.66,
+          "original_end": 194.02
+        },
+        {
+          "start": 185.28070833333334,
+          "end": 185.68070833333334,
+          "word": "content",
+          "original_start": 194.02,
+          "original_end": 194.42
+        },
+        {
+          "start": 185.68070833333334,
+          "end": 185.98070833333333,
+          "word": "hash",
+          "original_start": 194.42,
+          "original_end": 194.72
+        },
+        {
+          "start": 185.98070833333333,
+          "end": 186.48070833333333,
+          "word": "manifest",
+          "original_start": 194.72,
+          "original_end": 195.22
+        },
+        {
+          "start": 186.94070833333333,
+          "end": 187.34070833333334,
+          "word": "connecting",
+          "original_start": 195.68,
+          "original_end": 196.08
+        },
+        {
+          "start": 187.34070833333334,
+          "end": 188.06070833333334,
+          "word": "quantities",
+          "original_start": 196.08,
+          "original_end": 196.8
+        },
+        {
+          "start": 188.06070833333334,
+          "end": 188.44070833333333,
+          "word": "back",
+          "original_start": 196.8,
+          "original_end": 197.18
+        },
+        {
+          "start": 188.44070833333333,
+          "end": 188.64070833333332,
+          "word": "to",
+          "original_start": 197.18,
+          "original_end": 197.38
+        },
+        {
+          "start": 188.64070833333332,
+          "end": 188.82070833333333,
+          "word": "their",
+          "original_start": 197.38,
+          "original_end": 197.56
+        },
+        {
+          "start": 188.82070833333333,
+          "end": 189.24070833333334,
+          "word": "sources",
+          "original_start": 197.56,
+          "original_end": 197.98
+        },
+        {
+          "start": 189.76070833333333,
+          "end": 190.16070833333333,
+          "word": "ready",
+          "original_start": 198.5,
+          "original_end": 198.9
+        },
+        {
+          "start": 190.16070833333333,
+          "end": 190.42070833333332,
+          "word": "for",
+          "original_start": 198.9,
+          "original_end": 199.16
+        },
+        {
+          "start": 190.42070833333332,
+          "end": 190.54070833333333,
+          "word": "the",
+          "original_start": 199.16,
+          "original_end": 199.28
+        },
+        {
+          "start": 190.54070833333333,
+          "end": 191.02070833333335,
+          "word": "operations",
+          "original_start": 199.28,
+          "original_end": 199.76
+        },
+        {
+          "start": 191.02070833333335,
+          "end": 191.42070833333332,
+          "word": "and",
+          "original_start": 199.76,
+          "original_end": 200.16
+        },
+        {
+          "start": 191.42070833333332,
+          "end": 191.78070833333334,
+          "word": "quality",
+          "original_start": 200.16,
+          "original_end": 200.52
+        },
+        {
+          "start": 191.78070833333334,
+          "end": 192.18070833333334,
+          "word": "team",
+          "original_start": 200.52,
+          "original_end": 200.92
+        },
+        {
+          "start": 192.18070833333334,
+          "end": 192.38070833333333,
+          "word": "to",
+          "original_start": 200.92,
+          "original_end": 201.12
+        },
+        {
+          "start": 192.38070833333333,
+          "end": 192.96070833333334,
+          "word": "explain",
+          "original_start": 201.12,
+          "original_end": 201.7
+        },
+        {
+          "start": 192.96070833333334,
+          "end": 193.36070833333332,
+          "word": "and",
+          "original_start": 201.7,
+          "original_end": 202.1
+        },
+        {
+          "start": 193.36070833333332,
+          "end": 193.60070833333333,
+          "word": "hand",
+          "original_start": 202.1,
+          "original_end": 202.34
+        },
+        {
+          "start": 193.60070833333333,
+          "end": 193.90070833333334,
+          "word": "over.",
+          "original_start": 202.34,
+          "original_end": 202.64
+        }
+      ],
+      "original_start": 176.46,
+      "original_end": 202.937667,
+      "exact_audio_start": 168.824375,
+      "exact_audio_end": 194.198375,
+      "start_frame": 10129,
+      "cues": [
+        {
+          "key": "snapshot",
+          "section": "s06",
+          "phrase": "fixed snapshot",
+          "start": 170.94058333333334,
+          "end": 171.98058333333333,
+          "match_confidence": 1.0,
+          "original_start": 179.12,
+          "original_end": 180.16,
+          "video_frame": 10256
+        },
+        {
+          "key": "export_manifest",
+          "section": "s06",
+          "phrase": "content-hash manifest",
+          "start": 185.28070833333334,
+          "end": 186.48070833333333,
+          "match_confidence": 1.0,
+          "original_start": 194.02,
+          "original_end": 195.22,
+          "video_frame": 11117
+        }
+      ],
+      "end_frame": 11652
+    },
+    {
+      "id": "s07",
+      "title": "Built through agentic AI",
+      "text": "Codex agents helped build the system across idea generation, market research, interface design, custom code, testing, deployment and pitch creation, with one hundred and forty-three passing automated tests recorded. Live models interpret documents while explicit operator review and deterministic accounting govern the operational record, bringing agentic AI development and practical AI assistance into one focused product.",
+      "start": 194.2,
+      "end": 227.73333333333332,
+      "duration": 33.53333333333333,
+      "audio_file": "narration.wav",
+      "first_word": 194.19870833333334,
+      "last_word": 227.35870833333334,
+      "boundary_match_confidence": 1,
+      "words": [
+        {
+          "start": 194.19870833333334,
+          "end": 194.79870833333334,
+          "word": "Codex",
+          "original_start": 202.938,
+          "original_end": 203.538
+        },
+        {
+          "start": 194.79870833333334,
+          "end": 195.21870833333332,
+          "word": "agents",
+          "original_start": 203.538,
+          "original_end": 203.958
+        },
+        {
+          "start": 195.21870833333332,
+          "end": 195.79870833333334,
+          "word": "helped",
+          "original_start": 203.958,
+          "original_end": 204.538
+        },
+        {
+          "start": 195.79870833333334,
+          "end": 196.21870833333332,
+          "word": "build",
+          "original_start": 204.538,
+          "original_end": 204.958
+        },
+        {
+          "start": 196.21870833333332,
+          "end": 196.55870833333333,
+          "word": "the",
+          "original_start": 204.958,
+          "original_end": 205.298
+        },
+        {
+          "start": 196.55870833333333,
+          "end": 196.95870833333333,
+          "word": "system",
+          "original_start": 205.298,
+          "original_end": 205.698
+        },
+        {
+          "start": 196.95870833333333,
+          "end": 197.55870833333333,
+          "word": "across",
+          "original_start": 205.698,
+          "original_end": 206.298
+        },
+        {
+          "start": 197.55870833333333,
+          "end": 198.23870833333334,
+          "word": "idea",
+          "original_start": 206.298,
+          "original_end": 206.978
+        },
+        {
+          "start": 198.23870833333334,
+          "end": 198.87870833333332,
+          "word": "generation,",
+          "original_start": 206.978,
+          "original_end": 207.618
+        },
+        {
+          "start": 199.33870833333333,
+          "end": 199.73870833333334,
+          "word": "market",
+          "original_start": 208.078,
+          "original_end": 208.478
+        },
+        {
+          "start": 199.73870833333334,
+          "end": 200.23870833333334,
+          "word": "research,",
+          "original_start": 208.478,
+          "original_end": 208.978
+        },
+        {
+          "start": 200.85870833333334,
+          "end": 201.21870833333332,
+          "word": "interface",
+          "original_start": 209.598,
+          "original_end": 209.958
+        },
+        {
+          "start": 201.21870833333332,
+          "end": 201.81870833333332,
+          "word": "design,",
+          "original_start": 209.958,
+          "original_end": 210.558
+        },
+        {
+          "start": 202.23870833333334,
+          "end": 202.51870833333334,
+          "word": "custom",
+          "original_start": 210.978,
+          "original_end": 211.258
+        },
+        {
+          "start": 202.51870833333334,
+          "end": 202.97870833333334,
+          "word": "code,",
+          "original_start": 211.258,
+          "original_end": 211.718
+        },
+        {
+          "start": 203.49870833333333,
+          "end": 203.75870833333335,
+          "word": "testing,",
+          "original_start": 212.238,
+          "original_end": 212.498
+        },
+        {
+          "start": 204.15870833333332,
+          "end": 204.53870833333335,
+          "word": "deployment,",
+          "original_start": 212.898,
+          "original_end": 213.278
+        },
+        {
+          "start": 205.13870833333334,
+          "end": 205.21870833333332,
+          "word": "and",
+          "original_start": 213.878,
+          "original_end": 213.958
+        },
+        {
+          "start": 205.21870833333332,
+          "end": 205.53870833333335,
+          "word": "pitch",
+          "original_start": 213.958,
+          "original_end": 214.278
+        },
+        {
+          "start": 205.53870833333335,
+          "end": 206.05870833333333,
+          "word": "creation,",
+          "original_start": 214.278,
+          "original_end": 214.798
+        },
+        {
+          "start": 206.63870833333334,
+          "end": 206.83870833333333,
+          "word": "with",
+          "original_start": 215.378,
+          "original_end": 215.578
+        },
+        {
+          "start": 206.83870833333333,
+          "end": 208.35870833333334,
+          "word": "143",
+          "original_start": 215.578,
+          "original_end": 217.098
+        },
+        {
+          "start": 208.35870833333334,
+          "end": 208.91870833333334,
+          "word": "passing",
+          "original_start": 217.098,
+          "original_end": 217.658
+        },
+        {
+          "start": 208.91870833333334,
+          "end": 209.49870833333333,
+          "word": "automated",
+          "original_start": 217.658,
+          "original_end": 218.238
+        },
+        {
+          "start": 209.49870833333333,
+          "end": 210.17870833333333,
+          "word": "tests",
+          "original_start": 218.238,
+          "original_end": 218.918
+        },
+        {
+          "start": 210.17870833333333,
+          "end": 210.81870833333332,
+          "word": "recorded.",
+          "original_start": 218.918,
+          "original_end": 219.558
+        },
+        {
+          "start": 211.53870833333335,
+          "end": 211.91870833333334,
+          "word": "Live",
+          "original_start": 220.278,
+          "original_end": 220.658
+        },
+        {
+          "start": 211.91870833333334,
+          "end": 212.35870833333334,
+          "word": "models",
+          "original_start": 220.658,
+          "original_end": 221.098
+        },
+        {
+          "start": 212.35870833333334,
+          "end": 213.01870833333334,
+          "word": "interpret",
+          "original_start": 221.098,
+          "original_end": 221.758
+        },
+        {
+          "start": 213.01870833333334,
+          "end": 213.61870833333333,
+          "word": "documents",
+          "original_start": 221.758,
+          "original_end": 222.358
+        },
+        {
+          "start": 213.61870833333333,
+          "end": 214.21870833333332,
+          "word": "while",
+          "original_start": 222.358,
+          "original_end": 222.958
+        },
+        {
+          "start": 214.21870833333332,
+          "end": 214.75870833333335,
+          "word": "explicit",
+          "original_start": 222.958,
+          "original_end": 223.498
+        },
+        {
+          "start": 214.75870833333335,
+          "end": 215.31870833333332,
+          "word": "operator",
+          "original_start": 223.498,
+          "original_end": 224.058
+        },
+        {
+          "start": 215.31870833333332,
+          "end": 215.77870833333333,
+          "word": "review",
+          "original_start": 224.058,
+          "original_end": 224.518
+        },
+        {
+          "start": 215.77870833333333,
+          "end": 216.51870833333334,
+          "word": "and",
+          "original_start": 224.518,
+          "original_end": 225.258
+        },
+        {
+          "start": 216.51870833333334,
+          "end": 217.41870833333334,
+          "word": "deterministic",
+          "original_start": 225.258,
+          "original_end": 226.158
+        },
+        {
+          "start": 217.41870833333334,
+          "end": 217.97870833333334,
+          "word": "accounting",
+          "original_start": 226.158,
+          "original_end": 226.718
+        },
+        {
+          "start": 217.97870833333334,
+          "end": 218.79870833333334,
+          "word": "govern",
+          "original_start": 226.718,
+          "original_end": 227.538
+        },
+        {
+          "start": 218.79870833333334,
+          "end": 219.07870833333334,
+          "word": "the",
+          "original_start": 227.538,
+          "original_end": 227.818
+        },
+        {
+          "start": 219.07870833333334,
+          "end": 219.75870833333335,
+          "word": "operational",
+          "original_start": 227.818,
+          "original_end": 228.498
+        },
+        {
+          "start": 219.75870833333335,
+          "end": 220.23870833333334,
+          "word": "record,",
+          "original_start": 228.498,
+          "original_end": 228.978
+        },
+        {
+          "start": 220.85870833333334,
+          "end": 221.25870833333335,
+          "word": "bringing",
+          "original_start": 229.598,
+          "original_end": 229.998
+        },
+        {
+          "start": 221.25870833333335,
+          "end": 222.03870833333335,
+          "word": "agentic",
+          "original_start": 229.998,
+          "original_end": 230.778
+        },
+        {
+          "start": 222.03870833333335,
+          "end": 222.27870833333333,
+          "word": "AI",
+          "original_start": 230.778,
+          "original_end": 231.018
+        },
+        {
+          "start": 222.27870833333333,
+          "end": 222.91870833333334,
+          "word": "development",
+          "original_start": 231.018,
+          "original_end": 231.658
+        },
+        {
+          "start": 222.91870833333334,
+          "end": 223.67870833333333,
+          "word": "and",
+          "original_start": 231.658,
+          "original_end": 232.418
+        },
+        {
+          "start": 223.67870833333333,
+          "end": 224.17870833333333,
+          "word": "practical",
+          "original_start": 232.418,
+          "original_end": 232.918
+        },
+        {
+          "start": 224.17870833333333,
+          "end": 224.65870833333332,
+          "word": "AI",
+          "original_start": 232.918,
+          "original_end": 233.398
+        },
+        {
+          "start": 224.65870833333332,
+          "end": 225.25870833333335,
+          "word": "assistance",
+          "original_start": 233.398,
+          "original_end": 233.998
+        },
+        {
+          "start": 225.25870833333335,
+          "end": 225.95870833333333,
+          "word": "into",
+          "original_start": 233.998,
+          "original_end": 234.698
+        },
+        {
+          "start": 225.95870833333333,
+          "end": 226.33870833333333,
+          "word": "one",
+          "original_start": 234.698,
+          "original_end": 235.078
+        },
+        {
+          "start": 226.33870833333333,
+          "end": 226.91870833333334,
+          "word": "focused",
+          "original_start": 235.078,
+          "original_end": 235.658
+        },
+        {
+          "start": 226.91870833333334,
+          "end": 227.35870833333334,
+          "word": "product.",
+          "original_start": 235.658,
+          "original_end": 236.098
+        }
+      ],
+      "original_start": 202.937667,
+      "original_end": 236.547667,
+      "exact_audio_start": 194.198375,
+      "exact_audio_end": 227.737375,
+      "start_frame": 11652,
+      "cues": [
+        {
+          "key": "tests",
+          "section": "s07",
+          "phrase": "one hundred and forty-three passing automated tests",
+          "start": 206.83870833333333,
+          "end": 210.17870833333333,
+          "match_confidence": 1.0,
+          "original_start": 215.578,
+          "original_end": 218.918,
+          "video_frame": 12410
+        }
+      ],
+      "end_frame": 13664
+    },
+    {
+      "id": "s08",
+      "title": "Trace. Review. Account.",
+      "text": "Open RecallScope to follow a batch, review a receipt and inspect its evidence, using the complete guided workflow without your own key or choosing live AI through the private server connection. Know where every affected batch went, and account for what comes back.",
+      "start": 227.73333333333332,
+      "end": 251.21666666666667,
+      "duration": 23.48333333333335,
+      "audio_file": "narration.wav",
+      "first_word": 227.863,
+      "last_word": 248.874875,
+      "boundary_match_confidence": 1.0,
+      "words": [
+        {
+          "start": 227.863,
+          "end": 228.183,
+          "word": "Open",
+          "original_start": 236.998,
+          "original_end": 237.318
+        },
+        {
+          "start": 228.183,
+          "end": 228.643,
+          "word": "recall",
+          "original_start": 237.318,
+          "original_end": 237.778
+        },
+        {
+          "start": 228.643,
+          "end": 229.083,
+          "word": "scope",
+          "original_start": 237.778,
+          "original_end": 238.218
+        },
+        {
+          "start": 229.083,
+          "end": 229.523,
+          "word": "to",
+          "original_start": 238.218,
+          "original_end": 238.658
+        },
+        {
+          "start": 229.523,
+          "end": 229.863,
+          "word": "follow",
+          "original_start": 238.658,
+          "original_end": 238.998
+        },
+        {
+          "start": 229.863,
+          "end": 230.063,
+          "word": "a",
+          "original_start": 238.998,
+          "original_end": 239.198
+        },
+        {
+          "start": 230.063,
+          "end": 230.363,
+          "word": "batch,",
+          "original_start": 239.198,
+          "original_end": 239.498
+        },
+        {
+          "start": 231.003,
+          "end": 231.383,
+          "word": "review",
+          "original_start": 240.138,
+          "original_end": 240.518
+        },
+        {
+          "start": 231.383,
+          "end": 231.583,
+          "word": "a",
+          "original_start": 240.518,
+          "original_end": 240.718
+        },
+        {
+          "start": 231.583,
+          "end": 231.943,
+          "word": "receipt,",
+          "original_start": 240.718,
+          "original_end": 241.078
+        },
+        {
+          "start": 232.503,
+          "end": 232.743,
+          "word": "and",
+          "original_start": 241.638,
+          "original_end": 241.878
+        },
+        {
+          "start": 232.743,
+          "end": 233.223,
+          "word": "inspect",
+          "original_start": 241.878,
+          "original_end": 242.358
+        },
+        {
+          "start": 233.223,
+          "end": 233.703,
+          "word": "its",
+          "original_start": 242.358,
+          "original_end": 242.838
+        },
+        {
+          "start": 233.703,
+          "end": 234.183,
+          "word": "evidence",
+          "original_start": 242.838,
+          "original_end": 243.318
+        },
+        {
+          "start": 234.183,
+          "end": 235.183,
+          "word": "using",
+          "original_start": 243.318,
+          "original_end": 244.318
+        },
+        {
+          "start": 235.183,
+          "end": 235.423,
+          "word": "the",
+          "original_start": 244.318,
+          "original_end": 244.558
+        },
+        {
+          "start": 235.423,
+          "end": 235.843,
+          "word": "complete",
+          "original_start": 244.558,
+          "original_end": 244.978
+        },
+        {
+          "start": 235.843,
+          "end": 236.543,
+          "word": "guided",
+          "original_start": 244.978,
+          "original_end": 245.678
+        },
+        {
+          "start": 236.543,
+          "end": 237.143,
+          "word": "workflow",
+          "original_start": 245.678,
+          "original_end": 246.278
+        },
+        {
+          "start": 237.143,
+          "end": 237.743,
+          "word": "without",
+          "original_start": 246.278,
+          "original_end": 246.878
+        },
+        {
+          "start": 237.743,
+          "end": 238.123,
+          "word": "your",
+          "original_start": 246.878,
+          "original_end": 247.258
+        },
+        {
+          "start": 238.123,
+          "end": 238.383,
+          "word": "own",
+          "original_start": 247.258,
+          "original_end": 247.518
+        },
+        {
+          "start": 238.383,
+          "end": 238.723,
+          "word": "key,",
+          "original_start": 247.518,
+          "original_end": 247.858
+        },
+        {
+          "start": 239.303,
+          "end": 239.623,
+          "word": "or",
+          "original_start": 248.438,
+          "original_end": 248.758
+        },
+        {
+          "start": 239.623,
+          "end": 240.103,
+          "word": "choosing",
+          "original_start": 248.758,
+          "original_end": 249.238
+        },
+        {
+          "start": 240.103,
+          "end": 240.523,
+          "word": "live",
+          "original_start": 249.238,
+          "original_end": 249.658
+        },
+        {
+          "start": 240.523,
+          "end": 241.123,
+          "word": "AI",
+          "original_start": 249.658,
+          "original_end": 250.258
+        },
+        {
+          "start": 241.123,
+          "end": 241.663,
+          "word": "through",
+          "original_start": 250.258,
+          "original_end": 250.798
+        },
+        {
+          "start": 241.663,
+          "end": 241.843,
+          "word": "the",
+          "original_start": 250.798,
+          "original_end": 250.978
+        },
+        {
+          "start": 241.843,
+          "end": 242.223,
+          "word": "private",
+          "original_start": 250.978,
+          "original_end": 251.358
+        },
+        {
+          "start": 242.223,
+          "end": 242.623,
+          "word": "server",
+          "original_start": 251.358,
+          "original_end": 251.758
+        },
+        {
+          "start": 242.623,
+          "end": 243.143,
+          "word": "connection.",
+          "original_start": 251.758,
+          "original_end": 252.278
+        },
+        {
+          "start": 243.143,
+          "end": 243.934875,
+          "word": "Know",
+          "original_start": 252.278,
+          "original_end": 253.438
+        },
+        {
+          "start": 243.934875,
+          "end": 244.414875,
+          "word": "where",
+          "original_start": 253.438,
+          "original_end": 253.918
+        },
+        {
+          "start": 244.414875,
+          "end": 244.914875,
+          "word": "every",
+          "original_start": 253.918,
+          "original_end": 254.418
+        },
+        {
+          "start": 244.914875,
+          "end": 245.534875,
+          "word": "affected",
+          "original_start": 254.418,
+          "original_end": 255.038
+        },
+        {
+          "start": 245.534875,
+          "end": 245.894875,
+          "word": "batch",
+          "original_start": 255.038,
+          "original_end": 255.398
+        },
+        {
+          "start": 245.894875,
+          "end": 246.314875,
+          "word": "went",
+          "original_start": 255.398,
+          "original_end": 255.818
+        },
+        {
+          "start": 246.314875,
+          "end": 247.194875,
+          "word": "and",
+          "original_start": 255.818,
+          "original_end": 256.698
+        },
+        {
+          "start": 247.194875,
+          "end": 247.594875,
+          "word": "account",
+          "original_start": 256.698,
+          "original_end": 257.098
+        },
+        {
+          "start": 247.594875,
+          "end": 248.034875,
+          "word": "for",
+          "original_start": 257.098,
+          "original_end": 257.538
+        },
+        {
+          "start": 248.034875,
+          "end": 248.214875,
+          "word": "what",
+          "original_start": 257.538,
+          "original_end": 257.718
+        },
+        {
+          "start": 248.214875,
+          "end": 248.554875,
+          "word": "comes",
+          "original_start": 257.718,
+          "original_end": 258.058
+        },
+        {
+          "start": 248.554875,
+          "end": 248.874875,
+          "word": "back.",
+          "original_start": 258.058,
+          "original_end": 258.378
+        }
+      ],
+      "original_start": 236.547667,
+      "original_end": 258.717667,
+      "exact_audio_start": 227.737375,
+      "exact_audio_end": 249.21454166666666,
+      "start_frame": 13664,
+      "cues": [
+        {
+          "key": "tagline",
+          "section": "s08",
+          "phrase": "Know where every affected batch went",
+          "start": 243.143,
+          "end": 246.314875,
+          "match_confidence": 1.0,
+          "original_start": 252.278,
+          "original_end": 255.818,
+          "video_frame": 14589
+        }
+      ],
+      "end_frame": 15073
+    }
+  ],
+  "words": [
+    {
+      "start": 0.8,
+      "end": 0.98,
+      "word": "A",
+      "original_start": 0.0,
+      "original_end": 0.18
+    },
+    {
+      "start": 0.98,
+      "end": 1.28,
+      "word": "medicine",
+      "original_start": 0.18,
+      "original_end": 0.48
+    },
+    {
+      "start": 1.28,
+      "end": 1.72,
+      "word": "recall",
+      "original_start": 0.48,
+      "original_end": 0.92
+    },
+    {
+      "start": 1.72,
+      "end": 2.28,
+      "word": "begins",
+      "original_start": 0.92,
+      "original_end": 1.48
+    },
+    {
+      "start": 2.28,
+      "end": 2.6,
+      "word": "with",
+      "original_start": 1.48,
+      "original_end": 1.8
+    },
+    {
+      "start": 2.6,
+      "end": 2.74,
+      "word": "a",
+      "original_start": 1.8,
+      "original_end": 1.94
+    },
+    {
+      "start": 2.74,
+      "end": 2.96,
+      "word": "simple",
+      "original_start": 1.94,
+      "original_end": 2.16
+    },
+    {
+      "start": 2.96,
+      "end": 3.44,
+      "word": "question.",
+      "original_start": 2.16,
+      "original_end": 2.64
+    },
+    {
+      "start": 4.3,
+      "end": 4.5,
+      "word": "Where",
+      "original_start": 3.5,
+      "original_end": 3.7
+    },
+    {
+      "start": 4.5,
+      "end": 4.68,
+      "word": "did",
+      "original_start": 3.7,
+      "original_end": 3.88
+    },
+    {
+      "start": 4.68,
+      "end": 4.88,
+      "word": "this",
+      "original_start": 3.88,
+      "original_end": 4.08
+    },
+    {
+      "start": 4.88,
+      "end": 5.1,
+      "word": "batch",
+      "original_start": 4.08,
+      "original_end": 4.3
+    },
+    {
+      "start": 5.1,
+      "end": 5.44,
+      "word": "go?",
+      "original_start": 4.3,
+      "original_end": 4.64
+    },
+    {
+      "start": 6.28,
+      "end": 6.42,
+      "word": "For",
+      "original_start": 5.48,
+      "original_end": 5.62
+    },
+    {
+      "start": 6.42,
+      "end": 6.56,
+      "word": "a",
+      "original_start": 5.62,
+      "original_end": 5.76
+    },
+    {
+      "start": 6.56,
+      "end": 6.98,
+      "word": "distributor,",
+      "original_start": 5.76,
+      "original_end": 6.18
+    },
+    {
+      "start": 7.44,
+      "end": 7.52,
+      "word": "the",
+      "original_start": 6.64,
+      "original_end": 6.72
+    },
+    {
+      "start": 7.52,
+      "end": 7.82,
+      "word": "answer",
+      "original_start": 6.72,
+      "original_end": 7.02
+    },
+    {
+      "start": 7.82,
+      "end": 8.04,
+      "word": "can",
+      "original_start": 7.02,
+      "original_end": 7.24
+    },
+    {
+      "start": 8.04,
+      "end": 8.16,
+      "word": "be",
+      "original_start": 7.24,
+      "original_end": 7.36
+    },
+    {
+      "start": 8.16,
+      "end": 8.52,
+      "word": "scattered",
+      "original_start": 7.36,
+      "original_end": 7.72
+    },
+    {
+      "start": 8.52,
+      "end": 8.82,
+      "word": "across",
+      "original_start": 7.72,
+      "original_end": 8.02
+    },
+    {
+      "start": 8.82,
+      "end": 9.48,
+      "word": "receipts,",
+      "original_start": 8.02,
+      "original_end": 8.68
+    },
+    {
+      "start": 9.9,
+      "end": 10.16,
+      "word": "warehouse",
+      "original_start": 9.1,
+      "original_end": 9.36
+    },
+    {
+      "start": 10.16,
+      "end": 10.74,
+      "word": "records,",
+      "original_start": 9.36,
+      "original_end": 9.94
+    },
+    {
+      "start": 11.14,
+      "end": 11.36,
+      "word": "delivery",
+      "original_start": 10.34,
+      "original_end": 10.56
+    },
+    {
+      "start": 11.36,
+      "end": 11.76,
+      "word": "notes,",
+      "original_start": 10.56,
+      "original_end": 10.96
+    },
+    {
+      "start": 12.18,
+      "end": 12.34,
+      "word": "and",
+      "original_start": 11.38,
+      "original_end": 11.54
+    },
+    {
+      "start": 12.34,
+      "end": 12.72,
+      "word": "returned",
+      "original_start": 11.54,
+      "original_end": 11.92
+    },
+    {
+      "start": 12.72,
+      "end": 13.2,
+      "word": "boxes.",
+      "original_start": 11.92,
+      "original_end": 12.4
+    },
+    {
+      "start": 13.781583333333334,
+      "end": 14.221583333333333,
+      "word": "Recall",
+      "original_start": 13.46,
+      "original_end": 13.9
+    },
+    {
+      "start": 14.221583333333333,
+      "end": 14.521583333333334,
+      "word": "Scope",
+      "original_start": 13.9,
+      "original_end": 14.2
+    },
+    {
+      "start": 14.521583333333334,
+      "end": 14.901583333333333,
+      "word": "brings",
+      "original_start": 14.2,
+      "original_end": 14.58
+    },
+    {
+      "start": 14.901583333333333,
+      "end": 15.161583333333333,
+      "word": "that",
+      "original_start": 14.58,
+      "original_end": 14.84
+    },
+    {
+      "start": 15.161583333333333,
+      "end": 15.541583333333334,
+      "word": "story",
+      "original_start": 14.84,
+      "original_end": 15.22
+    },
+    {
+      "start": 15.541583333333334,
+      "end": 15.941583333333334,
+      "word": "together",
+      "original_start": 15.22,
+      "original_end": 15.62
+    },
+    {
+      "start": 15.941583333333334,
+      "end": 16.701583333333332,
+      "word": "so",
+      "original_start": 15.62,
+      "original_end": 16.38
+    },
+    {
+      "start": 16.701583333333332,
+      "end": 16.841583333333332,
+      "word": "the",
+      "original_start": 16.38,
+      "original_end": 16.52
+    },
+    {
+      "start": 16.841583333333332,
+      "end": 17.101583333333334,
+      "word": "team",
+      "original_start": 16.52,
+      "original_end": 16.78
+    },
+    {
+      "start": 17.101583333333334,
+      "end": 17.321583333333333,
+      "word": "can",
+      "original_start": 16.78,
+      "original_end": 17.0
+    },
+    {
+      "start": 17.321583333333333,
+      "end": 17.661583333333333,
+      "word": "trace",
+      "original_start": 17.0,
+      "original_end": 17.34
+    },
+    {
+      "start": 17.661583333333333,
+      "end": 18.001583333333333,
+      "word": "each",
+      "original_start": 17.34,
+      "original_end": 17.68
+    },
+    {
+      "start": 18.001583333333333,
+      "end": 18.38158333333333,
+      "word": "movement",
+      "original_start": 17.68,
+      "original_end": 18.06
+    },
+    {
+      "start": 18.38158333333333,
+      "end": 18.941583333333334,
+      "word": "and",
+      "original_start": 18.06,
+      "original_end": 18.62
+    },
+    {
+      "start": 18.941583333333334,
+      "end": 19.221583333333335,
+      "word": "account",
+      "original_start": 18.62,
+      "original_end": 18.9
+    },
+    {
+      "start": 19.221583333333335,
+      "end": 19.421583333333334,
+      "word": "for",
+      "original_start": 18.9,
+      "original_end": 19.1
+    },
+    {
+      "start": 19.421583333333334,
+      "end": 19.581583333333334,
+      "word": "what",
+      "original_start": 19.1,
+      "original_end": 19.26
+    },
+    {
+      "start": 19.581583333333334,
+      "end": 19.88158333333333,
+      "word": "comes",
+      "original_start": 19.26,
+      "original_end": 19.56
+    },
+    {
+      "start": 19.88158333333333,
+      "end": 20.161583333333333,
+      "word": "back.",
+      "original_start": 19.56,
+      "original_end": 19.84
+    },
+    {
+      "start": 20.901583333333335,
+      "end": 21.241583333333335,
+      "word": "This",
+      "original_start": 20.58,
+      "original_end": 20.92
+    },
+    {
+      "start": 21.241583333333335,
+      "end": 21.501583333333333,
+      "word": "is",
+      "original_start": 20.92,
+      "original_end": 21.18
+    },
+    {
+      "start": 21.501583333333333,
+      "end": 21.941583333333334,
+      "word": "Recall",
+      "original_start": 21.18,
+      "original_end": 21.62
+    },
+    {
+      "start": 21.941583333333334,
+      "end": 22.261583333333334,
+      "word": "Scope",
+      "original_start": 21.62,
+      "original_end": 21.94
+    },
+    {
+      "start": 22.261583333333334,
+      "end": 22.461583333333333,
+      "word": "for",
+      "original_start": 21.94,
+      "original_end": 22.14
+    },
+    {
+      "start": 22.461583333333333,
+      "end": 22.901583333333335,
+      "word": "pharmaceutical",
+      "original_start": 22.14,
+      "original_end": 22.58
+    },
+    {
+      "start": 22.901583333333335,
+      "end": 23.641583333333333,
+      "word": "distributors",
+      "original_start": 22.58,
+      "original_end": 23.32
+    },
+    {
+      "start": 23.641583333333333,
+      "end": 23.821583333333333,
+      "word": "and",
+      "original_start": 23.32,
+      "original_end": 23.5
+    },
+    {
+      "start": 23.821583333333333,
+      "end": 24.361583333333332,
+      "word": "wholesalers.",
+      "original_start": 23.5,
+      "original_end": 24.04
+    },
+    {
+      "start": 25.121583333333334,
+      "end": 25.38158333333333,
+      "word": "We",
+      "original_start": 24.8,
+      "original_end": 25.06
+    },
+    {
+      "start": 25.38158333333333,
+      "end": 25.501583333333333,
+      "word": "are",
+      "original_start": 25.06,
+      "original_end": 25.18
+    },
+    {
+      "start": 25.501583333333333,
+      "end": 25.841583333333332,
+      "word": "following",
+      "original_start": 25.18,
+      "original_end": 25.52
+    },
+    {
+      "start": 25.841583333333332,
+      "end": 26.721583333333335,
+      "word": "Asterbridge",
+      "original_start": 25.52,
+      "original_end": 26.4
+    },
+    {
+      "start": 26.721583333333335,
+      "end": 27.321583333333333,
+      "word": "Distribution,",
+      "original_start": 26.4,
+      "original_end": 27.0
+    },
+    {
+      "start": 27.781583333333334,
+      "end": 27.901583333333335,
+      "word": "a",
+      "original_start": 27.46,
+      "original_end": 27.58
+    },
+    {
+      "start": 27.901583333333335,
+      "end": 28.281583333333334,
+      "word": "fictional",
+      "original_start": 27.58,
+      "original_end": 27.96
+    },
+    {
+      "start": 28.281583333333334,
+      "end": 28.821583333333333,
+      "word": "workspace",
+      "original_start": 27.96,
+      "original_end": 28.5
+    },
+    {
+      "start": 28.821583333333333,
+      "end": 29.501583333333333,
+      "word": "with",
+      "original_start": 28.5,
+      "original_end": 29.18
+    },
+    {
+      "start": 29.501583333333333,
+      "end": 29.841583333333332,
+      "word": "six",
+      "original_start": 29.18,
+      "original_end": 29.52
+    },
+    {
+      "start": 29.841583333333332,
+      "end": 30.261583333333334,
+      "word": "medicines",
+      "original_start": 29.52,
+      "original_end": 29.94
+    },
+    {
+      "start": 30.261583333333334,
+      "end": 30.721583333333335,
+      "word": "and",
+      "original_start": 29.94,
+      "original_end": 30.4
+    },
+    {
+      "start": 30.721583333333335,
+      "end": 31.081583333333334,
+      "word": "nine",
+      "original_start": 30.4,
+      "original_end": 30.76
+    },
+    {
+      "start": 31.081583333333334,
+      "end": 31.601583333333334,
+      "word": "product",
+      "original_start": 30.76,
+      "original_end": 31.28
+    },
+    {
+      "start": 31.601583333333334,
+      "end": 32.041583333333335,
+      "word": "-specific",
+      "original_start": 31.28,
+      "original_end": 31.72
+    },
+    {
+      "start": 32.041583333333335,
+      "end": 32.761583333333334,
+      "word": "batches.",
+      "original_start": 31.72,
+      "original_end": 32.44
+    },
+    {
+      "start": 33.089083333333335,
+      "end": 33.309083333333334,
+      "word": "The",
+      "original_start": 33.2,
+      "original_end": 33.42
+    },
+    {
+      "start": 33.309083333333334,
+      "end": 33.729083333333335,
+      "word": "overview",
+      "original_start": 33.42,
+      "original_end": 33.84
+    },
+    {
+      "start": 33.729083333333335,
+      "end": 34.32908333333334,
+      "word": "connects",
+      "original_start": 33.84,
+      "original_end": 34.44
+    },
+    {
+      "start": 34.32908333333334,
+      "end": 34.84908333333333,
+      "word": "stock,",
+      "original_start": 34.44,
+      "original_end": 34.96
+    },
+    {
+      "start": 35.24908333333333,
+      "end": 35.589083333333335,
+      "word": "deliveries,",
+      "original_start": 35.36,
+      "original_end": 35.7
+    },
+    {
+      "start": 36.14908333333333,
+      "end": 36.88908333333333,
+      "word": "recalls,",
+      "original_start": 36.26,
+      "original_end": 37.0
+    },
+    {
+      "start": 37.06908333333333,
+      "end": 37.14908333333333,
+      "word": "and",
+      "original_start": 37.18,
+      "original_end": 37.26
+    },
+    {
+      "start": 37.14908333333333,
+      "end": 37.549083333333336,
+      "word": "evidence",
+      "original_start": 37.26,
+      "original_end": 37.66
+    },
+    {
+      "start": 37.549083333333336,
+      "end": 37.909083333333335,
+      "word": "in",
+      "original_start": 37.66,
+      "original_end": 38.02
+    },
+    {
+      "start": 37.909083333333335,
+      "end": 38.089083333333335,
+      "word": "one",
+      "original_start": 38.02,
+      "original_end": 38.2
+    },
+    {
+      "start": 38.089083333333335,
+      "end": 38.509083333333336,
+      "word": "place.",
+      "original_start": 38.2,
+      "original_end": 38.62
+    },
+    {
+      "start": 39.189083333333336,
+      "end": 39.46908333333333,
+      "word": "Open",
+      "original_start": 39.3,
+      "original_end": 39.58
+    },
+    {
+      "start": 39.46908333333333,
+      "end": 39.629083333333334,
+      "word": "a",
+      "original_start": 39.58,
+      "original_end": 39.74
+    },
+    {
+      "start": 39.629083333333334,
+      "end": 39.909083333333335,
+      "word": "product",
+      "original_start": 39.74,
+      "original_end": 40.02
+    },
+    {
+      "start": 39.909083333333335,
+      "end": 40.14908333333333,
+      "word": "to",
+      "original_start": 40.02,
+      "original_end": 40.26
+    },
+    {
+      "start": 40.14908333333333,
+      "end": 40.28908333333333,
+      "word": "see",
+      "original_start": 40.26,
+      "original_end": 40.4
+    },
+    {
+      "start": 40.28908333333333,
+      "end": 40.42908333333333,
+      "word": "its",
+      "original_start": 40.4,
+      "original_end": 40.54
+    },
+    {
+      "start": 40.42908333333333,
+      "end": 40.869083333333336,
+      "word": "strength,",
+      "original_start": 40.54,
+      "original_end": 40.98
+    },
+    {
+      "start": 41.269083333333334,
+      "end": 41.70908333333333,
+      "word": "presentation,",
+      "original_start": 41.38,
+      "original_end": 41.82
+    },
+    {
+      "start": 42.38908333333333,
+      "end": 42.96908333333333,
+      "word": "expiry,",
+      "original_start": 42.5,
+      "original_end": 43.08
+    },
+    {
+      "start": 43.20908333333333,
+      "end": 43.32908333333334,
+      "word": "and",
+      "original_start": 43.32,
+      "original_end": 43.44
+    },
+    {
+      "start": 43.32908333333334,
+      "end": 43.78908333333333,
+      "word": "recorded",
+      "original_start": 43.44,
+      "original_end": 43.9
+    },
+    {
+      "start": 43.78908333333333,
+      "end": 44.32908333333334,
+      "word": "quantities,",
+      "original_start": 43.9,
+      "original_end": 44.44
+    },
+    {
+      "start": 44.729083333333335,
+      "end": 44.909083333333335,
+      "word": "then",
+      "original_start": 44.84,
+      "original_end": 45.02
+    },
+    {
+      "start": 44.909083333333335,
+      "end": 45.10908333333333,
+      "word": "move",
+      "original_start": 45.02,
+      "original_end": 45.22
+    },
+    {
+      "start": 45.10908333333333,
+      "end": 45.56908333333333,
+      "word": "directly",
+      "original_start": 45.22,
+      "original_end": 45.68
+    },
+    {
+      "start": 45.56908333333333,
+      "end": 45.78908333333333,
+      "word": "to",
+      "original_start": 45.68,
+      "original_end": 45.9
+    },
+    {
+      "start": 45.78908333333333,
+      "end": 45.869083333333336,
+      "word": "the",
+      "original_start": 45.9,
+      "original_end": 45.98
+    },
+    {
+      "start": 45.869083333333336,
+      "end": 46.129083333333334,
+      "word": "batch,",
+      "original_start": 45.98,
+      "original_end": 46.24
+    },
+    {
+      "start": 46.42908333333333,
+      "end": 46.729083333333335,
+      "word": "warehouse,",
+      "original_start": 46.54,
+      "original_end": 46.84
+    },
+    {
+      "start": 47.14908333333333,
+      "end": 47.28908333333333,
+      "word": "or",
+      "original_start": 47.26,
+      "original_end": 47.4
+    },
+    {
+      "start": 47.28908333333333,
+      "end": 47.689083333333336,
+      "word": "recipient",
+      "original_start": 47.4,
+      "original_end": 47.8
+    },
+    {
+      "start": 47.689083333333336,
+      "end": 48.10908333333333,
+      "word": "behind",
+      "original_start": 47.8,
+      "original_end": 48.22
+    },
+    {
+      "start": 48.10908333333333,
+      "end": 48.32908333333334,
+      "word": "the",
+      "original_start": 48.22,
+      "original_end": 48.44
+    },
+    {
+      "start": 48.32908333333334,
+      "end": 48.549083333333336,
+      "word": "number.",
+      "original_start": 48.44,
+      "original_end": 48.66
+    },
+    {
+      "start": 49.369083333333336,
+      "end": 49.48908333333333,
+      "word": "The",
+      "original_start": 49.48,
+      "original_end": 49.6
+    },
+    {
+      "start": 49.48908333333333,
+      "end": 49.869083333333336,
+      "word": "familiar",
+      "original_start": 49.6,
+      "original_end": 49.98
+    },
+    {
+      "start": 49.869083333333336,
+      "end": 50.42908333333333,
+      "word": "workspace",
+      "original_start": 49.98,
+      "original_end": 50.54
+    },
+    {
+      "start": 50.42908333333333,
+      "end": 51.10908333333333,
+      "word": "stays",
+      "original_start": 50.54,
+      "original_end": 51.22
+    },
+    {
+      "start": 51.10908333333333,
+      "end": 51.769083333333334,
+      "word": "consistent",
+      "original_start": 51.22,
+      "original_end": 51.88
+    },
+    {
+      "start": 51.769083333333334,
+      "end": 52.20908333333333,
+      "word": "in",
+      "original_start": 51.88,
+      "original_end": 52.32
+    },
+    {
+      "start": 52.20908333333333,
+      "end": 52.46908333333333,
+      "word": "light",
+      "original_start": 52.32,
+      "original_end": 52.58
+    },
+    {
+      "start": 52.46908333333333,
+      "end": 52.729083333333335,
+      "word": "and",
+      "original_start": 52.58,
+      "original_end": 52.84
+    },
+    {
+      "start": 52.729083333333335,
+      "end": 52.96908333333333,
+      "word": "night",
+      "original_start": 52.84,
+      "original_end": 53.08
+    },
+    {
+      "start": 52.96908333333333,
+      "end": 53.24908333333333,
+      "word": "mode.",
+      "original_start": 53.08,
+      "original_end": 53.36
+    },
+    {
+      "start": 53.589083333333335,
+      "end": 54.229083333333335,
+      "word": "Here",
+      "original_start": 53.7,
+      "original_end": 54.34
+    },
+    {
+      "start": 54.229083333333335,
+      "end": 54.729083333333335,
+      "word": "is",
+      "original_start": 54.34,
+      "original_end": 54.84
+    },
+    {
+      "start": 54.729083333333335,
+      "end": 54.869083333333336,
+      "word": "the",
+      "original_start": 54.84,
+      "original_end": 54.98
+    },
+    {
+      "start": 54.869083333333336,
+      "end": 55.52908333333333,
+      "word": "paracetamol",
+      "original_start": 54.98,
+      "original_end": 55.64
+    },
+    {
+      "start": 55.52908333333333,
+      "end": 55.769083333333334,
+      "word": "batch.",
+      "original_start": 55.64,
+      "original_end": 55.88
+    },
+    {
+      "start": 56.689083333333336,
+      "end": 56.96908333333333,
+      "word": "1",
+      "original_start": 56.8,
+      "original_end": 57.08
+    },
+    {
+      "start": 56.96908333333333,
+      "end": 57.42908333333333,
+      "word": ",000",
+      "original_start": 57.08,
+      "original_end": 57.54
+    },
+    {
+      "start": 57.42908333333333,
+      "end": 57.78908333333333,
+      "word": "boxes",
+      "original_start": 57.54,
+      "original_end": 57.9
+    },
+    {
+      "start": 57.78908333333333,
+      "end": 58.089083333333335,
+      "word": "were",
+      "original_start": 57.9,
+      "original_end": 58.2
+    },
+    {
+      "start": 58.089083333333335,
+      "end": 58.509083333333336,
+      "word": "received",
+      "original_start": 58.2,
+      "original_end": 58.62
+    },
+    {
+      "start": 58.509083333333336,
+      "end": 59.16908333333333,
+      "word": "and",
+      "original_start": 58.62,
+      "original_end": 59.28
+    },
+    {
+      "start": 59.16908333333333,
+      "end": 59.52908333333333,
+      "word": "600",
+      "original_start": 59.28,
+      "original_end": 59.64
+    },
+    {
+      "start": 59.52908333333333,
+      "end": 60.009083333333336,
+      "word": "were",
+      "original_start": 59.64,
+      "original_end": 60.12
+    },
+    {
+      "start": 60.009083333333336,
+      "end": 60.46908333333333,
+      "word": "dispatched",
+      "original_start": 60.12,
+      "original_end": 60.58
+    },
+    {
+      "start": 60.46908333333333,
+      "end": 60.64908333333333,
+      "word": "to",
+      "original_start": 60.58,
+      "original_end": 60.76
+    },
+    {
+      "start": 60.64908333333333,
+      "end": 60.909083333333335,
+      "word": "four",
+      "original_start": 60.76,
+      "original_end": 61.02
+    },
+    {
+      "start": 60.909083333333335,
+      "end": 61.28908333333333,
+      "word": "customer",
+      "original_start": 61.02,
+      "original_end": 61.4
+    },
+    {
+      "start": 61.28908333333333,
+      "end": 61.66908333333333,
+      "word": "sites.",
+      "original_start": 61.4,
+      "original_end": 61.78
+    },
+    {
+      "start": 62.267125,
+      "end": 62.387125,
+      "word": "The",
+      "original_start": 62.9,
+      "original_end": 63.02
+    },
+    {
+      "start": 62.387125,
+      "end": 62.667125,
+      "word": "trace",
+      "original_start": 63.02,
+      "original_end": 63.3
+    },
+    {
+      "start": 62.667125,
+      "end": 63.087125,
+      "word": "connects",
+      "original_start": 63.3,
+      "original_end": 63.72
+    },
+    {
+      "start": 63.087125,
+      "end": 63.407125,
+      "word": "the",
+      "original_start": 63.72,
+      "original_end": 64.04
+    },
+    {
+      "start": 63.407125,
+      "end": 63.807125,
+      "word": "supplier,",
+      "original_start": 64.04,
+      "original_end": 64.44
+    },
+    {
+      "start": 64.387125,
+      "end": 64.507125,
+      "word": "two",
+      "original_start": 65.02,
+      "original_end": 65.14
+    },
+    {
+      "start": 64.507125,
+      "end": 65.047125,
+      "word": "warehouses",
+      "original_start": 65.14,
+      "original_end": 65.68
+    },
+    {
+      "start": 65.047125,
+      "end": 65.707125,
+      "word": "and",
+      "original_start": 65.68,
+      "original_end": 66.34
+    },
+    {
+      "start": 65.707125,
+      "end": 65.967125,
+      "word": "those",
+      "original_start": 66.34,
+      "original_end": 66.6
+    },
+    {
+      "start": 65.967125,
+      "end": 66.527125,
+      "word": "destinations.",
+      "original_start": 66.6,
+      "original_end": 67.16
+    },
+    {
+      "start": 67.30470833333334,
+      "end": 67.64470833333333,
+      "word": "Now,",
+      "original_start": 68.42,
+      "original_end": 68.76
+    },
+    {
+      "start": 67.80470833333334,
+      "end": 68.28470833333333,
+      "word": "compare",
+      "original_start": 68.92,
+      "original_end": 69.4
+    },
+    {
+      "start": 68.28470833333333,
+      "end": 68.54470833333333,
+      "word": "a",
+      "original_start": 69.4,
+      "original_end": 69.66
+    },
+    {
+      "start": 68.54470833333333,
+      "end": 69.18470833333333,
+      "word": "moxicillin.",
+      "original_start": 69.66,
+      "original_end": 70.3
+    },
+    {
+      "start": 69.94470833333334,
+      "end": 70.10470833333333,
+      "word": "Its",
+      "original_start": 71.06,
+      "original_end": 71.22
+    },
+    {
+      "start": 70.10470833333333,
+      "end": 70.42470833333333,
+      "word": "printed",
+      "original_start": 71.22,
+      "original_end": 71.54
+    },
+    {
+      "start": 70.42470833333333,
+      "end": 70.76470833333333,
+      "word": "batch",
+      "original_start": 71.54,
+      "original_end": 71.88
+    },
+    {
+      "start": 70.76470833333333,
+      "end": 71.08470833333334,
+      "word": "code",
+      "original_start": 71.88,
+      "original_end": 72.2
+    },
+    {
+      "start": 71.08470833333334,
+      "end": 71.54470833333333,
+      "word": "is",
+      "original_start": 72.2,
+      "original_end": 72.66
+    },
+    {
+      "start": 71.54470833333333,
+      "end": 72.02470833333334,
+      "word": "identical.",
+      "original_start": 72.66,
+      "original_end": 73.14
+    },
+    {
+      "start": 72.5425,
+      "end": 73.2025,
+      "word": "RecallScope",
+      "original_start": 74.0,
+      "original_end": 74.66
+    },
+    {
+      "start": 73.2025,
+      "end": 73.6225,
+      "word": "keeps",
+      "original_start": 74.66,
+      "original_end": 75.08
+    },
+    {
+      "start": 73.6225,
+      "end": 73.8025,
+      "word": "the",
+      "original_start": 75.08,
+      "original_end": 75.26
+    },
+    {
+      "start": 73.8025,
+      "end": 73.9625,
+      "word": "two",
+      "original_start": 75.26,
+      "original_end": 75.42
+    },
+    {
+      "start": 73.9625,
+      "end": 74.2625,
+      "word": "medicines",
+      "original_start": 75.42,
+      "original_end": 75.72
+    },
+    {
+      "start": 74.2625,
+      "end": 74.8025,
+      "word": "separate",
+      "original_start": 75.72,
+      "original_end": 76.26
+    },
+    {
+      "start": 74.8025,
+      "end": 75.2825,
+      "word": "because",
+      "original_start": 76.26,
+      "original_end": 76.74
+    },
+    {
+      "start": 75.2825,
+      "end": 75.6225,
+      "word": "product",
+      "original_start": 76.74,
+      "original_end": 77.08
+    },
+    {
+      "start": 75.6225,
+      "end": 76.2225,
+      "word": "identity",
+      "original_start": 77.08,
+      "original_end": 77.68
+    },
+    {
+      "start": 76.2225,
+      "end": 76.7025,
+      "word": "matters",
+      "original_start": 77.68,
+      "original_end": 78.16
+    },
+    {
+      "start": 76.7025,
+      "end": 77.0625,
+      "word": "as",
+      "original_start": 78.16,
+      "original_end": 78.52
+    },
+    {
+      "start": 77.0625,
+      "end": 77.2625,
+      "word": "much",
+      "original_start": 78.52,
+      "original_end": 78.72
+    },
+    {
+      "start": 77.2625,
+      "end": 77.4225,
+      "word": "as",
+      "original_start": 78.72,
+      "original_end": 78.88
+    },
+    {
+      "start": 77.4225,
+      "end": 77.5225,
+      "word": "the",
+      "original_start": 78.88,
+      "original_end": 78.98
+    },
+    {
+      "start": 77.5225,
+      "end": 77.7825,
+      "word": "batch",
+      "original_start": 78.98,
+      "original_end": 79.24
+    },
+    {
+      "start": 77.7825,
+      "end": 78.1025,
+      "word": "label.",
+      "original_start": 79.24,
+      "original_end": 79.56
+    },
+    {
+      "start": 78.43670833333333,
+      "end": 78.73070833333334,
+      "word": "A",
+      "original_start": 80.48,
+      "original_end": 80.94
+    },
+    {
+      "start": 78.73070833333334,
+      "end": 79.05070833333333,
+      "word": "matching",
+      "original_start": 80.94,
+      "original_end": 81.26
+    },
+    {
+      "start": 79.05070833333333,
+      "end": 79.37070833333334,
+      "word": "string",
+      "original_start": 81.26,
+      "original_end": 81.58
+    },
+    {
+      "start": 79.37070833333334,
+      "end": 79.71070833333333,
+      "word": "alone",
+      "original_start": 81.58,
+      "original_end": 81.92
+    },
+    {
+      "start": 79.71070833333333,
+      "end": 80.27070833333333,
+      "word": "must",
+      "original_start": 81.92,
+      "original_end": 82.48
+    },
+    {
+      "start": 80.27070833333333,
+      "end": 80.55070833333333,
+      "word": "never",
+      "original_start": 82.48,
+      "original_end": 82.76
+    },
+    {
+      "start": 80.55070833333333,
+      "end": 80.97070833333333,
+      "word": "merge",
+      "original_start": 82.76,
+      "original_end": 83.18
+    },
+    {
+      "start": 80.97070833333333,
+      "end": 81.23070833333334,
+      "word": "stock",
+      "original_start": 83.18,
+      "original_end": 83.44
+    },
+    {
+      "start": 81.23070833333334,
+      "end": 81.75070833333334,
+      "word": "or",
+      "original_start": 83.44,
+      "original_end": 83.96
+    },
+    {
+      "start": 81.75070833333334,
+      "end": 82.19070833333333,
+      "word": "expand",
+      "original_start": 83.96,
+      "original_end": 84.4
+    },
+    {
+      "start": 82.19070833333333,
+      "end": 82.39070833333334,
+      "word": "a",
+      "original_start": 84.4,
+      "original_end": 84.6
+    },
+    {
+      "start": 82.39070833333334,
+      "end": 82.71070833333333,
+      "word": "recall.",
+      "original_start": 84.6,
+      "original_end": 84.92
+    },
+    {
+      "start": 83.51070833333333,
+      "end": 83.83070833333333,
+      "word": "Document",
+      "original_start": 85.72,
+      "original_end": 86.04
+    },
+    {
+      "start": 83.83070833333333,
+      "end": 84.45070833333334,
+      "word": "Intake",
+      "original_start": 86.04,
+      "original_end": 86.66
+    },
+    {
+      "start": 84.45070833333334,
+      "end": 84.75070833333334,
+      "word": "offers",
+      "original_start": 86.66,
+      "original_end": 86.96
+    },
+    {
+      "start": 84.75070833333334,
+      "end": 85.19070833333333,
+      "word": "guided",
+      "original_start": 86.96,
+      "original_end": 87.4
+    },
+    {
+      "start": 85.19070833333333,
+      "end": 85.73070833333334,
+      "word": "examples,",
+      "original_start": 87.4,
+      "original_end": 87.94
+    },
+    {
+      "start": 86.39070833333334,
+      "end": 86.79070833333333,
+      "word": "structured",
+      "original_start": 88.6,
+      "original_end": 89.0
+    },
+    {
+      "start": 86.79070833333333,
+      "end": 87.35070833333333,
+      "word": "CSV",
+      "original_start": 89.0,
+      "original_end": 89.56
+    },
+    {
+      "start": 87.35070833333333,
+      "end": 87.77070833333333,
+      "word": "import",
+      "original_start": 89.56,
+      "original_end": 89.98
+    },
+    {
+      "start": 87.77070833333333,
+      "end": 88.47070833333333,
+      "word": "and",
+      "original_start": 89.98,
+      "original_end": 90.68
+    },
+    {
+      "start": 88.47070833333333,
+      "end": 88.79070833333333,
+      "word": "live",
+      "original_start": 90.68,
+      "original_end": 91.0
+    },
+    {
+      "start": 88.79070833333333,
+      "end": 89.15070833333333,
+      "word": "AI",
+      "original_start": 91.0,
+      "original_end": 91.36
+    },
+    {
+      "start": 89.15070833333333,
+      "end": 89.69070833333333,
+      "word": "assistance.",
+      "original_start": 91.36,
+      "original_end": 91.9
+    },
+    {
+      "start": 90.34841666666667,
+      "end": 91.00841666666666,
+      "word": "Fireworks",
+      "original_start": 93.14,
+      "original_end": 93.8
+    },
+    {
+      "start": 91.00841666666666,
+      "end": 91.22841666666666,
+      "word": "and",
+      "original_start": 93.8,
+      "original_end": 94.02
+    },
+    {
+      "start": 91.22841666666666,
+      "end": 91.76841666666667,
+      "word": "OpenAI",
+      "original_start": 94.02,
+      "original_end": 94.56
+    },
+    {
+      "start": 91.76841666666667,
+      "end": 92.42841666666666,
+      "word": "can",
+      "original_start": 94.56,
+      "original_end": 95.22
+    },
+    {
+      "start": 92.42841666666666,
+      "end": 92.84841666666667,
+      "word": "interpret",
+      "original_start": 95.22,
+      "original_end": 95.64
+    },
+    {
+      "start": 92.84841666666667,
+      "end": 93.30841666666667,
+      "word": "text,",
+      "original_start": 95.64,
+      "original_end": 96.1
+    },
+    {
+      "start": 93.62841666666667,
+      "end": 93.94841666666666,
+      "word": "images",
+      "original_start": 96.42,
+      "original_end": 96.74
+    },
+    {
+      "start": 93.94841666666666,
+      "end": 94.54841666666667,
+      "word": "and",
+      "original_start": 96.74,
+      "original_end": 97.34
+    },
+    {
+      "start": 94.54841666666667,
+      "end": 95.36841666666666,
+      "word": "PDFs",
+      "original_start": 97.34,
+      "original_end": 98.16
+    },
+    {
+      "start": 95.36841666666666,
+      "end": 95.84841666666667,
+      "word": "into",
+      "original_start": 98.16,
+      "original_end": 98.64
+    },
+    {
+      "start": 95.84841666666667,
+      "end": 96.24841666666667,
+      "word": "proposed",
+      "original_start": 98.64,
+      "original_end": 99.04
+    },
+    {
+      "start": 96.24841666666667,
+      "end": 96.94841666666666,
+      "word": "receipts",
+      "original_start": 99.04,
+      "original_end": 99.74
+    },
+    {
+      "start": 96.94841666666666,
+      "end": 97.46841666666667,
+      "word": "or",
+      "original_start": 99.74,
+      "original_end": 100.26
+    },
+    {
+      "start": 97.46841666666667,
+      "end": 98.12841666666667,
+      "word": "dispatches.",
+      "original_start": 100.26,
+      "original_end": 100.92
+    },
+    {
+      "start": 98.3975,
+      "end": 98.70658333333333,
+      "word": "The",
+      "original_start": 101.72,
+      "original_end": 102.1
+    },
+    {
+      "start": 98.70658333333333,
+      "end": 99.00658333333334,
+      "word": "original",
+      "original_start": 102.1,
+      "original_end": 102.4
+    },
+    {
+      "start": 99.00658333333334,
+      "end": 99.38658333333333,
+      "word": "source",
+      "original_start": 102.4,
+      "original_end": 102.78
+    },
+    {
+      "start": 99.38658333333333,
+      "end": 99.70658333333333,
+      "word": "remains",
+      "original_start": 102.78,
+      "original_end": 103.1
+    },
+    {
+      "start": 99.70658333333333,
+      "end": 100.28658333333334,
+      "word": "alongside",
+      "original_start": 103.1,
+      "original_end": 103.68
+    },
+    {
+      "start": 100.28658333333334,
+      "end": 100.70658333333333,
+      "word": "every",
+      "original_start": 103.68,
+      "original_end": 104.1
+    },
+    {
+      "start": 100.70658333333333,
+      "end": 101.22658333333334,
+      "word": "proposal",
+      "original_start": 104.1,
+      "original_end": 104.62
+    },
+    {
+      "start": 101.22658333333334,
+      "end": 101.92658333333334,
+      "word": "and",
+      "original_start": 104.62,
+      "original_end": 105.32
+    },
+    {
+      "start": 101.92658333333334,
+      "end": 102.58658333333334,
+      "word": "deterministic",
+      "original_start": 105.32,
+      "original_end": 105.98
+    },
+    {
+      "start": 102.58658333333334,
+      "end": 102.94658333333334,
+      "word": "checks",
+      "original_start": 105.98,
+      "original_end": 106.34
+    },
+    {
+      "start": 102.94658333333334,
+      "end": 103.46658333333333,
+      "word": "validate",
+      "original_start": 106.34,
+      "original_end": 106.86
+    },
+    {
+      "start": 103.46658333333333,
+      "end": 104.36658333333334,
+      "word": "identifiers,",
+      "original_start": 106.86,
+      "original_end": 107.76
+    },
+    {
+      "start": 104.74658333333333,
+      "end": 105.18658333333333,
+      "word": "quantities",
+      "original_start": 108.14,
+      "original_end": 108.58
+    },
+    {
+      "start": 105.18658333333333,
+      "end": 105.68658333333333,
+      "word": "and",
+      "original_start": 108.58,
+      "original_end": 109.08
+    },
+    {
+      "start": 105.68658333333333,
+      "end": 106.06658333333333,
+      "word": "units",
+      "original_start": 109.08,
+      "original_end": 109.46
+    },
+    {
+      "start": 106.06658333333333,
+      "end": 106.68658333333333,
+      "word": "before",
+      "original_start": 109.46,
+      "original_end": 110.08
+    },
+    {
+      "start": 106.68658333333333,
+      "end": 106.88658333333333,
+      "word": "an",
+      "original_start": 110.08,
+      "original_end": 110.28
+    },
+    {
+      "start": 106.88658333333333,
+      "end": 107.24658333333333,
+      "word": "operator",
+      "original_start": 110.28,
+      "original_end": 110.64
+    },
+    {
+      "start": 107.24658333333333,
+      "end": 107.86658333333334,
+      "word": "approves.",
+      "original_start": 110.64,
+      "original_end": 111.26
+    },
+    {
+      "start": 108.272,
+      "end": 108.532,
+      "word": "For",
+      "original_start": 112.16,
+      "original_end": 112.42
+    },
+    {
+      "start": 108.532,
+      "end": 108.692,
+      "word": "this",
+      "original_start": 112.42,
+      "original_end": 112.58
+    },
+    {
+      "start": 108.692,
+      "end": 109.192,
+      "word": "walkthrough,",
+      "original_start": 112.58,
+      "original_end": 113.08
+    },
+    {
+      "start": 109.672,
+      "end": 109.732,
+      "word": "the",
+      "original_start": 113.56,
+      "original_end": 113.62
+    },
+    {
+      "start": 109.732,
+      "end": 110.032,
+      "word": "guided",
+      "original_start": 113.62,
+      "original_end": 113.92
+    },
+    {
+      "start": 110.032,
+      "end": 110.452,
+      "word": "receipt",
+      "original_start": 113.92,
+      "original_end": 114.34
+    },
+    {
+      "start": 110.452,
+      "end": 110.752,
+      "word": "is",
+      "original_start": 114.34,
+      "original_end": 114.64
+    },
+    {
+      "start": 110.752,
+      "end": 111.012,
+      "word": "pre",
+      "original_start": 114.64,
+      "original_end": 114.9
+    },
+    {
+      "start": 111.012,
+      "end": 111.352,
+      "word": "-filled",
+      "original_start": 114.9,
+      "original_end": 115.24
+    },
+    {
+      "start": 111.352,
+      "end": 111.852,
+      "word": "and",
+      "original_start": 115.24,
+      "original_end": 115.74
+    },
+    {
+      "start": 111.852,
+      "end": 112.112,
+      "word": "needs",
+      "original_start": 115.74,
+      "original_end": 116.0
+    },
+    {
+      "start": 112.112,
+      "end": 112.372,
+      "word": "no",
+      "original_start": 116.0,
+      "original_end": 116.26
+    },
+    {
+      "start": 112.372,
+      "end": 112.812,
+      "word": "API",
+      "original_start": 116.26,
+      "original_end": 116.7
+    },
+    {
+      "start": 112.812,
+      "end": 113.252,
+      "word": "key.",
+      "original_start": 116.7,
+      "original_end": 117.14
+    },
+    {
+      "start": 113.620625,
+      "end": 114.060625,
+      "word": "Review",
+      "original_start": 118.0,
+      "original_end": 118.44
+    },
+    {
+      "start": 114.060625,
+      "end": 114.460625,
+      "word": "40",
+      "original_start": 118.44,
+      "original_end": 118.84
+    },
+    {
+      "start": 114.460625,
+      "end": 114.800625,
+      "word": "boxes",
+      "original_start": 118.84,
+      "original_end": 119.18
+    },
+    {
+      "start": 114.800625,
+      "end": 115.020625,
+      "word": "of",
+      "original_start": 119.18,
+      "original_end": 119.4
+    },
+    {
+      "start": 115.020625,
+      "end": 115.160625,
+      "word": "a",
+      "original_start": 119.4,
+      "original_end": 119.54
+    },
+    {
+      "start": 115.160625,
+      "end": 115.440625,
+      "word": "separate",
+      "original_start": 119.54,
+      "original_end": 119.82
+    },
+    {
+      "start": 115.440625,
+      "end": 115.900625,
+      "word": "available",
+      "original_start": 119.82,
+      "original_end": 120.28
+    },
+    {
+      "start": 115.900625,
+      "end": 116.680625,
+      "word": "paracetamol",
+      "original_start": 120.28,
+      "original_end": 121.06
+    },
+    {
+      "start": 116.680625,
+      "end": 116.960625,
+      "word": "batch.",
+      "original_start": 121.06,
+      "original_end": 121.34
+    },
+    {
+      "start": 117.820625,
+      "end": 118.200625,
+      "word": "Compare",
+      "original_start": 122.2,
+      "original_end": 122.58
+    },
+    {
+      "start": 118.200625,
+      "end": 118.460625,
+      "word": "the",
+      "original_start": 122.58,
+      "original_end": 122.84
+    },
+    {
+      "start": 118.460625,
+      "end": 118.760625,
+      "word": "source",
+      "original_start": 122.84,
+      "original_end": 123.14
+    },
+    {
+      "start": 118.760625,
+      "end": 119.520625,
+      "word": "and",
+      "original_start": 123.14,
+      "original_end": 123.9
+    },
+    {
+      "start": 119.520625,
+      "end": 119.880625,
+      "word": "save",
+      "original_start": 123.9,
+      "original_end": 124.26
+    },
+    {
+      "start": 119.880625,
+      "end": 120.040625,
+      "word": "the",
+      "original_start": 124.26,
+      "original_end": 124.42
+    },
+    {
+      "start": 120.040625,
+      "end": 120.400625,
+      "word": "decision.",
+      "original_start": 124.42,
+      "original_end": 124.78
+    },
+    {
+      "start": 120.400625,
+      "end": 121.20554166666666,
+      "word": "Only",
+      "original_start": 124.78,
+      "original_end": 126.08
+    },
+    {
+      "start": 121.20554166666666,
+      "end": 121.48554166666666,
+      "word": "then",
+      "original_start": 126.08,
+      "original_end": 126.36
+    },
+    {
+      "start": 121.48554166666666,
+      "end": 121.66554166666667,
+      "word": "does",
+      "original_start": 126.36,
+      "original_end": 126.54
+    },
+    {
+      "start": 121.66554166666667,
+      "end": 122.02554166666667,
+      "word": "available",
+      "original_start": 126.54,
+      "original_end": 126.9
+    },
+    {
+      "start": 122.02554166666667,
+      "end": 122.46554166666667,
+      "word": "stock",
+      "original_start": 126.9,
+      "original_end": 127.34
+    },
+    {
+      "start": 122.46554166666667,
+      "end": 122.96554166666667,
+      "word": "rise",
+      "original_start": 127.34,
+      "original_end": 127.84
+    },
+    {
+      "start": 122.96554166666667,
+      "end": 123.22554166666667,
+      "word": "from",
+      "original_start": 127.84,
+      "original_end": 128.1
+    },
+    {
+      "start": 123.22554166666667,
+      "end": 123.82554166666667,
+      "word": "400",
+      "original_start": 128.1,
+      "original_end": 128.7
+    },
+    {
+      "start": 123.82554166666667,
+      "end": 124.26554166666666,
+      "word": "to",
+      "original_start": 128.7,
+      "original_end": 129.14
+    },
+    {
+      "start": 124.26554166666666,
+      "end": 125.34554166666666,
+      "word": "440.",
+      "original_start": 129.14,
+      "original_end": 130.22
+    },
+    {
+      "start": 125.71354166666667,
+      "end": 126.39795833333334,
+      "word": "Repeating",
+      "original_start": 131.04,
+      "original_end": 131.84
+    },
+    {
+      "start": 126.39795833333334,
+      "end": 126.57795833333333,
+      "word": "that",
+      "original_start": 131.84,
+      "original_end": 132.02
+    },
+    {
+      "start": 126.57795833333333,
+      "end": 126.99795833333333,
+      "word": "document",
+      "original_start": 132.02,
+      "original_end": 132.44
+    },
+    {
+      "start": 126.99795833333333,
+      "end": 127.39795833333334,
+      "word": "cannot",
+      "original_start": 132.44,
+      "original_end": 132.84
+    },
+    {
+      "start": 127.39795833333334,
+      "end": 127.81795833333334,
+      "word": "post",
+      "original_start": 132.84,
+      "original_end": 133.26
+    },
+    {
+      "start": 127.81795833333334,
+      "end": 128.03795833333334,
+      "word": "the",
+      "original_start": 133.26,
+      "original_end": 133.48
+    },
+    {
+      "start": 128.03795833333334,
+      "end": 128.31795833333334,
+      "word": "same",
+      "original_start": 133.48,
+      "original_end": 133.76
+    },
+    {
+      "start": 128.31795833333334,
+      "end": 128.65795833333334,
+      "word": "receipt",
+      "original_start": 133.76,
+      "original_end": 134.1
+    },
+    {
+      "start": 128.65795833333334,
+      "end": 128.97795833333333,
+      "word": "twice.",
+      "original_start": 134.1,
+      "original_end": 134.42
+    },
+    {
+      "start": 129.43795833333334,
+      "end": 129.77795833333334,
+      "word": "We",
+      "original_start": 134.88,
+      "original_end": 135.22
+    },
+    {
+      "start": 129.77795833333334,
+      "end": 130.01795833333333,
+      "word": "switch",
+      "original_start": 135.22,
+      "original_end": 135.46
+    },
+    {
+      "start": 130.01795833333333,
+      "end": 130.35795833333333,
+      "word": "to",
+      "original_start": 135.46,
+      "original_end": 135.8
+    },
+    {
+      "start": 130.35795833333333,
+      "end": 130.49795833333334,
+      "word": "the",
+      "original_start": 135.8,
+      "original_end": 135.94
+    },
+    {
+      "start": 130.49795833333334,
+      "end": 130.89795833333332,
+      "word": "active",
+      "original_start": 135.94,
+      "original_end": 136.34
+    },
+    {
+      "start": 130.89795833333332,
+      "end": 131.37795833333334,
+      "word": "recall",
+      "original_start": 136.34,
+      "original_end": 136.82
+    },
+    {
+      "start": 131.37795833333334,
+      "end": 131.77795833333334,
+      "word": "scenario.",
+      "original_start": 136.82,
+      "original_end": 137.22
+    },
+    {
+      "start": 132.61445833333335,
+      "end": 132.79445833333332,
+      "word": "With",
+      "original_start": 138.52,
+      "original_end": 138.7
+    },
+    {
+      "start": 132.79445833333332,
+      "end": 133.29445833333332,
+      "word": "100",
+      "original_start": 138.7,
+      "original_end": 139.2
+    },
+    {
+      "start": 133.29445833333332,
+      "end": 133.69445833333333,
+      "word": "boxes",
+      "original_start": 139.2,
+      "original_end": 139.6
+    },
+    {
+      "start": 133.69445833333333,
+      "end": 134.23445833333332,
+      "word": "returned",
+      "original_start": 139.6,
+      "original_end": 140.14
+    },
+    {
+      "start": 134.23445833333332,
+      "end": 134.91445833333333,
+      "word": "and",
+      "original_start": 140.14,
+      "original_end": 140.82
+    },
+    {
+      "start": 134.91445833333333,
+      "end": 135.45445833333332,
+      "word": "500",
+      "original_start": 140.82,
+      "original_end": 141.36
+    },
+    {
+      "start": 135.45445833333332,
+      "end": 136.27445833333334,
+      "word": "outstanding,",
+      "original_start": 141.36,
+      "original_end": 142.18
+    },
+    {
+      "start": 136.920375,
+      "end": 137.160375,
+      "word": "then",
+      "original_start": 143.18,
+      "original_end": 143.42
+    },
+    {
+      "start": 137.160375,
+      "end": 137.600375,
+      "word": "review",
+      "original_start": 143.42,
+      "original_end": 143.86
+    },
+    {
+      "start": 137.600375,
+      "end": 138.140375,
+      "word": "20",
+      "original_start": 143.86,
+      "original_end": 144.4
+    },
+    {
+      "start": 138.140375,
+      "end": 138.540375,
+      "word": "more",
+      "original_start": 144.4,
+      "original_end": 144.8
+    },
+    {
+      "start": 138.540375,
+      "end": 139.000375,
+      "word": "returned",
+      "original_start": 144.8,
+      "original_end": 145.26
+    },
+    {
+      "start": 139.000375,
+      "end": 139.580375,
+      "word": "boxes",
+      "original_start": 145.26,
+      "original_end": 145.84
+    },
+    {
+      "start": 139.580375,
+      "end": 140.360375,
+      "word": "against",
+      "original_start": 145.84,
+      "original_end": 146.62
+    },
+    {
+      "start": 140.360375,
+      "end": 140.800375,
+      "word": "their",
+      "original_start": 146.62,
+      "original_end": 147.06
+    },
+    {
+      "start": 140.800375,
+      "end": 141.280375,
+      "word": "original",
+      "original_start": 147.06,
+      "original_end": 147.54
+    },
+    {
+      "start": 141.280375,
+      "end": 141.720375,
+      "word": "dispatch.",
+      "original_start": 147.54,
+      "original_end": 147.98
+    },
+    {
+      "start": 142.319875,
+      "end": 143.034375,
+      "word": "Approval",
+      "original_start": 149.18,
+      "original_end": 149.96
+    },
+    {
+      "start": 143.034375,
+      "end": 143.514375,
+      "word": "raises",
+      "original_start": 149.96,
+      "original_end": 150.44
+    },
+    {
+      "start": 143.514375,
+      "end": 144.154375,
+      "word": "returns",
+      "original_start": 150.44,
+      "original_end": 151.08
+    },
+    {
+      "start": 144.154375,
+      "end": 144.514375,
+      "word": "to",
+      "original_start": 151.08,
+      "original_end": 151.44
+    },
+    {
+      "start": 144.514375,
+      "end": 145.414375,
+      "word": "120",
+      "original_start": 151.44,
+      "original_end": 152.34
+    },
+    {
+      "start": 145.414375,
+      "end": 146.414375,
+      "word": "and",
+      "original_start": 152.34,
+      "original_end": 153.34
+    },
+    {
+      "start": 146.414375,
+      "end": 146.914375,
+      "word": "reduces",
+      "original_start": 153.34,
+      "original_end": 153.84
+    },
+    {
+      "start": 146.914375,
+      "end": 147.634375,
+      "word": "outstanding",
+      "original_start": 153.84,
+      "original_end": 154.56
+    },
+    {
+      "start": 147.634375,
+      "end": 148.234375,
+      "word": "quantity",
+      "original_start": 154.56,
+      "original_end": 155.16
+    },
+    {
+      "start": 148.234375,
+      "end": 148.974375,
+      "word": "to",
+      "original_start": 155.16,
+      "original_end": 155.9
+    },
+    {
+      "start": 148.974375,
+      "end": 150.034375,
+      "word": "480",
+      "original_start": 155.9,
+      "original_end": 156.96
+    },
+    {
+      "start": 150.494375,
+      "end": 150.994375,
+      "word": "while",
+      "original_start": 157.42,
+      "original_end": 157.92
+    },
+    {
+      "start": 150.994375,
+      "end": 151.154375,
+      "word": "the",
+      "original_start": 157.92,
+      "original_end": 158.08
+    },
+    {
+      "start": 151.154375,
+      "end": 151.494375,
+      "word": "boxes",
+      "original_start": 158.08,
+      "original_end": 158.42
+    },
+    {
+      "start": 151.494375,
+      "end": 151.954375,
+      "word": "stay",
+      "original_start": 158.42,
+      "original_end": 158.88
+    },
+    {
+      "start": 151.954375,
+      "end": 152.654375,
+      "word": "quarantined.",
+      "original_start": 158.88,
+      "original_end": 159.58
+    },
+    {
+      "start": 153.073375,
+      "end": 153.36879166666668,
+      "word": "The",
+      "original_start": 160.5,
+      "original_end": 160.98
+    },
+    {
+      "start": 153.36879166666668,
+      "end": 153.84879166666667,
+      "word": "completed",
+      "original_start": 160.98,
+      "original_end": 161.46
+    },
+    {
+      "start": 153.84879166666667,
+      "end": 154.44879166666666,
+      "word": "scenario",
+      "original_start": 161.46,
+      "original_end": 162.06
+    },
+    {
+      "start": 154.44879166666666,
+      "end": 155.02879166666668,
+      "word": "accounts",
+      "original_start": 162.06,
+      "original_end": 162.64
+    },
+    {
+      "start": 155.02879166666668,
+      "end": 155.32879166666666,
+      "word": "for",
+      "original_start": 162.64,
+      "original_end": 162.94
+    },
+    {
+      "start": 155.32879166666666,
+      "end": 155.66879166666666,
+      "word": "all",
+      "original_start": 162.94,
+      "original_end": 163.28
+    },
+    {
+      "start": 155.66879166666666,
+      "end": 156.36879166666668,
+      "word": "600",
+      "original_start": 163.28,
+      "original_end": 163.98
+    },
+    {
+      "start": 156.36879166666668,
+      "end": 156.92879166666665,
+      "word": "dispatched",
+      "original_start": 163.98,
+      "original_end": 164.54
+    },
+    {
+      "start": 156.92879166666665,
+      "end": 157.34879166666667,
+      "word": "boxes",
+      "original_start": 164.54,
+      "original_end": 164.96
+    },
+    {
+      "start": 157.34879166666667,
+      "end": 157.82879166666666,
+      "word": "returning",
+      "original_start": 164.96,
+      "original_end": 165.44
+    },
+    {
+      "start": 158.36879166666668,
+      "end": 158.84879166666667,
+      "word": "and",
+      "original_start": 165.98,
+      "original_end": 166.46
+    },
+    {
+      "start": 158.84879166666667,
+      "end": 159.20879166666666,
+      "word": "all",
+      "original_start": 166.46,
+      "original_end": 166.82
+    },
+    {
+      "start": 159.20879166666666,
+      "end": 159.82879166666666,
+      "word": "1000",
+      "original_start": 166.82,
+      "original_end": 167.44
+    },
+    {
+      "start": 159.82879166666666,
+      "end": 160.44879166666666,
+      "word": "boxes",
+      "original_start": 167.44,
+      "original_end": 168.06
+    },
+    {
+      "start": 160.44879166666666,
+      "end": 160.84879166666667,
+      "word": "remaining",
+      "original_start": 168.06,
+      "original_end": 168.46
+    },
+    {
+      "start": 160.84879166666667,
+      "end": 161.14879166666665,
+      "word": "in",
+      "original_start": 168.46,
+      "original_end": 168.76
+    },
+    {
+      "start": 161.14879166666665,
+      "end": 161.62879166666667,
+      "word": "quarantine,",
+      "original_start": 168.76,
+      "original_end": 169.24
+    },
+    {
+      "start": 162.12879166666667,
+      "end": 162.68879166666667,
+      "word": "with",
+      "original_start": 169.74,
+      "original_end": 170.3
+    },
+    {
+      "start": 162.68879166666667,
+      "end": 163.18879166666667,
+      "word": "historical",
+      "original_start": 170.3,
+      "original_end": 170.8
+    },
+    {
+      "start": 163.18879166666667,
+      "end": 163.94879166666666,
+      "word": "dispatches",
+      "original_start": 170.8,
+      "original_end": 171.56
+    },
+    {
+      "start": 163.94879166666666,
+      "end": 164.18879166666667,
+      "word": "kept",
+      "original_start": 171.56,
+      "original_end": 171.8
+    },
+    {
+      "start": 164.18879166666667,
+      "end": 164.72879166666667,
+      "word": "separate",
+      "original_start": 171.8,
+      "original_end": 172.34
+    },
+    {
+      "start": 164.72879166666667,
+      "end": 165.02879166666668,
+      "word": "from",
+      "original_start": 172.34,
+      "original_end": 172.64
+    },
+    {
+      "start": 165.02879166666668,
+      "end": 165.36879166666668,
+      "word": "current",
+      "original_start": 172.64,
+      "original_end": 172.98
+    },
+    {
+      "start": 165.36879166666668,
+      "end": 165.76879166666666,
+      "word": "stock",
+      "original_start": 172.98,
+      "original_end": 173.38
+    },
+    {
+      "start": 165.76879166666666,
+      "end": 166.56879166666667,
+      "word": "and",
+      "original_start": 173.38,
+      "original_end": 174.18
+    },
+    {
+      "start": 166.56879166666667,
+      "end": 166.92879166666665,
+      "word": "no",
+      "original_start": 174.18,
+      "original_end": 174.54
+    },
+    {
+      "start": 166.92879166666665,
+      "end": 167.60879166666666,
+      "word": "automatic",
+      "original_start": 174.54,
+      "original_end": 175.22
+    },
+    {
+      "start": 167.60879166666666,
+      "end": 167.96879166666668,
+      "word": "release",
+      "original_start": 175.22,
+      "original_end": 175.58
+    },
+    {
+      "start": 167.96879166666668,
+      "end": 168.46879166666668,
+      "word": "decision.",
+      "original_start": 175.58,
+      "original_end": 176.08
+    },
+    {
+      "start": 168.824375,
+      "end": 169.38058333333333,
+      "word": "Reports",
+      "original_start": 176.84,
+      "original_end": 177.56
+    },
+    {
+      "start": 169.38058333333333,
+      "end": 170.00058333333334,
+      "word": "preserve",
+      "original_start": 177.56,
+      "original_end": 178.18
+    },
+    {
+      "start": 170.00058333333334,
+      "end": 170.22058333333334,
+      "word": "the",
+      "original_start": 178.18,
+      "original_end": 178.4
+    },
+    {
+      "start": 170.22058333333334,
+      "end": 170.48058333333333,
+      "word": "case",
+      "original_start": 178.4,
+      "original_end": 178.66
+    },
+    {
+      "start": 170.48058333333333,
+      "end": 170.80058333333332,
+      "word": "as",
+      "original_start": 178.66,
+      "original_end": 178.98
+    },
+    {
+      "start": 170.80058333333332,
+      "end": 170.94058333333334,
+      "word": "a",
+      "original_start": 178.98,
+      "original_end": 179.12
+    },
+    {
+      "start": 170.94058333333334,
+      "end": 171.30058333333332,
+      "word": "fixed",
+      "original_start": 179.12,
+      "original_end": 179.48
+    },
+    {
+      "start": 171.30058333333332,
+      "end": 171.98058333333333,
+      "word": "snapshot",
+      "original_start": 179.48,
+      "original_end": 180.16
+    },
+    {
+      "start": 172.36058333333332,
+      "end": 172.84058333333334,
+      "word": "so",
+      "original_start": 180.54,
+      "original_end": 181.02
+    },
+    {
+      "start": 172.84058333333334,
+      "end": 173.16058333333334,
+      "word": "later",
+      "original_start": 181.02,
+      "original_end": 181.34
+    },
+    {
+      "start": 173.16058333333334,
+      "end": 173.54058333333333,
+      "word": "movements",
+      "original_start": 181.34,
+      "original_end": 181.72
+    },
+    {
+      "start": 173.54058333333333,
+      "end": 174.04058333333333,
+      "word": "cannot",
+      "original_start": 181.72,
+      "original_end": 182.22
+    },
+    {
+      "start": 174.04058333333333,
+      "end": 174.54058333333333,
+      "word": "rewrite",
+      "original_start": 182.22,
+      "original_end": 182.72
+    },
+    {
+      "start": 174.54058333333333,
+      "end": 174.88058333333333,
+      "word": "the",
+      "original_start": 182.72,
+      "original_end": 183.06
+    },
+    {
+      "start": 174.88058333333333,
+      "end": 175.22058333333334,
+      "word": "earlier",
+      "original_start": 183.06,
+      "original_end": 183.4
+    },
+    {
+      "start": 175.22058333333334,
+      "end": 175.60058333333333,
+      "word": "record.",
+      "original_start": 183.4,
+      "original_end": 183.78
+    },
+    {
+      "start": 175.95379166666666,
+      "end": 176.26070833333333,
+      "word": "The",
+      "original_start": 184.68,
+      "original_end": 185.0
+    },
+    {
+      "start": 176.26070833333333,
+      "end": 176.54070833333333,
+      "word": "original",
+      "original_start": 185.0,
+      "original_end": 185.28
+    },
+    {
+      "start": 176.54070833333333,
+      "end": 177.08070833333332,
+      "word": "documents,",
+      "original_start": 185.28,
+      "original_end": 185.82
+    },
+    {
+      "start": 177.60070833333333,
+      "end": 177.76070833333333,
+      "word": "review",
+      "original_start": 186.34,
+      "original_end": 186.5
+    },
+    {
+      "start": 177.76070833333333,
+      "end": 178.14070833333332,
+      "word": "notes",
+      "original_start": 186.5,
+      "original_end": 186.88
+    },
+    {
+      "start": 178.14070833333332,
+      "end": 178.84070833333334,
+      "word": "and",
+      "original_start": 186.88,
+      "original_end": 187.58
+    },
+    {
+      "start": 178.84070833333334,
+      "end": 179.18070833333334,
+      "word": "decision",
+      "original_start": 187.58,
+      "original_end": 187.92
+    },
+    {
+      "start": 179.18070833333334,
+      "end": 179.64070833333332,
+      "word": "history",
+      "original_start": 187.92,
+      "original_end": 188.38
+    },
+    {
+      "start": 179.64070833333332,
+      "end": 180.12070833333334,
+      "word": "stay",
+      "original_start": 188.38,
+      "original_end": 188.86
+    },
+    {
+      "start": 180.12070833333334,
+      "end": 180.62070833333334,
+      "word": "available",
+      "original_start": 188.86,
+      "original_end": 189.36
+    },
+    {
+      "start": 180.62070833333334,
+      "end": 181.24070833333334,
+      "word": "alongside",
+      "original_start": 189.36,
+      "original_end": 189.98
+    },
+    {
+      "start": 181.24070833333334,
+      "end": 181.76070833333333,
+      "word": "PDF",
+      "original_start": 189.98,
+      "original_end": 190.5
+    },
+    {
+      "start": 181.76070833333333,
+      "end": 182.36070833333332,
+      "word": "and",
+      "original_start": 190.5,
+      "original_end": 191.1
+    },
+    {
+      "start": 182.36070833333332,
+      "end": 182.76070833333333,
+      "word": "ledger",
+      "original_start": 191.1,
+      "original_end": 191.5
+    },
+    {
+      "start": 182.76070833333333,
+      "end": 183.28070833333334,
+      "word": "exports",
+      "original_start": 191.5,
+      "original_end": 192.02
+    },
+    {
+      "start": 183.28070833333334,
+      "end": 184.00070833333334,
+      "word": "with",
+      "original_start": 192.02,
+      "original_end": 192.74
+    },
+    {
+      "start": 184.00070833333334,
+      "end": 184.14070833333332,
+      "word": "an",
+      "original_start": 192.74,
+      "original_end": 192.88
+    },
+    {
+      "start": 184.14070833333332,
+      "end": 184.44070833333333,
+      "word": "evidence",
+      "original_start": 192.88,
+      "original_end": 193.18
+    },
+    {
+      "start": 184.44070833333333,
+      "end": 184.92070833333332,
+      "word": "package",
+      "original_start": 193.18,
+      "original_end": 193.66
+    },
+    {
+      "start": 184.92070833333332,
+      "end": 185.28070833333334,
+      "word": "and",
+      "original_start": 193.66,
+      "original_end": 194.02
+    },
+    {
+      "start": 185.28070833333334,
+      "end": 185.68070833333334,
+      "word": "content",
+      "original_start": 194.02,
+      "original_end": 194.42
+    },
+    {
+      "start": 185.68070833333334,
+      "end": 185.98070833333333,
+      "word": "hash",
+      "original_start": 194.42,
+      "original_end": 194.72
+    },
+    {
+      "start": 185.98070833333333,
+      "end": 186.48070833333333,
+      "word": "manifest",
+      "original_start": 194.72,
+      "original_end": 195.22
+    },
+    {
+      "start": 186.94070833333333,
+      "end": 187.34070833333334,
+      "word": "connecting",
+      "original_start": 195.68,
+      "original_end": 196.08
+    },
+    {
+      "start": 187.34070833333334,
+      "end": 188.06070833333334,
+      "word": "quantities",
+      "original_start": 196.08,
+      "original_end": 196.8
+    },
+    {
+      "start": 188.06070833333334,
+      "end": 188.44070833333333,
+      "word": "back",
+      "original_start": 196.8,
+      "original_end": 197.18
+    },
+    {
+      "start": 188.44070833333333,
+      "end": 188.64070833333332,
+      "word": "to",
+      "original_start": 197.18,
+      "original_end": 197.38
+    },
+    {
+      "start": 188.64070833333332,
+      "end": 188.82070833333333,
+      "word": "their",
+      "original_start": 197.38,
+      "original_end": 197.56
+    },
+    {
+      "start": 188.82070833333333,
+      "end": 189.24070833333334,
+      "word": "sources",
+      "original_start": 197.56,
+      "original_end": 197.98
+    },
+    {
+      "start": 189.76070833333333,
+      "end": 190.16070833333333,
+      "word": "ready",
+      "original_start": 198.5,
+      "original_end": 198.9
+    },
+    {
+      "start": 190.16070833333333,
+      "end": 190.42070833333332,
+      "word": "for",
+      "original_start": 198.9,
+      "original_end": 199.16
+    },
+    {
+      "start": 190.42070833333332,
+      "end": 190.54070833333333,
+      "word": "the",
+      "original_start": 199.16,
+      "original_end": 199.28
+    },
+    {
+      "start": 190.54070833333333,
+      "end": 191.02070833333335,
+      "word": "operations",
+      "original_start": 199.28,
+      "original_end": 199.76
+    },
+    {
+      "start": 191.02070833333335,
+      "end": 191.42070833333332,
+      "word": "and",
+      "original_start": 199.76,
+      "original_end": 200.16
+    },
+    {
+      "start": 191.42070833333332,
+      "end": 191.78070833333334,
+      "word": "quality",
+      "original_start": 200.16,
+      "original_end": 200.52
+    },
+    {
+      "start": 191.78070833333334,
+      "end": 192.18070833333334,
+      "word": "team",
+      "original_start": 200.52,
+      "original_end": 200.92
+    },
+    {
+      "start": 192.18070833333334,
+      "end": 192.38070833333333,
+      "word": "to",
+      "original_start": 200.92,
+      "original_end": 201.12
+    },
+    {
+      "start": 192.38070833333333,
+      "end": 192.96070833333334,
+      "word": "explain",
+      "original_start": 201.12,
+      "original_end": 201.7
+    },
+    {
+      "start": 192.96070833333334,
+      "end": 193.36070833333332,
+      "word": "and",
+      "original_start": 201.7,
+      "original_end": 202.1
+    },
+    {
+      "start": 193.36070833333332,
+      "end": 193.60070833333333,
+      "word": "hand",
+      "original_start": 202.1,
+      "original_end": 202.34
+    },
+    {
+      "start": 193.60070833333333,
+      "end": 193.90070833333334,
+      "word": "over.",
+      "original_start": 202.34,
+      "original_end": 202.64
+    },
+    {
+      "start": 194.19870833333334,
+      "end": 194.79870833333334,
+      "word": "Codex",
+      "original_start": 202.938,
+      "original_end": 203.538
+    },
+    {
+      "start": 194.79870833333334,
+      "end": 195.21870833333332,
+      "word": "agents",
+      "original_start": 203.538,
+      "original_end": 203.958
+    },
+    {
+      "start": 195.21870833333332,
+      "end": 195.79870833333334,
+      "word": "helped",
+      "original_start": 203.958,
+      "original_end": 204.538
+    },
+    {
+      "start": 195.79870833333334,
+      "end": 196.21870833333332,
+      "word": "build",
+      "original_start": 204.538,
+      "original_end": 204.958
+    },
+    {
+      "start": 196.21870833333332,
+      "end": 196.55870833333333,
+      "word": "the",
+      "original_start": 204.958,
+      "original_end": 205.298
+    },
+    {
+      "start": 196.55870833333333,
+      "end": 196.95870833333333,
+      "word": "system",
+      "original_start": 205.298,
+      "original_end": 205.698
+    },
+    {
+      "start": 196.95870833333333,
+      "end": 197.55870833333333,
+      "word": "across",
+      "original_start": 205.698,
+      "original_end": 206.298
+    },
+    {
+      "start": 197.55870833333333,
+      "end": 198.23870833333334,
+      "word": "idea",
+      "original_start": 206.298,
+      "original_end": 206.978
+    },
+    {
+      "start": 198.23870833333334,
+      "end": 198.87870833333332,
+      "word": "generation,",
+      "original_start": 206.978,
+      "original_end": 207.618
+    },
+    {
+      "start": 199.33870833333333,
+      "end": 199.73870833333334,
+      "word": "market",
+      "original_start": 208.078,
+      "original_end": 208.478
+    },
+    {
+      "start": 199.73870833333334,
+      "end": 200.23870833333334,
+      "word": "research,",
+      "original_start": 208.478,
+      "original_end": 208.978
+    },
+    {
+      "start": 200.85870833333334,
+      "end": 201.21870833333332,
+      "word": "interface",
+      "original_start": 209.598,
+      "original_end": 209.958
+    },
+    {
+      "start": 201.21870833333332,
+      "end": 201.81870833333332,
+      "word": "design,",
+      "original_start": 209.958,
+      "original_end": 210.558
+    },
+    {
+      "start": 202.23870833333334,
+      "end": 202.51870833333334,
+      "word": "custom",
+      "original_start": 210.978,
+      "original_end": 211.258
+    },
+    {
+      "start": 202.51870833333334,
+      "end": 202.97870833333334,
+      "word": "code,",
+      "original_start": 211.258,
+      "original_end": 211.718
+    },
+    {
+      "start": 203.49870833333333,
+      "end": 203.75870833333335,
+      "word": "testing,",
+      "original_start": 212.238,
+      "original_end": 212.498
+    },
+    {
+      "start": 204.15870833333332,
+      "end": 204.53870833333335,
+      "word": "deployment,",
+      "original_start": 212.898,
+      "original_end": 213.278
+    },
+    {
+      "start": 205.13870833333334,
+      "end": 205.21870833333332,
+      "word": "and",
+      "original_start": 213.878,
+      "original_end": 213.958
+    },
+    {
+      "start": 205.21870833333332,
+      "end": 205.53870833333335,
+      "word": "pitch",
+      "original_start": 213.958,
+      "original_end": 214.278
+    },
+    {
+      "start": 205.53870833333335,
+      "end": 206.05870833333333,
+      "word": "creation,",
+      "original_start": 214.278,
+      "original_end": 214.798
+    },
+    {
+      "start": 206.63870833333334,
+      "end": 206.83870833333333,
+      "word": "with",
+      "original_start": 215.378,
+      "original_end": 215.578
+    },
+    {
+      "start": 206.83870833333333,
+      "end": 208.35870833333334,
+      "word": "143",
+      "original_start": 215.578,
+      "original_end": 217.098
+    },
+    {
+      "start": 208.35870833333334,
+      "end": 208.91870833333334,
+      "word": "passing",
+      "original_start": 217.098,
+      "original_end": 217.658
+    },
+    {
+      "start": 208.91870833333334,
+      "end": 209.49870833333333,
+      "word": "automated",
+      "original_start": 217.658,
+      "original_end": 218.238
+    },
+    {
+      "start": 209.49870833333333,
+      "end": 210.17870833333333,
+      "word": "tests",
+      "original_start": 218.238,
+      "original_end": 218.918
+    },
+    {
+      "start": 210.17870833333333,
+      "end": 210.81870833333332,
+      "word": "recorded.",
+      "original_start": 218.918,
+      "original_end": 219.558
+    },
+    {
+      "start": 211.53870833333335,
+      "end": 211.91870833333334,
+      "word": "Live",
+      "original_start": 220.278,
+      "original_end": 220.658
+    },
+    {
+      "start": 211.91870833333334,
+      "end": 212.35870833333334,
+      "word": "models",
+      "original_start": 220.658,
+      "original_end": 221.098
+    },
+    {
+      "start": 212.35870833333334,
+      "end": 213.01870833333334,
+      "word": "interpret",
+      "original_start": 221.098,
+      "original_end": 221.758
+    },
+    {
+      "start": 213.01870833333334,
+      "end": 213.61870833333333,
+      "word": "documents",
+      "original_start": 221.758,
+      "original_end": 222.358
+    },
+    {
+      "start": 213.61870833333333,
+      "end": 214.21870833333332,
+      "word": "while",
+      "original_start": 222.358,
+      "original_end": 222.958
+    },
+    {
+      "start": 214.21870833333332,
+      "end": 214.75870833333335,
+      "word": "explicit",
+      "original_start": 222.958,
+      "original_end": 223.498
+    },
+    {
+      "start": 214.75870833333335,
+      "end": 215.31870833333332,
+      "word": "operator",
+      "original_start": 223.498,
+      "original_end": 224.058
+    },
+    {
+      "start": 215.31870833333332,
+      "end": 215.77870833333333,
+      "word": "review",
+      "original_start": 224.058,
+      "original_end": 224.518
+    },
+    {
+      "start": 215.77870833333333,
+      "end": 216.51870833333334,
+      "word": "and",
+      "original_start": 224.518,
+      "original_end": 225.258
+    },
+    {
+      "start": 216.51870833333334,
+      "end": 217.41870833333334,
+      "word": "deterministic",
+      "original_start": 225.258,
+      "original_end": 226.158
+    },
+    {
+      "start": 217.41870833333334,
+      "end": 217.97870833333334,
+      "word": "accounting",
+      "original_start": 226.158,
+      "original_end": 226.718
+    },
+    {
+      "start": 217.97870833333334,
+      "end": 218.79870833333334,
+      "word": "govern",
+      "original_start": 226.718,
+      "original_end": 227.538
+    },
+    {
+      "start": 218.79870833333334,
+      "end": 219.07870833333334,
+      "word": "the",
+      "original_start": 227.538,
+      "original_end": 227.818
+    },
+    {
+      "start": 219.07870833333334,
+      "end": 219.75870833333335,
+      "word": "operational",
+      "original_start": 227.818,
+      "original_end": 228.498
+    },
+    {
+      "start": 219.75870833333335,
+      "end": 220.23870833333334,
+      "word": "record,",
+      "original_start": 228.498,
+      "original_end": 228.978
+    },
+    {
+      "start": 220.85870833333334,
+      "end": 221.25870833333335,
+      "word": "bringing",
+      "original_start": 229.598,
+      "original_end": 229.998
+    },
+    {
+      "start": 221.25870833333335,
+      "end": 222.03870833333335,
+      "word": "agentic",
+      "original_start": 229.998,
+      "original_end": 230.778
+    },
+    {
+      "start": 222.03870833333335,
+      "end": 222.27870833333333,
+      "word": "AI",
+      "original_start": 230.778,
+      "original_end": 231.018
+    },
+    {
+      "start": 222.27870833333333,
+      "end": 222.91870833333334,
+      "word": "development",
+      "original_start": 231.018,
+      "original_end": 231.658
+    },
+    {
+      "start": 222.91870833333334,
+      "end": 223.67870833333333,
+      "word": "and",
+      "original_start": 231.658,
+      "original_end": 232.418
+    },
+    {
+      "start": 223.67870833333333,
+      "end": 224.17870833333333,
+      "word": "practical",
+      "original_start": 232.418,
+      "original_end": 232.918
+    },
+    {
+      "start": 224.17870833333333,
+      "end": 224.65870833333332,
+      "word": "AI",
+      "original_start": 232.918,
+      "original_end": 233.398
+    },
+    {
+      "start": 224.65870833333332,
+      "end": 225.25870833333335,
+      "word": "assistance",
+      "original_start": 233.398,
+      "original_end": 233.998
+    },
+    {
+      "start": 225.25870833333335,
+      "end": 225.95870833333333,
+      "word": "into",
+      "original_start": 233.998,
+      "original_end": 234.698
+    },
+    {
+      "start": 225.95870833333333,
+      "end": 226.33870833333333,
+      "word": "one",
+      "original_start": 234.698,
+      "original_end": 235.078
+    },
+    {
+      "start": 226.33870833333333,
+      "end": 226.91870833333334,
+      "word": "focused",
+      "original_start": 235.078,
+      "original_end": 235.658
+    },
+    {
+      "start": 226.91870833333334,
+      "end": 227.35870833333334,
+      "word": "product.",
+      "original_start": 235.658,
+      "original_end": 236.098
+    },
+    {
+      "start": 227.863,
+      "end": 228.183,
+      "word": "Open",
+      "original_start": 236.998,
+      "original_end": 237.318
+    },
+    {
+      "start": 228.183,
+      "end": 228.643,
+      "word": "recall",
+      "original_start": 237.318,
+      "original_end": 237.778
+    },
+    {
+      "start": 228.643,
+      "end": 229.083,
+      "word": "scope",
+      "original_start": 237.778,
+      "original_end": 238.218
+    },
+    {
+      "start": 229.083,
+      "end": 229.523,
+      "word": "to",
+      "original_start": 238.218,
+      "original_end": 238.658
+    },
+    {
+      "start": 229.523,
+      "end": 229.863,
+      "word": "follow",
+      "original_start": 238.658,
+      "original_end": 238.998
+    },
+    {
+      "start": 229.863,
+      "end": 230.063,
+      "word": "a",
+      "original_start": 238.998,
+      "original_end": 239.198
+    },
+    {
+      "start": 230.063,
+      "end": 230.363,
+      "word": "batch,",
+      "original_start": 239.198,
+      "original_end": 239.498
+    },
+    {
+      "start": 231.003,
+      "end": 231.383,
+      "word": "review",
+      "original_start": 240.138,
+      "original_end": 240.518
+    },
+    {
+      "start": 231.383,
+      "end": 231.583,
+      "word": "a",
+      "original_start": 240.518,
+      "original_end": 240.718
+    },
+    {
+      "start": 231.583,
+      "end": 231.943,
+      "word": "receipt,",
+      "original_start": 240.718,
+      "original_end": 241.078
+    },
+    {
+      "start": 232.503,
+      "end": 232.743,
+      "word": "and",
+      "original_start": 241.638,
+      "original_end": 241.878
+    },
+    {
+      "start": 232.743,
+      "end": 233.223,
+      "word": "inspect",
+      "original_start": 241.878,
+      "original_end": 242.358
+    },
+    {
+      "start": 233.223,
+      "end": 233.703,
+      "word": "its",
+      "original_start": 242.358,
+      "original_end": 242.838
+    },
+    {
+      "start": 233.703,
+      "end": 234.183,
+      "word": "evidence",
+      "original_start": 242.838,
+      "original_end": 243.318
+    },
+    {
+      "start": 234.183,
+      "end": 235.183,
+      "word": "using",
+      "original_start": 243.318,
+      "original_end": 244.318
+    },
+    {
+      "start": 235.183,
+      "end": 235.423,
+      "word": "the",
+      "original_start": 244.318,
+      "original_end": 244.558
+    },
+    {
+      "start": 235.423,
+      "end": 235.843,
+      "word": "complete",
+      "original_start": 244.558,
+      "original_end": 244.978
+    },
+    {
+      "start": 235.843,
+      "end": 236.543,
+      "word": "guided",
+      "original_start": 244.978,
+      "original_end": 245.678
+    },
+    {
+      "start": 236.543,
+      "end": 237.143,
+      "word": "workflow",
+      "original_start": 245.678,
+      "original_end": 246.278
+    },
+    {
+      "start": 237.143,
+      "end": 237.743,
+      "word": "without",
+      "original_start": 246.278,
+      "original_end": 246.878
+    },
+    {
+      "start": 237.743,
+      "end": 238.123,
+      "word": "your",
+      "original_start": 246.878,
+      "original_end": 247.258
+    },
+    {
+      "start": 238.123,
+      "end": 238.383,
+      "word": "own",
+      "original_start": 247.258,
+      "original_end": 247.518
+    },
+    {
+      "start": 238.383,
+      "end": 238.723,
+      "word": "key,",
+      "original_start": 247.518,
+      "original_end": 247.858
+    },
+    {
+      "start": 239.303,
+      "end": 239.623,
+      "word": "or",
+      "original_start": 248.438,
+      "original_end": 248.758
+    },
+    {
+      "start": 239.623,
+      "end": 240.103,
+      "word": "choosing",
+      "original_start": 248.758,
+      "original_end": 249.238
+    },
+    {
+      "start": 240.103,
+      "end": 240.523,
+      "word": "live",
+      "original_start": 249.238,
+      "original_end": 249.658
+    },
+    {
+      "start": 240.523,
+      "end": 241.123,
+      "word": "AI",
+      "original_start": 249.658,
+      "original_end": 250.258
+    },
+    {
+      "start": 241.123,
+      "end": 241.663,
+      "word": "through",
+      "original_start": 250.258,
+      "original_end": 250.798
+    },
+    {
+      "start": 241.663,
+      "end": 241.843,
+      "word": "the",
+      "original_start": 250.798,
+      "original_end": 250.978
+    },
+    {
+      "start": 241.843,
+      "end": 242.223,
+      "word": "private",
+      "original_start": 250.978,
+      "original_end": 251.358
+    },
+    {
+      "start": 242.223,
+      "end": 242.623,
+      "word": "server",
+      "original_start": 251.358,
+      "original_end": 251.758
+    },
+    {
+      "start": 242.623,
+      "end": 243.143,
+      "word": "connection.",
+      "original_start": 251.758,
+      "original_end": 252.278
+    },
+    {
+      "start": 243.143,
+      "end": 243.934875,
+      "word": "Know",
+      "original_start": 252.278,
+      "original_end": 253.438
+    },
+    {
+      "start": 243.934875,
+      "end": 244.414875,
+      "word": "where",
+      "original_start": 253.438,
+      "original_end": 253.918
+    },
+    {
+      "start": 244.414875,
+      "end": 244.914875,
+      "word": "every",
+      "original_start": 253.918,
+      "original_end": 254.418
+    },
+    {
+      "start": 244.914875,
+      "end": 245.534875,
+      "word": "affected",
+      "original_start": 254.418,
+      "original_end": 255.038
+    },
+    {
+      "start": 245.534875,
+      "end": 245.894875,
+      "word": "batch",
+      "original_start": 255.038,
+      "original_end": 255.398
+    },
+    {
+      "start": 245.894875,
+      "end": 246.314875,
+      "word": "went",
+      "original_start": 255.398,
+      "original_end": 255.818
+    },
+    {
+      "start": 246.314875,
+      "end": 247.194875,
+      "word": "and",
+      "original_start": 255.818,
+      "original_end": 256.698
+    },
+    {
+      "start": 247.194875,
+      "end": 247.594875,
+      "word": "account",
+      "original_start": 256.698,
+      "original_end": 257.098
+    },
+    {
+      "start": 247.594875,
+      "end": 248.034875,
+      "word": "for",
+      "original_start": 257.098,
+      "original_end": 257.538
+    },
+    {
+      "start": 248.034875,
+      "end": 248.214875,
+      "word": "what",
+      "original_start": 257.538,
+      "original_end": 257.718
+    },
+    {
+      "start": 248.214875,
+      "end": 248.554875,
+      "word": "comes",
+      "original_start": 257.718,
+      "original_end": 258.058
+    },
+    {
+      "start": 248.554875,
+      "end": 248.874875,
+      "word": "back.",
+      "original_start": 258.058,
+      "original_end": 258.378
+    }
+  ],
+  "cues": [
+    {
+      "key": "hook",
+      "section": "s01",
+      "phrase": "where did this batch go",
+      "start": 4.3,
+      "end": 5.44,
+      "match_confidence": 1.0,
+      "original_start": 3.5,
+      "original_end": 4.64,
+      "video_frame": 258
+    },
+    {
+      "key": "workspace_identity",
+      "section": "s02",
+      "phrase": "six medicines and nine product-specific batches",
+      "start": 29.501583333333333,
+      "end": 32.761583333333334,
+      "match_confidence": 1.0,
+      "original_start": 29.18,
+      "original_end": 32.44,
+      "video_frame": 1770
+    },
+    {
+      "key": "trace_destinations",
+      "section": "s03",
+      "phrase": "six hundred were dispatched",
+      "start": 59.16908333333333,
+      "end": 60.46908333333333,
+      "match_confidence": 1.0,
+      "original_start": 59.28,
+      "original_end": 60.58,
+      "video_frame": 3550
+    },
+    {
+      "key": "same_code",
+      "section": "s03",
+      "phrase": "Now compare amoxicillin",
+      "start": 67.30470833333334,
+      "end": 69.18470833333333,
+      "match_confidence": 1.0,
+      "original_start": 68.42,
+      "original_end": 70.3,
+      "video_frame": 4038
+    },
+    {
+      "key": "provider_options",
+      "section": "s04",
+      "phrase": "Fireworks and OpenAI",
+      "start": 90.34841666666667,
+      "end": 91.76841666666667,
+      "match_confidence": 1.0,
+      "original_start": 93.14,
+      "original_end": 94.56,
+      "video_frame": 5421
+    },
+    {
+      "key": "guided_notice",
+      "section": "s04",
+      "phrase": "guided receipt is pre-filled",
+      "start": 109.732,
+      "end": 111.352,
+      "match_confidence": 1.0,
+      "original_start": 113.62,
+      "original_end": 115.24,
+      "video_frame": 6584
+    },
+    {
+      "key": "receipt_posted",
+      "section": "s04",
+      "phrase": "available stock rise from four hundred to four hundred and forty",
+      "start": 121.66554166666667,
+      "end": 125.34554166666666,
+      "match_confidence": 1.0,
+      "original_start": 126.54,
+      "original_end": 130.22,
+      "video_frame": 7300
+    },
+    {
+      "key": "partial_start",
+      "section": "s05",
+      "phrase": "one hundred boxes returned and five hundred outstanding",
+      "start": 132.79445833333332,
+      "end": 136.27445833333334,
+      "match_confidence": 1.0,
+      "original_start": 138.7,
+      "original_end": 142.18,
+      "video_frame": 7968
+    },
+    {
+      "key": "returned_120",
+      "section": "s05",
+      "phrase": "one hundred and twenty",
+      "start": 144.514375,
+      "end": 145.414375,
+      "match_confidence": 1.0,
+      "original_start": 151.44,
+      "original_end": 152.34,
+      "video_frame": 8671
+    },
+    {
+      "key": "outstanding_480",
+      "section": "s05",
+      "phrase": "four hundred and eighty",
+      "start": 148.974375,
+      "end": 150.034375,
+      "match_confidence": 1.0,
+      "original_start": 155.9,
+      "original_end": 156.96,
+      "video_frame": 8938
+    },
+    {
+      "key": "completed_case",
+      "section": "s05",
+      "phrase": "the completed scenario",
+      "start": 153.073375,
+      "end": 154.44879166666666,
+      "match_confidence": 1.0,
+      "original_start": 160.5,
+      "original_end": 162.06,
+      "video_frame": 9184
+    },
+    {
+      "key": "snapshot",
+      "section": "s06",
+      "phrase": "fixed snapshot",
+      "start": 170.94058333333334,
+      "end": 171.98058333333333,
+      "match_confidence": 1.0,
+      "original_start": 179.12,
+      "original_end": 180.16,
+      "video_frame": 10256
+    },
+    {
+      "key": "export_manifest",
+      "section": "s06",
+      "phrase": "content-hash manifest",
+      "start": 185.28070833333334,
+      "end": 186.48070833333333,
+      "match_confidence": 1.0,
+      "original_start": 194.02,
+      "original_end": 195.22,
+      "video_frame": 11117
+    },
+    {
+      "key": "tests",
+      "section": "s07",
+      "phrase": "one hundred and forty-three passing automated tests",
+      "start": 206.83870833333333,
+      "end": 210.17870833333333,
+      "match_confidence": 1.0,
+      "original_start": 215.578,
+      "original_end": 218.918,
+      "video_frame": 12410
+    },
+    {
+      "key": "tagline",
+      "section": "s08",
+      "phrase": "Know where every affected batch went",
+      "start": 243.143,
+      "end": 246.314875,
+      "match_confidence": 1.0,
+      "original_start": 252.278,
+      "original_end": 255.818,
+      "video_frame": 14589
+    }
+  ],
+  "edit_summary": {
+    "cuts": 20,
+    "removed_seconds": 10.303125,
+    "kept_pcm_identical": true,
+    "speech_rate_change": false,
+    "time_stretch": false
+  }
+}

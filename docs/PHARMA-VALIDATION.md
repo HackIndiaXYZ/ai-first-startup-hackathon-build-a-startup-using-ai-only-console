@@ -91,9 +91,15 @@ These are observed browser checks, not a claim of exhaustive accessibility confo
 - Light and night layouts were inspected. Navigation focus uses an inset outline so its scroll container does not clip the indicator. No browser warnings or errors were captured during this pass.
 - Direct navigation to `/bakery` returned to `/` and displayed the pharmaceutical overview. Settings exposed no earlier-edition link. The active catalogue contained six pharmaceutical products; source inspection found no food-production examples in the active seed or guided templates.
 
-Viewport checks exercise the page layout; they do not automate the Windows taskbar or operating-system display scaling. No industrial trial or video production was performed.
+Viewport checks exercise the page layout; they do not automate the Windows taskbar or operating-system display scaling. That interface follow-up did not include an industrial trial or video production.
 
-Current project materials contain the pharmaceutical pitch, screenshots and fixture corpus. Superseded presentation assets and their documentation are recoverable from Git history. Provider verification for this edition uses controlled responses; no live pharmaceutical extraction accuracy result is claimed.
+Current project materials contain the pharmaceutical pitch, product references and fixture corpus. Superseded presentation assets and their documentation are recoverable from Git history. Provider verification for this edition uses controlled responses; no live pharmaceutical extraction accuracy result is claimed.
+
+## 4 October presentation follow-up
+
+The separate eight-slide pharmaceutical pitch was rebuilt in code using native text, diagrams and three editable tables. Package, geometry, typeface and import checks passed. Every slide was inspected individually in artifact renders and native PowerPoint PDF output. The PPTX has zero embedded media assets; the PDF has zero embedded images and retains selectable text. Sources and quantitative scope are recorded in slide notes. [Pitch](RecallScope-Pharma-Pitch.pptx), [PDF](RecallScope-Pharma-Pitch.pdf), [source](media-source/pitch/README.md).
+
+The [coded animated walkthrough](RecallScope-Pharma-Demo.mp4) follows the pharmaceutical scenarios with Higgsfield narration. It is an authored visual demonstration of the implemented workflow, not captured browser footage or a live provider benchmark. Final frame, audio, duration and file verification is recorded in [release evidence](../product/verification/pharma-release.json). This media work does not change the application source, deployed version or recorded software test results.
 
 ## Re-run
 

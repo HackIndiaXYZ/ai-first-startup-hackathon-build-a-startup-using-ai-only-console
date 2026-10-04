@@ -27,7 +27,7 @@ The existing local checkout and dependencies survived the earlier attempted clea
 - Reusable foundations: Fireworks extraction, configurable OpenAI adapter, evidence preservation, explicit review decisions, session isolation, stale-write protection, saved report snapshots, light/night/system themes.
 - Restored baseline persistence: bounded workspace JSON in D1, original files in R2, browser-session identity. Product catalogues, stock ledgers and team accounts were subsequent pharmaceutical work.
 
-This restoration section records the starting baseline. The pharmaceutical schema, movement ledger, recall accounting, template-first intake and evidence exports are now published, with the interface follow-up in version 3. The public workspace is pharmaceutical-only: the former `/bakery` route redirects to `/`, and the earlier-edition Settings link has been removed. Legacy records remain preserved separately, with the former interface in Git history. Superseded presentation assets have been removed from the current project files; the pharmaceutical walkthrough video is on hold at the owner's request. See the current [pharmaceutical verification record](PHARMA-VALIDATION.md).
+This restoration section records the starting baseline. The pharmaceutical schema, movement ledger, recall accounting, template-first intake and evidence exports are now published, with the interface follow-up in version 3. The public workspace is pharmaceutical-only: the former route redirects to `/`, and the earlier-edition Settings link has been removed. Legacy records remain preserved separately, with the former interface in Git history. Current presentation materials use coded pharmaceutical visuals, a separate native vector pitch and the corresponding narration script. See the current [pharmaceutical verification record](PHARMA-VALIDATION.md).
 
 ### Restoration verification
 
@@ -82,7 +82,7 @@ NPRA's GDP guidance discusses expiry-based stock rotation, stock reconciliation,
 | Temperature / public notices | Source-linked Celsius observations and explicitly supplied policies; public-notice retrieval is read-only and human-reviewed. No medical safety decision or automatic recall action |
 | Processing and retention | Indexed record persistence and bounded document jobs; tables paginate the current bounded workspace in the browser. Manual backup/restore and administrator-approved expired-preview metadata cleanup are available. [Retention policy](DATA-RETENTION.md) |
 | Operational evidence | Database-only `/api/health`, actual SQLite transaction/race checks, independently decoded evidence ZIPs and parsed PDF exports. Environment-labelled synthetic 1,000/10,000-movement timings are saved under `product/verification/` |
-| Presentation / release | Pharmaceutical application version 2 is published. README, screenshots, editable pitch, AI record, written walkthrough and alternatives research match this edition. The new video is on hold at the owner's request |
+| Presentation / release | Pharmaceutical application version 3 is published. README, product references, native vector pitch, AI record, coded video and narration describe this edition. Final video inspection is tracked in the release evidence |
 
 The final integrated unit run passed **143/143** checks. Both retained bakery and pharmaceutical API suites passed on localhost without a live AI call. Browser evidence covers the complete selected-batch workflow and presentation behaviors described above. Final production-build completion and the release secret scan are tracked separately in [PHARMA-VALIDATION.md](PHARMA-VALIDATION.md).
 
@@ -202,7 +202,7 @@ The implementation exposes explicit GS1 and EPCIS subsets described in the verif
 - [x] **74 · P2 — Alternatives research.** Compare current distributor software, document processes and traceability tools using dated primary sources. Distinguish observed features from our proposed advantages.
 - [x] **75 · P2 — Commercial model.** Build a transparent cost model for hosting, extraction, storage and support. Treat pricing, adoption, savings and willingness to pay as hypotheses until measured.
 - [x] **76 · P1 — Coherent sample scenario.** Create a labelled fictional distributor dataset with internally consistent products, batches, receipts, transfers, dispatches and returns. Maintain separate difficult fixtures for correctness checks.
-- [ ] **77 · P2 — Matched submission assets; video on hold.** README, screenshots, pharmaceutical pitch, written walkthrough and AI usage record are updated. The owner paused the new video on 4 October; its existing draft work is preserved. Superseded footage links, captions, stills and pitch files have been removed from the current project files.
+- [x] **77 · P2 — Matched submission assets.** README, pharmaceutical [vector pitch](RecallScope-Pharma-Pitch.pptx), [PDF](RecallScope-Pharma-Pitch.pdf), [narration script](DEMO-SCRIPT.md) and AI usage record are updated. The [pharmaceutical walkthrough](RecallScope-Pharma-Demo.mp4) follows the implemented workflow, with final audio/visual and duration verification tracked in [release evidence](../product/verification/pharma-release.json). Superseded media links are absent from current materials.
 - [x] **78 · P2 — Release evidence.** [Build record](BUILD-STATUS.md) records the published application revision, successful deployment, checks, live URL and bounded feature scope. Official competition requirements were rechecked before release; no organizer submission receipt, invented customer, certification or guaranteed prize is claimed.
 
 ## Proposed replacement for the item list
@@ -250,14 +250,16 @@ Add a second product with the same printed batch code and confirm it remains out
 | 2 · Complete recall workflow | Cases, holds, affected recipients, returns, reconciliation and fixed report | The known-total scenario and partial-return scenario pass in domain, API and browser checks |
 | 3 · Document intelligence | Pharma extraction schema, evidence-linked review, deduplication, provider controls and import recovery | Approved imports produce the expected movements; malformed/ambiguous proposals do not silently change stock |
 | 4 · Product hardening | Team access, exports, audit history, recovery, accessibility and measured scale | Isolation, roles, backup restore and representative browser journeys pass with recorded evidence |
-| 5 · Presentation and release | Updated screenshots, deck, concise video, documentation and deployment matching the built scope | Every showcased feature is usable and every factual claim maps to evidence |
+| 5 · Presentation and release | Coded animated walkthrough, separate native vector deck/PDF, documentation and deployment matching the built scope | Every showcased feature is usable, each authored scenario is identified and every factual claim maps to evidence |
 | Later · Integrations | Barcode, serialisation, EPCIS, ERP and temperature data | Add independently after the core workflow is stable and supported format/scope is explicit |
 
-**Current sequence:** milestones 1–4 are implemented with bounded integration profiles, 143 passing unit checks, both API suites and the observed browser journeys. Build and release scan passed; application version 2 is live. The pharmaceutical pitch and documentation are updated. The video portion of milestone 5 is on hold by request, and native vendor ERP adapters remain a future scoped integration.
+**Current sequence:** milestones 1–4 are implemented with bounded integration profiles, 143 passing unit checks, both API suites and the observed browser journeys. Build and release scan passed; application version 3 is live. The native vector pitch/PDF and documentation are updated. Milestone 5 is complete: the 4:11 coded video passed the frame, narration, caption and full-decode checks recorded in release evidence. Native vendor ERP adapters remain a future scoped integration.
 
 ## Visual decision
 
 Keep the current restrained visual style and night mode. Add a clear product identity, readable tables, a compact stock movement graph, an expiry timeline and an evidence-linked reconciliation breakdown. Animate only selection and state transitions. One restrained illustration could help a future landing page, but generated luxury imagery has lower priority than a working recall workflow and is unnecessary for this build.
+
+Presentation media has its own motion design. The video uses coded product layouts and animated trace paths, reviews and quantities; the separate pitch uses editable text and vectors. Product fonts stay unchanged. Editorial media headings can use a restrained contrasting typeface, and no webpage screenshot supplies the video or pitch layout.
 
 ## How this could improve the competition entry
 

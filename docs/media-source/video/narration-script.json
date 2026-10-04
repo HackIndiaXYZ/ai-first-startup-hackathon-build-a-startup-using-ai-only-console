@@ -1,0 +1,69 @@
+{
+  "project": "RecallScope",
+  "edition": "Pharmaceutical distributors and wholesalers",
+  "target_duration_seconds": [
+    180,
+    300
+  ],
+  "planned_duration_seconds": 251.21666666666667,
+  "status": "final-edited-narration",
+  "sections": [
+    {
+      "id": "s01",
+      "title": "Every box has a story",
+      "target_seconds": 20,
+      "text": "A medicine recall begins with a simple question: where did this batch go? For a distributor, the answer can be scattered across receipts, warehouse records, delivery notes and returned boxes. RecallScope brings that story together, so the team can trace each movement and account for what comes back."
+    },
+    {
+      "id": "s02",
+      "title": "One operational workspace",
+      "target_seconds": 30,
+      "text": "This is RecallScope for pharmaceutical distributors and wholesalers. We are following Asterbridge Distribution, a fictional workspace with six medicines and nine product-specific batches. The overview connects stock, deliveries, recalls and evidence in one place. Open a product to see its strength, presentation, expiry and recorded quantities, then move directly to the batch, warehouse or recipient behind the number. The familiar workspace stays consistent in light and night mode."
+    },
+    {
+      "id": "s03",
+      "title": "Identity before matching",
+      "target_seconds": 30,
+      "text": "Here is the paracetamol batch. One thousand boxes were received, and six hundred were dispatched to four customer sites. The trace connects the supplier, two warehouses and those destinations. Now compare amoxicillin: its printed batch code is identical. RecallScope keeps the two medicines separate because product identity matters as much as the batch label. A matching string alone must never merge stock or expand a recall."
+    },
+    {
+      "id": "s04",
+      "title": "AI interprets. People approve.",
+      "target_seconds": 45,
+      "text": "Document intake offers guided examples, structured CSV import and live AI assistance. Fireworks and OpenAI can interpret text, images and PDFs into proposed receipts or dispatches. The original source remains alongside every proposal, and deterministic checks validate identifiers, quantities and units before an operator approves. For this walkthrough, the guided receipt is pre-filled and needs no API key. Review forty boxes of a separate available paracetamol batch, compare the source, and save the decision. Only then does available stock rise from four hundred to four hundred and forty. Repeating that document cannot post the same receipt twice."
+    },
+    {
+      "id": "s05",
+      "title": "Account for every return",
+      "target_seconds": 40,
+      "text": "We switch to the active recall scenario, with one hundred boxes returned and five hundred outstanding, then review twenty more returned boxes against their original dispatch. Approval raises returns to one hundred and twenty and reduces outstanding quantity to four hundred and eighty, while the boxes stay quarantined; the completed scenario accounts for all six hundred dispatched boxes returning and all one thousand boxes remaining in quarantine, with historical dispatches kept separate from current stock and no automatic release decision."
+    },
+    {
+      "id": "s06",
+      "title": "Evidence that travels",
+      "target_seconds": 30,
+      "text": "Reports preserve the case as a fixed snapshot, so later movements cannot rewrite the earlier record. The original documents, review notes and decision history stay available alongside PDF and ledger exports, with an evidence package and content-hash manifest connecting quantities back to their sources, ready for the operations and quality team to explain and hand over."
+    },
+    {
+      "id": "s07",
+      "title": "Built through agentic AI",
+      "target_seconds": 25,
+      "text": "Codex agents helped build the system across idea generation, market research, interface design, custom code, testing, deployment and pitch creation, with one hundred and forty-three passing automated tests recorded. Live models interpret documents while explicit operator review and deterministic accounting govern the operational record, bringing agentic AI development and practical AI assistance into one focused product."
+    },
+    {
+      "id": "s08",
+      "title": "Trace. Review. Account.",
+      "target_seconds": 20,
+      "text": "Open RecallScope to follow a batch, review a receipt and inspect its evidence, using the complete guided workflow without your own key or choosing live AI through the private server connection. Know where every affected batch went, and account for what comes back."
+    }
+  ],
+  "delivery": "Clear, composed professional explainer; natural conversational pace; warm, authoritative, precise; no theatrical delivery.",
+  "voice": {
+    "name": "Grady",
+    "voice_id": "e2a2d2e6-9ed2-59cd-82af-feaa27f8a678",
+    "voice_type": "preset"
+  },
+  "model": "seed_audio",
+  "selection_note": "Higgsfield Grady narration; selected clean takes; silence-only editing with preserved voiced samples. No speed or pitch change.",
+  "word_count": 514
+}

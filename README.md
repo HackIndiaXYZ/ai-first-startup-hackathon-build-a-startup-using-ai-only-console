@@ -12,9 +12,11 @@
 
 **Judges need no API key.** Guided document examples and structured CSV imports provide a complete source → review → stock → recall workflow. Guided examples use pre-filled proposals without a live model call; optional live extraction uses a privately configured server-side provider.
 
-[Run locally](#run-locally) · [Three-minute walkthrough](#walkthrough-without-an-api-key) · [Verification](docs/PHARMA-VALIDATION.md) · [AI build record](docs/AI-USAGE.md) · [Product and alternatives](docs/PHARMA-ALTERNATIVES.md) · [Development roadmap](docs/PHARMA-DISTRIBUTION-ROADMAP.md) · [Retention and recovery](docs/DATA-RETENTION.md)
+[Watch the walkthrough](docs/RecallScope-Pharma-Demo.mp4) · [Pitch PDF](docs/RecallScope-Pharma-Pitch.pdf) · [Try it yourself](#walkthrough-without-an-api-key) · [Run locally](#run-locally) · [Verification](docs/PHARMA-VALIDATION.md) · [AI build record](docs/AI-USAGE.md) · [Product and alternatives](docs/PHARMA-ALTERNATIVES.md)
 
-**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The public workspace and current project materials are pharmaceutical-only. The updated walkthrough video is on hold at the owner's request.
+**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The public workspace and current project materials are pharmaceutical-only.
+
+The **4:11, 1080p / 60 fps** narrated [product walkthrough](docs/RecallScope-Pharma-Demo.mp4) uses coded animation and product visuals to explain the implemented workflow. It preserves the application's visual identity and shows authored pharmaceutical scenarios. The separate [editable pitch](docs/RecallScope-Pharma-Pitch.pptx) and [PDF](docs/RecallScope-Pharma-Pitch.pdf) use native text and vectors. Their visual layouts do not depend on webpage screenshots. [English captions](docs/RecallScope-Pharma-Demo.srt) and the [complete coded film source](docs/media-source/video/README.md) are included.
 
 ![RecallScope pharmaceutical distribution workspace](docs/screenshots/pharma/pharma-overview.jpg)
 
@@ -100,12 +102,12 @@ npm run test:api
 
 The API checks require the local server. They use isolated synthetic sessions and do not call paid AI providers. [Pharmaceutical verification](docs/PHARMA-VALIDATION.md) separates automated results, browser journeys, standards-subset checks and the scope of provider verification.
 
-- [Current demonstration script](docs/DEMO-SCRIPT.md)
+- [Coded pharmaceutical walkthrough](docs/RecallScope-Pharma-Demo.mp4) and [narration script](docs/DEMO-SCRIPT.md)
 - [AI usage and development decisions](docs/AI-USAGE.md)
 - [Official-source alternatives and commercial hypothesis](docs/PHARMA-ALTERNATIVES.md)
 - [Roadmap and implementation scope](docs/PHARMA-DISTRIBUTION-ROADMAP.md)
 - [Pharmaceutical source fixtures](product/fixtures/pharma/README.md)
-- [Pharmaceutical pitch deck](docs/RecallScope-Pharma-Pitch.pptx)
+- [Editable pharmaceutical pitch](docs/RecallScope-Pharma-Pitch.pptx), [vector PDF](docs/RecallScope-Pharma-Pitch.pdf) and [pitch source](docs/media-source/pitch/README.md)
 - [Credential handling and rotation](docs/SECRET-HANDLING.md)
 
 Built for **Team Console · HackIndia AI-First Startup Hackathon**. The original [MIT license](LICENSE) is preserved; dependencies retain their own licenses.

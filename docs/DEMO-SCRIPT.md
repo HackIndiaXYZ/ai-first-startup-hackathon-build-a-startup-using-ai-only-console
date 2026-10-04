@@ -1,73 +1,61 @@
-# RecallScope pharmaceutical walkthrough
+# RecallScope pharmaceutical demonstration
 
-**Current edition: pharmaceutical distributors and wholesalers.** This is a planned three-minute live walkthrough script, not a claim that a new video has already been produced. Video production is on hold at the owner's request.
+**Current edition: pharmaceutical distributors and wholesalers.** The [video](RecallScope-Pharma-Demo.mp4) uses coded animation and pharmaceutical product visuals with Higgsfield Grady narration. Its visual identity follows the current application. The pitch is a separate [editable deck](RecallScope-Pharma-Pitch.pptx) and [vector PDF](RecallScope-Pharma-Pitch.pdf).
 
-The presenter uses the labelled fictional Asterbridge Distribution workspace. Start with a fresh **completed** sample scenario so the known quantities below are reproducible. No API key or paid request is required.
+The film illustrates the labelled fictional Asterbridge Distribution scenarios. Its transitions show the implemented workflow and known record states, rather than recorded browser interactions. Guided intake uses pre-filled proposals without an AI request. Live Fireworks/OpenAI extraction remains a separate optional path.
 
-## 0:00–0:25 · One batch, one operational question
+## Narration
 
-**Show:** product identity, batch and recall summary.
+Eight editorial sections follow the selected speech. Visual timing is aligned to the measured narration, so this script does not substitute estimated timecodes for the final media duration.
 
-**Narration:** “When a distributor receives a recall notice, the first question is where this product batch went. The next is what has come back. RecallScope connects stock, shipments, returns and source records in one workspace for the operations and quality team.”
+### Every box has a story
 
-Briefly identify the records as the supplied fictional scenario.
+A medicine recall begins with a simple question: where did this batch go? For a distributor, the answer can be scattered across receipts, warehouse records, delivery notes and returned boxes. RecallScope brings that story together, so the team can trace each movement and account for what comes back.
 
-## 0:25–0:55 · Explain the accounting
+### One operational workspace
 
-**Show:** paracetamol 500 mg, batch PCR-260901; Central/North; the four customer destinations.
+This is RecallScope for pharmaceutical distributors and wholesalers. We are following Asterbridge Distribution, a fictional workspace with six medicines and nine product-specific batches. The overview connects stock, deliveries, recalls and evidence in one place. Open a product to see its strength, presentation, expiry and recorded quantities, then move directly to the batch, warehouse or recipient behind the number. The familiar workspace stays consistent in light and night mode.
 
-**Narration:** “This batch began with one thousand boxes. Six hundred went to four customer sites. In the completed case, all six hundred were returned and the recorded thousand boxes remain quarantined. Historical deliveries and current stock are different measures, so the app does not add them together.”
+### Identity before matching
 
-Open the amoxicillin product with the same printed batch code. Show that it remains outside the paracetamol case.
+Here is the paracetamol batch. One thousand boxes were received, and six hundred were dispatched to four customer sites. The trace connects the supplier, two warehouses and those destinations. Now compare amoxicillin: its printed batch code is identical. RecallScope keeps the two medicines separate because product identity matters as much as the batch label. A matching string alone must never merge stock or expand a recall.
 
-**Narration:** “A batch code alone is not a product identity. The same printed code on a different medicine stays separate.”
+### AI interprets. People approve.
 
-## 0:55–1:35 · Let the judge use the workflow
+Document intake offers guided examples, structured CSV import and live AI assistance. Fireworks and OpenAI can interpret text, images and PDFs into proposed receipts or dispatches. The original source remains alongside every proposal, and deterministic checks validate identifiers, quantities and units before an operator approves. For this walkthrough, the guided receipt is pre-filled and needs no API key. Review forty boxes of a separate available paracetamol batch, compare the source, and save the decision. Only then does available stock rise from four hundred to four hundred and forty. Repeating that document cannot post the same receipt twice.
 
-**Show:** Document intake → Guided examples → Goods received.
+### Account for every return
 
-Read or leave visible: **“Guided example — pre-filled records; no AI request is made.”**
+We switch to the active recall scenario, with one hundred boxes returned and five hundred outstanding, then review twenty more returned boxes against their original dispatch. Approval raises returns to one hundred and twenty and reduces outstanding quantity to four hundred and eighty, while the boxes stay quarantined; the completed scenario accounts for all six hundred dispatched boxes returning and all one thousand boxes remaining in quarantine, with historical dispatches kept separate from current stock and no automatic release decision.
 
-**Narration:** “Judges can use the complete document workflow without sharing a key. This guided source is pre-filled. The original CSV stays beside the proposals; product, batch, quantity, unit and warehouse are matched explicitly.”
+### Evidence that travels
 
-Inspect the 40-box receipt for PAR-500-100 / PCR-261001, expiry 2028-01, supplier-northstar, loc-central.
+Reports preserve the case as a fixed snapshot, so later movements cannot rewrite the earlier record. The original documents, review notes and decision history stay available alongside PDF and ledger exports, with an evidence package and content-hash manifest connecting quantities back to their sources, ready for the operations and quality team to explain and hand over.
 
-Enter review note: “Compared the source receipt, exact product batch, quantity, unit and receiving location.”
+### Built through agentic AI
 
-Confirm the review and post. Show the available batch increase from **400 to 440 boxes**. Reload if the available recording time allows.
+Codex agents helped build the system across idea generation, market research, interface design, custom code, testing, deployment and pitch creation, with one hundred and forty-three passing automated tests recorded. Live models interpret documents while explicit operator review and deterministic accounting govern the operational record, bringing agentic AI development and practical AI assistance into one focused product.
 
-**Narration:** “The preview does not change stock. A reviewed posting does. Reusing the same document cannot create a second receipt.”
+### Trace. Review. Account.
 
-## 1:35–2:10 · Account for a partial return
+Open RecallScope to follow a batch, review a receipt and inspect its evidence, using the complete guided workflow without your own key or choosing live AI through the private server connection. Know where every affected batch went, and account for what comes back.
 
-For a live presentation, load the **active recall** sample before this segment. A reset replaces the working sample; export any wanted changes first. In an edited recording, make the scenario switch visible rather than implying continuous state.
+## Scenario continuity
 
-**Show:** active case has **100 returned / 500 outstanding**. Open the partial customer-return example. Inspect its link to DSP-001 and approve 20 boxes with a source review note.
+| Segment | Record state |
+| --- | --- |
+| Batch trace | PAR-500-100 / PCR-260901: 1,000 boxes received, 600 historically dispatched through two warehouses to four recipient sites |
+| Duplicate printed code | AMX-500-100 / PCR-260901 stays outside the paracetamol case |
+| Guided goods receipt | Separate available batch PCR-261001 increases from 400 to 440 boxes only after reviewed approval of 40 boxes |
+| Active recall | Scenario switch starts with 100 returned and 500 outstanding boxes |
+| Partial return | Approved 20-box return linked to DSP-001 makes totals 120 returned and 480 outstanding |
+| Completed recall | Explicit scenario change shows all 600 dispatched boxes returned, 1,000 boxes in quarantine and zero outstanding |
+| Reports | Fixed snapshots retain the quantities and sources captured at creation |
 
-**Narration:** “A partial return stays tied to its original dispatch. These twenty boxes change returns to one hundred and twenty and outstanding quantity to four hundred and eighty. Returned stock stays quarantined; the software does not turn an accounting update into a medicine-safety decision.”
+Historical dispatches and current stock are distinct measures. Returned boxes already form part of stock on hand. Accounting completion does not authorize release, disposal or medicine use.
 
-## 2:10–2:40 · Take the evidence with you
+## Reproduce the workflow in the app
 
-**Show:** saved report, PDF preview and evidence-package download; original source and decision history.
+The [README walkthrough](../README.md#walkthrough-without-an-api-key) gives the interactive steps. Use the completed or active sample named above. Sample reset replaces the working scenario, so export a backup first if retaining changes matters.
 
-**Narration:** “A report is a fixed snapshot of the case, its source records and quantities. Later changes do not rewrite the earlier report. The evidence package includes the source files and a content-hash manifest.”
-
-Show light/night appearance and the readable stock/expiry table briefly. Use movement to explain the selected path; do not spend this time on decorative transitions.
-
-## 2:40–3:00 · What AI contributes
-
-**Show:** three intake choices; live AI remains an optional separate mode.
-
-**Narration:** “Fireworks and OpenAI can propose fields from documents when a private server connection is configured. Operators review the evidence; deterministic code controls quantities and posting. The project itself was developed with AI assistance across product design, implementation, research and verification. Its strength is a specific distributor workflow that judges can inspect and use.”
-
-End on: **“Know where every affected batch went. Account for what comes back.”**
-
-## Presenter checks
-
-- Use the correct completed or active scenario for each segment.
-- Keep the sample-data disclosure and template notice visible where relevant.
-- Do not call a template an AI extraction result.
-- Controlled-provider checks are not a live pharmaceutical extraction accuracy benchmark.
-- Demonstrate a real posted action, a real report and its source, rather than substituting animated numbers.
-- Keep claims aligned with [software verification](PHARMA-VALIDATION.md) and the [official-source market comparison](PHARMA-ALTERNATIVES.md).
-- Label any future edited footage as selected moments from the workflow; editing length is not a measured task-completion time.
+The recorded application checks appear in [pharmaceutical verification](PHARMA-VALIDATION.md). Film length is not a measured task-completion time, and controlled-provider tests are not a live extraction accuracy benchmark. Final video inspection and duration belong to the [release evidence](../product/verification/pharma-release.json).

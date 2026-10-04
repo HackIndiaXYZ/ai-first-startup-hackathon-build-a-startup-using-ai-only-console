@@ -1,0 +1,60 @@
+{
+  "file": "RecallScope-Pharma-Demo.mp4",
+  "duration": 251.21666666666667,
+  "width": 1920,
+  "height": 1080,
+  "fps": 60,
+  "decodedFrames": 15073,
+  "bytes": 37980967,
+  "chapters": 8,
+  "subtitles": "English, optional MP4 track and companion SRT",
+  "audio": {
+    "integrated_lufs": -16.03,
+    "true_peak_dbtp": -1.41,
+    "loudness_range_lu": 3.9
+  },
+  "full_decode": "passed",
+  "sha256": "591adebee922a00a398eb23e2d39c0e3f9f086bf92c0047686ff99619927975f",
+  "visualReview": {
+    "sceneSamples": 40,
+    "encodedKeyFrames": 16,
+    "screenshotInputs": 0,
+    "criticalChecks": [
+      "receipt approval click and400→440",
+      "active recall100→120returned;500→480outstanding",
+      "completed example distinct",
+      "audit reason wrapping",
+      "closing URL and title",
+      "light and night product views"
+    ]
+  },
+  "narrationReview": {
+    "selectedVoice": "Grady",
+    "model": "seed_audio",
+    "silenceCuts": 20,
+    "removedSilenceSeconds": 10.303125,
+    "retainedPCMSegmentsHashIdentical": 21,
+    "remainingInternalPausesAtLeast08Seconds": 0,
+    "timeStretch": false,
+    "captions": 54,
+    "cueAlignment": "all authored anchors matched uniquely and monotonically"
+  },
+  "files": {
+    "RecallScope-Pharma-Demo.mp4": {
+      "bytes": 37980967,
+      "sha256": "591adebee922a00a398eb23e2d39c0e3f9f086bf92c0047686ff99619927975f"
+    },
+    "RecallScope-Pharma-Demo.srt": {
+      "bytes": 5415,
+      "sha256": "b750c411b11cafcbfc4914cca899b6bcbf3310821cce7af66b60fb809541c04e"
+    },
+    "RecallScope-Pharma-Pitch.pptx": {
+      "bytes": 50377,
+      "sha256": "6fbb8e1ef29c601069b2c572035b1e31fe887de103bbc31940e206e9d0e64c10"
+    },
+    "RecallScope-Pharma-Pitch.pdf": {
+      "bytes": 108557,
+      "sha256": "9368400899d248a6f868a2bb83ebcfc9ab6e59c7bbcb357df473f859bb44f122"
+    }
+  }
+}

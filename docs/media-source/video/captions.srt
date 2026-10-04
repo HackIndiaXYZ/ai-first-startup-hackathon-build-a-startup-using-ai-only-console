@@ -1,0 +1,258 @@
+1
+00:00:00,800 --> 00:00:03,620
+A medicine recall begins with a simple
+question.
+
+2
+00:00:04,300 --> 00:00:05,620
+Where did this batch go?
+
+3
+00:00:06,280 --> 00:00:10,159
+For a distributor, the answer can be
+scattered across receipts, warehouse
+
+4
+00:00:10,160 --> 00:00:13,380
+records, delivery notes, and returned
+boxes.
+
+5
+00:00:13,782 --> 00:00:18,941
+RecallScope brings that story together so
+the team can trace each movement and
+
+6
+00:00:18,942 --> 00:00:20,342
+account for what comes back.
+
+7
+00:00:20,902 --> 00:00:24,542
+This is RecallScope for pharmaceutical
+distributors and wholesalers.
+
+8
+00:00:25,122 --> 00:00:29,841
+We are following Asterbridge Distribution,
+a fictional workspace with six
+
+9
+00:00:29,842 --> 00:00:32,942
+medicines and nine product-specific
+batches.
+
+10
+00:00:33,089 --> 00:00:38,689
+The overview connects stock, deliveries,
+recalls, and evidence in one place.
+
+11
+00:00:39,189 --> 00:00:43,788
+Open a product to see its strength,
+presentation, expiry, and recorded
+
+12
+00:00:43,789 --> 00:00:48,328
+quantities, then move directly to the
+batch, warehouse, or recipient behind the
+
+13
+00:00:48,329 --> 00:00:53,429
+number. The familiar workspace stays
+consistent in light and night mode.
+
+14
+00:00:53,589 --> 00:00:55,949
+Here is the paracetamol batch.
+
+15
+00:00:56,689 --> 00:01:01,849
+1,000 boxes were received and 600 were
+dispatched to four customer sites.
+
+16
+00:01:02,267 --> 00:01:06,707
+The trace connects the supplier, two
+warehouses and those destinations.
+
+17
+00:01:07,305 --> 00:01:09,365
+Now, compare amoxicillin.
+
+18
+00:01:09,945 --> 00:01:12,205
+Its printed batch code is identical.
+
+19
+00:01:12,542 --> 00:01:16,702
+RecallScope keeps the two medicines
+separate because product identity matters
+
+20
+00:01:16,702 --> 00:01:18,283
+as much as the batch label.
+
+21
+00:01:18,437 --> 00:01:22,891
+A matching string alone must never merge
+stock or expand a recall.
+
+22
+00:01:23,511 --> 00:01:29,150
+Document Intake offers guided examples,
+structured CSV import and live AI
+
+23
+00:01:29,151 --> 00:01:34,547
+assistance. Fireworks and OpenAI can
+interpret text, images and
+
+24
+00:01:34,548 --> 00:01:38,308
+PDFs into proposed receipts or dispatches.
+
+25
+00:01:38,398 --> 00:01:42,946
+The original source remains alongside
+every proposal and deterministic checks
+
+26
+00:01:42,947 --> 00:01:48,047
+validate identifiers, quantities and units
+before an operator approves.
+
+27
+00:01:48,272 --> 00:01:53,432
+For this walkthrough, the guided receipt
+is pre-filled and needs no API key.
+
+28
+00:01:53,621 --> 00:01:57,141
+Review 40 boxes of a separate available
+paracetamol batch.
+
+29
+00:01:57,821 --> 00:02:00,400
+Compare the source and save the decision.
+
+30
+00:02:00,401 --> 00:02:05,526
+Only then does available stock rise from
+400 to 440.
+
+31
+00:02:05,714 --> 00:02:09,158
+Repeating that document cannot post the
+same receipt twice.
+
+32
+00:02:09,438 --> 00:02:11,958
+We switch to the active recall scenario.
+
+33
+00:02:12,614 --> 00:02:18,539
+With 100 boxes returned and 500
+outstanding, then review 20 more
+
+34
+00:02:18,540 --> 00:02:21,900
+returned boxes against their original
+dispatch.
+
+35
+00:02:22,320 --> 00:02:28,233
+Approval raises returns to 120 and reduces
+outstanding quantity
+
+36
+00:02:28,234 --> 00:02:32,834
+to 480 while the boxes stay quarantined.
+
+37
+00:02:33,073 --> 00:02:39,208
+The completed scenario accounts for all
+600 dispatched boxes returning and all
+
+38
+00:02:39,209 --> 00:02:44,728
+1,000 boxes remaining in quarantine, with
+historical dispatches kept separate
+
+39
+00:02:44,729 --> 00:02:48,649
+from current stock and no automatic
+release decision.
+
+40
+00:02:48,824 --> 00:02:54,540
+Reports preserve the case as a fixed
+snapshot so later movements cannot rewrite
+
+41
+00:02:54,541 --> 00:02:59,180
+the earlier record. The original
+documents, review notes and decision
+
+42
+00:02:59,181 --> 00:03:04,920
+history stay available alongside PDF and
+ledger exports with an evidence package
+
+43
+00:03:04,921 --> 00:03:10,420
+and content hash manifest connecting
+quantities back to their sources ready for
+
+44
+00:03:10,421 --> 00:03:14,081
+the operations and quality team to explain
+and hand over.
+
+45
+00:03:14,199 --> 00:03:20,419
+Codex agents helped build the system
+across idea generation, market research,
+
+46
+00:03:20,859 --> 00:03:26,838
+interface design, custom code, testing,
+deployment, and pitch creation, with
+
+47
+00:03:26,839 --> 00:03:30,999
+143 passing automated tests recorded.
+
+48
+00:03:31,539 --> 00:03:37,418
+Live models interpret documents while
+explicit operator review and deterministic
+
+49
+00:03:37,419 --> 00:03:42,918
+accounting govern the operational record,
+bringing agentic AI development
+
+50
+00:03:42,919 --> 00:03:47,539
+and practical AI assistance into one
+focused product.
+
+51
+00:03:47,863 --> 00:03:53,702
+Open RecallScope to follow a batch, review
+a receipt, and inspect its
+
+52
+00:03:53,703 --> 00:03:59,622
+evidence using the complete guided
+workflow without your own key, or
+
+53
+00:03:59,623 --> 00:04:03,142
+choosing live AI through the private
+server connection.
+
+54
+00:04:03,143 --> 00:04:09,055
+Know where every affected batch went and
+account for what comes back.

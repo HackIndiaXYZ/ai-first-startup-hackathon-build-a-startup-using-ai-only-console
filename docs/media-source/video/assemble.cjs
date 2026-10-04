@@ -1,0 +1,28 @@
+'use strict';
+const fs=require('fs'),path=require('path'),{spawnSync}=require('child_process');
+const root=process.env.FILM_WORK_DIR?path.resolve(process.env.FILM_WORK_DIR):path.join(__dirname,'.cache'),renders=path.join(root,'renders'),qa=path.join(root,'qa');
+const ffmpeg=process.env.FFMPEG_PATH||require('ffmpeg-static');
+const timeline=JSON.parse(fs.readFileSync(path.join(__dirname,'timeline.json'),'utf8'));
+const arg=(key,fallback)=>{const i=process.argv.indexOf(key);return i<0?fallback:process.argv[i+1]};
+const out=path.resolve(arg('--out',path.join(renders,'RecallScope-Pharma-Demo.mp4')));
+fs.mkdirSync(path.dirname(out),{recursive:true});fs.mkdirSync(qa,{recursive:true});
+function run(args){const r=spawnSync(ffmpeg,['-hide_banner','-y',...args],{encoding:'utf8',windowsHide:true,maxBuffer:10*1024*1024});if(r.status!==0)throw Error(r.stderr||r.error?.message);return r.stderr}
+const audio=path.join(__dirname,'narration.wav');
+const analysis=run(['-i',audio,'-af','loudnorm=I=-16:TP=-1.5:LRA=7:print_format=json','-f','null','-']);
+const measured=JSON.parse(analysis.slice(analysis.lastIndexOf('{'),analysis.lastIndexOf('}')+1));
+fs.writeFileSync(path.join(qa,'loudness-input.json'),JSON.stringify(measured,null,2));
+const filter=`loudnorm=I=-16:TP=-1.5:LRA=7:measured_I=${measured.input_i}:measured_TP=${measured.input_tp}:measured_LRA=${measured.input_lra}:measured_thresh=${measured.input_thresh}:offset=${measured.target_offset}:linear=true:print_format=json`;
+const concat=path.join(renders,'concat.txt');
+fs.writeFileSync(concat,timeline.sections.map((_,i)=>`file 'scene-${String(i+1).padStart(2,'0')}.mp4'`).join('\n')+'\n');
+const metadata=path.join(renders,'chapters.ffmeta');
+fs.writeFileSync(metadata,';FFMETADATA1\ntitle=RecallScope — Pharmaceutical distribution\nartist=Team Console\ncomment=Code-rendered product demonstration. Fictional example records. Narration: Higgsfield Seed Audio / Grady.\n'+timeline.sections.map(s=>`[CHAPTER]\nTIMEBASE=1/1000\nSTART=${Math.round(s.start*1000)}\nEND=${Math.round(s.end*1000)}\ntitle=${s.title}\n`).join(''));
+const log=run(['-f','concat','-safe','0','-i',concat,'-i',audio,'-i',path.join(__dirname,'captions.srt'),'-i',metadata,'-map','0:v:0','-map','1:a:0','-map','2:s:0','-map_metadata','3','-map_chapters','3','-c:v','copy','-af',filter,'-c:a','aac','-b:a','192k','-ar','48000','-c:s','mov_text','-metadata:s:s:0','language=eng','-metadata:s:s:0','title=English','-disposition:s:0','0','-t',String(timeline.duration),'-movflags','+faststart',out]);
+fs.writeFileSync(path.join(qa,'assembly.log'),log);
+const decode=spawnSync(ffmpeg,['-v','error','-i',out,'-map','0:v:0','-map','0:a:0','-progress','pipe:1','-f','null','-'],{encoding:'utf8',windowsHide:true,maxBuffer:10*1024*1024});
+if(decode.status!==0||decode.stderr.trim())throw Error('Decode errors: '+decode.stderr);
+const decodedFrames=Number([...decode.stdout.matchAll(/\bframe=(\d+)/g)].at(-1)?.[1]);
+if(decodedFrames!==timeline.total_frames)throw Error(`Frame count ${decodedFrames} does not match ${timeline.total_frames}`);
+const loudness=run(['-i',out,'-af','loudnorm=I=-16:TP=-1.5:LRA=7:print_format=json','-f','null','-']);
+const actual=JSON.parse(loudness.slice(loudness.lastIndexOf('{'),loudness.lastIndexOf('}')+1));
+const result={file:path.basename(out),duration:timeline.duration,width:1920,height:1080,fps:60,decodedFrames,bytes:fs.statSync(out).size,chapters:timeline.sections.length,subtitles:'English, optional MP4 track and companion SRT',audio:{integrated_lufs:Number(actual.input_i),true_peak_dbtp:Number(actual.input_tp),loudness_range_lu:Number(actual.input_lra)},full_decode:'passed',sha256:require('crypto').createHash('sha256').update(fs.readFileSync(out)).digest('hex')};
+fs.writeFileSync(path.join(qa,'film-verification.json'),JSON.stringify(result,null,2));console.log(JSON.stringify(result,null,2));

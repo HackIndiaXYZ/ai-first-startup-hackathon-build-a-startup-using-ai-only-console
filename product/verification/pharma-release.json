@@ -19,6 +19,49 @@
   "build": "passed",
   "pdfFinalAdjustment": "six export checks passed; included in successful Site build",
   "interfaceFollowUp": "short-window profile visibility, audit reason wrapping, mobile column widths, inset navigation focus and pharmaceutical-only routing verified locally; 143 tests, typecheck and production build passed again",
-  "video": "on hold at owner request",
+  "video": {
+    "path": "docs/RecallScope-Pharma-Demo.mp4",
+    "format": "coded animation and pharmaceutical product visuals with AI narration",
+    "scenario": "authored pharmaceutical records matching implemented workflows",
+    "screenRecording": false,
+    "status": "verified",
+    "durationSeconds": 251.21666666666667,
+    "sha256": "591adebee922a00a398eb23e2d39c0e3f9f086bf92c0047686ff99619927975f",
+    "visualReview": "40 scene samples plus16 final encoded key frames inspected; approval cursor, return quantities, audit wrapping and transition layers corrected and verified",
+    "audioReview": "transcript and word alignment checked;20 silence-only edits preserve source PCM segments;zero residual internal pauses >=0.8 seconds; no time stretching;54 caption blocks align with timed words",
+    "durationRequirement": "180-300 seconds",
+    "resolution": "1920x1080",
+    "fps": 60,
+    "decodedFrames": 15073,
+    "bytes": 37980967,
+    "chapters": 8,
+    "captionsPath": "docs/RecallScope-Pharma-Demo.srt",
+    "sourcePath": "docs/media-source/video/README.md",
+    "fullDecode": "passed",
+    "audio": {
+      "integrated_lufs": -16.03,
+      "true_peak_dbtp": -1.41,
+      "loudness_range_lu": 3.9
+    },
+    "voice": {
+      "provider": "Higgsfield",
+      "model": "seed_audio",
+      "preset": "Grady"
+    },
+    "captions": "optional English MP4 track plus companion SRT"
+  },
+  "pitch": {
+    "pptxPath": "docs/RecallScope-Pharma-Pitch.pptx",
+    "pdfPath": "docs/RecallScope-Pharma-Pitch.pdf",
+    "sourcePath": "docs/media-source/pitch/build.mjs",
+    "slides": 8,
+    "nativeTables": 3,
+    "embeddedRasterImages": 0,
+    "editableTextAndShapes": true,
+    "pdfSelectableTextAndVectors": true,
+    "packageAndLayoutChecks": "passed",
+    "visualReview": "all slides inspected in artifact renders and native PowerPoint PDF output",
+    "applicationFilesChanged": false
+  },
   "industrialTrials": "outside requested scope"
 }

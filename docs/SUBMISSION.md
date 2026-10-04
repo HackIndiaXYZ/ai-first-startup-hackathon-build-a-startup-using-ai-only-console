@@ -10,8 +10,8 @@ RecallScope is an evidence-led pharmaceutical distribution workspace. It helps o
 | --- | --- |
 | Live application | [Open RecallScope](https://recallscope.console3096.chatgpt.site) |
 | Source repository | [Official Team Console repository](https://github.com/HackIndiaXYZ/ai-first-startup-hackathon-build-a-startup-using-ai-only-console) |
-| Pharmaceutical walkthrough | Video on hold at the owner's request; [written walkthrough](DEMO-SCRIPT.md) available |
-| Pitch | [Editable pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx) |
+| Pharmaceutical walkthrough | [Coded animated product demonstration](RecallScope-Pharma-Demo.mp4), with [narration script](DEMO-SCRIPT.md) |
+| Pitch | [Editable vector pitch](RecallScope-Pharma-Pitch.pptx), [PDF](RecallScope-Pharma-Pitch.pdf) and [authoring source](media-source/pitch/README.md) |
 | AI usage report | [Tools, prompts and development evidence](AI-USAGE.md) |
 | Market research | [Official-source alternatives and commercial hypothesis](PHARMA-ALTERNATIVES.md) |
 | Verification | [Software and browser evidence](PHARMA-VALIDATION.md) |
@@ -34,10 +34,16 @@ RecallScope brings those records into one reviewed workflow. Optional AI extract
 
 The supplied organisations and transactions are fictional. Live Fireworks/OpenAI extraction is a separate optional path; keys remain on the server. No judge needs to provide a credential to complete the guided workflow.
 
+## Video and pitch
+
+The **4:11 video (1080p, 60 fps)** demonstrates this workflow through coded animation, native text and product visuals, with professional AI narration. Its authored scenario transitions explain the recorded quantities and review decisions. It is a rendered demonstration of the implemented product, rather than a screen recording or a measurement of task-completion speed.
+
+The pitch is a separate eight-slide deliverable. Its editable PowerPoint shapes, tables and text stay sharp when resized, and the PDF retains selectable text and vector graphics. Sources and factual scope are recorded in the slide notes.
+
 ## Why this entry is distinctive
 
 The product has a specific operator, a complete end-to-end task and inspectable source evidence. Technical depth lies in product-scoped batch identity, unit conservation, serial custody, stale-write protection and reconciliation that keeps historical shipments separate from stock. AI contributes to development and optional document interpretation without silently changing records. These qualities make the product demonstrable and defensible; they do not guarantee a prize.
 
 ## Submission administration
 
-The current materials target the [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only): public code, a live product, pitch, 3–5-minute video and documented AI use. The event page was rechecked on 3 October 2026 before updating the release. The pharmaceutical video is on hold. Submission through the organizer's portal is a separate action; this file does not assert a new submission receipt.
+The current materials target the [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only): public code, a live product, pitch, 3–5-minute video and documented AI use. The event page was rechecked on 3 October 2026 before updating the release. Final media verification is recorded separately in the [release evidence](../product/verification/pharma-release.json). Submission through the organizer's portal is a separate action; this file does not assert a new submission receipt.
