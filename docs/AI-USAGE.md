@@ -37,119 +37,35 @@ Codex authored an eight-slide pharmaceutical pitch with real interface captures 
 
 Official-source research compares [TraceLink, SAP and Odoo](PHARMA-ALTERNATIVES.md). No customer interview, industrial deployment result, revenue, savings measurement or compliance certification is claimed.
 
-The pharmaceutical application was published as version 2 on 4 October 2026 MYT. The September video remains historical bakery evidence. The current source, pitch and written walkthrough describe the pharmaceutical edition; its video is on hold.
-
-## Historical bakery release record — September 2026
-
-The following sections preserve the earlier release's actual development and publication history. Their sample totals and live extraction observations refer to that bakery implementation.
-
-## Participant instruction
-
-The participant selected RecallScope after AI-assisted project research, then authorised autonomous implementation: “ok, can start now, all you decide for first prize … continuously until before push to github or where you think critical issue to stop”.
-
-The participant supplied the required team repository and GitHub identity, authorized the official GitHub publication, and subsequently requested a public app for judges. The participant later authorized the demonstration video and selected Grady as its narration voice. The source, public app and [product demo](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) are published.
-
-## Tools and roles
-
-| Tool | Actual role |
-|---|---|
-| Codex | Product scoping, implementation, synthetic source construction, tests, debugging, visual review, build packaging and documentation |
-| Delegated Codex reviewers | Independent competition-requirement checks and adversarial traceability review |
-| OpenAI Responses API adapter | Configurable runtime extraction from PDF/image/text into structured proposals; Fireworks is the selected and live-verified provider |
-| Fireworks / Kimi K2.6 | User-selected development provider; actual synthetic text and PDF extraction tested with explicit review before import |
-| PDF.js and pdf-lib | Existing open-source libraries for browser page rendering and independent server page-count checks; these libraries are not claimed as AI-authored code |
-| Browser tooling | Actual interaction checks: review, recalculation, reload persistence, import approval, reports and responsive layouts |
-| Presentation tooling | Editable pitch deck creation and rendering checks |
-| Higgsfield Seed Audio | Nine narration clips using the participant-selected Grady voice at speech rate -5; generation consumed 23.10 credits |
-| Video composition tooling | Chaptered editing, native motion and assembly of actual interface captures with AI narration |
-
-Task-specific application code was authored by Codex under participant direction. The project also contains an existing MIT-licensed starter and third-party packages. No audited numerical percentage of the entire dependency tree is claimed. The working history and source identify AI-produced custom work and reused dependencies separately.
+The pharmaceutical application was published on 4 October 2026 MYT, with the layout and routing follow-up in version 3. The current source, pitch, screenshots and written walkthrough describe the pharmaceutical edition; its video is on hold. Superseded presentation files were removed from the latest project tree and remain recoverable in Git history.
 
 ## AI-led work across the seven activities
 
-| Activity | Completed work and evidence |
-|---|---|
-| Idea generation | AI-assisted selection and scope of ingredient-to-customer traceability; product decisions recorded below |
-| Market research | Published-source desk research, competitor comparison and buyer/pricing hypotheses in [market research](PILOT-AND-ALTERNATIVES.md) |
-| UI/UX design | Trace map, document library, report reader, personalized appearance and responsive interaction design |
-| Coding | Custom React/TypeScript, server routes, extraction adapters and deterministic traceability rules in the official repository |
-| Testing | Automated domain/provider/SQL checks, browser and API integration, and recorded live Fireworks extraction |
-| Deployment | Sites hosting configuration, database migrations, private server-side Fireworks secret and public request allowance; the verified public URL is recorded in the project overview |
-| Pitch creation | AI-authored, editable [pitch deck](RecallScope-Pitch.pptx) with visual verification, plus a chaptered [product demo](VIDEO.md) with AI narration |
+| Activity | Work and evidence |
+| --- | --- |
+| Idea generation | AI-assisted scoping of batch traceability and recall reconciliation for pharmaceutical distributors, with the owner selecting this industry |
+| Market research | Published-source comparison and commercial hypotheses in [pharmaceutical alternatives](PHARMA-ALTERNATIVES.md) |
+| UI/UX design | Product, stock, delivery, recall, evidence and reporting views; light/night themes, responsive layouts and keyboard interaction |
+| Coding | Custom React/TypeScript interface, APIs, reviewed intake, product-scoped ledger and persistence in the official repository |
+| Testing | Domain, provider, export, SQL and API checks plus observed browser journeys in the [verification record](PHARMA-VALIDATION.md) |
+| Deployment | Sites hosting, database migrations, server-side secrets and verified public publication in the [build record](BUILD-STATUS.md) |
+| Pitch creation | AI-authored editable [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx) with application captures; the [written walkthrough](DEMO-SCRIPT.md) is available and video production remains on hold |
 
-The fictional bakery records illustrate the product. Market research means documented desk research, and is separate from customer interviews or manufacturer validation. Those are not claimed as completed activities.
+## Authorship and reused components
 
-## Evidence for the 80% AI-driven execution requirement
+Codex authored the task-specific application implementation, tests, fictional records, documentation and presentation under the owner's direction. The owner selected the project direction, supplied the repository and authorised publication. The project also retains an MIT-licensed starter and third-party packages, including PDF.js and pdf-lib. Those dependencies are not claimed as AI-authored work. No numerical authorship percentage calculated from bundled dependencies or measured development time is asserted.
 
-The event asks for at least 80% AI-driven execution. For the new work in this build, Codex authored the custom application implementation, tests, synthetic records, documentation and presentation. The participant selected the project direction, supplied the repository and authorised the work; no participant-written application code was supplied during this build. These are the actual roles evidenced by the task history and source, not a stopwatch measurement or a percentage calculated from bundled dependencies. The organiser's interpretation of the requirement remains authoritative.
+## Development decisions
 
-## Development prompts and decisions
+1. Model pharmaceutical products, manufacturer-scoped batches, packaging units, warehouse movements and recipients explicitly.
+2. Keep stock conservation and recall accounting deterministic; separate historical dispatch exposure from current stock.
+3. Preserve original source text, identifiers, evidence locations and operator decisions.
+4. Make guided examples and CSV useful without a provider key; identify their provenance clearly.
+5. Offer Fireworks and OpenAI as optional server-side providers, with reviewed proposals rather than automatic posting.
+6. Verify duplicate protection, stale-write rejection, workspace isolation, report snapshots and evidence exports.
+7. Use actual pharmaceutical interface captures in the pitch and current project materials.
+8. Keep commercial assumptions and controlled verification distinct from industrial validation or measured customer outcomes.
 
-The following are concise records of development instructions, not a verbatim dump of private task history:
+## Provider and data boundaries
 
-1. Build RecallScope around supplier ingredient lots, production batches and customer deliveries, with source evidence for every confirmed relationship.
-2. Make an ambiguous code correction change the synthetic result from 720 to 1,080 delivered packs, while keeping a second missing-record case unresolved.
-3. Review the domain for duplicated dispatches, missing quantities, false links, incomplete reports and snapshot integrity.
-4. Keep AI-generated proposals outside confirmed traceability until the operator reviews them.
-5. Preserve exact identifiers, original files, source references, review notes and evidence of field edits.
-6. Test the application through its actual interface and HTTP routes, including session isolation and failed writes.
-7. Prepare a pitch with synthetic results and unvalidated commercial assumptions labelled honestly.
-8. Refine the interface into an operator-focused workspace: night/system appearance, personalization, record search/filtering and report reading. Development slogans were removed from application navigation; source provenance and sample-data disclosures were preserved. No generated imagery was needed for this data workspace.
-
-## Runtime extraction prompt
-
-The full executable prompt and JSON schema are versioned in `product/lib/ai-extract.ts`. The prompt treats uploaded documents as untrusted data, preserves O/0 ambiguities, forbids invented records and silent truncation, retains unknown values, requires literal evidence quotes, and requests human-review proposals. Both providers use structured outputs. Only the OpenAI request uses `store:false`.
-
-The participant subsequently requested Fireworks for development while keeping OpenAI support. `AI_PROVIDER` selects the service; `FIREWORKS_MODEL` defaults to `accounts/fireworks/models/kimi-k2p6`, and `OPENAI_MODEL` defaults to `gpt-5.4-mini`. The live Fireworks tests are documented in [LIVE-AI-VALIDATION.md](LIVE-AI-VALIDATION.md). The OpenAI adapter has controlled-response tests but no live OpenAI test. Seeded demo records remain pre-authored and labelled. The user-supplied key is kept in ignored local configuration and omitted from all reports and source packages.
-
-## AI errors found and corrected
-
-- Missing quantities initially became zero; they now remain explicitly unknown.
-- Identical duplicate dispatch references could inflate totals; identical duplicates now count once and conflicting duplicates fail.
-- Unresolved customers were missing from early reports; all unresolved delivery details are now exported.
-- Early map lines visually implied a lot connection to unrelated batches; only confirmed lot relationships now receive those edges.
-- Importing a custom file could remove the sample-data warning; mixed data now retains disclosure.
-- Explicit supplier/ingredient conflicts and post-save cleanup failure handling were tightened.
-- A named batch without a production sheet now creates a visible unresolved placeholder.
-- Runtime source-size instructions now explicitly forbid silent AI truncation.
-- PDF worker loading initially encountered a development-overlay error; the pinned worker now loads as an unmodified static asset.
-- Fireworks batch fields that could trigger a validation conflict are now editable in the review screen.
-- Server PDF page-count validation now detects a submitted image set that omits an original page.
-- A two-page request reached its timeout without changing saved records; the development request now explicitly disables reasoning for structured extraction, with the retry outcome recorded separately.
-
-## Evidence and limitations
-
-Domain and adapter tests, route integration checks, UI observations, the pitch deck and sample sources are included. Synthetic scenario correctness is not real-world OCR accuracy, customer validation, a food-safety claim or measured time savings.
-
-Official requirement source: https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only
-OpenAI structured output guidance: https://developers.openai.com/api/docs/guides/structured-outputs
-OpenAI file input guidance: https://developers.openai.com/api/docs/guides/file-inputs
-Fireworks vision input guidance: https://docs.fireworks.ai/guides/querying-vision-language-models
-Fireworks structured output guidance: https://docs.fireworks.ai/structured-responses/structured-response-formatting
-Fireworks Chat Completions parameters: https://docs.fireworks.ai/api-reference/post-chatcompletions
-
-## Reference-checklist audit and refinement - 12 September 2026
-
-User instruction: treat an attached championship checklist as optional reference, decide worthwhile improvements and visuals, and provide a fuller post-build checklist. Codex reviewed all four pages, compared official requirements, and used read-only strategic/product reviews. It selected functional path feedback, same-lot report comparison and clearer document-reading status, rather than adding arbitrary charts or luxury imagery. A review found and fixed omitted delivery decisions after later ingredient resolution. Codex implemented and verified the changes, generated a 76-item evidence checklist and prepared a cited alternative comparison, neutral interview plan and unit-economics formulas. No customer interviews, pilot, ROI, paid extraction benchmark, publication or submission was invented or performed in this refinement. Forty-two automated checks pass; remaining gaps are explicitly listed in the readiness packet.
-
-## GitHub release preparation - 12 September 2026
-
-After the owner explicitly authorized publication to the official Team Console repository, Codex verified the destination and fast-forward relationship, inspected all reachable Git objects for configured secrets, and refined the README, navigation and architecture summary. The original Git history and MIT license are preserved. GitHub Actions runs the project checks from a clean checkout. The subsequent public app and video releases are documented below.
-
-## Complete showcase - 12 September 2026
-
-The owner requested a polished complete fictional scenario without a real manufacturer trial. Codex authored a separate complete dataset with matching production evidence, kept the original ambiguity fixture for regression coverage, and made the complete dataset the default for new sessions and sample resets. Existing sessions remain unchanged. The main experience, reports, README, walkthrough and editable pitch now focus on the complete trace: 1,440 delivered packs across four batches and four destinations. Forty-five automated tests and the application/API checks passed. Codex generated an example report directly from the same domain code. The pre-authored sample is not presented as a new AI extraction or real customer outcome; Fireworks and OpenAI support remain intact.
-
-After publication, GitHub's clean installation exposed a versionless optional PDF canvas entry in the dependency lock. Codex reproduced the failure in an isolated folder, regenerated only the missing canvas package family using npm, and verified a fresh dependency installation. Existing valid package versions were preserved. The repair was published through the same normal Git history.
-
-## Public deployment - 12 September 2026
-
-Following the participant's request, Codex registered and publicly deployed [RecallScope](https://recallscope.console3096.chatgpt.site) through Sites. The exact application source was pushed to the hosting source repository, and the build archive was checked for required migrations and credential exclusion. Fireworks was configured as a private runtime secret, with OpenAI support retained. An atomic shared request allowance was added before public release, and all 47 automated checks, type checking, the production build and API integration passed. Sites reported deployment success with environment revision 1. Video production followed under separate authorization.
-
-## Product demo - 13 September 2026
-
-Codex prepared the narration and nine-chapter structure, captured the actual RecallScope interface, and assembled a [4:40 product demo](https://d2ol7oe51mr4n9.cloudfront.net/user_3GIHIHlGYWNEBJDIfcsqR2O7n0p/78fee478-81f8-44f8-ab66-1968689ab191.mp4) with native motion and AI narration. Its duration is 280.4667 seconds (4:40.47), at 1920 × 1080 and 30 fps. The participant selected Grady (`e2a2d2e6-9ed2-59cd-82af-feaa27f8a678`). Higgsfield Seed Audio generated nine narration clips at speech rate -5, consuming 23.10 credits for those clips. This figure covers the narration generation, separate from development and hosting costs.
-
-Actual UI still captures and authored motion form the visual presentation. No generated footage is used. The chaptered edit presents the ingredient trace, source evidence, report workflow, document intake and AI-led build. It combines selected moments from the workflow rather than representing one continuous application session or a measured task-completion time. The [video materials](VIDEO.md) include separate chapters, production files and 74 optional English caption cues; captions are supplied separately and are not burned into the picture.
-
-The document-intake segment comes from a real Fireworks request that returned three proposals. The operator supplied a source-lot value during review before approving the import. This records both the AI proposal and the operator's contribution. The pre-authored bakery showcase remains separate from that extraction run. Sample transactions illustrate the product; they do not establish customer validation, measured savings or general extraction accuracy.
+Runtime prompts and schemas are versioned in `product/lib/pharma/providers.ts`. Uploaded content is untrusted source material. Model output is validated against the original source and remains a proposal until reviewed; it cannot silently authorize medicine disposition or change stock. Provider credentials stay in ignored local configuration or private deployment secrets and never enter presentation materials, browser code or Git.

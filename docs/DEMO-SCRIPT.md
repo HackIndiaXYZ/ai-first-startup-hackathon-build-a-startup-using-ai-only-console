@@ -1,6 +1,6 @@
 # RecallScope pharmaceutical walkthrough
 
-**Current edition: pharmaceutical distributors and wholesalers.** This is a planned three-minute live walkthrough script, not a claim that a new video has already been produced. The [September film](VIDEO.md) shows the earlier bakery edition.
+**Current edition: pharmaceutical distributors and wholesalers.** This is a planned three-minute live walkthrough script, not a claim that a new video has already been produced. Video production is on hold at the owner's request.
 
 The presenter uses the labelled fictional Asterbridge Distribution workspace. Start with a fresh **completed** sample scenario so the known quantities below are reproducible. No API key or paid request is required.
 
@@ -67,7 +67,7 @@ End on: **â€œKnow where every affected batch went. Account for what comes back.â
 - Use the correct completed or active scenario for each segment.
 - Keep the sample-data disclosure and template notice visible where relevant.
 - Do not call a template an AI extraction result.
-- Do not claim the previous bakery extraction run measures the pharmaceutical schema.
+- Controlled-provider checks are not a live pharmaceutical extraction accuracy benchmark.
 - Demonstrate a real posted action, a real report and its source, rather than substituting animated numbers.
 - Keep claims aligned with [software verification](PHARMA-VALIDATION.md) and the [official-source market comparison](PHARMA-ALTERNATIVES.md).
 - Label any future edited footage as selected moments from the workflow; editing length is not a measured task-completion time.

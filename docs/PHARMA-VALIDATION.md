@@ -82,9 +82,7 @@ These are observed browser checks, not a claim of exhaustive accessibility confo
 
 **ERP preparation:** the implemented first phase provides documented CSV fields, explicit column mapping, validated previews and reviewed/idempotent posting, plus the declared EPCIS export/preview profile. Native vendor ERP authentication, synchronization and unattended retries remain a future scoped integration; no connected ERP is claimed.
 
-## Historical evidence
-
-### 4 October interface follow-up
+## 4 October interface follow-up
 
 - All 143 unit tests passed again; TypeScript checking and the production Site build passed.
 - The profile remained fully visible at 1536 × 730, 1280 × 600 and 1280 × 480 CSS-pixel viewports, with approximately 19 pixels of space below it. At the shortest height, navigation scrolled independently and Settings remained reachable.
@@ -95,7 +93,7 @@ These are observed browser checks, not a claim of exhaustive accessibility confo
 
 Viewport checks exercise the page layout; they do not automate the Windows taskbar or operating-system display scaling. No industrial trial or video production was performed.
 
-[The September live Fireworks record](LIVE-AI-VALIDATION.md) documents the bakery schema. It is retained as historical evidence and is not counted as a pharmaceutical extraction accuracy result. The older video likewise depicts the bakery edition.
+Current project materials contain the pharmaceutical pitch, screenshots and fixture corpus. Superseded presentation assets and their documentation are recoverable from Git history. Provider verification for this edition uses controlled responses; no live pharmaceutical extraction accuracy result is claimed.
 
 ## Re-run
 

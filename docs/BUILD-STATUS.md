@@ -43,8 +43,8 @@ Detailed evidence: [Pharmaceutical verification](PHARMA-VALIDATION.md), [secret 
 
 ## Presentation and submission materials
 
-Use the [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx), [current demonstration script](DEMO-SCRIPT.md) and [AI usage record](AI-USAGE.md). The pharmaceutical walkthrough video is **on hold at the owner's request**. Existing narration and draft chapters are preserved locally; they are not presented as a completed current film. September bakery materials remain labelled historical evidence.
+Use the [pharmaceutical pitch](RecallScope-Pharma-Pitch.pptx), [current demonstration script](DEMO-SCRIPT.md) and [AI usage record](AI-USAGE.md). The pharmaceutical walkthrough video is **on hold at the owner's request**. Existing narration and draft chapters are preserved locally; they are not presented as a completed current film. The current project files include only pharmaceutical presentation materials; superseded assets remain recoverable through Git history.
 
 The [official event page](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only) was checked on 3 October before publication. It listed the code-freeze deadline as **1 November 2026, 08:03 IST** and requested a public repository, live app, 3–5-minute demo, pitch and AI workflow documentation. Publishing assets is distinct from an organizer's entry receipt; no new portal submission is claimed.
 
-[September build record](BUILD-STATUS-2026-09.md) preserves the earlier release. No real industrial trial, customer adoption, revenue, medicine-safety result or certification is claimed.
+No real industrial trial, customer adoption, revenue, medicine-safety result or certification is claimed.

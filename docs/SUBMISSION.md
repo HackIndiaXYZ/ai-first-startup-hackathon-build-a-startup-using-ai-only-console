@@ -40,6 +40,4 @@ The product has a specific operator, a complete end-to-end task and inspectable 
 
 ## Submission administration
 
-The current materials target the [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only): public code, a live product, pitch, 3–5-minute video and documented AI use. The event page was rechecked on 3 October 2026 before updating the release. The pharmaceutical video is on hold; the September video depicts the earlier bakery edition. Submission through the organizer's portal is a separate action; this file does not assert a new submission receipt.
-
-[September submission record](SUBMISSION-2026-09.md) is retained as historical context.
+The current materials target the [official event requirements](https://hackindia.org/2026/ai-first-startup-hackathon-build-a-startup-using-ai-only): public code, a live product, pitch, 3–5-minute video and documented AI use. The event page was rechecked on 3 October 2026 before updating the release. The pharmaceutical video is on hold. Submission through the organizer's portal is a separate action; this file does not assert a new submission receipt.

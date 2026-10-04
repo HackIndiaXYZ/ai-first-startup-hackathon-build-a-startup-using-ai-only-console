@@ -1,4 +1,0 @@
-type,code,lotCode,batchCode,ingredient,product,supplier,customer,receivedKg,usedKg,producedPacks,packs,date
-lot,DEMO-FL-01,,,Wheat flour,,Synthetic Sample Mill,,60,,,,
-batch,DEMO-CK-01,DEMO-FL-01,,,Butter cookies,,,,12,200,,
-delivery,DEMO-DIS-01,,DEMO-CK-01,,,,Synthetic Sample Café,,,,180,2026-09-10

@@ -10,7 +10,7 @@
 
 [Run locally](#run-locally) · [Three-minute walkthrough](#walkthrough-without-an-api-key) · [Verification](docs/PHARMA-VALIDATION.md) · [AI build record](docs/AI-USAGE.md) · [Product and alternatives](docs/PHARMA-ALTERNATIVES.md) · [Development roadmap](docs/PHARMA-DISTRIBUTION-ROADMAP.md) · [Retention and recovery](docs/DATA-RETENTION.md)
 
-**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The public workspace is pharmaceutical-only. The former `/bakery` URL redirects to `/`; legacy records remain preserved separately, and the earlier interface remains in Git history. The updated walkthrough video is on hold at the owner's request; the [September video](docs/VIDEO.md) depicts the earlier bakery edition.
+**Pharmaceutical edition released 4 October 2026:** [open the live application](https://recallscope.console3096.chatgpt.site/). The public workspace and current project materials are pharmaceutical-only. The updated walkthrough video is on hold at the owner's request.
 
 ![RecallScope pharmaceutical distribution workspace](docs/screenshots/pharma/pharma-overview.jpg)
 
@@ -50,7 +50,7 @@ flowchart LR
   E --> F[Fixed report and evidence package]
 ```
 
-React and TypeScript run on Vinext and Cloudflare Workers. D1 stores versioned pharmaceutical workspace records, sessions, memberships and request identities. R2 stores source files and bounded review drafts. Mutations use workspace revision checks and atomic persistence; repeat request IDs do not repeat stock posting. The pharmaceutical schema is separate from the retained bakery schema.
+React and TypeScript run on Vinext and Cloudflare Workers. D1 stores versioned pharmaceutical workspace records, sessions, memberships and request identities. R2 stores source files and bounded review drafts. Mutations use workspace revision checks and atomic persistence; repeat request IDs do not repeat stock posting. Product, batch and movement identities remain scoped to their pharmaceutical workspace.
 
 The core accounting rules are ordinary deterministic code. AI can propose fields; it does not approve records, silently match similar identifiers or change stock on its own.
 
@@ -81,7 +81,7 @@ For Fireworks, configure `AI_PROVIDER=fireworks`, `FIREWORKS_API_KEY` and option
 
 Text, CSV, images and bounded PDF documents can produce proposals. Fireworks PDF/WebP inputs use rendered images; every PDF page is checked against the original. Structured schemas, exact source quotes, product-scoped matching and review apply independently of the model. Live extraction has timeouts plus workspace and shared daily request allowances. No request is made when selecting a guided example.
 
-The pharmaceutical adapters have mocked-provider checks. The [September Fireworks observation](docs/LIVE-AI-VALIDATION.md) tested the earlier bakery schema and must not be represented as a pharmaceutical extraction benchmark.
+The pharmaceutical adapters have controlled-provider checks. No live pharmaceutical extraction accuracy benchmark is claimed.
 
 ## Verification and project materials
 
@@ -94,13 +94,13 @@ npm run build
 npm run test:api
 ```
 
-The API checks require the local server. They use isolated synthetic sessions and do not call paid AI providers. [Pharmaceutical verification](docs/PHARMA-VALIDATION.md) separates automated results, browser journeys, standards-subset checks and historical live AI observations.
+The API checks require the local server. They use isolated synthetic sessions and do not call paid AI providers. [Pharmaceutical verification](docs/PHARMA-VALIDATION.md) separates automated results, browser journeys, standards-subset checks and the scope of provider verification.
 
 - [Current demonstration script](docs/DEMO-SCRIPT.md)
 - [AI usage and development decisions](docs/AI-USAGE.md)
 - [Official-source alternatives and commercial hypothesis](docs/PHARMA-ALTERNATIVES.md)
 - [Roadmap and implementation scope](docs/PHARMA-DISTRIBUTION-ROADMAP.md)
-- [Earlier bakery video and captions](docs/VIDEO.md)
+- [Pharmaceutical source fixtures](product/fixtures/pharma/README.md)
 - [Pharmaceutical pitch deck](docs/RecallScope-Pharma-Pitch.pptx)
 - [Credential handling and rotation](docs/SECRET-HANDLING.md)
 
